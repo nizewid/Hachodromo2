@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hachodromo.Shared", "Hachodromo.Shared\Hachodromo.Shared.csproj", "{D249C3BA-F239-4055-AACB-C4C16D8CA78B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hachodromo.API", "Hachodromo.API\Hachodromo.API.csproj", "{9E84CCBB-CC0B-4C62-9923-3157DAE9D4DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hachodromo.WEB", "Hachodromo.WEB\Hachodromo.WEB.csproj", "{3A40D768-891B-4A43-81EC-9EFC46B6E134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hachodromo.Mobile", "Hachodromo.Mobile\Hachodromo.Mobile.csproj", "{51D71ABF-CACC-4F24-9B78-942685A18D56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D249C3BA-F239-4055-AACB-C4C16D8CA78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D249C3BA-F239-4055-AACB-C4C16D8CA78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D249C3BA-F239-4055-AACB-C4C16D8CA78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D249C3BA-F239-4055-AACB-C4C16D8CA78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E84CCBB-CC0B-4C62-9923-3157DAE9D4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E84CCBB-CC0B-4C62-9923-3157DAE9D4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E84CCBB-CC0B-4C62-9923-3157DAE9D4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E84CCBB-CC0B-4C62-9923-3157DAE9D4DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A40D768-891B-4A43-81EC-9EFC46B6E134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A40D768-891B-4A43-81EC-9EFC46B6E134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A40D768-891B-4A43-81EC-9EFC46B6E134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A40D768-891B-4A43-81EC-9EFC46B6E134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D71ABF-CACC-4F24-9B78-942685A18D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D71ABF-CACC-4F24-9B78-942685A18D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D71ABF-CACC-4F24-9B78-942685A18D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D71ABF-CACC-4F24-9B78-942685A18D56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

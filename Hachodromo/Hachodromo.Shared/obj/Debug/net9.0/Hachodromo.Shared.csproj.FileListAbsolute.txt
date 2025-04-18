@@ -1,0 +1,12 @@
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\bin\Debug\net9.0\Hachodromo.Shared.deps.json
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\bin\Debug\net9.0\Hachodromo.Shared.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\bin\Debug\net9.0\Hachodromo.Shared.pdb
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.AssemblyInfoInputs.cache
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.AssemblyInfo.cs
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.csproj.CoreCompileInputs.cache
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.sourcelink.json
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\refint\Hachodromo.Shared.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\Hachodromo.Shared.pdb
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Shared\obj\Debug\net9.0\ref\Hachodromo.Shared.dll
