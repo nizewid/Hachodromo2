@@ -26,5 +26,28 @@ namespace Hachodromo.API.Controllers
             await _context.SaveChangesAsync();
             return Ok(country);
         }
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> PutAsync(Country country, int id)
+        {
+            if (id != country.Id)
+            {
+                return BadRequest("El id del país no coincide con el id de la URL");
+            }
+            _context.Update(country);
+            await _context.SaveChangesAsync();
+            return Ok(country);
+        }
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> DeleteAsync(int id)
+        {
+            var country = await _context.Countries.FirstOrDefaultAsync(x => x.Id == id);
+            if (country == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(country);
+            await _context.SaveChangesAsync();
+            return Ok(country);
+        }
     }
 }

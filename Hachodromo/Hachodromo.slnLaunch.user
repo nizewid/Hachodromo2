@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "api_web",
+    "Projects": [
+      {
+        "Path": "Hachodromo.API\\Hachodromo.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "Hachodromo.WEB\\Hachodromo.WEB.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]

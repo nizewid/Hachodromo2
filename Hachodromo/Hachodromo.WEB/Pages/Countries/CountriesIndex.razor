@@ -1,0 +1,33 @@
+﻿@page "/countries"
+@inject IRepository repository
+
+<h3>Paises</h3>
+<GenericList MyList="Countries">
+	<Body>
+		<table class="table table-striped">
+			<thead>
+				<th>id</th>
+				<th>Nombre</th>
+			</thead>
+			<tbody>
+				@foreach (var country in Countries)
+				{
+					<tr>
+						<td>@country.Id</td>
+						<td>@country.Name</td>
+						<td>Editar</td>
+					</tr>
+				}
+				</tbody>
+		</table>
+	</Body>
+</GenericList>
+@code {
+	public List<Country>? Countries { get; set; } = new List<Country>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		var responseHttp = await repository.Get<List<Country>>("/api/countries");
+		Countries = responseHttp.Response;
+	}
+}

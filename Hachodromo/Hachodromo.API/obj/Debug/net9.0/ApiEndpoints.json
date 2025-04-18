@@ -24,5 +24,42 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
+    "Method": "PutAsync",
+    "RelativePath": "api/countries/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "Hachodromo.Shared.Entities.Country",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/countries/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
