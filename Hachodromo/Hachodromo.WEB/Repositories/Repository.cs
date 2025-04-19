@@ -88,6 +88,8 @@ namespace Hachodromo.WEB.Repositories
         private async Task<T> UnserializeAnswer<T>(HttpResponseMessage httpResponse, JsonSerializerOptions jsonSerializerOptions)
         {
             var respuestaString = await httpResponse.Content.ReadAsStringAsync();
+            Console.WriteLine("Respuesta del servidor:");
+            Console.WriteLine(respuestaString); // << Muestra el HTML o lo que venga
             return JsonSerializer.Deserialize<T>(respuestaString, jsonSerializerOptions)!;
         }
     }
