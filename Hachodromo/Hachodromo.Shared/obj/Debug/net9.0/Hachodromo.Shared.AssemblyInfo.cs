@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hachodromo.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f75cfc0ae360a36f7dd4da885a7f6e5b306701e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d81fa87295dd4907b9a8ddae959872327c18020")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hachodromo.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hachodromo.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

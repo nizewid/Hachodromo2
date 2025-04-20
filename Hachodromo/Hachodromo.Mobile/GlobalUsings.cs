@@ -1,4 +1,4 @@
-global using Fonts;
+global using Hachodromo.Mobile.Resources.Fonts;
 global using Hachodromo.Mobile.Data;
 global using Hachodromo.Mobile.PageModels;
 global using Hachodromo.Mobile.Pages;

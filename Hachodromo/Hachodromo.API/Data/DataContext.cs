@@ -10,6 +10,9 @@ namespace Hachodromo.API.Data
         }
 
         public DbSet<Country> Countries { get; set; } = null!;
+        public DbSet<Region> Regions { get; set; } = null!;
+        public DbSet<City> Cities { get; set; } = null!;
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

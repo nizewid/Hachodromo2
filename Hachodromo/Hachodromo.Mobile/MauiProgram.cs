@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using Hachodromo.Mobile.Resources.Fonts;
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Toolkit.Hosting;
 

@@ -1,6 +1,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Hachodromo.Mobile.Models;
+using Hachodromo.Mobile.Resources.Fonts;
 
 namespace Hachodromo.Mobile.PageModels
 {

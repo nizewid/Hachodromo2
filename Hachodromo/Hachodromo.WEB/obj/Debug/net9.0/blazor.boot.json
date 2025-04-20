@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Hachodromo.WEB",
   "resources": {
-    "hash": "sha256-nwDpNfDoMfe5OsQt4xbal0DascbBUgjfqlvL8YL3/YI=",
+    "hash": "sha256-K0TeHAJNcuto7Ko552gKY8+VUXcB4oYmxoZojdCG5js=",
     "fingerprinting": {
       "CurrieTechnologies.Razor.SweetAlert2.lvj7kgyo2r.wasm": "CurrieTechnologies.Razor.SweetAlert2.wasm",
       "Microsoft.AspNetCore.Authorization.n41ua9ceve.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -202,10 +202,10 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Hachodromo.Shared.94t13fba88.wasm": "Hachodromo.Shared.wasm",
-      "Hachodromo.Shared.otv5gxxxo0.pdb": "Hachodromo.Shared.pdb",
-      "Hachodromo.WEB.0ah0cb2ytd.wasm": "Hachodromo.WEB.wasm",
-      "Hachodromo.WEB.hkdwmpp71m.pdb": "Hachodromo.WEB.pdb"
+      "Hachodromo.Shared.sd3js33iha.wasm": "Hachodromo.Shared.wasm",
+      "Hachodromo.Shared.45gitik72o.pdb": "Hachodromo.Shared.pdb",
+      "Hachodromo.WEB.9ahw4fpbue.wasm": "Hachodromo.WEB.wasm",
+      "Hachodromo.WEB.jkg81lykq2.pdb": "Hachodromo.WEB.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hvg7u8bimp.js": "sha256-LX9rFEWGVxhkOkAVPG0w5RxPwzPBlEUz6dQNjWS7M+M="
@@ -416,12 +416,12 @@
       "WindowsBase.5lai2eowco.wasm": "sha256-GcDi5293y2A7oSiFYTbBTUe0d+ISbvgeel4ZNd8KkPM=",
       "mscorlib.wzkfrp7u5k.wasm": "sha256-9PjsU0gaxxz5Vyw++p9DeYUWLsaXbaMS2RbX6wmTUmk=",
       "netstandard.d82br99ghv.wasm": "sha256-DS8keXxU4eQpa1kIoiFxOA2Ii2g9hoNWSaVi8F8AnIE=",
-      "Hachodromo.Shared.94t13fba88.wasm": "sha256-Vwf27jlPO6erGeBEsXDHmU25jYGSSOU4oscXRmQzaK8=",
-      "Hachodromo.WEB.0ah0cb2ytd.wasm": "sha256-eI+8bb8CSdQ/F5kFZp1vb6INmPX1+d2KwO+GS21oNV8="
+      "Hachodromo.Shared.sd3js33iha.wasm": "sha256-4M+Rh732AUZ6CG/9oKR6zxbUihM0UjmHKK9+tcw16Yc=",
+      "Hachodromo.WEB.9ahw4fpbue.wasm": "sha256-gY8oPu35M2AB8t/bzQA4Qz0/F4nIEdn2WRgmsX6T558="
     },
     "pdb": {
-      "Hachodromo.Shared.otv5gxxxo0.pdb": "sha256-pEtT674y/oOgXg/l1xcC2mwlye2uTGl0MJMICMFHnVE=",
-      "Hachodromo.WEB.hkdwmpp71m.pdb": "sha256-sTbqdR6aMJYoWSin8CprzbCJ0qtDZI2nX+5gPcAy7R0="
+      "Hachodromo.Shared.45gitik72o.pdb": "sha256-OOcWY0QnIChcoJP0138laNKZXRLGUCLwSUMh7+GkUcc=",
+      "Hachodromo.WEB.jkg81lykq2.pdb": "sha256-4zqu23kucRcNOX95dKI18YWhvKxJT3x60GUr5dHW8JE="
     }
   },
   "cacheBootResources": true,

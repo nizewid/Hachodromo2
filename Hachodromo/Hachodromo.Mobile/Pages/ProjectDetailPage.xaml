@@ -6,7 +6,7 @@
              xmlns:pages="clr-namespace:Hachodromo.Mobile.Pages"
              xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
              xmlns:controls="clr-namespace:Hachodromo.Mobile.Pages.Controls"
-             xmlns:fonts="clr-namespace:Fonts"
+             xmlns:fonts="clr-namespace:Hachodromo.Mobile.Resources.Fonts"
              x:Class="Hachodromo.Mobile.Pages.ProjectDetailPage"
              x:DataType="pageModels:ProjectDetailPageModel"
              Title="Project">

@@ -263,6 +263,7 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\bin\Debug\net9.0-ios\iossimula
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Mobile.csproj.AssemblyReference.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.inputs
@@ -308,7 +309,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimula
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\coremlc\_BundleResourceWithLogicalName.items
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\_ProcessedBundleResourcesPath.items
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\_ProcessedContentPath.items
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Mobile.csproj.AssemblyReference.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Mobile.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Mobile.AssemblyInfoInputs.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Mobile.AssemblyInfo.cs

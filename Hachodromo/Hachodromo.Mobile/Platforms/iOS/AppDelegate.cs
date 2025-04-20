@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Hachodromo.Mobile
+namespace Hachodromo.Mobile.Platforms.iOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

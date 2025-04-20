@@ -122,6 +122,32 @@
   },
   "components": {
     "schemas": {
+      "City": {
+        "required": [
+          "cityName",
+          "regionId"
+        ],
+        "type": "object",
+        "properties": {
+          "cityCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cityName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "region": {
+            "$ref": "#/components/schemas/Region"
+          }
+        },
+        "additionalProperties": false
+      },
       "Country": {
         "required": [
           "name"
@@ -136,6 +162,46 @@
             "maxLength": 100,
             "minLength": 1,
             "type": "string"
+          },
+          "regions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Region"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Region": {
+        "required": [
+          "countryId",
+          "regionName"
+        ],
+        "type": "object",
+        "properties": {
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "cities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/City"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

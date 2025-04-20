@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Hachodromo.Mobile
+namespace Hachodromo.Mobile.Platforms.MacCatalyst
 {
     public class Program
     {
