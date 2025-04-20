@@ -15,6 +15,6 @@ namespace Hachodromo.Shared.Entities
         public string Name { get; set; } = null!;
 
         [InverseProperty("Country")]
-        public virtual ICollection<Region> Regions { get; set; } = new List<Region>();
+        public virtual ICollection<Region>? Regions { get; set; }
     }
 }

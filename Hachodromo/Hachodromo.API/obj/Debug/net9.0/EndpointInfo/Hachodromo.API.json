@@ -139,7 +139,7 @@
           },
           "cityName": {
             "maxLength": 100,
-            "minLength": 0,
+            "minLength": 1,
             "type": "string"
           },
           "region": {

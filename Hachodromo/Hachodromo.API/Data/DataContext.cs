@@ -18,6 +18,8 @@ namespace Hachodromo.API.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Region>().HasIndex(x => new { x.RegionName, x.CountryId }).IsUnique();
+            modelBuilder.Entity<City>().HasIndex(x => new { x.CityName, x.RegionId }).IsUnique();
         }
     }
 }

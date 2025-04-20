@@ -11,8 +11,9 @@ namespace Hachodromo.Shared.Entities
         [Required]
         public int RegionId { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "No puede superar los 100 Caracteres")]
+        [Display(Name = "Ciudad")]
+        [Required(ErrorMessage ="El Campo {0} es obligatorio")]
+        [MaxLength(100, ErrorMessage = "el campo {0} puede superar los {1} Caracteres")]
         public string CityName { get; set; } = "CityName";
 
         [ForeignKey("RegionId")]

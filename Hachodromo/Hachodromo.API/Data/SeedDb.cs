@@ -24,13 +24,13 @@ namespace Hachodromo.API.Data
         {
             if (!_context.Countries.Any()) // <-- cambiamos a "si NO hay países"
             {
-                await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Countries ON");
+                //await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Countries ON");
                 _context.Countries.AddRange(
-                    new Country { Id = 1, Name = "España" }
+                    new Country { Name = "España" }
                 );
 
                 await _context.SaveChangesAsync(); // 
-                await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Countries OFF");
+                //await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Countries OFF");
             }
         }
 
@@ -123,27 +123,27 @@ namespace Hachodromo.API.Data
         {
             if (!_context.Regions.Any())
             {
-                //await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Regions ON"); // no lo necesita 
+            //    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Regions ON"); // no lo necesita 
                 _context.Regions.AddRange(
-                    new Region { RegionId = 1, RegionName = "Andalucía", CountryId = 1 },
-                    new Region { RegionId = 2, RegionName = "Aragón", CountryId = 1 },
-                    new Region { RegionId = 3, RegionName = "Asturias", CountryId = 1 },
-                    new Region { RegionId = 4, RegionName = "Illes Balears", CountryId = 1 },
-                    new Region { RegionId = 5, RegionName = "Canarias", CountryId = 1 },
-                    new Region { RegionId = 6, RegionName = "Cantabria", CountryId = 1 },
-                    new Region { RegionId = 7, RegionName = "Castilla y León", CountryId = 1 },
-                    new Region { RegionId = 8, RegionName = "Castilla-La Mancha", CountryId = 1 },
-                    new Region { RegionId = 9, RegionName = "Cataluña", CountryId = 1 },
-                    new Region { RegionId = 10, RegionName = "Comunitat Valenciana", CountryId = 1 },
-                    new Region { RegionId = 11, RegionName = "Extremadura", CountryId = 1 },
-                    new Region { RegionId = 12, RegionName = "Galicia", CountryId = 1 },
-                    new Region { RegionId = 13, RegionName = "Comunidad de Madrid", CountryId = 1 },
-                    new Region { RegionId = 14, RegionName = "Región de Murcia", CountryId = 1 },
-                    new Region { RegionId = 15, RegionName = "Comunidad Foral de Navarra", CountryId = 1 },
-                    new Region { RegionId = 16, RegionName = "País Vasco", CountryId = 1 },
-                    new Region { RegionId = 17, RegionName = "La Rioja", CountryId = 1 },
-                    new Region { RegionId = 18, RegionName = "Ceuta", CountryId = 1 },
-                    new Region { RegionId = 19, RegionName = "Melilla", CountryId = 1 }
+                    new Region { RegionName = "Andalucía", CountryId = 1 },
+                    new Region { RegionName = "Aragón", CountryId = 1 },
+                    new Region { RegionName = "Asturias", CountryId = 1 },
+                    new Region { RegionName = "Illes Balears", CountryId = 1 },
+                    new Region { RegionName = "Canarias", CountryId = 1 },
+                    new Region { RegionName = "Cantabria", CountryId = 1 },
+                    new Region { RegionName = "Castilla y León", CountryId = 1 },
+                    new Region { RegionName = "Castilla-La Mancha", CountryId = 1 },
+                    new Region { RegionName = "Cataluña", CountryId = 1 },
+                    new Region { RegionName = "Comunitat Valenciana", CountryId = 1 },
+                    new Region { RegionName = "Extremadura", CountryId = 1 },
+                    new Region { RegionName = "Galicia", CountryId = 1 },
+                    new Region { RegionName = "Comunidad de Madrid", CountryId = 1 },
+                    new Region { RegionName = "Región de Murcia", CountryId = 1 },
+                    new Region { RegionName = "Comunidad Foral de Navarra", CountryId = 1 },
+                    new Region { RegionName = "País Vasco", CountryId = 1 },
+                    new Region { RegionName = "La Rioja", CountryId = 1 },
+                    new Region { RegionName = "Ceuta", CountryId = 1 },
+                    new Region { RegionName = "Melilla", CountryId = 1 }
                 );
             }
             await _context.SaveChangesAsync();
