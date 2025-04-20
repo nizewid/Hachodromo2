@@ -17,11 +17,11 @@
 			await sweetAlertService.FireAsync("Error", message);
 			return;
 		}
-		countryForm.FormPostedSuccessfully = true;
-		NavigationManager.NavigateTo("/countries");
+		Return();
 	}
 	private void Return()
 	{
-	NavigationManager.NavigateTo("/countries");
+		countryForm!.FormPostedSuccessfully = true;
+		NavigationManager.NavigateTo("/countries");
 	}
 }

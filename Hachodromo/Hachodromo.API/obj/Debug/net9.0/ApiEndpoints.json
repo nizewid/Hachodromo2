@@ -28,7 +28,7 @@
   {
     "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
     "Method": "PutAsync",
-    "RelativePath": "api/countries/{id}",
+    "RelativePath": "api/countries",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -37,7 +37,18 @@
         "Name": "country",
         "Type": "Hachodromo.Shared.Entities.Country",
         "IsRequired": true
-      },
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/countries/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",

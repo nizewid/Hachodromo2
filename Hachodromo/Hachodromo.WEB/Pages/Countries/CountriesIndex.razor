@@ -1,5 +1,7 @@
 ﻿@page "/countries"
 @inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
 
 <h3>Paises</h3>
 <a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
@@ -14,15 +16,16 @@
 				<th>Nombre</th>
 			</thead>
 			<tbody>
-				@foreach (var country in Countries)
+				@foreach (var country in Countries!)
 				{
 					<tr>
 						<td>@country.Id</td>
 						<td>@country.Name</td>
-						<td>Editar</td>
+						<a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
+						<button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id)) >Eliminar</button>
 					</tr>
 				}
-				</tbody>
+			</tbody>
 		</table>
 	</Body>
 </GenericList>
@@ -33,5 +36,40 @@
 	{
 		var responseHttp = await repository.Get<List<Country>>("/api/countries");
 		Countries = responseHttp.Response;
+	}
+
+	private async Task LoadAsync()
+	{
+		var responseHttp = await repository.Get<List<Country>>("/api/countries");
+		Countries = responseHttp.Response;
+	}
+
+	private async Task DeleteAsync(int id)
+	{
+		var result = await sweetAlertService.FireAsync(new SweetAlertOptions
+			{
+				Title = "Confirmación",
+				Text = "¿Deseas eliminar el país?",
+				Icon = SweetAlertIcon.Question,
+				ShowCancelButton = true,
+				CancelButtonText = "NO",
+				ConfirmButtonText = "SI"
+			});
+		var confirm = string.IsNullOrEmpty(result.Value);
+		if (confirm)
+		{
+			return;
+		}
+		var responseHttp = await repository.Delete($"/api/countries/{id}");
+		if (responseHttp.Error)
+		{
+			if (responseHttp.HttpResponseMessage.StatusCode != HttpStatusCode.NotFound)
+			{
+				var message = await responseHttp.GetErrorMessageAsync();
+				await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+				return;
+			}
+		}
+		await LoadAsync();
 	}
 }

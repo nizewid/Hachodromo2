@@ -1124,10 +1124,10 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.d
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\refint\Hachodromo.WEB.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\ref\Hachodromo.WEB.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.0nsfe4bd81.pdb
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.0lbnfip6lg.wasm
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.0lbnfip6lg.wasm.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.0nsfe4bd81.pdb.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\jmolh7orb4-0lbnfip6lg.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\n0otfsjeq9-0nsfe4bd81.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\ji1y6g0vlk-bbsja12s94.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.hkdwmpp71m.pdb
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.0ah0cb2ytd.wasm
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.0ah0cb2ytd.wasm.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.hkdwmpp71m.pdb.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\jmolh7orb4-0ah0cb2ytd.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\n0otfsjeq9-hkdwmpp71m.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\ji1y6g0vlk-a0yiaqdh5i.gz
