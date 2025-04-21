@@ -23,5 +23,7 @@ namespace Hachodromo.Shared.Entities
         [InverseProperty("Region")]
         public virtual ICollection<City> Cities { get; set; } = new List<City>();
 
+        public int CityNumber => Cities == null ? 0 : Cities.Count;
+
     }
 }

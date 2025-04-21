@@ -72,5 +72,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
+    "Method": "GetFullAsync",
+    "RelativePath": "full",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

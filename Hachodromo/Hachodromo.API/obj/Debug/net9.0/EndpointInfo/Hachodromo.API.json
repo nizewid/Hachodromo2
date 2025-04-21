@@ -75,6 +75,18 @@
         }
       }
     },
+    "/full": {
+      "get": {
+        "tags": [
+          "CountriesControllers"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/countries/{id}": {
       "get": {
         "tags": [
@@ -169,6 +181,11 @@
               "$ref": "#/components/schemas/Region"
             },
             "nullable": true
+          },
+          "regionNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -202,6 +219,11 @@
               "$ref": "#/components/schemas/City"
             },
             "nullable": true
+          },
+          "cityNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
           }
         },
         "additionalProperties": false

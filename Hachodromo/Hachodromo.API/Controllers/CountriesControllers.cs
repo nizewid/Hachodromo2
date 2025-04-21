@@ -17,8 +17,21 @@ namespace Hachodromo.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            return Ok(await _context.Countries.ToListAsync());
+            return Ok(await _context.Countries
+                .Include(x=>x.Regions)
+                .ToListAsync());
         }
+
+        [HttpGet("/full")]
+        public async Task<IActionResult> GetFullAsync()
+        {
+            return Ok(await _context.Countries
+                .Include(x => x.Regions!)
+                .ThenInclude(x=>x.Cities)
+                .ToListAsync());
+        }
+
+
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
