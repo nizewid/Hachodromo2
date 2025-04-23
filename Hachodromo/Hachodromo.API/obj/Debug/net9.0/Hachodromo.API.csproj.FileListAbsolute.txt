@@ -163,10 +163,10 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\staticwebassets\
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Hachodromo.API.props
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Hachodromo.API.props
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodro.70AE7C18.Up2Date
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\refint\Hachodromo.API.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.genruntimeconfig.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\ref\Hachodromo.API.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

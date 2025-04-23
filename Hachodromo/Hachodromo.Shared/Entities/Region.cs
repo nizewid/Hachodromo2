@@ -18,10 +18,10 @@ namespace Hachodromo.Shared.Entities
         public int CountryId { get; set; } // Clave foránea a la tabla de países
 
         [ForeignKey(nameof(CountryId))]
-        public virtual Country Country { get; set; } = null!;
+        public virtual Country? Country { get; set; } = null!;
 
         [InverseProperty("Region")]
-        public virtual ICollection<City> Cities { get; set; } = new List<City>();
+        public virtual ICollection<City>? Cities { get; set; } = new List<City>();
 
         public int CityNumber => Cities == null ? 0 : Cities.Count;
 

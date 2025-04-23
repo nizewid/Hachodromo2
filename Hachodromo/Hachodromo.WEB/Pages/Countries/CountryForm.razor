@@ -16,7 +16,7 @@
 </EditForm>
 
 @code {
-    private EditContext editContext = null;
+    private EditContext editContext = null!;
 
     [Parameter]
     [EditorRequired]
@@ -25,12 +25,6 @@
     [Parameter]
     [EditorRequired]
     public EventCallback ReturnAction { get; set; }
-
-    private async Task HandleValidSubmit()
-    {
-        // Lógica para manejar el envío válido del formulario
-        await OnValidSubmit.InvokeAsync(Country);
-    }
 
     [Parameter]
     [EditorRequired]
@@ -41,6 +35,16 @@
     protected override void OnInitialized()
     {
         editContext = new(Country);
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (OnValidSubmit.HasDelegate)
+        {
+            await OnValidSubmit.InvokeAsync(Country);
+        }
+
+        FormPostedSuccessfully = true;
     }
 
     private async Task OnBeforeInternalNavigation(LocationChangingContext context)

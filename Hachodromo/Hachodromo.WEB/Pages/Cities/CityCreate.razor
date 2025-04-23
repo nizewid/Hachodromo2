@@ -1,0 +1,52 @@
+﻿@page "/cities/create/{RegionId:int}"
+@inject IRepository repository
+@inject NavigationManager NavigationManager
+@inject SweetAlertService sweetAlertService
+<h3>Crear Ciudad para la región: @region?.RegionName</h3>
+<CityForm @ref="cityForm" City="city" OnValidSubmit="Create" ReturnAction="Return"/>
+
+@code {
+	private City city= new();
+	private CityForm? cityForm;
+	private Region? region;
+
+	[Parameter]
+	public int RegionId { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadRegion();
+	}
+
+	private async Task Create()
+	{
+		city.RegionId = RegionId;
+		var httpResponse = await repository.Post<City>("/api/cities", city);
+		if (httpResponse.Error){
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message);
+			return;
+		}
+		Return();
+	}
+	private void Return()
+	{
+		cityForm!.FormPostedSuccessfully = true;
+		NavigationManager.NavigateTo($"/region/details/{RegionId}");
+	}
+
+	private async Task LoadRegion()
+	{
+		var response = await repository.Get<Region>($"/api/region/{RegionId}");
+		if (!response.Error)
+		{
+			region = response.Response;
+		}
+		else
+		{
+			var message = await response.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message);
+			NavigationManager.NavigateTo("/countries");
+		}
+	}
+}

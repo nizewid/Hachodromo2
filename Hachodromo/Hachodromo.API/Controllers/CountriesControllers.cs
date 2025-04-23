@@ -33,9 +33,17 @@ namespace Hachodromo.API.Controllers
 
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetByIdAsync(int id)
+        public async Task<IActionResult> GetAsync(int id)
         {
-            return Ok(await _context.Countries.FirstOrDefaultAsync(x => x.Id == id));
+            var country = await _context.Countries
+                .Include(x=>x.Regions!)
+                .ThenInclude(x=> x.Cities)
+                .FirstOrDefaultAsync(x => x.Id == id);
+            if (country == null)
+            {
+                return NotFound();
+            }
+            return Ok(country);
         }
         [HttpPost]
         public async Task<ActionResult> PostAsync(Country country)

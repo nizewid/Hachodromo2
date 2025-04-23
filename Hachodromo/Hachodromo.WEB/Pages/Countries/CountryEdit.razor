@@ -41,7 +41,7 @@ else
 
 	private async Task EditAsync()
 	{
-		var responseHttp = await repository.Put<Country>($"/api/countries/", country);
+		var responseHttp = await repository.Put<Country>($"/api/countries/", country!);
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();

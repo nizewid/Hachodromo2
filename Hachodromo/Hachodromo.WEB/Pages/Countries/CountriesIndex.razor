@@ -3,8 +3,10 @@
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 
+
 <h3>Paises</h3>
 <a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
+
 <GenericList MyList="Countries">
 	<Loading>
 		<p>Cargando...</p>
@@ -24,6 +26,7 @@
 						<td>@country.Id</td>
 						<td>@country.Name</td>
 						<td>@country.RegionNumber</td>
+						<a class="btn btn-light" href="/countries/details/@country.Id">Detalles</a>
 						<a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
 						<button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id)) >Eliminar</button>
 					</tr>

@@ -1,5 +1,79 @@
 [
   {
+    "ContainingType": "Hachodromo.API.Controllers.CitiesController",
+    "Method": "GetAsync",
+    "RelativePath": "api/cities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CitiesController",
+    "Method": "PostAsync",
+    "RelativePath": "api/cities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "city",
+        "Type": "Hachodromo.Shared.Entities.City",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CitiesController",
+    "Method": "PutAsync",
+    "RelativePath": "api/cities",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "Hachodromo.Shared.Entities.Country",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CitiesController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/cities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CitiesController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/cities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
     "Method": "GetAsync",
     "RelativePath": "api/countries",
@@ -43,7 +117,7 @@
   },
   {
     "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
-    "Method": "GetByIdAsync",
+    "Method": "GetAsync",
     "RelativePath": "api/countries/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -61,6 +135,80 @@
     "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
     "Method": "DeleteAsync",
     "RelativePath": "api/countries/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.RegionsController",
+    "Method": "GetAsync",
+    "RelativePath": "api/regions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.RegionsController",
+    "Method": "PostAsync",
+    "RelativePath": "api/regions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "region",
+        "Type": "Hachodromo.Shared.Entities.Region",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.RegionsController",
+    "Method": "PutAsync",
+    "RelativePath": "api/regions",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "region",
+        "Type": "Hachodromo.Shared.Entities.Region",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.RegionsController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/regions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.RegionsController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/regions/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

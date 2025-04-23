@@ -15,140 +15,214 @@ namespace Hachodromo.API.Data
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
-            await CheckCountriesAsync();
-            await CheckRegionsAsync();
-            await CheckCitiesAsync();
+            await SeedSpainAsync();
         }
 
-        private async Task CheckCountriesAsync()
+        public async Task SeedSpainAsync()
         {
-            if (!_context.Countries.Any()) // <-- cambiamos a "si NO hay países"
-            {
-                //await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Countries ON");
-                _context.Countries.AddRange(
-                    new Country { Name = "España" }
-                );
+            // Si ya hay países, asumimos que la BD está cargada
+            if (await _context.Countries.AnyAsync())
+                return;
 
-                await _context.SaveChangesAsync(); // 
-                //await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Countries OFF");
+            // --- País  → Regiones → Ciudades (sin CityCode) ------------------------
+            var spain = new Country
+            {
+                Name = "España",
+                Regions = new List<Region>
+        {
+            new Region
+            {
+                RegionName = "Andalucía",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Almería"  },
+                    new City { CityName = "Cádiz"    },
+                    new City { CityName = "Córdoba"  },
+                    new City { CityName = "Granada"  },
+                    new City { CityName = "Huelva"   },
+                    new City { CityName = "Jaén"     },
+                    new City { CityName = "Málaga"   },
+                    new City { CityName = "Sevilla"  }
+                }
+            },
+            new Region
+            {
+                RegionName = "Aragón",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Huesca"    },
+                    new City { CityName = "Teruel"    },
+                    new City { CityName = "Zaragoza"  }
+                }
+            },
+            new Region
+            {
+                RegionName = "Asturias",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Oviedo" },
+                    new City { CityName = "Gijón"  }
+                }
+            },
+            new Region
+            {
+                RegionName = "Illes Balears",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Palma de Mallorca" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Canarias",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Las Palmas de Gran Canaria" },
+                    new City { CityName = "Santa Cruz de Tenerife"     }
+                }
+            },
+            new Region
+            {
+                RegionName = "Cantabria",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Santander" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Castilla y León",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Ávila"      },
+                    new City { CityName = "Burgos"     },
+                    new City { CityName = "León"       },
+                    new City { CityName = "Palencia"   },
+                    new City { CityName = "Salamanca"  },
+                    new City { CityName = "Segovia"    },
+                    new City { CityName = "Soria"      },
+                    new City { CityName = "Valladolid" },
+                    new City { CityName = "Zamora"     }
+                }
+            },
+            new Region
+            {
+                RegionName = "Castilla-La Mancha",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Albacete"     },
+                    new City { CityName = "Ciudad Real"  },
+                    new City { CityName = "Cuenca"       },
+                    new City { CityName = "Guadalajara"  },
+                    new City { CityName = "Toledo"       }
+                }
+            },
+            new Region
+            {
+                RegionName = "Cataluña",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Barcelona" },
+                    new City { CityName = "Girona"    },
+                    new City { CityName = "Lleida"    },
+                    new City { CityName = "Tarragona" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Comunitat Valenciana",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Alicante/Alacant" },
+                    new City { CityName = "Castellón/Castelló" },
+                    new City { CityName = "Valencia/València" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Extremadura",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Badajoz" },
+                    new City { CityName = "Cáceres" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Galicia",
+                Cities = new List<City>
+                {
+                    new City { CityName = "A Coruña"   },
+                    new City { CityName = "Lugo"       },
+                    new City { CityName = "Ourense"    },
+                    new City { CityName = "Pontevedra" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Comunidad de Madrid",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Madrid" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Región de Murcia",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Murcia" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Comunidad Foral de Navarra",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Pamplona/Iruña" }
+                }
+            },
+            new Region
+            {
+                RegionName = "País Vasco",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Vitoria-Gasteiz"          },
+                    new City { CityName = "Bilbao"                   },
+                    new City { CityName = "Donostia-San Sebastián"   }
+                }
+            },
+            new Region
+            {
+                RegionName = "La Rioja",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Logroño" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Ceuta",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Ceuta" }
+                }
+            },
+            new Region
+            {
+                RegionName = "Melilla",
+                Cities = new List<City>
+                {
+                    new City { CityName = "Melilla" }
+                }
             }
         }
+            };
 
-
-        private async Task CheckCitiesAsync()
-        {
-            if (!_context.Cities.Any())
-            {
-        //        await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Cities ON");
-                _context.Cities.AddRange(
-                        // Andalucía
-                        new City { CityCode = 4, CityName = "Almería", RegionId = 1 },
-                        new City { CityCode = 11, CityName = "Cádiz", RegionId = 1 },
-                        new City { CityCode = 14, CityName = "Córdoba", RegionId = 1 },
-                        new City { CityCode = 18, CityName = "Granada", RegionId = 1 },
-                        new City { CityCode = 21, CityName = "Huelva", RegionId = 1 },
-                        new City { CityCode = 23, CityName = "Jaén", RegionId = 1 },
-                        new City { CityCode = 29, CityName = "Málaga", RegionId = 1 },
-                        new City { CityCode = 41, CityName = "Sevilla", RegionId = 1 },
-                        // Aragón
-                        new City { CityCode = 22, CityName = "Huesca", RegionId = 2 },
-                        new City { CityCode = 44, CityName = "Teruel", RegionId = 2 },
-                        new City { CityCode = 50, CityName = "Zaragoza", RegionId = 2 },
-                        // Asturias, Principado de
-                        new City { CityCode = 33, CityName = "Oviedo", RegionId = 3 },
-                        new City { CityCode = 66, CityName = "Gijón", RegionId = 3 },
-                        // Balears, Illes
-                        new City { CityCode = 7, CityName = "Palma de Mallorca", RegionId = 4 },
-                        // Canarias
-                        new City { CityCode = 35, CityName = "Las Palmas de Gran Canaria", RegionId = 5 },
-                        new City { CityCode = 38, CityName = "Santa Cruz de Tenerife", RegionId = 5 },
-                        // Cantabria
-                        new City { CityCode = 39, CityName = "Santander", RegionId = 6 },
-                        // Castilla y León
-                        new City { CityCode = 5, CityName = "Ávila", RegionId = 7 },
-                        new City { CityCode = 9, CityName = "Burgos", RegionId = 7 },
-                        new City { CityCode = 24, CityName = "León", RegionId = 7 },
-                        new City { CityCode = 34, CityName = "Palencia", RegionId = 7 },
-                        new City { CityCode = 37, CityName = "Salamanca", RegionId = 7 },
-                        new City { CityCode = 40, CityName = "Segovia", RegionId = 7 },
-                        new City { CityCode = 42, CityName = "Soria", RegionId = 7 },
-                        new City { CityCode = 47, CityName = "Valladolid", RegionId = 7 },
-                        new City { CityCode = 49, CityName = "Zamora", RegionId = 7 },
-                        // Castilla-La Mancha
-                        new City { CityCode = 2, CityName = "Albacete", RegionId = 8 },
-                        new City { CityCode = 13, CityName = "Ciudad Real", RegionId = 8 },
-                        new City { CityCode = 16, CityName = "Cuenca", RegionId = 8 },
-                        new City { CityCode = 19, CityName = "Guadalajara", RegionId = 8 },
-                        new City { CityCode = 45, CityName = "Toledo", RegionId = 8 },
-                        // Cataluña
-                        new City { CityCode = 8, CityName = "Barcelona", RegionId = 9 },
-                        new City { CityCode = 17, CityName = "Girona", RegionId = 9 },
-                        new City { CityCode = 25, CityName = "Lleida", RegionId = 9 },
-                        new City { CityCode = 43, CityName = "Tarragona", RegionId = 9 },
-                        // Comunitat Valenciana
-                        new City { CityCode = 3, CityName = "Alicante/Alacant", RegionId = 10 },
-                        new City { CityCode = 12, CityName = "Castellón/Castelló", RegionId = 10 },
-                        new City { CityCode = 46, CityName = "Valencia/València", RegionId = 10 },
-                        // Extremadura
-                        new City { CityCode = 6, CityName = "Badajoz", RegionId = 11 },
-                        new City { CityCode = 10, CityName = "Cáceres", RegionId = 11 },
-                        // Galicia
-                        new City { CityCode = 15, CityName = "A Coruña", RegionId = 12 },
-                        new City { CityCode = 27, CityName = "Lugo", RegionId = 12 },
-                        new City { CityCode = 32, CityName = "Ourense", RegionId = 12 },
-                        new City { CityCode = 36, CityName = "Pontevedra", RegionId = 12 },
-                        // Madrid, Comunidad de
-                        new City { CityCode = 28, CityName = "Madrid", RegionId = 13 },
-                        // Murcia, Región de
-                        new City { CityCode = 30, CityName = "Murcia", RegionId = 14 },
-                        // Navarra, Comunidad Foral de
-                        new City { CityCode = 31, CityName = "Pamplona/Iruña", RegionId = 15 },
-                        // País Vasco
-                        new City { CityCode = 1, CityName = "Vitoria-Gasteiz", RegionId = 16 },
-                        new City { CityCode = 48, CityName = "Bilbao", RegionId = 16 },
-                        new City { CityCode = 20, CityName = "Donostia-San Sebastián", RegionId = 16 },
-                        // Rioja, La
-                        new City { CityCode = 26, CityName = "Logroño", RegionId = 17 },
-                        // Ceuta
-                        new City { CityCode = 51, CityName = "Ceuta", RegionId = 18 },
-                        // Melilla
-                        new City { CityCode = 52, CityName = "Melilla", RegionId = 19 }
-                        );
-            }
+            _context.Countries.Add(spain);
             await _context.SaveChangesAsync();
-       //     await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Cities OFF");
         }
 
-        private async Task CheckRegionsAsync()
-        {
-            if (!_context.Regions.Any())
-            {
-            //    await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Regions ON"); // no lo necesita 
-                _context.Regions.AddRange(
-                    new Region { RegionName = "Andalucía", CountryId = 1 },
-                    new Region { RegionName = "Aragón", CountryId = 1 },
-                    new Region { RegionName = "Asturias", CountryId = 1 },
-                    new Region { RegionName = "Illes Balears", CountryId = 1 },
-                    new Region { RegionName = "Canarias", CountryId = 1 },
-                    new Region { RegionName = "Cantabria", CountryId = 1 },
-                    new Region { RegionName = "Castilla y León", CountryId = 1 },
-                    new Region { RegionName = "Castilla-La Mancha", CountryId = 1 },
-                    new Region { RegionName = "Cataluña", CountryId = 1 },
-                    new Region { RegionName = "Comunitat Valenciana", CountryId = 1 },
-                    new Region { RegionName = "Extremadura", CountryId = 1 },
-                    new Region { RegionName = "Galicia", CountryId = 1 },
-                    new Region { RegionName = "Comunidad de Madrid", CountryId = 1 },
-                    new Region { RegionName = "Región de Murcia", CountryId = 1 },
-                    new Region { RegionName = "Comunidad Foral de Navarra", CountryId = 1 },
-                    new Region { RegionName = "País Vasco", CountryId = 1 },
-                    new Region { RegionName = "La Rioja", CountryId = 1 },
-                    new Region { RegionName = "Ceuta", CountryId = 1 },
-                    new Region { RegionName = "Melilla", CountryId = 1 }
-                );
-            }
-            await _context.SaveChangesAsync();
-            //await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Regions OFF");
-        }
     }
 } 
 

@@ -6,8 +6,8 @@ namespace Hachodromo.Shared.Entities
     public partial class City
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CityCode { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CityId { get; set; }
         [Required]
         public int RegionId { get; set; }
 
@@ -18,7 +18,7 @@ namespace Hachodromo.Shared.Entities
 
         [ForeignKey("RegionId")]
         [InverseProperty("Cities")]
-        public virtual Region Region { get; set; } = null!;
+        public virtual Region? Region { get; set; }
 
     }
 }
