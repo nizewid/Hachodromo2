@@ -13,10 +13,9 @@ else
 {
 	<div class="card">
 		<div class="card-body">
-			<h5 class="card-title">Detalles del País</h5>
+			<h5 class="card-title">Detalles de región @region.RegionName</h5> 
 			<p class="card-text">Id: @region.RegionId</p>
-			<p class="card-text">Nombre: @region.RegionName</p>
-			<p class="card-text">Regiónes: @region.CityNumber</p>
+			<p class="card-text">Ciudades: @region.CityNumber</p>
 			<div class="mb-2">
 				<a class="btn btn-primary" href="/cities/create/@region.RegionId">Nueva Ciudad</a>
 				<a class="btn btn-success" href="/countries/details/@region.CountryId">Regresar</a>
@@ -37,7 +36,6 @@ else
 					{
 						<tr>
 							<td>@city.CityName</td>
-							<td>@region.CityNumber</td>
 							<a class="btn btn-warning" href="/cities/edit/@city.CityId">Editar</a>
 							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(city.CityId)) >Eliminar</button>
 						</tr>

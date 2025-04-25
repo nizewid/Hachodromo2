@@ -48,13 +48,13 @@ namespace Hachodromo.API.Controllers
             }
         }
         [HttpPut]
-        public async Task<ActionResult> PutAsync(Country country)
+        public async Task<ActionResult> PutAsync(City city)
         {
             try
             {
-                _context.Update(country);
+                _context.Update(city);
                 await _context.SaveChangesAsync();
-                return Ok(country);
+                return Ok(city);
             }
             catch (DbUpdateException dbUpdateException)
             {
@@ -72,14 +72,14 @@ namespace Hachodromo.API.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteAsync(int id)
         {
-            var country = await _context.Countries.FirstOrDefaultAsync(x => x.Id == id);
-            if (country == null)
+            var city = await _context.Cities.FirstOrDefaultAsync(x => x.CityId == id);
+            if (city == null)
             {
                 return NotFound();
             }
-            _context.Remove(country);
+            _context.Remove(city);
             await _context.SaveChangesAsync();
-            return Ok(country);
+            return Ok(city);
         }
 
     }

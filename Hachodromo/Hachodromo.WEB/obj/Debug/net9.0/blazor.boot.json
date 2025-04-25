@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Hachodromo.WEB",
   "resources": {
-    "hash": "sha256-k+QmnmL8cITPmvRpxn2XhWLt6/NduZDntKxsTWyQtJo=",
+    "hash": "sha256-CAHw5TCMuhP8rzY4MlGGl011lBYiDHhVqkuziimUMmc=",
     "fingerprinting": {
       "CurrieTechnologies.Razor.SweetAlert2.lvj7kgyo2r.wasm": "CurrieTechnologies.Razor.SweetAlert2.wasm",
       "Microsoft.AspNetCore.Authorization.n41ua9ceve.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -204,8 +204,8 @@
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
       "Hachodromo.Shared.p8ymtw3d2w.wasm": "Hachodromo.Shared.wasm",
       "Hachodromo.Shared.y80owapql5.pdb": "Hachodromo.Shared.pdb",
-      "Hachodromo.WEB.3pb692ejhm.wasm": "Hachodromo.WEB.wasm",
-      "Hachodromo.WEB.wujd9pogus.pdb": "Hachodromo.WEB.pdb"
+      "Hachodromo.WEB.gh8pf6nmt2.wasm": "Hachodromo.WEB.wasm",
+      "Hachodromo.WEB.hcr2ol751a.pdb": "Hachodromo.WEB.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hvg7u8bimp.js": "sha256-LX9rFEWGVxhkOkAVPG0w5RxPwzPBlEUz6dQNjWS7M+M="
@@ -417,11 +417,11 @@
       "mscorlib.wzkfrp7u5k.wasm": "sha256-9PjsU0gaxxz5Vyw++p9DeYUWLsaXbaMS2RbX6wmTUmk=",
       "netstandard.d82br99ghv.wasm": "sha256-DS8keXxU4eQpa1kIoiFxOA2Ii2g9hoNWSaVi8F8AnIE=",
       "Hachodromo.Shared.p8ymtw3d2w.wasm": "sha256-2YO0zcW3jggQMbENzJPHo4QSFXG5Iaxi/+cmJWnjeoo=",
-      "Hachodromo.WEB.3pb692ejhm.wasm": "sha256-txE71eQX0MQHOupCYzUr2zAf5uSi5l9/ku01Sg2m1ck="
+      "Hachodromo.WEB.gh8pf6nmt2.wasm": "sha256-NC67EMZ3iKtgUCCzUlZRyC3QNQ79CA2e95drKCMNTtM="
     },
     "pdb": {
       "Hachodromo.Shared.y80owapql5.pdb": "sha256-Qq9Tv/jRfqEvrRQ2hHEqg3pZgLMiZbJ5oqFeUylu8FM=",
-      "Hachodromo.WEB.wujd9pogus.pdb": "sha256-yNKl0lCztdx7IIvXWrJ1r1j1waWhGkzlYX0zOL8qScQ="
+      "Hachodromo.WEB.hcr2ol751a.pdb": "sha256-D82NbNmqeBeSukBLl225AoLbJWmy/V27EpcP4iKqRXA="
     }
   },
   "cacheBootResources": true,

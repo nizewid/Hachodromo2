@@ -37,7 +37,7 @@
 
 	private async Task LoadRegion()
 	{
-		var response = await repository.Get<Region>($"/api/region/{RegionId}");
+		var response = await repository.Get<Region>($"/api/regions/{RegionId}");
 		if (!response.Error)
 		{
 			region = response.Response;

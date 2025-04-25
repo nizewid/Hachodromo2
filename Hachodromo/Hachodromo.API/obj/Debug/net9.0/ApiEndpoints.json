@@ -34,8 +34,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "country",
-        "Type": "Hachodromo.Shared.Entities.Country",
+        "Name": "city",
+        "Type": "Hachodromo.Shared.Entities.City",
         "IsRequired": true
       }
     ],

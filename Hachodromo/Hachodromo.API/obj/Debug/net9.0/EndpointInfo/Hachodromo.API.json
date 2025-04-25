@@ -53,17 +53,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Country"
+                "$ref": "#/components/schemas/City"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Country"
+                "$ref": "#/components/schemas/City"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Country"
+                "$ref": "#/components/schemas/City"
               }
             }
           }
