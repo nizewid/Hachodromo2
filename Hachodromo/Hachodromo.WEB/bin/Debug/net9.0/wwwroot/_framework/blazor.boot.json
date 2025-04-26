@@ -1,14 +1,16 @@
 {
   "mainAssemblyName": "Hachodromo.WEB",
   "resources": {
-    "hash": "sha256-M92iXJrFXDsWAHuT+d6MEKg5AadYVZNtXKGyDRydwrU=",
+    "hash": "sha256-0N5oHhLCCrES8QVbjb9GJerAH6nNNqQXAK+WCU4dNlY=",
     "fingerprinting": {
       "CurrieTechnologies.Razor.SweetAlert2.lvj7kgyo2r.wasm": "CurrieTechnologies.Razor.SweetAlert2.wasm",
       "Microsoft.AspNetCore.Authorization.n41ua9ceve.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.h4ild4sjod.wasm": "Microsoft.AspNetCore.Components.wasm",
+      "Microsoft.AspNetCore.Components.Authorization.rrohwkxxx2.wasm": "Microsoft.AspNetCore.Components.Authorization.wasm",
       "Microsoft.AspNetCore.Components.Forms.9at76jd5um.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.Web.gczxzkllks.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.5mh1xgfbey.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication.hegb9isbhu.wasm": "Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm",
       "Microsoft.AspNetCore.Cryptography.Internal.8s17eakz8h.wasm": "Microsoft.AspNetCore.Cryptography.Internal.wasm",
       "Microsoft.AspNetCore.Cryptography.KeyDerivation.kafya3ded9.wasm": "Microsoft.AspNetCore.Cryptography.KeyDerivation.wasm",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore.1r0tan0onw.wasm": "Microsoft.AspNetCore.Identity.EntityFrameworkCore.wasm",
@@ -215,8 +217,8 @@
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
       "Hachodromo.Shared.y14t2ejffc.wasm": "Hachodromo.Shared.wasm",
       "Hachodromo.Shared.fyge6nyd46.pdb": "Hachodromo.Shared.pdb",
-      "Hachodromo.WEB.bv5w9onebe.wasm": "Hachodromo.WEB.wasm",
-      "Hachodromo.WEB.blblvbh7yn.pdb": "Hachodromo.WEB.pdb"
+      "Hachodromo.WEB.3t74g63q2t.wasm": "Hachodromo.WEB.wasm",
+      "Hachodromo.WEB.f6qzvmzaf6.pdb": "Hachodromo.WEB.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hvg7u8bimp.js": "sha256-LX9rFEWGVxhkOkAVPG0w5RxPwzPBlEUz6dQNjWS7M+M="
@@ -240,9 +242,11 @@
       "CurrieTechnologies.Razor.SweetAlert2.lvj7kgyo2r.wasm": "sha256-n6ubE26hJennNg6Gc9pr3BUMAuIS7CU4C94k2cw++m8=",
       "Microsoft.AspNetCore.Authorization.n41ua9ceve.wasm": "sha256-N6/4dp+rtuEu+iWs7ZZs30QrZzpGpF9KC6ulCWZCo2w=",
       "Microsoft.AspNetCore.Components.h4ild4sjod.wasm": "sha256-AYyXG0WrvwNEEX2QtbpR9AtYu26WKG+S10Q398vbgqY=",
+      "Microsoft.AspNetCore.Components.Authorization.rrohwkxxx2.wasm": "sha256-WShaslVUH4uKLh3hXazSn9XwD8JhJmLeMj4QyajtDhc=",
       "Microsoft.AspNetCore.Components.Forms.9at76jd5um.wasm": "sha256-AZJqGXJM2Sos31wIr7syLy0TWCLYEWzemxDkwUyfPyk=",
       "Microsoft.AspNetCore.Components.Web.gczxzkllks.wasm": "sha256-0GsGHUcZqMbcNzsilO3GcgG7962qJ/ZHuKufQPUcbh4=",
       "Microsoft.AspNetCore.Components.WebAssembly.5mh1xgfbey.wasm": "sha256-bcBNpQFDHBkNzyn5jS+H2hh1Dm0ra0paIjloKIHy5r4=",
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication.hegb9isbhu.wasm": "sha256-NyfmmSqZ0GXgcnGt9vZIttunoj480cGXerqGtk5Av8I=",
       "Microsoft.AspNetCore.Cryptography.Internal.8s17eakz8h.wasm": "sha256-OMXtmtiwahK3j5kzp5PiOipT+fiJPsNzV6MAJ3sf6Jg=",
       "Microsoft.AspNetCore.Cryptography.KeyDerivation.kafya3ded9.wasm": "sha256-FPhql9l9xMf/UwygMR80JE53LQbPmQiafNwdpznEzvc=",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore.1r0tan0onw.wasm": "sha256-Da+mlENCTmky9oLTzJ7YmNn+BkUBEU8yAr4NcHxmpvs=",
@@ -439,11 +443,11 @@
       "mscorlib.wzkfrp7u5k.wasm": "sha256-9PjsU0gaxxz5Vyw++p9DeYUWLsaXbaMS2RbX6wmTUmk=",
       "netstandard.d82br99ghv.wasm": "sha256-DS8keXxU4eQpa1kIoiFxOA2Ii2g9hoNWSaVi8F8AnIE=",
       "Hachodromo.Shared.y14t2ejffc.wasm": "sha256-xuNf1TdWL30aXxoogf6SweHrDpi56Xj+Gxnd4zYuKJE=",
-      "Hachodromo.WEB.bv5w9onebe.wasm": "sha256-t94BAJyEyVk42xkbzKbZ7kjD6GdVyNlLvdJ3tIaD7Q8="
+      "Hachodromo.WEB.3t74g63q2t.wasm": "sha256-eWeND/Trb5qGXCKHnbl4OximEifhjpItG6oyQ2FI4do="
     },
     "pdb": {
       "Hachodromo.Shared.fyge6nyd46.pdb": "sha256-qdDxBpyc/aOeSjM03mr+rZPrv1HbAhTcn1MyCAmZK2g=",
-      "Hachodromo.WEB.blblvbh7yn.pdb": "sha256-EXffaEC3yJrwBbVvD5PHz5oU8P3yeVaBMBK62ntzfQU="
+      "Hachodromo.WEB.f6qzvmzaf6.pdb": "sha256-uUmt7vegULTSD+o0cIovfFewueJvGlMyYfikoj0Bptc="
     }
   },
   "cacheBootResources": true,

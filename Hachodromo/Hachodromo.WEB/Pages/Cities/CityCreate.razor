@@ -2,6 +2,8 @@
 @inject IRepository repository
 @inject NavigationManager NavigationManager
 @inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles = "Admin")]
+
 <h3>Crear Ciudad para la región: @region?.RegionName</h3>
 <CityForm @ref="cityForm" City="city" OnValidSubmit="Create" ReturnAction="Return"/>
 

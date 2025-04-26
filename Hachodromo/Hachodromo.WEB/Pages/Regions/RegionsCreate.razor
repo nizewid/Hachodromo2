@@ -2,6 +2,8 @@
 @inject IRepository repository
 @inject NavigationManager NavigationManager
 @inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles = "Admin")]
+
 <h3>Crear región para el pais: @country?.Name</h3>
 <RegionForm @ref="regionForm" Region="region" OnValidSubmit="Create" ReturnAction="Return"/>
 

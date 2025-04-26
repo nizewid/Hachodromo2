@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components.Forms
 @inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles= "Admin")]
 
 <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"/>
 <EditForm EditContext="editContext" OnValidSubmit="HandleValidSubmit">
