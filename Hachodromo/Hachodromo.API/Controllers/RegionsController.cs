@@ -1,4 +1,6 @@
 ﻿using Hachodromo.API.Data;
+using Hachodromo.API.Helpers;
+using Hachodromo.Shared.DTOs;
 using Hachodromo.Shared.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,11 +17,15 @@ namespace Hachodromo.API.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<IActionResult> GetAsync()
+        public async Task<IActionResult> GetAsync([FromQuery] PaginationDto pagination)
         {
-            return Ok(await _context.Regions
-                .Include(x => x.Cities)
-                .ToListAsync());
+            var queryable = _context.Regions.Include(x => x.Cities).Where(x => x.Country!.Id == pagination.Id).AsQueryable();
+
+            if (!string.IsNullOrEmpty(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.RegionName.ToLower().Contains(pagination.Filter.ToLower()));
+            }
+            return Ok(await queryable.OrderBy(x=>x.RegionName).Paginate(pagination).ToListAsync());
         }
 
         [HttpGet("{id:int}")]
@@ -36,6 +42,21 @@ namespace Hachodromo.API.Controllers
                 return Ok(region);
             }
         }
+
+        [HttpGet("totalPages")]
+        public async Task<IActionResult> GetPagesAsync([FromQuery] PaginationDto pagination)
+        {
+            var queryable = _context.Regions.Where(x=>x.Country!.Id == pagination.Id).AsQueryable();
+
+            if (!string.IsNullOrEmpty(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.RegionName.ToLower().Contains(pagination.Filter.ToLower()));
+            }
+            double count = await queryable.CountAsync();
+            double totalPages = Math.Ceiling(count / pagination.RecordsNumber);
+            return Ok(totalPages);
+        }
+
         [HttpPost]
         public async Task<ActionResult> PostAsync(Region region)
         {

@@ -1,5 +1,6 @@
 
 using Hachodromo.API.Data;
+using Hachodromo.API.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -21,6 +22,7 @@ namespace Hachodromo.API
             builder.Services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddTransient<SeedDb>();
+            builder.Services.AddScoped<IApiService, ApiService>();
 
             var app = builder.Build();
             SeedData(app);

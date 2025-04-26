@@ -15,13 +15,26 @@ else
 		<div class="card-body">
 			<h5 class="card-title">Detalles de región @region.RegionName</h5> 
 			<p class="card-text">Id: @region.RegionId</p>
-			<p class="card-text">Ciudades: @region.CityNumber</p>
+			<p class="card-text">Ciudades: @region.CityNumber</p> 
 			<div class="mb-2">
 				<a class="btn btn-primary" href="/cities/create/@region.RegionId">Nueva Ciudad</a>
 				<a class="btn btn-success" href="/countries/details/@region.CountryId">Regresar</a>
 			</div>
 		</div>
 	</div>
+	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
+		<div>
+			<a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
+		</div>
+		<div class="mx-2">
+			<input style="widh: 200px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
+		</div>
+		<div>
+			<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
+			<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
+		</div>
+	</div>
+	<Pagination CurrentPage="currentPage" TotalPages="totalPages" SelectedPage="SelectedPageAsync" />
 	<GenericList MyList="cities">
 		<Loading>
 			<p>Cargando...</p>
@@ -50,34 +63,71 @@ else
 
 @code {
 	private Region? region;
-	private List<City> cities;
+	private List<City>? cities;
+	private int currentPage = 1;
+	private int totalPages;
 
 	[Parameter]
 	public int RegionId { get; set; }
 
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public string Page { get; set; } = string.Empty;
+
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public string Filter { get; set; } = string.Empty;
 
 	protected override async Task OnInitializedAsync()
 	{
 		await LoadAsync();
 	}
 
-	private async Task LoadAsync()
+	private async Task SelectedPageAsync(int page)
 	{
-		var responseHttp = await repository.Get<Region>($"/api/regions/{RegionId}");
-		if (responseHttp.Error)
+		currentPage = page;
+		await LoadAsync(page);
+	}
+
+	private async Task LoadAsync(int page = 1)
+	{
+		string url1, url2 = string.Empty;
+
+		if (!string.IsNullOrWhiteSpace(Page))
 		{
-			if (responseHttp.HttpResponseMessage.StatusCode != HttpStatusCode.NotFound)
+			page = Convert.ToInt32(Page);
+		}
+
+		if (string.IsNullOrEmpty(Filter))
+		{
+			url1 = $"/api/cities?id={RegionId}&page={page}";
+			url2 = $"/api/cities/totalPages?id={RegionId}";
+		}
+		else
+		{
+			url1 = $"/api/cities?id={RegionId}&page={page}&filter={Filter}";
+			url2 = $"/api/cities/totalPages?id={RegionId}&filter={Filter}";
+		}
+		var responseHttp1 = await repository.Get<Region>($"/api/regions/{RegionId}");
+		var responseHttp2 = await repository.Get<List<City>>(url1);
+		var responseHttp3 = await repository.Get<int>(url2);
+
+		if (responseHttp1.Error)
+		{
+			if (responseHttp1.HttpResponseMessage.StatusCode != HttpStatusCode.NotFound)
 			{
 				navigationManager.NavigateTo("/countries");
 				return;
 			}
-			var message = await responseHttp.GetErrorMessageAsync();
+			var message = await responseHttp1.GetErrorMessageAsync();
 			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
 			return;
 		}
-		region = responseHttp.Response;
-		cities = region!.Cities!.ToList();
+		region = responseHttp1.Response;
+		cities = responseHttp2.Response;
+		totalPages = responseHttp3.Response;
 	}
+
 
 	private async Task DeleteAsync(int id)
 	{
@@ -102,6 +152,18 @@ else
 			}
 		}
 		await LoadAsync();
+	}
+	private async Task CleanFilterAsync()
+	{
+		Filter = string.Empty;
+		await ApplyFilterAsync();
+	}
+
+	private async Task ApplyFilterAsync()
+	{
+		int page = 1;
+		await LoadAsync(page);
+		await SelectedPageAsync(page);
 	}
 
 }

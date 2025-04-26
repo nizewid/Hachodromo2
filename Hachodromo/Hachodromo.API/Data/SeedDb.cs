@@ -1,4 +1,6 @@
-﻿using Hachodromo.Shared.Entities;
+﻿using Hachodromo.API.Services;
+using Hachodromo.Shared.Entities;
+using Hachodromo.Shared.Responses;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hachodromo.API.Data
@@ -6,223 +8,107 @@ namespace Hachodromo.API.Data
     public class SeedDb
     {
         private readonly DataContext _context;
+        private readonly IApiService _apiService;
 
-        public SeedDb(DataContext context)
+        public SeedDb(DataContext context, IApiService apiService)
         {
             _context = context;
+            _apiService = apiService;
         }
 
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
-            await SeedSpainAsync();
+            await CheckCountriesAsync();
         }
-
-        public async Task SeedSpainAsync()
+        public async Task CheckCountriesAsync()
         {
-            // Si ya hay países, asumimos que la BD está cargada
-            if (await _context.Countries.AnyAsync())
-                return;
+            var targetCountries = new List<(string Name, string Iso2)>
+    {
+        ("España", "ES"),
+        ("Francia", "FR"),
+        ("Portugal", "PT"),
+        ("Andorra", "AD"),
+        ("Gibraltar", "GI"),
+        ("Marruecos", "MA"),
+        ("Italia", "IT"),
+        ("Reino Unido", "GB"),
+        ("Alemania", "DE"),
+        ("Países Bajos", "NL"),
+        ("Estados Unidos", "US"),
+        ("Bélgica", "BE"),
+        ("Suecia", "SE"),
+        ("Rusia", "RU"),
+        ("Suiza", "CH"),
+        ("Noruega", "NO"),
+        ("Dinamarca", "DK"),
+        ("Irlanda", "IE"),
+        ("China", "CN"),
+        ("Japón", "JP"),
+        ("Canadá", "CA"),
+        ("Australia", "AU"),
+        ("Venezuela", "VE")
+    };
 
-            // --- País  → Regiones → Ciudades (sin CityCode) ------------------------
-            var spain = new Country
+            foreach (var (name, iso2) in targetCountries)
             {
-                Name = "España",
-                Regions = new List<Region>
-        {
-            new Region
-            {
-                RegionName = "Andalucía",
-                Cities = new List<City>
+                if (_context.Countries.Any(c => c.Name == name))
+                    continue;
+
+                Country country = new() { Name = name, Regions = new List<Region>() };
+
+                Response responseRegions = await _apiService.GetListAsync<RegionResponse>("/v1", $"/countries/{iso2}/states");
+
+                if (responseRegions.IsSuccess)
                 {
-                    new City { CityName = "Almería"  },
-                    new City { CityName = "Cádiz"    },
-                    new City { CityName = "Córdoba"  },
-                    new City { CityName = "Granada"  },
-                    new City { CityName = "Huelva"   },
-                    new City { CityName = "Jaén"     },
-                    new City { CityName = "Málaga"   },
-                    new City { CityName = "Sevilla"  }
+                    List<RegionResponse> regionResponses = (List<RegionResponse>)responseRegions.Result!;
+                    foreach (RegionResponse regionResponse in regionResponses)
+                    {
+                        Region region = new()
+                        {
+                            RegionName = regionResponse.Name!,
+                            Cities = new List<City>()
+                        };
+
+                        Response responseCities = await _apiService.GetListAsync<CityResponse>("/v1", $"/countries/{iso2}/states/{regionResponse.Iso2}/cities");
+
+                        if (responseCities.IsSuccess)
+                        {
+                            List<CityResponse> cityResponses = (List<CityResponse>)responseCities.Result!;
+                            var cityNames = new HashSet<string>();
+
+                            foreach (CityResponse cityResponse in cityResponses)
+                            {
+                                if (string.IsNullOrWhiteSpace(cityResponse.Name))
+                                    continue;
+
+                                var cityName = cityResponse.Name!.Trim();
+
+                                // Evitar duplicados agregando (ciudad) si ya existe
+                                if (!cityNames.Add(cityName))
+                                {
+                                    cityName += " (ciudad)";
+                                }
+
+                                region.Cities!.Add(new City { CityName = cityName });
+                            }
+                        }
+
+                        if (region.Cities!.Count > 0)
+                        {
+                            country.Regions!.Add(region);
+                        }
+                    }
                 }
-            },
-            new Region
-            {
-                RegionName = "Aragón",
-                Cities = new List<City>
+
+                if (country.Regions!.Count > 0)
                 {
-                    new City { CityName = "Huesca"    },
-                    new City { CityName = "Teruel"    },
-                    new City { CityName = "Zaragoza"  }
-                }
-            },
-            new Region
-            {
-                RegionName = "Asturias",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Oviedo" },
-                    new City { CityName = "Gijón"  }
-                }
-            },
-            new Region
-            {
-                RegionName = "Illes Balears",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Palma de Mallorca" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Canarias",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Las Palmas de Gran Canaria" },
-                    new City { CityName = "Santa Cruz de Tenerife"     }
-                }
-            },
-            new Region
-            {
-                RegionName = "Cantabria",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Santander" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Castilla y León",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Ávila"      },
-                    new City { CityName = "Burgos"     },
-                    new City { CityName = "León"       },
-                    new City { CityName = "Palencia"   },
-                    new City { CityName = "Salamanca"  },
-                    new City { CityName = "Segovia"    },
-                    new City { CityName = "Soria"      },
-                    new City { CityName = "Valladolid" },
-                    new City { CityName = "Zamora"     }
-                }
-            },
-            new Region
-            {
-                RegionName = "Castilla-La Mancha",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Albacete"     },
-                    new City { CityName = "Ciudad Real"  },
-                    new City { CityName = "Cuenca"       },
-                    new City { CityName = "Guadalajara"  },
-                    new City { CityName = "Toledo"       }
-                }
-            },
-            new Region
-            {
-                RegionName = "Cataluña",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Barcelona" },
-                    new City { CityName = "Girona"    },
-                    new City { CityName = "Lleida"    },
-                    new City { CityName = "Tarragona" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Comunitat Valenciana",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Alicante/Alacant" },
-                    new City { CityName = "Castellón/Castelló" },
-                    new City { CityName = "Valencia/València" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Extremadura",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Badajoz" },
-                    new City { CityName = "Cáceres" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Galicia",
-                Cities = new List<City>
-                {
-                    new City { CityName = "A Coruña"   },
-                    new City { CityName = "Lugo"       },
-                    new City { CityName = "Ourense"    },
-                    new City { CityName = "Pontevedra" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Comunidad de Madrid",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Madrid" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Región de Murcia",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Murcia" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Comunidad Foral de Navarra",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Pamplona/Iruña" }
-                }
-            },
-            new Region
-            {
-                RegionName = "País Vasco",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Vitoria-Gasteiz"          },
-                    new City { CityName = "Bilbao"                   },
-                    new City { CityName = "Donostia-San Sebastián"   }
-                }
-            },
-            new Region
-            {
-                RegionName = "La Rioja",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Logroño" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Ceuta",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Ceuta" }
-                }
-            },
-            new Region
-            {
-                RegionName = "Melilla",
-                Cities = new List<City>
-                {
-                    new City { CityName = "Melilla" }
+                    _context.Countries!.Add(country);
+                    await _context.SaveChangesAsync();
                 }
             }
         }
-            };
-
-            _context.Countries.Add(spain);
-            await _context.SaveChangesAsync();
-        }
-
     }
-} 
+}
+
 
