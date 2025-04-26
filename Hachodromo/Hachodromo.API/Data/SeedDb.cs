@@ -1,5 +1,7 @@
-﻿using Hachodromo.API.Services;
+﻿using Hachodromo.API.Helpers;
+using Hachodromo.API.Services;
 using Hachodromo.Shared.Entities;
+using Hachodromo.Shared.Enums;
 using Hachodromo.Shared.Responses;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,17 +11,50 @@ namespace Hachodromo.API.Data
     {
         private readonly DataContext _context;
         private readonly IApiService _apiService;
+        private readonly IUserHelper _userHelper;
 
-        public SeedDb(DataContext context, IApiService apiService)
+        public SeedDb(DataContext context, IApiService apiService, IUserHelper userHelper)
         {
             _context = context;
             _apiService = apiService;
+            _userHelper = userHelper;
         }
 
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
             await CheckCountriesAsync();
+            await CheckRolesAsync();
+            await CheckUserAsync("13364217K","José","Flores Silva","euroflores1@gmail.com","640097444","C/Progreso 36",UserType.Admin);
+        }
+        private async Task CheckRolesAsync()
+        {
+            await _userHelper.CheckRoleAsync(UserType.Admin.ToString());
+            await _userHelper.CheckRoleAsync(UserType.User.ToString());
+        }
+
+        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone, string address, UserType userType)
+        {
+            var user = await _userHelper.GetUserAsync(email);
+            if (user == null)
+            {
+                user = new User
+                {
+                    Document = document,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Email = email,
+                    PhoneNumber = phone,
+                    BornDate = new DateTime(1989, 9, 19),
+                    Address = address,
+                    UserName = email,
+                    City = _context.Cities.FirstOrDefault(),
+                    UserType = userType,
+                };
+                await _userHelper.AddUserAsync(user, "123456");
+                await _userHelper.AddUserToRole(user, userType.ToString());
+            }
+            return user;
         }
         public async Task CheckCountriesAsync()
         {

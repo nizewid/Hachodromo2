@@ -20,5 +20,7 @@ namespace Hachodromo.Shared.Entities
         [InverseProperty("Cities")]
         public virtual Region? Region { get; set; }
 
+        public ICollection<User>? Users { get; set; }
+
     }
 }
