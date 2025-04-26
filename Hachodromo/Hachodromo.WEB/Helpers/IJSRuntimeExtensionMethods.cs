@@ -1,0 +1,26 @@
+﻿using Microsoft.JSInterop;
+
+namespace Hachodromo.WEB.Helpers
+{
+    public static class IJSRuntimeExtensionMethods
+    {
+        public static ValueTask<object> SetLocalStorage(this IJSRuntime js, string key, string content)
+        {
+            return js.InvokeAsync<object>("localStorage.setItem", key, content);
+        }
+        public static ValueTask<object> GetLocalStorage(this IJSRuntime js, string key)
+        {
+            return js.InvokeAsync<object>("localStorage.getItem", key);
+        }
+        public static ValueTask<object> RemoveLocalStorage(this IJSRuntime js, string key)
+        {
+            return js.InvokeAsync<object>("localStorage.removeItem", key);
+        }
+
+        public static ValueTask<object> ClearLocalStorage(this IJSRuntime js)
+        {
+            return js.InvokeAsync<object>("localStorage.clear");
+        }
+
+    }
+}

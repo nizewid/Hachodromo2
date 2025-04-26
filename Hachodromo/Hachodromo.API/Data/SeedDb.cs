@@ -1,4 +1,4 @@
-﻿using Hachodromo.API.Helpers;
+using Hachodromo.API.Helpers;
 using Hachodromo.API.Services;
 using Hachodromo.Shared.Entities;
 using Hachodromo.Shared.Enums;

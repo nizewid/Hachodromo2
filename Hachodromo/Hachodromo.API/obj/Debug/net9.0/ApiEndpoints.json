@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "CreateUser",
+    "RelativePath": "api/accounts/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Hachodromo.Shared.DTOs.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "Login",
+    "RelativePath": "api/accounts/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Hachodromo.Shared.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Hachodromo.API.Controllers.CitiesController",
     "Method": "GetAsync",
     "RelativePath": "api/cities",

@@ -1,4 +1,5 @@
-﻿using Hachodromo.Shared.Entities;
+﻿using Hachodromo.Shared.DTOs;
+using Hachodromo.Shared.Entities;
 using Microsoft.AspNetCore.Identity;
 
 namespace Hachodromo.API.Helpers
@@ -13,6 +14,10 @@ namespace Hachodromo.API.Helpers
         Task AddUserToRole(User user, string roleName);
 
         Task<bool> IsUserInRoleAsync(User user, string roleName);
+
+        Task<SignInResult> LoginAsync(LoginDto model);
+
+        Task LogoutAsync();
 
     }
 }

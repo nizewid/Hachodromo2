@@ -3,8 +3,11 @@ using Hachodromo.API.Data;
 using Hachodromo.API.Helpers;
 using Hachodromo.API.Services;
 using Hachodromo.Shared.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
 
 namespace Hachodromo.API
@@ -27,6 +30,7 @@ namespace Hachodromo.API
             builder.Services.AddTransient<SeedDb>();
             builder.Services.AddScoped<IApiService, ApiService>();
             builder.Services.AddScoped<IUserHelper, UserHelper>();
+            
 
             builder.Services.AddIdentity<User, IdentityRole>(x =>
             {
@@ -40,6 +44,17 @@ namespace Hachodromo.API
             }) 
                 .AddEntityFrameworkStores<DataContext>()
                 .AddDefaultTokenProviders();
+
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(x => x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
+                    ClockSkew = TimeSpan.Zero,
+                });
 
             var app = builder.Build();
             SeedData(app);

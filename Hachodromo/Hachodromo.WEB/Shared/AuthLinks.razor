@@ -1,0 +1,10 @@
+﻿<Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+	<Authorized>
+		<span>Hola, @context.User.Identity!.Name</span>
+		<a href="logout" class="nav-link btn btn-link">Cerrar sesión</a>
+	</Authorized>
+	<NotAuthorized>
+		<a href="login" class="nav-link btn btn-link">Iniciar sesión</a>
+		<a href="register" class="nav-link btn btn-link">Registrarse</a>
+	</NotAuthorized>
+</Microsoft.AspNetCore.Components.Authorization.AuthorizeView>

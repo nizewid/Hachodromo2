@@ -9,6 +9,10 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Hachodromo.API.p
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Core.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Identity.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Humanizer.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Build.Locator.dll
@@ -30,6 +34,8 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extens
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
@@ -171,8 +177,3 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\refint\Hachodrom
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.genruntimeconfig.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\ref\Hachodromo.API.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

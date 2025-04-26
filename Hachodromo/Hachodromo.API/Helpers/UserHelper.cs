@@ -1,4 +1,5 @@
 ﻿using Hachodromo.API.Data;
+using Hachodromo.Shared.DTOs;
 using Hachodromo.Shared.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +11,15 @@ namespace Hachodromo.API.Helpers
         private readonly DataContext _context;
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<User> _singInManager;
 
-        public UserHelper(DataContext context, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+        public UserHelper(DataContext context, UserManager<User> userManager, RoleManager<IdentityRole> roleManager, SignInManager<User> singInManager)
         {
+            UserManager = userManager;
             _context = context;
             _userManager = userManager;
             _roleManager = roleManager;
+            _singInManager = singInManager;
         }
 
         public UserManager<User> UserManager { get; }
@@ -39,17 +43,29 @@ namespace Hachodromo.API.Helpers
             }
         }
 
-        public async Task<User?> GetUserAsync(string email)
+        public async Task<User> GetUserAsync(string email)
         {
-            return await _context.Users.Include(c=>c.City)
-                                        .ThenInclude(r => r.Region)
-                                        .ThenInclude(c => c.Country)
+            var user = await _context.Users
+                                        .Include(c => c.City!)
+                                        .ThenInclude(r => r.Region!)
+                                        .ThenInclude(c => c.Country!)
                                         .FirstOrDefaultAsync(x => x.Email == email);
+            return user!;
         }
 
         public async Task<bool> IsUserInRoleAsync(User user, string roleName)
         {
             return await _userManager.IsInRoleAsync(user, roleName);
+        }
+
+        public async Task<SignInResult> LoginAsync(LoginDto model)
+        {
+            return await _singInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
+        }
+
+        public async Task LogoutAsync()
+        {
+            await _singInManager.SignOutAsync();
         }
     }
 }
