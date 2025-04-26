@@ -52,32 +52,4 @@ namespace Hachodromo.Shared.Entities
         public string FullName => $"{FirstName} {LastName}";
       
     }
-    /*
-     * 
-     * public class User
-    {
-        public int UserId { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public DateTime BornDate { get; set; }
-        public int SexCodeId { get; set; } // Relación con SexCode
-        public int CityId { get; set; } // Relación con City
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime LastLogin { get; set; }
-        public bool IsActive { get; set; }
-        public int UserTypeId { get; set; } // Relación con UserType
-        public int MembershipId { get; set; } // Relación con Membership
-
-        // Propiedades de navegación
-        public SexCode SexCode { get; set; }
-        public City City { get; set; }
-        public UserType UserType { get; set; }
-        public Membership Membership { get; set; }
-        public ICollection<Reservation> Reservations { get; set; }
-        public ICollection<Post> Posts { get; set; }
-        public ICollection<Purchase> Purchases { get; set; }
-        public ICollection<Item> CreatedItems { get; set; }
-    }*/
 }

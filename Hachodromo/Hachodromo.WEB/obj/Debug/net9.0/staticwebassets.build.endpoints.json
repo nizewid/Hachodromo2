@@ -5394,306 +5394,8 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15896"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:05 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000116658889"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ukICfQ9ixSU65ikg3nAnuWPT5AB6Q2l0nxXAFRx1Cvw=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.pdb.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ukICfQ9ixSU65ikg3nAnuWPT5AB6Q2l0nxXAFRx1Cvw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ukICfQ9ixSU65ikg3nAnuWPT5AB6Q2l0nxXAFRx1Cvw="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15896"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:05 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q5tut7a5tf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000116658889"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ukICfQ9ixSU65ikg3nAnuWPT5AB6Q2l0nxXAFRx1Cvw=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q5tut7a5tf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4nexe6r3QiHXtrOB4LD9HptaH4qoTqY4ZKXWpeXPWEk="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.q5tut7a5tf.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ukICfQ9ixSU65ikg3nAnuWPT5AB6Q2l0nxXAFRx1Cvw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q5tut7a5tf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ukICfQ9ixSU65ikg3nAnuWPT5AB6Q2l0nxXAFRx1Cvw="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.pdb.gz"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.qy338fpk5e.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.qy338fpk5e.wasm",
+      "Route": "_framework/Hachodromo.Shared.d6m502utev.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.d6m502utev.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5714,21 +5416,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM=\""
+          "Value": "\"hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:06 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:57 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qy338fpk5e"
+          "Value": "d6m502utev"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM="
+          "Value": "sha256-hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA="
         },
         {
           "Name": "label",
@@ -5737,13 +5439,13 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.qy338fpk5e.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.qy338fpk5e.wasm.gz",
+      "Route": "_framework/Hachodromo.Shared.d6m502utev.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.d6m502utev.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000162707452"
+          "Quality": "0.000162839928"
         }
       ],
       "ResponseHeaders": [
@@ -5761,7 +5463,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6145"
+          "Value": "6140"
         },
         {
           "Name": "Content-Type",
@@ -5769,15 +5471,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jukHvlLjXwGP8jXiCZWJ3Eoaaqw9U2glGR9j6td6jcM=\""
+          "Value": "\"aFndeO394nsNpotNl44F4cKSR/mBzRifOaiGfnQ+7WE=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM=\""
+          "Value": "W/\"hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:07 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
         },
         {
           "Name": "Vary",
@@ -5787,11 +5489,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qy338fpk5e"
+          "Value": "d6m502utev"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM="
+          "Value": "sha256-hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA="
         },
         {
           "Name": "label",
@@ -5800,8 +5502,8 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.qy338fpk5e.wasm.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.qy338fpk5e.wasm.gz",
+      "Route": "_framework/Hachodromo.Shared.d6m502utev.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.d6m502utev.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5818,7 +5520,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6145"
+          "Value": "6140"
         },
         {
           "Name": "Content-Type",
@@ -5826,11 +5528,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jukHvlLjXwGP8jXiCZWJ3Eoaaqw9U2glGR9j6td6jcM=\""
+          "Value": "\"aFndeO394nsNpotNl44F4cKSR/mBzRifOaiGfnQ+7WE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:07 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
         },
         {
           "Name": "Vary",
@@ -5840,11 +5542,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "qy338fpk5e"
+          "Value": "d6m502utev"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jukHvlLjXwGP8jXiCZWJ3Eoaaqw9U2glGR9j6td6jcM="
+          "Value": "sha256-aFndeO394nsNpotNl44F4cKSR/mBzRifOaiGfnQ+7WE="
         },
         {
           "Name": "label",
@@ -5853,8 +5555,306 @@
       ]
     },
     {
+      "Route": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:07:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hx3xds2m9t"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000116658889"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8571"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VP0ZO0k0aBSH03NerWmELFG9bWtP9oqWHfOuA+UoDMU=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hx3xds2m9t"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8571"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VP0ZO0k0aBSH03NerWmELFG9bWtP9oqWHfOuA+UoDMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hx3xds2m9t"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VP0ZO0k0aBSH03NerWmELFG9bWtP9oqWHfOuA+UoDMU="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.pdb.gz"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:07:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000116658889"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8571"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VP0ZO0k0aBSH03NerWmELFG9bWtP9oqWHfOuA+UoDMU=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JU9zM0ROiNssfulXVO1BvWv1ntsd/DBHTFLet0V6gpU="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.hx3xds2m9t.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8571"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VP0ZO0k0aBSH03NerWmELFG9bWtP9oqWHfOuA+UoDMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VP0ZO0k0aBSH03NerWmELFG9bWtP9oqWHfOuA+UoDMU="
+        }
+      ]
+    },
+    {
       "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.qy338fpk5e.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.d6m502utev.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5875,28 +5875,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM=\""
+          "Value": "\"hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:06 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:57 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM="
+          "Value": "sha256-hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.qy338fpk5e.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.d6m502utev.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000162707452"
+          "Quality": "0.000162839928"
         }
       ],
       "ResponseHeaders": [
@@ -5914,7 +5914,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6145"
+          "Value": "6140"
         },
         {
           "Name": "Content-Type",
@@ -5922,15 +5922,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jukHvlLjXwGP8jXiCZWJ3Eoaaqw9U2glGR9j6td6jcM=\""
+          "Value": "\"aFndeO394nsNpotNl44F4cKSR/mBzRifOaiGfnQ+7WE=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM=\""
+          "Value": "W/\"hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:07 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
         },
         {
           "Name": "Vary",
@@ -5940,13 +5940,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LpXOt424yR+7BKI/3HVKLnQPvM1cmwIb3iAx7/eIOzM="
+          "Value": "sha256-hWeUG5v1ZVFeQHz9lAUyxy77ItpFoolvJbhh2bYZQcA="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.Shared.wasm.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.qy338fpk5e.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.d6m502utev.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5963,7 +5963,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6145"
+          "Value": "6140"
         },
         {
           "Name": "Content-Type",
@@ -5971,11 +5971,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jukHvlLjXwGP8jXiCZWJ3Eoaaqw9U2glGR9j6td6jcM=\""
+          "Value": "\"aFndeO394nsNpotNl44F4cKSR/mBzRifOaiGfnQ+7WE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:07 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
         },
         {
           "Name": "Vary",
@@ -5985,13 +5985,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jukHvlLjXwGP8jXiCZWJ3Eoaaqw9U2glGR9j6td6jcM="
+          "Value": "sha256-aFndeO394nsNpotNl44F4cKSR/mBzRifOaiGfnQ+7WE="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.WEB.5nwi433zi1.wasm",
-      "AssetFile": "_framework/Hachodromo.WEB.5nwi433zi1.wasm",
+      "Route": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb",
+      "AssetFile": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6004,44 +6004,44 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "113429"
+          "Value": "93932"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/wasm"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4=\""
+          "Value": "\"XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:11 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:57 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5nwi433zi1"
+          "Value": "ewhnmxd2e2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4="
+          "Value": "sha256-XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8="
         },
         {
           "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.wasm"
+          "Value": "_framework/Hachodromo.WEB.pdb"
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.WEB.5nwi433zi1.wasm",
-      "AssetFile": "_framework/Hachodromo.WEB.5nwi433zi1.wasm.gz",
+      "Route": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb",
+      "AssetFile": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000024008451"
+          "Quality": "0.000013892555"
         }
       ],
       "ResponseHeaders": [
@@ -6059,23 +6059,23 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "41651"
+          "Value": "71980"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/wasm"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"CoL7+IrGz+iPkhZ1SP3C0DgqI5gTcfrZnMglwt1q+38=\""
+          "Value": "\"DchXHuqdJ+aWjzH3upCV26rSIgePUiFgM62//AfrKgI=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4=\""
+          "Value": "W/\"XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         },
         {
           "Name": "Vary",
@@ -6085,21 +6085,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5nwi433zi1"
+          "Value": "ewhnmxd2e2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4="
+          "Value": "sha256-XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8="
         },
         {
           "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.wasm"
+          "Value": "_framework/Hachodromo.WEB.pdb"
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.WEB.5nwi433zi1.wasm.gz",
-      "AssetFile": "_framework/Hachodromo.WEB.5nwi433zi1.wasm.gz",
+      "Route": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6116,19 +6116,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "41651"
+          "Value": "71980"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/wasm"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"CoL7+IrGz+iPkhZ1SP3C0DgqI5gTcfrZnMglwt1q+38=\""
+          "Value": "\"DchXHuqdJ+aWjzH3upCV26rSIgePUiFgM62//AfrKgI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         },
         {
           "Name": "Vary",
@@ -6138,11 +6138,172 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5nwi433zi1"
+          "Value": "ewhnmxd2e2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CoL7+IrGz+iPkhZ1SP3C0DgqI5gTcfrZnMglwt1q+38="
+          "Value": "sha256-DchXHuqdJ+aWjzH3upCV26rSIgePUiFgM62//AfrKgI="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.WEB.pdb.gz"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.ggl22fdbca.wasm",
+      "AssetFile": "_framework/Hachodromo.WEB.ggl22fdbca.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "129301"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:16:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ggl22fdbca"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.WEB.wasm"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.ggl22fdbca.wasm",
+      "AssetFile": "_framework/Hachodromo.WEB.ggl22fdbca.wasm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000021768944"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "45936"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pIRJl81Xq/hMD1noGIOEJmpYI1V5x3JIkmyOtGmqpNw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ggl22fdbca"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.WEB.wasm"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.ggl22fdbca.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.WEB.ggl22fdbca.wasm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "45936"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pIRJl81Xq/hMD1noGIOEJmpYI1V5x3JIkmyOtGmqpNw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ggl22fdbca"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pIRJl81Xq/hMD1noGIOEJmpYI1V5x3JIkmyOtGmqpNw="
         },
         {
           "Name": "label",
@@ -6152,7 +6313,7 @@
     },
     {
       "Route": "_framework/Hachodromo.WEB.pdb",
-      "AssetFile": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb",
+      "AssetFile": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6165,7 +6326,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "83400"
+          "Value": "93932"
         },
         {
           "Name": "Content-Type",
@@ -6173,28 +6334,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY=\""
+          "Value": "\"XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:11 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:57 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY="
+          "Value": "sha256-XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.WEB.pdb",
-      "AssetFile": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000016040036"
+          "Quality": "0.000013892555"
         }
       ],
       "ResponseHeaders": [
@@ -6212,7 +6373,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62343"
+          "Value": "71980"
         },
         {
           "Name": "Content-Type",
@@ -6220,15 +6381,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sapedhHKDOL7u3F7PGY721ukEisQO6QDdqJFjMJhPWI=\""
+          "Value": "\"DchXHuqdJ+aWjzH3upCV26rSIgePUiFgM62//AfrKgI=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY=\""
+          "Value": "W/\"XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         },
         {
           "Name": "Vary",
@@ -6238,13 +6399,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY="
+          "Value": "sha256-XgQqHbYz7icxb3+gP7+1TcYA2/DNU6RzPpC8EW6a2K8="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.WEB.pdb.gz",
-      "AssetFile": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.WEB.ewhnmxd2e2.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6261,7 +6422,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62343"
+          "Value": "71980"
         },
         {
           "Name": "Content-Type",
@@ -6269,11 +6430,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sapedhHKDOL7u3F7PGY721ukEisQO6QDdqJFjMJhPWI=\""
+          "Value": "\"DchXHuqdJ+aWjzH3upCV26rSIgePUiFgM62//AfrKgI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         },
         {
           "Name": "Vary",
@@ -6283,174 +6444,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sapedhHKDOL7u3F7PGY721ukEisQO6QDdqJFjMJhPWI="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb",
-      "AssetFile": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "83400"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:11 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tzsvc0tcsf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb",
-      "AssetFile": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000016040036"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "62343"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sapedhHKDOL7u3F7PGY721ukEisQO6QDdqJFjMJhPWI=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tzsvc0tcsf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-d/+txPr2cwvCRecyfqE8dVWGKrksufmdW55nh6krLfY="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb.gz",
-      "AssetFile": "_framework/Hachodromo.WEB.tzsvc0tcsf.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "62343"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sapedhHKDOL7u3F7PGY721ukEisQO6QDdqJFjMJhPWI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tzsvc0tcsf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sapedhHKDOL7u3F7PGY721ukEisQO6QDdqJFjMJhPWI="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.pdb.gz"
+          "Value": "sha256-DchXHuqdJ+aWjzH3upCV26rSIgePUiFgM62//AfrKgI="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.WEB.wasm",
-      "AssetFile": "_framework/Hachodromo.WEB.5nwi433zi1.wasm",
+      "AssetFile": "_framework/Hachodromo.WEB.ggl22fdbca.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6463,7 +6463,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "113429"
+          "Value": "129301"
         },
         {
           "Name": "Content-Type",
@@ -6471,28 +6471,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4=\""
+          "Value": "\"IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:11 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:57 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4="
+          "Value": "sha256-IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.WEB.wasm",
-      "AssetFile": "_framework/Hachodromo.WEB.5nwi433zi1.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.WEB.ggl22fdbca.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000024008451"
+          "Quality": "0.000021768944"
         }
       ],
       "ResponseHeaders": [
@@ -6510,7 +6510,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "41651"
+          "Value": "45936"
         },
         {
           "Name": "Content-Type",
@@ -6518,15 +6518,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CoL7+IrGz+iPkhZ1SP3C0DgqI5gTcfrZnMglwt1q+38=\""
+          "Value": "\"pIRJl81Xq/hMD1noGIOEJmpYI1V5x3JIkmyOtGmqpNw=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4=\""
+          "Value": "W/\"IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         },
         {
           "Name": "Vary",
@@ -6536,13 +6536,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wdW5DukwhIkUc5ndOJoprM/sjGuYSivC8R6r3Kk/5K4="
+          "Value": "sha256-IEcpOxrw+aFkixr9aGVUkq8OM0F9yrMPWSj2ex++wpY="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.WEB.wasm.gz",
-      "AssetFile": "_framework/Hachodromo.WEB.5nwi433zi1.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.WEB.ggl22fdbca.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6559,7 +6559,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "41651"
+          "Value": "45936"
         },
         {
           "Name": "Content-Type",
@@ -6567,11 +6567,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CoL7+IrGz+iPkhZ1SP3C0DgqI5gTcfrZnMglwt1q+38=\""
+          "Value": "\"pIRJl81Xq/hMD1noGIOEJmpYI1V5x3JIkmyOtGmqpNw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         },
         {
           "Name": "Vary",
@@ -6581,7 +6581,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CoL7+IrGz+iPkhZ1SP3C0DgqI5gTcfrZnMglwt1q+38="
+          "Value": "sha256-pIRJl81Xq/hMD1noGIOEJmpYI1V5x3JIkmyOtGmqpNw="
         }
       ]
     },
@@ -68286,7 +68286,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "42838"
+          "Value": "43923"
         },
         {
           "Name": "Content-Type",
@@ -68294,17 +68294,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lOwKTdyKsd42gB4DwJXmmrB7ABBEhw3GjZ2t6/x6kyQ=\""
+          "Value": "\"pIgqfnW6MM+AWM937YBHdXsWICQLOtdfJu+EjsJpnyo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 22:30:12 GMT"
+          "Value": "Sat, 26 Apr 2025 23:16:58 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lOwKTdyKsd42gB4DwJXmmrB7ABBEhw3GjZ2t6/x6kyQ="
+          "Value": "sha256-pIgqfnW6MM+AWM937YBHdXsWICQLOtdfJu+EjsJpnyo="
         }
       ]
     },
@@ -68315,7 +68315,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000073131490"
+          "Quality": "0.000073136839"
         }
       ],
       "ResponseHeaders": [
@@ -68333,7 +68333,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13673"
+          "Value": "13672"
         },
         {
           "Name": "Content-Type",
@@ -68341,15 +68341,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Reb9j5cw0Zj4+hHphRRzlYZ71J65EX9qh9AQ2uyZErs=\""
+          "Value": "\"b4CrOotXuAw6fx2+fGC2FaIf6hPvUh837livwxFX8Mc=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"lOwKTdyKsd42gB4DwJXmmrB7ABBEhw3GjZ2t6/x6kyQ=\""
+          "Value": "W/\"pIgqfnW6MM+AWM937YBHdXsWICQLOtdfJu+EjsJpnyo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:07 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
         },
         {
           "Name": "Vary",
@@ -68359,7 +68359,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lOwKTdyKsd42gB4DwJXmmrB7ABBEhw3GjZ2t6/x6kyQ="
+          "Value": "sha256-pIgqfnW6MM+AWM937YBHdXsWICQLOtdfJu+EjsJpnyo="
         }
       ]
     },
@@ -68382,7 +68382,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13673"
+          "Value": "13672"
         },
         {
           "Name": "Content-Type",
@@ -68390,11 +68390,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Reb9j5cw0Zj4+hHphRRzlYZ71J65EX9qh9AQ2uyZErs=\""
+          "Value": "\"b4CrOotXuAw6fx2+fGC2FaIf6hPvUh837livwxFX8Mc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 21:38:07 GMT"
+          "Value": "Sat, 26 Apr 2025 23:07:58 GMT"
         },
         {
           "Name": "Vary",
@@ -68404,7 +68404,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Reb9j5cw0Zj4+hHphRRzlYZ71J65EX9qh9AQ2uyZErs="
+          "Value": "sha256-b4CrOotXuAw6fx2+fGC2FaIf6hPvUh837livwxFX8Mc="
         }
       ]
     },
