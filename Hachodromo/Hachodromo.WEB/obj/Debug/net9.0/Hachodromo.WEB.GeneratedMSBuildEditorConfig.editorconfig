@@ -28,6 +28,18 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxDaGFuZ2VQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ConfirmEmail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxDb25maXJtRW1haWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/EditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxFZGl0VXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ResendTokenEmail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZXNlbmRUb2tlbkVtYWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Cities/CitiesEdit.razor]
@@ -106,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/GenericList.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEdlbmVyaWNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/InputImg.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0SW1nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/Pagination.razor]

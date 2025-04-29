@@ -5,51 +5,57 @@
 @attribute [Authorize(Roles= "Admin")]
 
 <h3>Paises</h3>
-<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
-	<div>
-		<a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
-	</div>
-	<div class="mx-2">
-		<input style="widh: 300px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter"/>
-	</div>
-	<div>
-		<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
-		<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
-	</div>
-</div>
 
-<Pagination CurrentPage="currentPage"
-TotalPages="totalPages"
-SelectedPage="SelectedPageAsync" />
+@if(Countries is null){
+	<div class="spinner"/>
+}else{
+	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
+		<div>
+			<a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
+		</div>
+		<div class="mx-2">
+			<input style="widh: 300px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
+		</div>
+		<div>
+			<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
+			<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
+		</div>
+	</div>
 
-<GenericList MyList="Countries">
-	<Loading>
-		<p>Cargando...</p>
-	</Loading>
-	<Body>
-		<table class="table table-striped">
-			<thead>
+	<Pagination CurrentPage="currentPage"
+				TotalPages="totalPages"
+				SelectedPage="SelectedPageAsync" />
+
+	<GenericList MyList="Countries">
+		<Loading>
+			<div class="spinner" />
+		</Loading>
+		<Body>
+			<table class="table table-striped">
+				<thead>
 				<th>id</th>
 				<th>Nombre</th>
 				<th>Provincias</th>
 				<th>Acciones</th>
-			</thead>
-			<tbody>
-				@foreach (var country in Countries!)
-				{
-					<tr>
-						<td>@country.Id</td>
-						<td>@country.Name</td>
-						<td>@country.RegionNumber</td>
-						<a class="btn btn-light" href="/countries/details/@country.Id">Detalles</a>
-						<a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
-						<button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id)) >Eliminar</button>
-					</tr>
-				}
-			</tbody>
-		</table>
-	</Body>
-</GenericList>
+				</thead>
+				<tbody>
+					@foreach (var country in Countries!)
+					{
+						<tr>
+							<td>@country.Id</td>
+							<td>@country.Name</td>
+							<td>@country.RegionNumber</td>
+							<a class="btn btn-light" href="/countries/details/@country.Id">Detalles</a>
+							<a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
+							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id))>Eliminar</button>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</Body>
+	</GenericList>
+}
+
 @code {
 	public List<Country>? Countries { get; set; }
 	private int currentPage = 1;

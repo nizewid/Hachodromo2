@@ -1,6 +1,69 @@
 [
   {
     "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "Put",
+    "RelativePath": "api/accounts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Hachodromo.Shared.Entities.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "Get",
+    "RelativePath": "api/accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "ChangePasswordAsync",
+    "RelativePath": "api/accounts/changePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Hachodromo.Shared.DTOs.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "ConfirmEmailAsync",
+    "RelativePath": "api/accounts/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
     "Method": "CreateUser",
     "RelativePath": "api/accounts/CreateUser",
     "HttpMethod": "POST",
@@ -26,6 +89,22 @@
       {
         "Name": "model",
         "Type": "Hachodromo.Shared.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "ResendToken",
+    "RelativePath": "api/accounts/ResendToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Hachodromo.Shared.DTOs.EmailDto",
         "IsRequired": true
       }
     ],
@@ -120,6 +199,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CitiesController",
+    "Method": "GetComboAsync",
+    "RelativePath": "api/cities/combo/{regionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regionId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -254,6 +349,16 @@
   },
   {
     "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
+    "Method": "GetComboAsync",
+    "RelativePath": "api/countries/combo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.CountriesControllers",
     "Method": "GetPagesAsync",
     "RelativePath": "api/countries/totalPages",
     "HttpMethod": "GET",
@@ -372,6 +477,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.RegionsController",
+    "Method": "GetComboAsync",
+    "RelativePath": "api/regions/combo/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
         "Type": "System.Int32",
         "IsRequired": true
       }

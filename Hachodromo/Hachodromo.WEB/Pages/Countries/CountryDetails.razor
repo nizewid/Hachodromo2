@@ -6,7 +6,7 @@
 
 @if (country is null)
 {
-	<p>Cargando...</p>
+	<div class="spinner" />
 }
 else
 {
@@ -39,7 +39,7 @@ else
 	<Pagination CurrentPage="currentPage" TotalPages="totalPages" SelectedPage="SelectedPageAsync" />
 	<GenericList MyList="regions">
 		<Loading>
-			<p>Cargando...</p>
+			<div class="spinner" />
 		</Loading>
 		<Body>
 			<table class="table table-striped">

@@ -34,6 +34,11 @@ namespace Hachodromo.API.Helpers
             await _userManager.AddToRoleAsync(user, roleName);
         }
 
+        public async Task<IdentityResult> ChangePasswordAsync(User user, string oldPassword, string newPassword)
+        {
+            return await _userManager.ChangePasswordAsync(user, oldPassword, newPassword);
+        }
+
         public async Task CheckRoleAsync(string roleName)
         {
             bool roleExists = await _roleManager.RoleExistsAsync(roleName);
@@ -43,6 +48,16 @@ namespace Hachodromo.API.Helpers
             }
         }
 
+        public async Task<IdentityResult> ConfirmEmailAsync(User user, string token)
+        {
+            return await _userManager.ConfirmEmailAsync(user, token);
+        }
+
+        public async Task<string> GenerateEmailConfirmationTokenAsync(User user)
+        {
+            return await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        }
+
         public async Task<User> GetUserAsync(string email)
         {
             var user = await _context.Users
@@ -50,6 +65,16 @@ namespace Hachodromo.API.Helpers
                                         .ThenInclude(r => r.Region!)
                                         .ThenInclude(c => c.Country!)
                                         .FirstOrDefaultAsync(x => x.Email == email);
+            return user!;
+        }
+
+        public async Task<User> GetUserAsync(Guid userId)
+        {
+            var user = await _context.Users
+                                        .Include(c => c.City!)
+                                        .ThenInclude(r => r.Region!)
+                                        .ThenInclude(c => c.Country!)
+                                        .FirstOrDefaultAsync(x => x.Id == userId.ToString());
             return user!;
         }
 
@@ -66,6 +91,11 @@ namespace Hachodromo.API.Helpers
         public async Task LogoutAsync()
         {
             await _singInManager.SignOutAsync();
+        }
+
+        public async Task<IdentityResult> UpdateUserAsync(User user)
+        {
+            return await _userManager.UpdateAsync(user);
         }
     }
 }

@@ -60,6 +60,17 @@ namespace Hachodromo.API.Controllers
             return Ok(totalPages);
         }
 
+        [AllowAnonymous]
+        [HttpGet("combo/{countryId:int}")]
+        public async Task<IActionResult> GetComboAsync(int countryId)
+        {
+            return Ok(await _context.Regions
+                .Where(x => x.CountryId == countryId)
+                .OrderBy(x => x.RegionName)
+                //.Select(x => new { x.RegionId, x.RegionName })
+                .ToListAsync());
+        }
+
         [HttpPost]
         public async Task<ActionResult> PostAsync(Region region)
         {

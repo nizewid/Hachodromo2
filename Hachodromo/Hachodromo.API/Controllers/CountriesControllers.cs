@@ -51,6 +51,16 @@ namespace Hachodromo.API.Controllers
             return Ok(totalPages);
         }
 
+        [AllowAnonymous]
+        [HttpGet("combo")]
+        public async Task<IActionResult> GetComboAsync()
+        {
+            return Ok(await _context.Countries
+                .OrderBy(x => x.Name)
+             //   .Select(x => new { x.Id, x.Name })
+                .ToListAsync());
+        }
+
         [HttpGet("/full")]
         public async Task<IActionResult> GetFullAsync()
         {

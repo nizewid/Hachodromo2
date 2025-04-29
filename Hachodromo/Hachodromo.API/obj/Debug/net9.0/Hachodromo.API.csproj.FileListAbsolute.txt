@@ -177,3 +177,9 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\refint\Hachodrom
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.genruntimeconfig.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\ref\Hachodromo.API.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Storage.Blobs.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Storage.Common.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.IO.Hashing.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\MailKit.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\MimeKit.dll

@@ -4,28 +4,43 @@
 @inject NavigationManager navigationManager
 @inject ILoginService loginService
 
-<h3>Iniciar Sesión</h3>
-
 <EditForm Model="loginDto" OnValidSubmit="LoginAsync">
     <DataAnnotationsValidator />
 
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-4">
-            <div class="mb-3">
-                <label>Email:</label>
-                <div>
-                    <InputText class="form-control" @bind-Value="@loginDto.Email" />
-                    <ValidationMessage For="@(() => loginDto.Email)" />
+            <div class="card shadow-sm rounded-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">Iniciar Sesión</h5>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email:</label>
+                        <InputText class="form-control" @bind-Value="loginDto.Email" />
+                        <ValidationMessage For="@(() => loginDto.Email)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña:</label>
+                        <InputText type="password" class="form-control" @bind-Value="loginDto.Password" />
+                        <ValidationMessage For="@(() => loginDto.Password)" />
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">Entrar</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+					<div class="text-center">
+						<p class="mb-0">¿No tienes una cuenta? <a href="/Register">Regístrate</a></p>
+					</div>
+					<div class="text-center">
+						<p class="mb-0">¿Olvidaste tu contraseña? <a href="/ForgotPassword">Recuperar contraseña</a></p>
+					</div>
+                    <div class="text-center">
+                        <p class="mb-0">Reenviar correo de reactivación <a href="/ResendToken">Enviar reactivación</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="mb-3">
-                <label>Contraseña:</label>
-                <div>
-                    <InputText type="password" class="form-control" @bind-Value="@loginDto.Password" />
-                    <ValidationMessage For="@(() => loginDto.Password)" />
-                </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
         </div>
     </div>
 </EditForm>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hachodromo.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c232dbaab818ea6eb1555564b8a5bc27f9ed9c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa774a2e83d27f5735cd7a0328dacb2a87ea493a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hachodromo.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hachodromo.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

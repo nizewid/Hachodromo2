@@ -23,9 +23,9 @@ namespace Hachodromo.API.Data
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
-            await CheckCountriesAsync();
-            await CheckRolesAsync();
-            await CheckUserAsync("13364217K","José","Flores Silva","euroflores1@gmail.com","640097444","C/Progreso 36",UserType.Admin);
+                await CheckCountriesAsync();
+                await CheckRolesAsync();
+               await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444","C/Progreso 36",UserType.Admin);
         }
         private async Task CheckRolesAsync()
         {
@@ -38,6 +38,11 @@ namespace Hachodromo.API.Data
             var user = await _userHelper.GetUserAsync(email);
             if (user == null)
             {
+                var city = _context.Cities.FirstOrDefault(x => x.CityName == "Gijón");
+                if (city == null)
+                {
+                    city = await _context.Cities.FirstOrDefaultAsync();
+                }
                 user = new User
                 {
                     Document = document,
@@ -48,11 +53,15 @@ namespace Hachodromo.API.Data
                     BornDate = new DateTime(1989, 9, 19),
                     Address = address,
                     UserName = email,
-                    City = _context.Cities.FirstOrDefault(),
+                    City = city,
                     UserType = userType,
                 };
                 await _userHelper.AddUserAsync(user, "123456");
                 await _userHelper.AddUserToRole(user, userType.ToString());
+
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
+                await _userHelper.ConfirmEmailAsync(user, token);
+
             }
             return user;
         }
