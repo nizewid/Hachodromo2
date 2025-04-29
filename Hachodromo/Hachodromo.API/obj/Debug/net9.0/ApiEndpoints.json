@@ -96,6 +96,22 @@
   },
   {
     "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "RecoverPassword",
+    "RelativePath": "api/accounts/RecoverPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Hachodromo.Shared.DTOs.EmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
     "Method": "ResendToken",
     "RelativePath": "api/accounts/ResendToken",
     "HttpMethod": "POST",
@@ -105,6 +121,22 @@
       {
         "Name": "model",
         "Type": "Hachodromo.Shared.DTOs.EmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/accounts/Resetnewpassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Hachodromo.Shared.DTOs.ResetPasswordDto",
         "IsRequired": true
       }
     ],

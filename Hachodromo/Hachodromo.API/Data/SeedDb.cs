@@ -23,9 +23,9 @@ namespace Hachodromo.API.Data
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
-                await CheckCountriesAsync();
-                await CheckRolesAsync();
-               await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444","C/Progreso 36",UserType.Admin);
+            await CheckCountriesAsync();
+            await CheckRolesAsync();
+            await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444","C/Progreso 36",UserType.Admin);
         }
         private async Task CheckRolesAsync()
         {

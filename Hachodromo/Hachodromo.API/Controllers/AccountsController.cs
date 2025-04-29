@@ -152,7 +152,7 @@ namespace Hachodromo.API.Controllers
                 var result = await _userHelper.UpdateUserAsync(currentUser);
                 if (result.Succeeded)
                 {
-                    return NoContent();
+                    return Ok(BuildToken(currentUser));
                 }
                 else
                 {
@@ -232,6 +232,44 @@ namespace Hachodromo.API.Controllers
                 return NoContent();
             }
             return BadRequest(response.Message);
+        }
+        [HttpPost("RecoverPassword")]
+        public async Task<ActionResult> RecoverPassword([FromBody] EmailDto model)
+        {
+            User user = await _userHelper.GetUserAsync(model.Email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var myToken = await _userHelper.GeneratePasswordResetTokenAsync(user);
+            var tokenLink = $"{_configuration["UrlWeb"]}/resetpassword?userid={user.Id}&token={HttpUtility.UrlEncode(myToken)}";
+
+            var response = _mailHelper.SendMail(user.FullName, user.Email!,
+                "HachodromoWeb - Recuperación de contraseña",
+                $"<h1> Hachodromo - Recuperación de contraseña </h1>" +
+                $"<p>Es necesario recuperar tu contraseña, haz click en el siguiente enlace para recuperarla:</p>" +
+                $"<p><a href='{tokenLink}'>Recuperar contraseña</a></p>");
+
+            if (response.IsSuccess)
+            {
+                return NoContent();
+            }
+            return BadRequest(response.Message);
+        }
+        [HttpPost("Resetnewpassword")]
+        public async Task<ActionResult> ResetPassword([FromBody] ResetPasswordDto model)
+        {
+            var user = await _userHelper.GetUserAsync(model.Email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var result = await _userHelper.ResetPasswordAsync(user, model.Token, model.Password);
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors.FirstOrDefault()!.Description);
+            }
+            return NoContent();
         }
     }
 }

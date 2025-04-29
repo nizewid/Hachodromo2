@@ -3,6 +3,7 @@ using Hachodromo.Shared.DTOs;
 using Hachodromo.Shared.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Hachodromo.API.Helpers
 {
@@ -58,6 +59,7 @@ namespace Hachodromo.API.Helpers
             return await _userManager.GenerateEmailConfirmationTokenAsync(user);
         }
 
+
         public async Task<User> GetUserAsync(string email)
         {
             var user = await _context.Users
@@ -92,10 +94,21 @@ namespace Hachodromo.API.Helpers
         {
             await _singInManager.SignOutAsync();
         }
-
         public async Task<IdentityResult> UpdateUserAsync(User user)
         {
             return await _userManager.UpdateAsync(user);
         }
+
+        public async Task<IdentityResult> ResetPasswordAsync(User user, string token, string newPassword)
+        {
+            return await _userManager.ResetPasswordAsync(user, token, newPassword);
+        }
+
+
+        public async Task<string> GeneratePasswordResetTokenAsync(User user)
+        {
+            return await _userManager.GeneratePasswordResetTokenAsync(user);
+        }
+
     }
 }

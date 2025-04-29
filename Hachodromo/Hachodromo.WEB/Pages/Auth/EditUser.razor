@@ -215,14 +215,14 @@ else
 
     private async Task SaveUserAsync()
     {
-        var responseHttp = await repository.Put<User>("/api/accounts", user!);
+        var responseHttp = await repository.Put<User, TokenDto>("/api/accounts", user!);
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
             await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
             return;
         }
-
+		await loginService.LoginAsync(responseHttp.Response!.Token);
         navigationManager.NavigateTo("/");
     }
 }

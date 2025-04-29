@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ws0XmUqLKIWfQZPXiB1fjl9MRvnjCOxQSWSvC4hPc8U=",
+  "Hash": "5w3fU/VhRMx9S6h33yZVUMq463oh7uoP4KaZgjJ0yQo=",
   "Source": "Hachodromo.WEB",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "mzaq74zq20",
-      "Integrity": "ImEkHvY/dbg6reP4MTR5fYi16r4S3G7XTVjRexvTCGE=",
+      "Fingerprint": "93hcgk58z9",
+      "Integrity": "hREsQJL04blhKGEHVrA2GiJEcaa5OdB7xoHPrJw26C0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\blazor.boot.json"
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "obxamtonpr",
-      "Integrity": "NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA=",
+      "Fingerprint": "btzcdq9s1e",
+      "Integrity": "T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.Shared\\bin\\Debug\\net9.0\\Hachodromo.Shared.pdb"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "r4vp5cieqw",
-      "Integrity": "JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k=",
+      "Fingerprint": "e9gmxfm74l",
+      "Integrity": "0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\webcil\\Hachodromo.Shared.wasm"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "ydtu88oiud",
-      "Integrity": "uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM=",
+      "Fingerprint": "gsbr9b93wv",
+      "Integrity": "cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\Hachodromo.WEB.pdb"
@@ -283,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "7xvkrxejzc",
-      "Integrity": "ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8=",
+      "Fingerprint": "lpxsbv9bqm",
+      "Integrity": "V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\webcil\\Hachodromo.WEB.wasm"
@@ -7451,12 +7451,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-obxamtonpr.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-btzcdq9s1e.gz",
       "SourceId": "Hachodromo.WEB",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=obxamtonpr}]!.pdb.gz",
+      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=btzcdq9s1e}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -7465,8 +7465,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "36m2w8u6t8",
-      "Integrity": "RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4=",
+      "Fingerprint": "9h7d4lbb1j",
+      "Integrity": "4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb"
@@ -8522,7 +8522,7 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.IO.FileSystem.Watcher.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\ji1y6g0vlk-mzaq74zq20.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\ji1y6g0vlk-93hcgk58z9.gz",
       "SourceId": "Hachodromo.WEB",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\",
@@ -8536,19 +8536,19 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ivzvnfo3mu",
-      "Integrity": "ouV5E5WWVe3WRcG9kvSw5h4RUqY6P6fvUL9b9Jj6drg=",
+      "Fingerprint": "xa329bae8x",
+      "Integrity": "OVI3Bspw38dCot6uEfMm8PW30R/kChgk6CHJbQNGcTc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-7xvkrxejzc.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-lpxsbv9bqm.gz",
       "SourceId": "Hachodromo.WEB",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Hachodromo.WEB#[.{fingerprint=7xvkrxejzc}]!.wasm.gz",
+      "RelativePath": "_framework/Hachodromo.WEB#[.{fingerprint=lpxsbv9bqm}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -8557,8 +8557,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "xyfll0jjis",
-      "Integrity": "GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw=",
+      "Fingerprint": "dtb90234ho",
+      "Integrity": "7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.wasm"
@@ -9194,12 +9194,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.ObjectModel.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-ydtu88oiud.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-gsbr9b93wv.gz",
       "SourceId": "Hachodromo.WEB",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Hachodromo.WEB#[.{fingerprint=ydtu88oiud}]!.pdb.gz",
+      "RelativePath": "_framework/Hachodromo.WEB#[.{fingerprint=gsbr9b93wv}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -9208,8 +9208,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "k3zx26vcj3",
-      "Integrity": "EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ=",
+      "Fingerprint": "bg5ots7h5d",
+      "Integrity": "ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.pdb"
@@ -10790,12 +10790,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.Threading.Channels.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-r4vp5cieqw.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-e9gmxfm74l.gz",
       "SourceId": "Hachodromo.WEB",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=r4vp5cieqw}]!.wasm.gz",
+      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=e9gmxfm74l}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -10804,8 +10804,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "r3fjzqvbbo",
-      "Integrity": "ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY=",
+      "Fingerprint": "kbf6n6csvr",
+      "Integrity": "8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm"
@@ -17852,11 +17852,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ImEkHvY/dbg6reP4MTR5fYi16r4S3G7XTVjRexvTCGE=\""
+          "Value": "\"hREsQJL04blhKGEHVrA2GiJEcaa5OdB7xoHPrJw26C0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17866,18 +17866,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ImEkHvY/dbg6reP4MTR5fYi16r4S3G7XTVjRexvTCGE="
+          "Value": "sha256-hREsQJL04blhKGEHVrA2GiJEcaa5OdB7xoHPrJw26C0="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\ji1y6g0vlk-mzaq74zq20.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\ji1y6g0vlk-93hcgk58z9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000073152890"
+          "Quality": "0.000073131490"
         }
       ],
       "ResponseHeaders": [
@@ -17887,15 +17887,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13669"
+          "Value": "13673"
         },
         {
           "Name": "ETag",
-          "Value": "\"ouV5E5WWVe3WRcG9kvSw5h4RUqY6P6fvUL9b9Jj6drg=\""
+          "Value": "\"OVI3Bspw38dCot6uEfMm8PW30R/kChgk6CHJbQNGcTc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17915,19 +17915,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ImEkHvY/dbg6reP4MTR5fYi16r4S3G7XTVjRexvTCGE=\""
+          "Value": "W/\"hREsQJL04blhKGEHVrA2GiJEcaa5OdB7xoHPrJw26C0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ImEkHvY/dbg6reP4MTR5fYi16r4S3G7XTVjRexvTCGE="
+          "Value": "sha256-hREsQJL04blhKGEHVrA2GiJEcaa5OdB7xoHPrJw26C0="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\ji1y6g0vlk-mzaq74zq20.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\ji1y6g0vlk-93hcgk58z9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -17936,7 +17936,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13669"
+          "Value": "13673"
         },
         {
           "Name": "Content-Type",
@@ -17944,11 +17944,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ouV5E5WWVe3WRcG9kvSw5h4RUqY6P6fvUL9b9Jj6drg=\""
+          "Value": "\"OVI3Bspw38dCot6uEfMm8PW30R/kChgk6CHJbQNGcTc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17966,7 +17966,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ouV5E5WWVe3WRcG9kvSw5h4RUqY6P6fvUL9b9Jj6drg="
+          "Value": "sha256-OVI3Bspw38dCot6uEfMm8PW30R/kChgk6CHJbQNGcTc="
         }
       ]
     },
@@ -20194,7 +20194,7 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.obxamtonpr.pdb",
+      "Route": "_framework/Hachodromo.Shared.btzcdq9s1e.pdb",
       "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -20204,7 +20204,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16296"
+          "Value": "16612"
         },
         {
           "Name": "Content-Type",
@@ -20212,11 +20212,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA=\""
+          "Value": "\"T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:44 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20226,7 +20226,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "obxamtonpr"
+          "Value": "btzcdq9s1e"
         },
         {
           "Name": "label",
@@ -20234,18 +20234,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA="
+          "Value": "sha256-T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.obxamtonpr.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-obxamtonpr.gz",
+      "Route": "_framework/Hachodromo.Shared.btzcdq9s1e.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-btzcdq9s1e.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000114077116"
+          "Quality": "0.000112334307"
         }
       ],
       "ResponseHeaders": [
@@ -20255,15 +20255,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8765"
+          "Value": "8901"
         },
         {
           "Name": "ETag",
-          "Value": "\"RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4=\""
+          "Value": "\"4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20283,13 +20283,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA=\""
+          "Value": "W/\"T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "obxamtonpr"
+          "Value": "btzcdq9s1e"
         },
         {
           "Name": "label",
@@ -20297,13 +20297,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA="
+          "Value": "sha256-T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.obxamtonpr.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-obxamtonpr.gz",
+      "Route": "_framework/Hachodromo.Shared.btzcdq9s1e.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-btzcdq9s1e.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -20312,7 +20312,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8765"
+          "Value": "8901"
         },
         {
           "Name": "Content-Type",
@@ -20320,11 +20320,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4=\""
+          "Value": "\"4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20342,7 +20342,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "obxamtonpr"
+          "Value": "btzcdq9s1e"
         },
         {
           "Name": "label",
@@ -20350,7 +20350,168 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4="
+          "Value": "sha256-4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.e9gmxfm74l.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16661"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:38:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e9gmxfm74l"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.e9gmxfm74l.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-e9gmxfm74l.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000147819660"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6764"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:38:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e9gmxfm74l"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.e9gmxfm74l.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-e9gmxfm74l.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:38:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e9gmxfm74l"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U="
         }
       ]
     },
@@ -20365,7 +20526,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16296"
+          "Value": "16612"
         },
         {
           "Name": "Content-Type",
@@ -20373,11 +20534,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA=\""
+          "Value": "\"T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:44 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20387,18 +20548,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA="
+          "Value": "sha256-T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.Shared.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-obxamtonpr.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-btzcdq9s1e.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000114077116"
+          "Quality": "0.000112334307"
         }
       ],
       "ResponseHeaders": [
@@ -20408,15 +20569,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8765"
+          "Value": "8901"
         },
         {
           "Name": "ETag",
-          "Value": "\"RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4=\""
+          "Value": "\"4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20436,19 +20597,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA=\""
+          "Value": "W/\"T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NHGW6mYuRoJvNjjFpcgtHIjXwpWHxTT76qRVqU8gCLA="
+          "Value": "sha256-T6XqjdtE8vwVih5lOYE6zOmZDXAQekdTrKMBAsD20wk="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.Shared.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-obxamtonpr.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\eivgwqsxbx-btzcdq9s1e.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -20457,7 +20618,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8765"
+          "Value": "8901"
         },
         {
           "Name": "Content-Type",
@@ -20465,11 +20626,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4=\""
+          "Value": "\"4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20487,168 +20648,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RYNOM0UrP6b53OO1ufRuhKewIray4F223+x9rRryVV4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.r4vp5cieqw.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16149"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4vp5cieqw"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.r4vp5cieqw.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-r4vp5cieqw.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000153045608"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6533"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4vp5cieqw"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.r4vp5cieqw.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-r4vp5cieqw.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6533"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4vp5cieqw"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY="
+          "Value": "sha256-4zARRUqkEf7fs7vIW2giXpkf/nzgHuBArbWosIrTUtE="
         }
       ]
     },
@@ -20663,7 +20663,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16149"
+          "Value": "16661"
         },
         {
           "Name": "Content-Type",
@@ -20671,11 +20671,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k=\""
+          "Value": "\"0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 12:38:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20685,18 +20685,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k="
+          "Value": "sha256-0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-r4vp5cieqw.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-e9gmxfm74l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000153045608"
+          "Quality": "0.000147819660"
         }
       ],
       "ResponseHeaders": [
@@ -20706,15 +20706,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6533"
+          "Value": "6764"
         },
         {
           "Name": "ETag",
-          "Value": "\"ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY=\""
+          "Value": "\"8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 12:38:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20734,19 +20734,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k=\""
+          "Value": "W/\"0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JSFtw0ic9tGKs8bFlffo4NoCbIG5IweVuNg59CYHY6k="
+          "Value": "sha256-0nhEZW6hnHxHBH13Qhv3CjkW8gwfOgFfMqeaRD2oLpI="
         }
       ]
     },
     {
       "Route": "_framework/Hachodromo.Shared.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-r4vp5cieqw.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\wu07cp2cdt-e9gmxfm74l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -20755,7 +20755,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6533"
+          "Value": "6764"
         },
         {
           "Name": "Content-Type",
@@ -20763,11 +20763,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY=\""
+          "Value": "\"8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:56:48 GMT"
+          "Value": "Tue, 29 Apr 2025 12:38:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -20785,173 +20785,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ydGxooTYZAbiMJNIz1na2EMRgUqqSRp2TAtIrgBWEfY="
+          "Value": "sha256-8F3fuEqRaC7bZfnVSo/1Mmv0QmR9xrZ5rQQ7BKYlV5U="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.WEB.7xvkrxejzc.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "170773"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xvkrxejzc"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.7xvkrxejzc.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-7xvkrxejzc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000017219706"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "58072"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xvkrxejzc"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.7xvkrxejzc.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-7xvkrxejzc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "58072"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7xvkrxejzc"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.WEB.wasm.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.pdb",
+      "Route": "_framework/Hachodromo.WEB.gsbr9b93wv.pdb",
       "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -20961,7 +20800,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117964"
+          "Value": "124640"
         },
         {
           "Name": "Content-Type",
@@ -20969,285 +20808,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM=\""
+          "Value": "\"cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-ydtu88oiud.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000011056321"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "90445"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-ydtu88oiud.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "90445"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "170773"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-7xvkrxejzc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000017219706"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "58072"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZWJZckYYl0SwePtuhqRNju59QbESQlB9b1J6Qjvvng8="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-7xvkrxejzc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "58072"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GWnoIdNnXGEFVNf1FJnnsQLaus/oq33t7n4Dt8imxCw="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.WEB.ydtu88oiud.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "117964"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:15 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21257,7 +20822,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ydtu88oiud"
+          "Value": "gsbr9b93wv"
         },
         {
           "Name": "label",
@@ -21265,18 +20830,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM="
+          "Value": "sha256-cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.WEB.ydtu88oiud.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-ydtu88oiud.gz",
+      "Route": "_framework/Hachodromo.WEB.gsbr9b93wv.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-gsbr9b93wv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000011056321"
+          "Quality": "0.000010400308"
         }
       ],
       "ResponseHeaders": [
@@ -21286,15 +20851,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "90445"
+          "Value": "96150"
         },
         {
           "Name": "ETag",
-          "Value": "\"EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ=\""
+          "Value": "\"ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21314,13 +20879,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM=\""
+          "Value": "W/\"cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ydtu88oiud"
+          "Value": "gsbr9b93wv"
         },
         {
           "Name": "label",
@@ -21328,13 +20893,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uue7arzgZkiE2Loy7GpOLRotRS5AEawLZS/pjEf3KDM="
+          "Value": "sha256-cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.WEB.ydtu88oiud.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-ydtu88oiud.gz",
+      "Route": "_framework/Hachodromo.WEB.gsbr9b93wv.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-gsbr9b93wv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21343,7 +20908,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "90445"
+          "Value": "96150"
         },
         {
           "Name": "Content-Type",
@@ -21351,11 +20916,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ=\""
+          "Value": "\"ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 11:58:16 GMT"
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21373,7 +20938,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ydtu88oiud"
+          "Value": "gsbr9b93wv"
         },
         {
           "Name": "label",
@@ -21381,7 +20946,442 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EMa3QABClEDfSR/beN7l5/yWrzCNTudEH0Nmqm7QkoQ="
+          "Value": "sha256-ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.lpxsbv9bqm.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179477"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lpxsbv9bqm"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.WEB.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.lpxsbv9bqm.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-lpxsbv9bqm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000016735281"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59753"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lpxsbv9bqm"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.WEB.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.lpxsbv9bqm.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-lpxsbv9bqm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59753"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lpxsbv9bqm"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.WEB.wasm.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124640"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 20:05:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-gsbr9b93wv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000010400308"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96150"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cHnN0I4t1Fl/VpHH0U7nnrSpxMjUJfGhi+76XMV3Egw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\n0otfsjeq9-gsbr9b93wv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 20:05:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZfH4/CwQ9rDuO5D1hFl/rnRJKZhegVdWXt9UcEaprE0="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.WEB.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179477"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-lpxsbv9bqm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000016735281"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59753"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V0+hiZW5g1LNsVf0lco9AYCpTPj+X3LrUpGVi8tWMro="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.WEB.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.WEB\\obj\\Debug\\net9.0\\compressed\\jmolh7orb4-lpxsbv9bqm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59753"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 12:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7+Ps7dz+WpachRl5c+j43yDGFiVdmsszO7zCmHoUul4="
         }
       ]
     },
