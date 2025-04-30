@@ -1,4 +1,5 @@
 ﻿@page "/countries/details/{Id:int}"
+@using Hachodromo.WEB.Pages.Regions
 @inject IRepository repository
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
@@ -17,7 +18,7 @@ else
 			<p class="card-text">Nombre: @country.Name</p>
 			<p class="card-text">Regiónes: @country.RegionNumber</p>
 			<div class="mb-2">
-				<a class="btn btn-primary" href="/regions/create/@country.Id">Nueva región</a>
+				<a class="btn btn-primary" @onclick=@(()=> ShowModal(country.Id))>Nueva región</a>
 				<a class="btn btn-success" href="/countries">Regresar</a>
 			</div>
 		</div>
@@ -25,9 +26,6 @@ else
 
 	<h3>Regiones</h3>
 	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
-		<div>
-			<a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
-		</div>
 		<div class="mx-2">
 			<input style="widh: 200px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
 		</div>
@@ -44,9 +42,11 @@ else
 		<Body>
 			<table class="table table-striped">
 				<thead>
-					<th>Estado</th>
-					<th>Ciudades</th>
-					<th>Acciones</th>
+					<tr>
+						<th>Estado</th>
+						<th>Ciudades</th>
+						<th>Acciones</th>
+					</tr>
 				</thead>
 				<tbody>
 					@foreach (var region in regions!)
@@ -54,17 +54,19 @@ else
 						<tr>
 							<td>@region.RegionName</td>
 							<td>@region.CityNumber</td>
+							<td>
 							<a class="btn btn-light" href="/region/details/@region.RegionId">Detalles</a>
-							<a class="btn btn-warning" href="/region/edit/@region.RegionId">Editar</a>
-							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(region.RegionId)) >Eliminar</button>
+							<a class="btn btn-warning" @onclick=@(()=>ShowModal(region.RegionId, true))>Editar</a>
+							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(region.RegionId))>Eliminar</button>
+							</td>
 						</tr>
 					}
 				</tbody>
 			</table>
 		</Body>
 	</GenericList>
-}
 
+}
 @code {
 	private Country? country;
 	private List<Region>? regions;
@@ -81,6 +83,9 @@ else
 	[Parameter]
 	[SupplyParameterFromQuery]
 	public string Filter { get; set; } = string.Empty;
+
+	[CascadingParameter]
+	IModalService Modal { get; set; } = default!;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -102,7 +107,8 @@ else
 		{
 			page = Convert.ToInt32(Page);
 		}
-		if(string.IsNullOrEmpty(Filter)){
+		if (string.IsNullOrEmpty(Filter))
+		{
 			url1 = $"/api/regions?id={Id}&page={page}";
 			url2 = $"/api/regions/totalPages?id={Id}";
 		}
@@ -167,5 +173,22 @@ else
 		await LoadAsync(page);
 		await SelectedPageAsync(page);
 	}
+	private async Task ShowModal(int id = 0, bool isEdit = false)
+	{
+		IModalReference modalReference;
+		if (isEdit)
+		{
+			modalReference = Modal.Show<RegionEdit>($"Editar región", new ModalParameters().Add("RegionId", id));
+		}
+		else
+		{
+			modalReference = Modal.Show<RegionsCreate>($"Crear región", new ModalParameters().Add("CountryId", country!.Id));
+		}
 
+		var result = await modalReference.Result;
+		if (result.Confirmed)
+		{
+			await LoadAsync();
+		}
+	}
 }

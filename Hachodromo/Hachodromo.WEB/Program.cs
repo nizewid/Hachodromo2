@@ -1,3 +1,4 @@
+using Blazored.Modal;
 using CurrieTechnologies.Razor.SweetAlert2;
 using Hachodromo.WEB.Auth;
 using Hachodromo.WEB.Repositories;
@@ -22,7 +23,7 @@ namespace Hachodromo.WEB
             builder.Services.AddScoped<AuthenticationProviderJWT>();
             builder.Services.AddScoped<AuthenticationStateProvider, AuthenticationProviderJWT>(x => x.GetRequiredService<AuthenticationProviderJWT>());
             builder.Services.AddScoped<ILoginService, AuthenticationProviderJWT>(x => x.GetRequiredService<AuthenticationProviderJWT>());
-
+            builder.Services.AddBlazoredModal();
             await builder.Build().RunAsync();
         }
     }

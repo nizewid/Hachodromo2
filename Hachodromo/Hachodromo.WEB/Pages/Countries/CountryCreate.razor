@@ -1,5 +1,4 @@
-﻿@page "/countries/create"
-@inject IRepository repository
+﻿@inject IRepository repository
 @inject NavigationManager NavigationManager
 @inject SweetAlertService sweetAlertService
 @attribute [Authorize(Roles = "Admin")]
@@ -11,6 +10,9 @@
 	private Country country = new();
 	private CountryForm? countryForm;
 
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
 	private async Task Create()
 	{
 		var httpResponse = await repository.Post<Country>("/api/countries", country);
@@ -19,6 +21,7 @@
 			await sweetAlertService.FireAsync("Error", message);
 			return;
 		}
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
 		Return();
 	}
 	private void Return()

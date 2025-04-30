@@ -1,5 +1,4 @@
-﻿@page "/cities/create/{RegionId:int}"
-@inject IRepository repository
+﻿@inject IRepository repository
 @inject NavigationManager NavigationManager
 @inject SweetAlertService sweetAlertService
 @attribute [Authorize(Roles = "Admin")]
@@ -8,12 +7,15 @@
 <CityForm @ref="cityForm" City="city" OnValidSubmit="Create" ReturnAction="Return"/>
 
 @code {
-	private City city= new();
+	private City city= new City {CityName = string.Empty };
 	private CityForm? cityForm;
 	private Region? region;
 
 	[Parameter]
 	public int RegionId { get; set; }
+
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -29,6 +31,7 @@
 			await sweetAlertService.FireAsync("Error", message);
 			return;
 		}
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
 		Return();
 	}
 	private void Return()

@@ -25,8 +25,20 @@ namespace Hachodromo.API.Data
             await _context.Database.EnsureCreatedAsync();
             await CheckCountriesAsync();
             await CheckRolesAsync();
+            await CheckCategories();
             await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444","C/Progreso 36",UserType.Admin);
         }
+
+        private async Task CheckCategories()
+        {
+            if(!_context.Categories.Any())
+            {
+                _context.Categories.Add(new Category { Name = "Souvenirs" });
+                _context.Categories.Add(new Category { Name = "Ropa" });
+                await _context.SaveChangesAsync();
+            }
+        }
+
         private async Task CheckRolesAsync()
         {
             await _userHelper.CheckRoleAsync(UserType.Admin.ToString());

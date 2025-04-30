@@ -1,5 +1,4 @@
-﻿@page "/region/edit/{Id:int}"
-@inject IRepository repository
+﻿@inject IRepository repository
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles= "Admin")]
@@ -21,6 +20,9 @@ else
 
 	[Parameter]
 	public int RegionId { get; set; }
+
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -49,6 +51,7 @@ else
 			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
 			return;
 		}
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
 		Return();
 	}
 	private void Return()

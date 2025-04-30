@@ -1,5 +1,4 @@
-﻿@page "/cities/edit/{CityId:int}"
-@inject IRepository repository
+﻿@inject IRepository repository
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles= "Admin")]
@@ -18,6 +17,9 @@ else
 @code {
 	private City? city;
 	private CityForm? cityForm;
+
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!; 
 
 	[Parameter]
 	public int CityId { get; set; }
@@ -49,6 +51,7 @@ else
 			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
 			return;
 		}
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
 		Return();
 	}
 	private void Return()

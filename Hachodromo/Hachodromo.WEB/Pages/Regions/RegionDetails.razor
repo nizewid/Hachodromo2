@@ -1,10 +1,11 @@
 ﻿@page "/region/details/{RegionId:int}"
+@using Hachodromo.WEB.Pages.Cities
 @inject IRepository repository
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles = "Admin")]
 
-<h3>Detalles de Región</h3>
+<h3>Regiones</h3>
 
 @if (region is null)
 {
@@ -14,19 +15,16 @@ else
 {
 	<div class="card">
 		<div class="card-body">
-			<h5 class="card-title">Detalles de región @region.RegionName</h5> 
+			<h5 class="card-title">Detalles de región @region.RegionName</h5>
 			<p class="card-text">Id: @region.RegionId</p>
-			<p class="card-text">Ciudades: @region.CityNumber</p> 
+			<p class="card-text">Ciudades: @region.CityNumber</p>
 			<div class="mb-2">
-				<a class="btn btn-primary" href="/cities/create/@region.RegionId">Nueva Ciudad</a>
+				<a class="btn btn-primary" @onclick=@(()=>ShowModal())>Nueva Ciudad</a>
 				<a class="btn btn-success" href="/countries/details/@region.CountryId">Regresar</a>
 			</div>
 		</div>
 	</div>
 	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
-		<div>
-			<a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
-		</div>
 		<div class="mx-2">
 			<input style="widh: 200px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
 		</div>
@@ -43,15 +41,20 @@ else
 		<Body>
 			<table class="table table-striped">
 				<thead>
-					<th>Ciudad</th>
+					<tr>
+						<th>Ciudad</th>
+						<th>Acciones</th>
+					</tr>
 				</thead>
 				<tbody>
 					@foreach (var city in cities!)
 					{
 						<tr>
 							<td>@city.CityName</td>
-							<a class="btn btn-warning" href="/cities/edit/@city.CityId">Editar</a>
-							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(city.CityId)) >Eliminar</button>
+							<td>
+							<a class="btn btn-warning" @onclick=@(() => ShowModal(city.CityId,true))>Editar</a>
+							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(city.CityId))>Eliminar</button>
+							</td>
 						</tr>
 					}
 				</tbody>
@@ -59,8 +62,6 @@ else
 		</Body>
 	</GenericList>
 }
-<h3>CountryDetails</h3>
-
 
 @code {
 	private Region? region;
@@ -78,6 +79,9 @@ else
 	[Parameter]
 	[SupplyParameterFromQuery]
 	public string Filter { get; set; } = string.Empty;
+
+	[CascadingParameter]
+	IModalService Modal { get; set; } = default!;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -166,5 +170,27 @@ else
 		await LoadAsync(page);
 		await SelectedPageAsync(page);
 	}
+	private async Task ShowModal(int cityId = 0, bool isEdit = false)
+	{
+		IModalReference modalReference;
+
+		if (isEdit)
+		{
+			modalReference = Modal.Show<CitiesEdit>("Editar Ciudad", new ModalParameters().Add("CityId", cityId));
+		}
+		else
+		{
+			var parameters = new ModalParameters();
+			parameters.Add("RegionId", region!.RegionId); // usa RegionId directamente
+			modalReference = Modal.Show<CityCreate>("Crear Ciudad", parameters);
+		}
+
+		var result = await modalReference.Result;
+		if (result.Confirmed)
+		{
+			await LoadAsync();
+		}
+	}
+
 
 }

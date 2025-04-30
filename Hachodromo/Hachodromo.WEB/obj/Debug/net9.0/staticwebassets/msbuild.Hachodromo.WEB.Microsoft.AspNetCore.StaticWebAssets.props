@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>mfgetjlwj8</Fingerprint>
-      <Integrity>TvzcO64myHz3zhhzQemgeVUnY7lnGSuolLx/NvevZ74=</Integrity>
+      <Fingerprint>6btxltk0dk</Fingerprint>
+      <Integrity>ohsBnZZw98V7d8/ZBCz5dRAX9/sp7NdPMIDxE3dDU+E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Hachodromo.WEB.styles.css'))</OriginalItemSpec>

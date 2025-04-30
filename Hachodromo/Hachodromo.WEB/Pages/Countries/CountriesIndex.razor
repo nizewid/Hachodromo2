@@ -4,17 +4,20 @@
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles= "Admin")]
 
-<h3>Paises</h3>
+<h1>Listado de Paises</h1>
 
-@if(Countries is null){
+@if(Countries is null)
+{
 	<div class="spinner"/>
-}else{
+}
+else
+{
 	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
 		<div>
-			<a class="btn btn-primary mb-3" href="/countries/create">Crear País</a>
+			<a class="btn btn-primary mb-3" @onclick=@(()=> ShowModal())>Crear País</a>
 		</div>
 		<div class="mx-2">
-			<input style="widh: 300px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
+			<input style="width: 300px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
 		</div>
 		<div>
 			<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
@@ -31,31 +34,34 @@
 			<div class="spinner" />
 		</Loading>
 		<Body>
-			<table class="table table-striped">
-				<thead>
-				<th>id</th>
-				<th>Nombre</th>
-				<th>Provincias</th>
-				<th>Acciones</th>
-				</thead>
-				<tbody>
-					@foreach (var country in Countries!)
-					{
-						<tr>
-							<td>@country.Id</td>
-							<td>@country.Name</td>
-							<td>@country.RegionNumber</td>
-							<a class="btn btn-light" href="/countries/details/@country.Id">Detalles</a>
-							<a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
-							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id))>Eliminar</button>
-						</tr>
-					}
-				</tbody>
-			</table>
+            <table class="table table-striped">  
+               <thead>  
+                   <tr> 
+                       <th>id</th>  
+                       <th>Nombre</th>  
+                       <th>Provincias</th>  
+                       <th>Acciones</th>  
+                   </tr>  
+               </thead>  
+               <tbody>  
+                   @foreach (var country in Countries!)  
+                   {  
+                       <tr>  
+                           <td>@country.Id</td>  
+                           <td>@country.Name</td>  
+                           <td>@country.RegionNumber</td>  
+                           <td>  
+                               <a class="btn btn-light" href="/countries/details/@country.Id">Detalles</a>  
+                               <a class="btn btn-warning" @onclick="@(()=>ShowModal(country.Id,true))">Editar</a>  
+                               <button class="btn btn-danger" @onclick="@(() => DeleteAsync(country.Id))">Eliminar</button>  
+                           </td>  
+                       </tr>  
+                   }  
+               </tbody>  
+            </table>
 		</Body>
 	</GenericList>
 }
-
 @code {
 	public List<Country>? Countries { get; set; }
 	private int currentPage = 1;
@@ -68,6 +74,9 @@
 	[Parameter]
 	[SupplyParameterFromQuery]
 	public string Filter { get; set; } = string.Empty;
+
+	[CascadingParameter]
+	IModalService Modal { get; set; } = default!;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -142,5 +151,29 @@
 		int page = 1;
 		await LoadAsync(page);
 		await SelectedPageAsync(page);
+	}
+
+	private async Task ShowModal(int id = 0, bool isEdit = false)
+	{
+		if(isEdit)
+		{
+			var parameters = new ModalParameters();
+			parameters.Add("CountryId", id);
+			var modal = Modal.Show<CountryEdit>("Editar País", parameters);
+			var result = await modal.Result;
+			if (!result.Cancelled)
+			{
+				await LoadAsync();
+			}
+		}
+		else
+		{
+			var modal = Modal.Show<CountryCreate>("Crear País");
+			var result = await modal.Result;
+			if (!result.Cancelled)
+			{
+				await LoadAsync();
+			}
+		}
 	}
 }

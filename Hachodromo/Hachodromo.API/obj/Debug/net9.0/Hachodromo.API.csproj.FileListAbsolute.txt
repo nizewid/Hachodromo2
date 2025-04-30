@@ -8,7 +8,11 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Hachodromo.API.d
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Hachodromo.API.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Core.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Identity.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Storage.Blobs.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Storage.Common.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Humanizer.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\MailKit.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -51,6 +55,7 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Identi
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\MimeKit.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Mono.TextTemplating.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -67,6 +72,7 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.Configura
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.Drawing.Common.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.Formats.Asn1.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.IO.Hashing.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.Runtime.Caching.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
@@ -177,9 +183,3 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\refint\Hachodrom
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\Hachodromo.API.genruntimeconfig.cache
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\obj\Debug\net9.0\ref\Hachodromo.API.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Storage.Blobs.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\Azure.Storage.Common.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\System.IO.Hashing.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\MailKit.dll
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.API\bin\Debug\net9.0\MimeKit.dll
