@@ -12,12 +12,18 @@ namespace Hachodromo.API.Data
         private readonly DataContext _context;
         private readonly IApiService _apiService;
         private readonly IUserHelper _userHelper;
+        private readonly IFileStorage _fileStorage;
+        private string[] categories = { "Ropa", "Accesorios", "Vikingos" };
+        private string[] itemImages = { "camisaviking.jpg", "camisaviking2.jpg", "cuernoVikingo.jpg", "llaveroviking.jpg"};
+        private string[] profileImages = { "Anais.png", "coco.jpg", "profile.jpg"};
 
-        public SeedDb(DataContext context, IApiService apiService, IUserHelper userHelper)
+
+        public SeedDb(DataContext context, IApiService apiService, IUserHelper userHelper, IFileStorage fileStorage)
         {
             _context = context;
             _apiService = apiService;
             _userHelper = userHelper;
+            _fileStorage = fileStorage;
         }
 
         public async Task SeedAsync()
@@ -25,16 +31,65 @@ namespace Hachodromo.API.Data
             await _context.Database.EnsureCreatedAsync();
             await CheckCountriesAsync();
             await CheckRolesAsync();
-            await CheckCategories();
-            await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444","C/Progreso 36",UserType.Admin);
+            await CheckCategoriesAsync();
+            await CheckItemsAsync();
+            await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444", profileImages[2],"C/Progreso 36",UserType.Admin);
+            await CheckUserAsync("11223344A", "Anais", "García", "anais@example.com", "600111222", profileImages[0], "Calle Luna 5", UserType.User);
+            await CheckUserAsync("22334455B", "Coco", "Gonzalez", "alt.so-9os6wo2t@yopmail.com", "600333444", profileImages[1], "Calle Sol 9", UserType.User);
+         
         }
 
-        private async Task CheckCategories()
+        private async Task CheckItemsAsync()
+        {
+            if (!_context.Items.Any())
+            {
+                await AddItemAsync("Camiseta Vikinga", 17.55M, 6F, new List<string>() { categories[0], categories[2] }, new List<string>() { itemImages[0], itemImages[1] });
+                await AddItemAsync("Cuerno Vikingo", 50.00M, 6F, new List<string>() { categories[1], categories[2] }, new List<string>() { itemImages[2] });
+                await AddItemAsync("Llavero Vikingo", 5.00M, 3F, new List<string>() { categories[1], categories[2] }, new List<string>() { itemImages[3] });
+                await AddItemAsync("Camiseta Vikinga Edición 2", 18.99M, 6F, new List<string>() { categories[0], categories[2] }, new List<string>() { itemImages[1] });
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        private async Task AddItemAsync(string name, decimal price, float stock, List<string> categories, List<string> images)
+        {
+            Item item= new()
+            {
+                Description = name,
+                Name = name,
+                Price = price,
+                Stock = stock,
+                ItemCategories = new List<ItemCategory>(),
+                ItemImages = new List<ItemImage>()
+            };
+
+            foreach (var categoryName in categories)
+            {
+                var category = await _context.Categories.FirstOrDefaultAsync(c => c.Name == categoryName);
+                if (category != null)
+                {
+                    item.ItemCategories.Add(new ItemCategory { Category = category });
+                }
+            }
+
+            foreach (string? image in images)
+            {
+                var filePath = $"{Environment.CurrentDirectory}\\Images\\products\\{image}";
+                var fileBytes = File.ReadAllBytes(filePath);
+                var imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "products");
+                item.ItemImages.Add(new ItemImage { Image = imagePath });
+            }
+
+            _context.Items.Add(item);
+        }
+
+        private async Task CheckCategoriesAsync()
         {
             if(!_context.Categories.Any())
             {
-                _context.Categories.Add(new Category { Name = "Souvenirs" });
-                _context.Categories.Add(new Category { Name = "Ropa" });
+                _context.Categories.Add(new Category { Name = categories[0] });
+                _context.Categories.Add(new Category { Name = categories[1] });
+                _context.Categories.Add(new Category { Name = categories[2] });
                 await _context.SaveChangesAsync();
             }
         }
@@ -45,7 +100,7 @@ namespace Hachodromo.API.Data
             await _userHelper.CheckRoleAsync(UserType.User.ToString());
         }
 
-        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone, string address, UserType userType)
+        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone,string profilePhoto, string address, UserType userType)
         {
             var user = await _userHelper.GetUserAsync(email);
             if (user == null)
@@ -55,6 +110,10 @@ namespace Hachodromo.API.Data
                 {
                     city = await _context.Cities.FirstOrDefaultAsync();
                 }
+
+                var filePath = $"{Environment.CurrentDirectory}\\Images\\users\\{profilePhoto}";
+                var fileBytes = File.ReadAllBytes(filePath);
+                var imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "users");
                 user = new User
                 {
                     Document = document,
@@ -67,6 +126,7 @@ namespace Hachodromo.API.Data
                     UserName = email,
                     City = city,
                     UserType = userType,
+                    Photo = imagePath,
                 };
                 await _userHelper.AddUserAsync(user, "123456");
                 await _userHelper.AddUserToRole(user, userType.ToString());

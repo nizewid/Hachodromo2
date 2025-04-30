@@ -1115,6 +1115,18 @@
             "maxLength": 100,
             "minLength": 1,
             "type": "string"
+          },
+          "itemCategories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemCategory"
+            },
+            "nullable": true
+          },
+          "itemCategoriesCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -1221,6 +1233,114 @@
             "minLength": 1,
             "type": "string",
             "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Item": {
+        "required": [
+          "name",
+          "price",
+          "stock"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 500,
+            "type": "string",
+            "format": "multiline",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "stock": {
+            "type": "number",
+            "format": "float"
+          },
+          "itemCategories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemCategory"
+            },
+            "nullable": true
+          },
+          "itemCategoriesCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "itemImages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemImage"
+            },
+            "nullable": true
+          },
+          "itemImagesCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "mainImage": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item": {
+            "$ref": "#/components/schemas/Item"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemImage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item": {
+            "$ref": "#/components/schemas/Item"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

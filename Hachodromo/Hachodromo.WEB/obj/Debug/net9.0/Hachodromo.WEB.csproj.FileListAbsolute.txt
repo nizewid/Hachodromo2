@@ -8,10 +8,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framewo
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.3c4wvb350q.wasm
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.cymp1amu5g.js
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.c1pa82bhzg.pdb
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.x8gp842k9u.wasm
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.fwvjo8mrps.pdb
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.kwm28ric4b.wasm
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
@@ -308,7 +304,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framewo
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Diagnostics.Debug.f876p8bdl7.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.ServiceProcess.e7xr9fy1fu.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Diagnostics.Contracts.vahp5ntdnv.wasm.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.c1pa82bhzg.pdb.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.cgyczwm7er.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.IO.Compression.FileSystem.4g98bz9hnx.wasm.gz
@@ -352,7 +347,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framewo
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Win32.Registry.w69ya3jgm7.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.IO.FileSystem.Watcher.tmt7veun1h.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.kwm28ric4b.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.ServiceModel.Web.t76w5potav.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Text.Json.qw8b9t8z3q.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Threading.ck6tnk99mb.wasm.gz
@@ -380,7 +374,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framewo
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Threading.Tasks.Extensions.oy6nisfgqx.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.ComponentModel.Annotations.aws0gou7sm.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.ObjectModel.l1u11g6q1b.wasm.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.fwvjo8mrps.pdb.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Linq.Queryable.h2kw1rfdow.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Net.WebProxy.la91e3qlbb.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.mnju7fj288.wasm.gz
@@ -437,7 +430,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framewo
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.pvdzb3a5kr.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Web.HttpUtility.13lb3w228t.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Threading.Channels.1c8gng5zge.wasm.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.x8gp842k9u.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Resources.Writer.vf2aoyu2am.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Core.lyqpsmh9ew.wasm.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\System.Net.fc94w86q07.wasm.gz
@@ -1209,11 +1201,6 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\wdna4
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\h3jmhcg82w-tjcz0u77k5.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\etbkxgws6q-tptq2av103.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\csgfy5p2ri-lfu7j35m59.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\wu07cp2cdt-x8gp842k9u.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\eivgwqsxbx-c1pa82bhzg.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\jmolh7orb4-kwm28ric4b.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\n0otfsjeq9-fwvjo8mrps.gz
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\ji1y6g0vlk-u9ojf4bgc2.gz
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\staticwebassets.build.json
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\staticwebassets.development.json
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1229,3 +1216,16 @@ C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.d
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\refint\Hachodromo.WEB.dll
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.pdb
 C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\ref\Hachodromo.WEB.dll
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.esnjohjvme.pdb
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.dpkhqjqq8z.wasm
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.esnjohjvme.pdb.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.Shared.dpkhqjqq8z.wasm.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\wu07cp2cdt-dpkhqjqq8z.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\eivgwqsxbx-esnjohjvme.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.ptmfvbkqvj.pdb
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.xazyg8qcxp.wasm
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.xazyg8qcxp.wasm.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\bin\Debug\net9.0\wwwroot\_framework\Hachodromo.WEB.ptmfvbkqvj.pdb.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\jmolh7orb4-xazyg8qcxp.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\n0otfsjeq9-ptmfvbkqvj.gz
+C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\compressed\ji1y6g0vlk-yv2qpv1mxj.gz

@@ -5,6 +5,7 @@ using Hachodromo.WEB.Repositories;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using System.Globalization;
 
 namespace Hachodromo.WEB
 {
@@ -25,6 +26,9 @@ namespace Hachodromo.WEB
             builder.Services.AddScoped<ILoginService, AuthenticationProviderJWT>(x => x.GetRequiredService<AuthenticationProviderJWT>());
             builder.Services.AddBlazoredModal();
             await builder.Build().RunAsync();
+            CultureInfo culture = new("es-ES");
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
         }
     }
 }

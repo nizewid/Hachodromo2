@@ -14,6 +14,9 @@ namespace Hachodromo.API.Data
         public DbSet<Region> Regions { get; set; } = null!;
         public DbSet<City> Cities { get; set; } = null!;
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Item> Items { get; set; } = null!;
+        public DbSet<ItemCategory> ItemCategories { get; set; } = null!;
+        public DbSet<ItemImage> ItemImages { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +25,7 @@ namespace Hachodromo.API.Data
             modelBuilder.Entity<Region>().HasIndex(x => new { x.RegionName, x.CountryId }).IsUnique();
             modelBuilder.Entity<City>().HasIndex(x => new { x.CityName, x.RegionId }).IsUnique();
             modelBuilder.Entity<Category>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Item>().HasIndex(x => x.Name).IsUnique();
         }
     }
 }
