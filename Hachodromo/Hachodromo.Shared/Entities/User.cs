@@ -42,6 +42,10 @@ namespace Hachodromo.Shared.Entities
         [DataType(DataType.Date)]
         [Range(typeof(DateTime), "01/01/1900", "31/12/2025", ErrorMessage = "La fecha de nacimiento debe ser válida.")]
         public DateTime BornDate { get; set; }
+
+        [Display(Name = "Membresía")]
+        public int? MembershipId { get; set; }
+        public Membership? Membership { get; set; } 
         public City? City { get; set; }
 
         [Display(Name = "Ciudad")]

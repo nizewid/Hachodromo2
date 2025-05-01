@@ -20,7 +20,7 @@ namespace Hachodromo.API.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<IActionResult> GetAsync([FromQuery] PaginationDto pagination)
+        public async Task<ActionResult<List<Country>>> GetAsync([FromQuery] PaginationDto pagination)
         {
             var queryable = _context.Countries
                 .Include(x => x.Regions)
@@ -37,8 +37,9 @@ namespace Hachodromo.API.Controllers
                 .ToListAsync());
         }
 
+
         [HttpGet("totalPages")]
-        public async Task<IActionResult> GetPagesAsync([FromQuery] PaginationDto pagination)
+        public async Task<ActionResult<double>> GetPagesAsync([FromQuery] PaginationDto pagination)
         {
             var queryable = _context.Countries.AsQueryable();
 
@@ -53,7 +54,7 @@ namespace Hachodromo.API.Controllers
 
         [AllowAnonymous]
         [HttpGet("combo")]
-        public async Task<IActionResult> GetComboAsync()
+        public async Task<ActionResult<List<Country>>> GetComboAsync()
         {
             return Ok(await _context.Countries
                 .OrderBy(x => x.Name)
@@ -62,7 +63,7 @@ namespace Hachodromo.API.Controllers
         }
 
         [HttpGet("/full")]
-        public async Task<IActionResult> GetFullAsync()
+        public async Task<ActionResult<List<Country>>> GetFullAsync()
         {
             return Ok(await _context.Countries
                 .Include(x => x.Regions!)
@@ -70,9 +71,8 @@ namespace Hachodromo.API.Controllers
                 .ToListAsync());
         }
 
-
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetAsync(int id)
+        public async Task<ActionResult<Country>> GetAsync(int id)
         {
             var country = await _context.Countries
                 .Include(x=>x.Regions!)
@@ -85,7 +85,7 @@ namespace Hachodromo.API.Controllers
             return Ok(country);
         }
         [HttpPost]
-        public async Task<ActionResult> PostAsync(Country country)
+        public async Task<ActionResult<Country>> PostAsync(Country country)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace Hachodromo.API.Controllers
             }
         }
         [HttpPut]
-        public async Task<ActionResult> PutAsync(Country country)
+        public async Task<ActionResult<Country>> PutAsync(Country country)
         {
             try
             {
@@ -129,7 +129,7 @@ namespace Hachodromo.API.Controllers
             }
         }
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult> DeleteAsync(int id)
+        public async Task<ActionResult<Country>> DeleteAsync(int id)
         {
             var country = await _context.Countries.FirstOrDefaultAsync(x => x.Id == id);
             if (country == null)

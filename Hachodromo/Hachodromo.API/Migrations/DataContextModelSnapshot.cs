@@ -145,7 +145,7 @@ namespace Hachodromo.API.Migrations
                     b.ToTable("ItemCategories");
                 });
 
-            modelBuilder.Entity("Hachodromo.Shared.Entities.ItemImages", b =>
+            modelBuilder.Entity("Hachodromo.Shared.Entities.ItemImage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -165,6 +165,40 @@ namespace Hachodromo.API.Migrations
                     b.HasIndex("ItemId");
 
                     b.ToTable("ItemImages");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Membership", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(5,4)");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Memberships");
                 });
 
             modelBuilder.Entity("Hachodromo.Shared.Entities.Region", b =>
@@ -243,6 +277,9 @@ namespace Hachodromo.API.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<int>("MembershipId")
+                        .HasColumnType("int");
+
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -279,6 +316,8 @@ namespace Hachodromo.API.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
+
+                    b.HasIndex("MembershipId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -454,7 +493,7 @@ namespace Hachodromo.API.Migrations
                     b.Navigation("Item");
                 });
 
-            modelBuilder.Entity("Hachodromo.Shared.Entities.ItemImages", b =>
+            modelBuilder.Entity("Hachodromo.Shared.Entities.ItemImage", b =>
                 {
                     b.HasOne("Hachodromo.Shared.Entities.Item", "Item")
                         .WithMany("ItemImages")
@@ -484,7 +523,15 @@ namespace Hachodromo.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Hachodromo.Shared.Entities.Membership", "Membership")
+                        .WithMany("Users")
+                        .HasForeignKey("MembershipId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("City");
+
+                    b.Navigation("Membership");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -558,6 +605,11 @@ namespace Hachodromo.API.Migrations
                     b.Navigation("ItemCategories");
 
                     b.Navigation("ItemImages");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Membership", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Hachodromo.Shared.Entities.Region", b =>

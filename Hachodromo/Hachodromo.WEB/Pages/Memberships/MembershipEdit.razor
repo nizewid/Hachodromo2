@@ -1,0 +1,64 @@
+﻿@page "/memberships/edit/{MembershipId:int}"
+@inject IRepository repository
+@inject NavigationManager navigationManager
+@inject SweetAlertService sweetAlertService
+
+<h3>Editar membresía</h3>
+
+@if (membership is null)
+{
+    <div class="spinner" />
+}
+else
+{
+    <MembershipForm @ref="membershipForm" Membership="membership" OnValidSubmit="EditAsync" ReturnAction="Return" />
+}
+
+@code {
+    private Membership? membership;
+    private MembershipForm? membershipForm;
+
+    [Parameter]
+    public int MembershipId { get; set; }
+
+    [CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseHttp = await repository.Get<Membership>($"/api/memberships/{MembershipId}");
+        if (responseHttp.Error)
+        {
+            if (responseHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("/memberships");
+                return;
+            }
+
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        membership = responseHttp.Response;
+    }
+
+    private async Task EditAsync()
+    {
+        var responseHttp = await repository.Put("/api/memberships", membership);
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
+        Return();
+    }
+
+    private void Return()
+    {
+        membershipForm!.FormPostedSuccessfully = true;
+        navigationManager.NavigateTo($"/memberships");
+    }
+}

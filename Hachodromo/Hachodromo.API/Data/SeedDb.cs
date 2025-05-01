@@ -15,7 +15,7 @@ namespace Hachodromo.API.Data
         private readonly IFileStorage _fileStorage;
         private string[] categories = { "Ropa", "Accesorios", "Vikingos" };
         private string[] itemImages = { "camisaviking.jpg", "camisaviking2.jpg", "cuernoVikingo.jpg", "llaveroviking.jpg"};
-        private string[] profileImages = { "Anais.png", "coco.jpg", "profile.jpg"};
+        private string[] profileImages = { "Anais.png", "coco.jpg", "profile.jpg","maya.png"};
 
 
         public SeedDb(DataContext context, IApiService apiService, IUserHelper userHelper, IFileStorage fileStorage)
@@ -29,14 +29,60 @@ namespace Hachodromo.API.Data
         public async Task SeedAsync()
         {
             await _context.Database.EnsureCreatedAsync();
-            await CheckCountriesAsync();
+
             await CheckRolesAsync();
             await CheckCategoriesAsync();
             await CheckItemsAsync();
-            await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444", profileImages[2],"C/Progreso 36",UserType.Admin);
-            await CheckUserAsync("11223344A", "Anais", "García", "anais@example.com", "600111222", profileImages[0], "Calle Luna 5", UserType.User);
-            await CheckUserAsync("22334455B", "Coco", "Gonzalez", "alt.so-9os6wo2t@yopmail.com", "600333444", profileImages[1], "Calle Sol 9", UserType.User);
-         
+           await CheckMembershipsAsync();
+            await CheckCountriesAsync();
+            await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444", profileImages[2],"C/Progreso 36",UserType.Admin,1);
+            await CheckUserAsync("11223344A", "Anais", "Gonzalez", "anais@example.com", "600111222", profileImages[0], "Calle Luna 5", UserType.User,2);
+            await CheckUserAsync("11222556B", "Coco", "Flores", "crutraucreibroimu-2614@yopmail.com", "600333444", profileImages[1], "Calle Sol 9", UserType.User,3);
+            await CheckUserAsync("44112233B", "Maya", "Gonzalez", "maya@yopmail.com", "600333444", profileImages[3], "Calle Sol 9", UserType.User, 4);
+        }
+
+        private async Task CheckMembershipsAsync()
+        {
+            if (!_context.Memberships.Any())
+            {
+                _context.Memberships.Add(new Membership
+                {
+                    Name = "Sin Membresía",
+                    Description = "Sin Membresía",
+                    Price = 0.00M,
+                    Duration = 0,
+                    Discount = 0.00M
+                });
+
+                _context.Memberships.Add(new Membership
+                {
+                    Name = "Vikingo Aficionado",
+                    Description = "Descuento en dianas",
+                    Price = 10.00M,
+                    Duration = 6,
+                    Discount = 0.05M
+                });
+
+                _context.Memberships.Add(new Membership
+                {
+                    Name = "Maestro de Valkirias",
+                    Description = "Descuento en dianas y artículos",
+                    Price = 20.00M,
+                    Duration = 12,
+                    Discount = 0.10M
+                });
+
+                _context.Memberships.Add(new Membership
+                {
+                    Name = "Dios de Valhala",
+                    Description = "Descuento en dianas, artículos y eventos",
+                    Price = 35.00M,
+                    Duration = 12,
+                    Discount = 0.15M
+                });
+
+                await _context.SaveChangesAsync();
+            }
         }
 
         private async Task CheckItemsAsync()
@@ -74,9 +120,9 @@ namespace Hachodromo.API.Data
 
             foreach (string? image in images)
             {
-                var filePath = $"{Environment.CurrentDirectory}\\Images\\products\\{image}";
+                var filePath = $"{Environment.CurrentDirectory}\\Images\\items\\{image}";
                 var fileBytes = File.ReadAllBytes(filePath);
-                var imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "products");
+                var imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "items");
                 item.ItemImages.Add(new ItemImage { Image = imagePath });
             }
 
@@ -100,7 +146,7 @@ namespace Hachodromo.API.Data
             await _userHelper.CheckRoleAsync(UserType.User.ToString());
         }
 
-        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone,string profilePhoto, string address, UserType userType)
+        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone,string profilePhoto, string address,UserType userType, int membershipId)
         {
             var user = await _userHelper.GetUserAsync(email);
             if (user == null)
@@ -109,6 +155,12 @@ namespace Hachodromo.API.Data
                 if (city == null)
                 {
                     city = await _context.Cities.FirstOrDefaultAsync();
+                }
+
+                var membership = await _context.Memberships.FirstOrDefaultAsync(m => m.Id == membershipId);
+                if(membership == null)
+                {
+                    membership = await _context.Memberships.FirstOrDefaultAsync();
                 }
 
                 var filePath = $"{Environment.CurrentDirectory}\\Images\\users\\{profilePhoto}";
@@ -125,6 +177,8 @@ namespace Hachodromo.API.Data
                     Address = address,
                     UserName = email,
                     City = city,
+                    MembershipId = membershipId,
+                    Membership = membership,
                     UserType = userType,
                     Photo = imagePath,
                 };

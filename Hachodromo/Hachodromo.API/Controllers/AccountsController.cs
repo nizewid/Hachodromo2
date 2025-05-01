@@ -4,6 +4,7 @@ using Hachodromo.Shared.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -270,6 +271,34 @@ namespace Hachodromo.API.Controllers
                 return BadRequest(result.Errors.FirstOrDefault()!.Description);
             }
             return NoContent();
+        }
+
+        [HttpGet("ByMembership/{membershipId:int}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<List<User>>> GetUsersByMembership(int membershipId)
+        {
+            var users = await _userHelper.GetUsersByMembershipAsync(membershipId);
+
+            if (users == null || users.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(users);
+        }
+
+        [HttpPut("RemoveMembership/{userMail}")]
+        public async Task<IActionResult> RemoveMembership(string userMail)
+        {
+            var user = await _userHelper.GetUserAsync(userMail);
+            if (user == null)
+            { 
+                return NotFound();
+            }
+            user.MembershipId = 1;
+            await _userHelper.UpdateUserAsync(user);
+
+            return Ok(user);
         }
     }
 }

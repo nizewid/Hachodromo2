@@ -15,9 +15,6 @@
 	[CascadingParameter]
 	BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
-	[Parameter]
-	public int StateId { get; set; }
-
     private async Task CreateAsync()
     {
         var httpResponse = await repository.Post("/api/categories", category);

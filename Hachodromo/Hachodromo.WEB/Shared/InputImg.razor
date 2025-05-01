@@ -3,25 +3,13 @@
     <div>
         <InputFile OnChange="OnChange" accept=".jpg,.jpeg,.png" />
     </div>
-</div>
-
-<div>
-    @if (imageBase64 is not null)
+    @if (!string.IsNullOrWhiteSpace(imageBase64))
     {
-        <div>
-            <div style="margin: 10px">
-                <img src="data:image/jpeg;base64, @imageBase64" style="width:400px" />
-            </div>
-        </div>
+        <img src=@($"data:image/jpeg;base64,{imageBase64}") style="width:400px" />
     }
-
-    @if (ImageURL is not null)
+    else if (!string.IsNullOrWhiteSpace(ImageURL))
     {
-        <div>
-            <div style="margin: 10px">
-                <img src="@ImageURL" style="width:400px" />
-            </div>
-        </div>
+        <img src="@ImageURL" style="width:400px" />
     }
 </div>
 

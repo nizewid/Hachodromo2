@@ -1,0 +1,64 @@
+﻿@page "/items/create"
+@inject IRepository repository
+@inject NavigationManager navigationManager
+@inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>ItemCreate</h3>
+
+
+@if (loading)
+{
+    <div class="spinner" />
+}
+else
+{
+    <ItemForm @ref="itemForm" ItemDto="itemDto" NonSelectedCategories="nonSelectedCategories" OnValidSubmit="CreateAsync" ReturnAction="Return" />
+}
+
+
+@code {
+    private ItemDto itemDto= new ItemDto
+        {
+            ItemCategoryIds = new List<int>(),
+            ItemImages = new List<string>()
+        };
+    private ItemForm? itemForm;
+    private List<Category> selectedCategories = new();
+    private List<Category> nonSelectedCategories = new();
+    private bool loading = true;
+
+    protected async override Task OnInitializedAsync()
+    {
+        var httpResponse = await repository.Get<List<Category>>("/api/categories");
+        loading = false;
+
+        if (httpResponse.Error)
+        {
+            var message = await httpResponse.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        nonSelectedCategories = httpResponse.Response!;
+    }
+
+    private async Task CreateAsync()
+    {
+        var httpResponse = await repository.Post("/api/items", itemDto);
+        if (httpResponse.Error)
+        {
+            var message = await httpResponse.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        Return();
+    }
+    private void Return()
+    {
+        itemForm!.FormPostedSuccessfully = true;
+        navigationManager.NavigateTo($"/items");
+    }
+}
+
+}

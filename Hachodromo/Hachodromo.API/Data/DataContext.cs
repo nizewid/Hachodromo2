@@ -18,6 +18,8 @@ namespace Hachodromo.API.Data
         public DbSet<ItemCategory> ItemCategories { get; set; } = null!;
         public DbSet<ItemImage> ItemImages { get; set; } = null!;
 
+        public DbSet<Membership> Memberships { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -26,6 +28,12 @@ namespace Hachodromo.API.Data
             modelBuilder.Entity<City>().HasIndex(x => new { x.CityName, x.RegionId }).IsUnique();
             modelBuilder.Entity<Category>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<Item>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Membership>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<User>()
+                                    .HasOne(u => u.Membership)
+                                    .WithMany()
+                                    .HasForeignKey(u => u.MembershipId)
+                                    .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

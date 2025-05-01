@@ -66,6 +66,7 @@ namespace Hachodromo.API.Helpers
                                         .Include(c => c.City!)
                                         .ThenInclude(r => r.Region!)
                                         .ThenInclude(c => c.Country!)
+                                        .Include(m => m.Membership!)
                                         .FirstOrDefaultAsync(x => x.Email == email);
             return user!;
         }
@@ -76,6 +77,7 @@ namespace Hachodromo.API.Helpers
                                         .Include(c => c.City!)
                                         .ThenInclude(r => r.Region!)
                                         .ThenInclude(c => c.Country!)
+                                        .Include(m => m.Membership!)
                                         .FirstOrDefaultAsync(x => x.Id == userId.ToString());
             return user!;
         }
@@ -110,5 +112,15 @@ namespace Hachodromo.API.Helpers
             return await _userManager.GeneratePasswordResetTokenAsync(user);
         }
 
+        public async Task<List<User>> GetUsersByMembershipAsync(int membershipId)
+        {
+            return await _context.Users
+                .Include(c => c.City!)
+                .ThenInclude(r => r.Region!)
+                .ThenInclude(c => c.Country!)
+                .Include(m => m.Membership!)
+                .Where(u => u.MembershipId == membershipId)
+                .ToListAsync();
+        }
     }
 }

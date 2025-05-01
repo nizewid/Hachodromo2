@@ -44,6 +44,7 @@ namespace Hachodromo.Shared.Entities
         public int ItemImagesCount => ItemImages == null ? 0 : ItemImages.Count;
 
         [Display(Name = "Imagen")]
-        public string MainImage => ItemImages == null ? string.Empty : ItemImages.FirstOrDefault()!.Image;
+        public string MainImage => ItemImages?.FirstOrDefault()?.Image ?? string.Empty;
+
     }
 }

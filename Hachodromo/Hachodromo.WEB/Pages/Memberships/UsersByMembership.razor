@@ -1,0 +1,82 @@
+﻿@page "/memberships/manage/{MembershipId:int}/users/"
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+
+<h3>Usuarios con esta membresía</h3>
+
+@if (users is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else if (users.Count == 0)
+{
+    <p>No hay usuarios con esta membresía.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.FullName</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>
+                        <!--<button class="btn btn-primary" @onclick="() => ShowModal(user.Id)">Ver Detalles</button> 
+
+                        TODO: implementar este modal vista rápida-->
+                        <button class="btn btn-danger" @onclick="() => DeleteUserMembership(user.Email)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] public int MembershipId { get; set; }
+    private List<User>? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await repository.Get<List<User>>($"/api/accounts/ByMembership/{MembershipId}");
+        if (!response.Error)
+        {
+            users = response.Response;
+        }
+    }
+    private async Task ShowModal(Guid userId)
+    {
+        
+    }
+    private async Task DeleteUserMembership(string email)
+    {
+        var user = users!.FirstOrDefault(u => u.Email == email);
+        if (user == null)
+        {
+            await sweetAlertService.FireAsync("Error", "Usuario no encontrado", SweetAlertIcon.Error);
+            return;
+        }
+
+        var response = await repository.Put<object>($"/api/accounts/RemoveMembership/{user.Email}", null);  // Cambié user.Id a user.Email
+        if (!response.Error)
+        {
+            users!.RemoveAll(u => u.Email == email); // Eliminamos al usuario de la lista
+            StateHasChanged();
+        }
+        else
+        {
+            var msg = await response.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", msg, SweetAlertIcon.Error);
+        }
+    }
+}
