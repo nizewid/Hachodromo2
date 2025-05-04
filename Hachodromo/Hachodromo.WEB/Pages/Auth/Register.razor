@@ -3,6 +3,7 @@
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @inject ILoginService loginService
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <EditForm Model="userDto" OnValidSubmit="CreteUserAsync">
 	<DataAnnotationsValidator />
@@ -51,6 +52,29 @@
 					</div>
 					<div class="col-md-6">
 						@* Segunda columna *@
+						@if (IsAdmin)
+						{
+							<div class="mb-3">
+								<label class="form-label">Tipo de usuario</label>
+								<select class="form-select" @bind="userDto.UserType">
+									<option value="@UserType.User">Usuario</option>
+									<option value="@UserType.Admin">Administrador</option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Membresía</label>
+								<select class="form-select" @bind="userDto.MembershipId">
+									<option value="0">Seleccione una membresía</option>
+									@if (memberships is not null)
+									{
+										@foreach (var membership in memberships)
+										{
+											<option value="@membership.Id">@membership.Name</option>
+										}
+									}
+									</select>
+							</div>
+						}
 						<div class="mb-3">
 							<label class="form-label">País</label>
 							<select class="form-select" @onchange="CountryChangedAsync">
@@ -119,16 +143,40 @@
 	private List<Country>? countries;
 	private List<Region>? regions;
 	private List<City>? cities;
+	private List<Membership>? memberships;
 	private string? imageUrl;
+
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public bool IsAdmin { get; set; }
+
+
 
 	protected override async Task OnInitializedAsync()
 	{
 		await LoadCountriesAsync();
 
+
 		if (!string.IsNullOrEmpty(userDto.Photo))
 		{
 			imageUrl = userDto.Photo;
 			userDto.Photo = null;
+		}
+		var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+		var user = authState.User;
+
+		if (user.Identity is not null && user.Identity.IsAuthenticated)
+		{
+			// Revisa si tiene el rol "Admin"
+			IsAdmin = user.IsInRole("Admin");
+		}
+		if (IsAdmin)
+		{
+			await LoadMembershipsAsync();
+		}
+		else
+		{
+			userDto.MembershipId = (int?)MembershipType.NoMembership;
 		}
 
 	}
@@ -142,7 +190,11 @@
 	{
 		//loading = true;
 		userDto.UserName = userDto.Email;
-		userDto.UserType = UserType.User;
+		if (!IsAdmin)
+		{
+			userDto.UserType = UserType.User;
+		}
+
 		var responseHttp = await repository.Post<UserDto>("/api/accounts/CreateUser", userDto);
 		if (responseHttp.Error)
 		{
@@ -167,6 +219,18 @@
 	{
 		var selectedRegion = Convert.ToInt32(e.Value!);
 		await LoadCitiesAsync(selectedRegion);
+	}
+
+	private async Task LoadMembershipsAsync()
+	{
+		var responseHttp = await repository.Get<List<Membership>>("/api/memberships/");
+		if (responseHttp.Error)
+		{
+			var message = await responseHttp.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+		memberships = responseHttp.Response;
 	}
 
 	private async Task LoadCountriesAsync()

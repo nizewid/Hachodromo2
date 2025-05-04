@@ -22,5 +22,7 @@ namespace Hachodromo.Shared.Entities
 
         public ICollection<User>? Users { get; set; }
 
+        public ICollection<Site>? Sites { get; set; }
+
     }
 }

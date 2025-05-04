@@ -14,8 +14,8 @@ namespace Hachodromo.API.Data
         private readonly IUserHelper _userHelper;
         private readonly IFileStorage _fileStorage;
         private string[] categories = { "Ropa", "Accesorios", "Vikingos" };
-        private string[] itemImages = { "camisaviking.jpg", "camisaviking2.jpg", "cuernoVikingo.jpg", "llaveroviking.jpg"};
-        private string[] profileImages = { "Anais.png", "coco.jpg", "profile.jpg","maya.png"};
+        private string[] itemImages = { "camisaviking.jpg", "camisaviking2.jpg", "cuernoVikingo.jpg", "llaveroviking.jpg" };
+        private string[] profileImages = { "Anais.png", "coco.jpg", "profile.jpg", "maya.png" };
 
 
         public SeedDb(DataContext context, IApiService apiService, IUserHelper userHelper, IFileStorage fileStorage)
@@ -33,13 +33,60 @@ namespace Hachodromo.API.Data
             await CheckRolesAsync();
             await CheckCategoriesAsync();
             await CheckItemsAsync();
-           await CheckMembershipsAsync();
+            await CheckMembershipsAsync();
             await CheckCountriesAsync();
-            await CheckUserAsync("13364217K","José","Flores Silva","jgfs.jf@gmail.com","640097444", profileImages[2],"C/Progreso 36",UserType.Admin,1);
-            await CheckUserAsync("11223344A", "Anais", "Gonzalez", "anais@example.com", "600111222", profileImages[0], "Calle Luna 5", UserType.User,2);
-            await CheckUserAsync("11222556B", "Coco", "Flores", "crutraucreibroimu-2614@yopmail.com", "600333444", profileImages[1], "Calle Sol 9", UserType.User,3);
+            await CheckSitesAsync();
+            await CheckUserAsync("13364217K", "José", "Flores Silva", "jgfs.jf@gmail.com", "640097444", profileImages[2], "C/Progreso 36", UserType.Admin, 1);
+            await CheckUserAsync("11223344A", "Anais", "Gonzalez", "anais@example.com", "600111222", profileImages[0], "Calle Luna 5", UserType.User, 2);
+            await CheckUserAsync("11222556B", "Coco", "Flores", "crutraucreibroimu-2614@yopmail.com", "600333444", profileImages[1], "Calle Sol 9", UserType.User, 3);
             await CheckUserAsync("44112233B", "Maya", "Gonzalez", "maya@yopmail.com", "600333444", profileImages[3], "Calle Sol 9", UserType.User, 4);
         }
+
+        private async Task CheckSitesAsync()
+        {
+            if (!_context.Sites.Any())
+            {
+                var city = await _context.Cities.FirstOrDefaultAsync(x => x.CityName == "Oviedo");
+                var city2 = await _context.Cities.FirstOrDefaultAsync(x => x.CityName == "Gijón");
+
+                if (city == null || city2 == null)
+                    throw new Exception("Las ciudades necesarias para crear los sitios no existen en la base de datos.");
+
+                _context.Sites.AddRange(
+                    new Site
+                    {
+                        Name = "Hachodromo OVD",
+                        Description = "Hachodromo de Oviedo",
+                        Address = "Calle Progreso 36",
+                        Phone = "600111222",
+                        City = city,
+                        CityId = city.CityId,
+                        Targets = new List<Target>
+                                            {
+                                                new Target { Capacity = 6, Status = TargetStatus.Available },
+                                                new Target { Capacity = 4, Status = TargetStatus.Available }
+                                            }
+                    },
+                    new Site
+                    {
+                        Name = "Hachodromo Gij",
+                        Description = "Hachodromo de Gijón",
+                        Address = "Calle Alegría 12",
+                        Phone = "900900900",
+                        City = city2,
+                        CityId = city2.CityId,
+                        Targets = new List<Target>
+                                            {
+                                                new Target { Capacity = 5, Status = TargetStatus.Available },
+                                                new Target { Capacity = 6, Status = TargetStatus.UnderMaintenance }
+                                            }
+                    }
+                );
+
+                await _context.SaveChangesAsync();
+            }
+        }
+
 
         private async Task CheckMembershipsAsync()
         {
@@ -99,7 +146,7 @@ namespace Hachodromo.API.Data
 
         private async Task AddItemAsync(string name, decimal price, float stock, List<string> categories, List<string> images)
         {
-            Item item= new()
+            Item item = new()
             {
                 Description = name,
                 Name = name,
@@ -131,7 +178,7 @@ namespace Hachodromo.API.Data
 
         private async Task CheckCategoriesAsync()
         {
-            if(!_context.Categories.Any())
+            if (!_context.Categories.Any())
             {
                 _context.Categories.Add(new Category { Name = categories[0] });
                 _context.Categories.Add(new Category { Name = categories[1] });
@@ -146,7 +193,7 @@ namespace Hachodromo.API.Data
             await _userHelper.CheckRoleAsync(UserType.User.ToString());
         }
 
-        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone,string profilePhoto, string address,UserType userType, int membershipId)
+        private async Task<User> CheckUserAsync(string document, string firstName, string lastName, string email, string phone, string profilePhoto, string address, UserType userType, int membershipId)
         {
             var user = await _userHelper.GetUserAsync(email);
             if (user == null)
@@ -158,7 +205,7 @@ namespace Hachodromo.API.Data
                 }
 
                 var membership = await _context.Memberships.FirstOrDefaultAsync(m => m.Id == membershipId);
-                if(membership == null)
+                if (membership == null)
                 {
                     membership = await _context.Memberships.FirstOrDefaultAsync();
                 }
@@ -195,7 +242,7 @@ namespace Hachodromo.API.Data
         {
             var targetCountries = new List<(string Name, string Iso2)>
     {
-        ("España", "ES"),
+        ("España", "ES"),/*,
         ("Francia", "FR"),
         ("Portugal", "PT"),
         ("Andorra", "AD"),
@@ -216,7 +263,7 @@ namespace Hachodromo.API.Data
         ("China", "CN"),
         ("Japón", "JP"),
         ("Canadá", "CA"),
-        ("Australia", "AU"),
+        ("Australia", "AU"),*/
         ("Venezuela", "VE")
     };
 

@@ -67,6 +67,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZXNldFBhc3N3b3JkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/UsersIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxVc2Vyc0luZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Categories/CategoriesIndex.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yaWVzSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -173,6 +177,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Regions/RegionsCreate.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xSZWdpb25zQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SiteCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZUNyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SiteEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZUVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SiteForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SitesIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZXNJbmRleC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Weather.razor]

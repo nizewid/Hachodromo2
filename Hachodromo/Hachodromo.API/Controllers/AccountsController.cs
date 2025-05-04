@@ -1,6 +1,8 @@
-﻿using Hachodromo.API.Helpers;
+﻿using Hachodromo.API.Data;
+using Hachodromo.API.Helpers;
 using Hachodromo.Shared.DTOs;
 using Hachodromo.Shared.Entities;
+using Hachodromo.Shared.Enums;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -22,14 +24,16 @@ namespace Hachodromo.API.Controllers
         private readonly IFileStorage _fileStorage;
         private readonly IMailHelper _mailHelper;
         private readonly string _container;
+        private readonly DataContext _context;
 
-        public AccountsController(IUserHelper userHelper, IConfiguration configuration, IFileStorage fileStorage, IMailHelper mailHelper)
+        public AccountsController(IUserHelper userHelper, IConfiguration configuration, IFileStorage fileStorage, IMailHelper mailHelper, DataContext context)
         {
             _userHelper = userHelper;
             _configuration = configuration;
             _fileStorage = fileStorage;
             _mailHelper = mailHelper;
             _container = "users";
+            _context = context;
         }
 
         [HttpPost("CreateUser")]
@@ -148,6 +152,8 @@ namespace Hachodromo.API.Controllers
                 currentUser.CityId = user.CityId;
                 currentUser.BornDate = user.BornDate;
                 currentUser.Document = user.Document;
+                currentUser.UserType = user.UserType;
+                currentUser.MembershipId = user.MembershipId;
                 currentUser.Photo = !string.IsNullOrEmpty(user.Photo) && user.Photo != currentUser.Photo ? user.Photo : currentUser.Photo;
 
                 var result = await _userHelper.UpdateUserAsync(currentUser);
@@ -295,10 +301,55 @@ namespace Hachodromo.API.Controllers
             { 
                 return NotFound();
             }
-            user.MembershipId = 1;
+            user.MembershipId = (int?)MembershipType.NoMembership;
             await _userHelper.UpdateUserAsync(user);
-
+             
             return Ok(user);
         }
+        [HttpGet("all")]
+        public async Task<ActionResult> GetAll([FromQuery] PaginationDto pagination)
+        {
+            var quearyable = _context.Users
+                .Include(c => c.City)
+                .Include(m => m.Membership)
+                .AsQueryable();
+
+            if(!string.IsNullOrWhiteSpace(pagination.Filter))
+            {
+                 quearyable = quearyable.Where(x => x.FirstName.ToLower().Contains(pagination.Filter.ToLower()) ||                                                x.LastName.ToLower() == pagination.Filter.ToLower());
+            }
+            return Ok(await quearyable
+                .OrderBy(x => x.FirstName)
+                .ThenBy(x => x.LastName)
+                .Paginate(pagination)
+                .ToListAsync());
+        }
+        [HttpGet("totalPages")]
+        public async Task<ActionResult> GetPages([FromQuery] PaginationDto pagination)
+        {
+            var queryable = _context.Users.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.FirstName.ToLower().Contains(pagination.Filter.ToLower()) || x.LastName.ToLower() == pagination.Filter.ToLower());
+            }
+
+            double count = await queryable.CountAsync();
+            double totalPages = Math.Ceiling(count / pagination.RecordsNumber);
+            return Ok(totalPages);
+        }
+
+        [HttpGet("{email}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> GetByEmail(string email)
+        {
+            var user = await _userHelper.GetUserAsync(email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
+        }
+
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,7 @@ namespace Hachodromo.Shared.Entities
 
         [Display(Name = "Membresía")]
         public int? MembershipId { get; set; }
+        [ForeignKey("MembershipId")]
         public Membership? Membership { get; set; } 
         public City? City { get; set; }
 
@@ -54,6 +56,10 @@ namespace Hachodromo.Shared.Entities
 
         [Display(Name = "Usuario")]
         public string FullName => $"{FirstName} {LastName}";
-      
+
+        [Display(Name = "Reservas")]
+        public ICollection<Reservation> Reservations { get; set; } = [];
+
+
     }
 }

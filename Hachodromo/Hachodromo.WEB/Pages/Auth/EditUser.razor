@@ -1,8 +1,10 @@
 ﻿@page "/EditUser"
+@page "/EditUser/{Email}"
 @inject IRepository repository
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @inject ILoginService loginService
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 @if (user is null)
 {
@@ -59,12 +61,36 @@ else
                                 <ValidationMessage For="@(() => user.Address)" />
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <InputDate class="form-control" @bind-Value="user.BornDate" />
+                            <ValidationMessage For="@(() => user.BornDate)" />
+                        </div>
                     </div>
                     <div class="col-6">
-                        <div class="form-control-plaintext mb-1">
-                            <label>Membresía:</label>
-                                <p class="fw-semibold"> @user.Membership?.Name </p>
-                        </div>
+                        @if (IsAdmin)
+                        {
+                            <div class="mb-3">
+                                <label class="form-label">Tipo de usuario</label>
+                                <select class="form-select" @bind="user.UserType">
+                                    <option value="@UserType.User">Usuario</option>
+                                    <option value="@UserType.Admin">Administrador</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Membresía</label>
+                                <select class="form-select" @bind="user.MembershipId">
+                                    <option value="0">Seleccione una membresía</option>
+                                    @if (memberships is not null)
+                                    {
+                                        @foreach (var membership in memberships)
+                                        {
+                                            <option value="@membership.Id">@membership.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
                         <div class="mb-3">
                             <label>País:</label>
                             <div>
@@ -128,13 +154,31 @@ else
     private List<Region>? regions;
     private List<City>? cities;
     private string? imageUrl;
-	private List<Membership>? memberships;
+    private List<Membership>? memberships;
+
+    [Parameter]
+    public string? Email { get; set; }
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public bool IsAdmin { get; set; }
 
     [CascadingParameter]
-	IModalService modalService { get; set; } = default!;
+    IModalService modalService { get; set; } = default!;
 
     protected override async Task OnInitializedAsync()
     {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var loggeduser = authState.User;
+        if (loggeduser.Identities is not null && loggeduser.Identity!.IsAuthenticated)
+        {
+            IsAdmin = loggeduser.IsInRole("Admin");
+        }
+        if (IsAdmin)
+        {
+            await LoadMembershipsAsync();
+        }
+
         await LoadUserAsyc();
         await LoadCountriesAsync();
         await LoadRegionsAsync(user!.City!.Region!.Country!.Id);
@@ -146,11 +190,22 @@ else
             user.Photo = null;
         }
 
+
     }
 
     private async Task LoadUserAsyc()
     {
-        var responseHTTP = await repository.Get<User>($"/api/accounts");
+        string url = string.Empty;
+        if(IsAdmin)
+        {
+            url = $"/api/accounts/{Email}";
+        }
+        else
+        {
+            url = $"/api/accounts";
+        }
+        var responseHTTP = await repository.Get<User>(url);
+
         if (responseHTTP.Error)
         {
             if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -231,8 +286,17 @@ else
             await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
             return;
         }
-		await loginService.LoginAsync(responseHttp.Response!.Token);
-        navigationManager.NavigateTo("/");
+        if (IsAdmin)
+        {
+            await sweetAlertService.FireAsync("Éxito", "Usuario editado correctamente", SweetAlertIcon.Success);
+            navigationManager.NavigateTo("/users");
+        }
+        else
+        {
+            await sweetAlertService.FireAsync("Éxito", "Usuario editado correctamente", SweetAlertIcon.Success);
+            await loginService.LoginAsync(responseHttp.Response!.Token);
+            navigationManager.NavigateTo("/");
+        }
     }
     private async Task ShowModal()
     {
@@ -245,4 +309,16 @@ else
 			await LoadUserAsyc();
 		}
     }
+    private async Task LoadMembershipsAsync()
+    {
+        var responseHttp = await repository.Get<List<Membership>>("/api/memberships/");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        memberships = responseHttp.Response;
+    }
+
 }

@@ -2,6 +2,7 @@
 using Hachodromo.API.Helpers;
 using Hachodromo.Shared.DTOs;
 using Hachodromo.Shared.Entities;
+using Hachodromo.Shared.Enums;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -82,7 +83,7 @@ namespace Hachodromo.API.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteAsync(int id)
         {
-            if (id == 1)
+            if (id == (int)MembershipType.NoMembership)
             {
                 return BadRequest("No se puede eliminar la membresía por defecto.");
             }
@@ -92,12 +93,12 @@ namespace Hachodromo.API.Controllers
             {
                 return NotFound();
             }
-            
+
             var usersWithMembership = await _context.Users.Where(u => u.MembershipId == id).ToListAsync();
 
             foreach (var user in usersWithMembership)
             {
-                user.MembershipId = 1; 
+                user.MembershipId = (int?)MembershipType.NoMembership;
             }
             _context.Remove(membership);
             await _context.SaveChangesAsync();

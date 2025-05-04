@@ -31,7 +31,7 @@ namespace Hachodromo.Shared.Entities
 
         [Display(Name = "Duración")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
-        [Range(1, 12, ErrorMessage = "El campo {0} debe estar entre {1} y {2}.")]
+        [Range(0, 12, ErrorMessage = "El campo {0} debe estar entre {1} y {2}.")]
         [DisplayFormat(DataFormatString = "{0} meses")]
         public int Duration { get; set; }
 
@@ -40,7 +40,6 @@ namespace Hachodromo.Shared.Entities
         [DisplayFormat(DataFormatString = "{0:P0}")]
         [Column(TypeName = "decimal(5,4)")]
         public decimal Discount { get; set; }
-
 
         public ICollection<User>? Users { get; set; } = [];
     }

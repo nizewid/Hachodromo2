@@ -13,12 +13,20 @@ namespace Hachodromo.API.Data
         public DbSet<Country> Countries { get; set; } = null!;
         public DbSet<Region> Regions { get; set; } = null!;
         public DbSet<City> Cities { get; set; } = null!;
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; } = null!;
         public DbSet<Item> Items { get; set; } = null!;
         public DbSet<ItemCategory> ItemCategories { get; set; } = null!;
         public DbSet<ItemImage> ItemImages { get; set; } = null!;
 
-        public DbSet<Membership> Memberships { get; set; }
+        public DbSet<Membership> Memberships { get; set; } = null!;
+
+        public DbSet<Site> Sites { get; set; } = null!;
+
+        public DbSet<Target> Targets { get; set; } = null!;
+
+        public DbSet<Reservation> Reservations { get; set; } = null!;
+
+        public DbSet<ReservationTarget> ReservationTargets { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +42,17 @@ namespace Hachodromo.API.Data
                                     .WithMany()
                                     .HasForeignKey(u => u.MembershipId)
                                     .OnDelete(DeleteBehavior.SetNull);
+            modelBuilder.Entity<Site>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<ReservationTarget>()
+                                    .HasOne(rt => rt.Reservation)
+                                    .WithMany(r => r.ReservationTargets)
+                                    .HasForeignKey(rt => rt.ReservationId)
+                                    .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<ReservationTarget>()
+                                    .HasOne(rt => rt.Target)
+                                    .WithMany(t => t.ReservationTargets)
+                                    .HasForeignKey(rt => rt.TargetId)
+                                    .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -227,6 +227,130 @@ namespace Hachodromo.API.Migrations
                     b.ToTable("Regions");
                 });
 
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("HourEnd")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan>("HourStart")
+                        .HasColumnType("time");
+
+                    b.Property<string>("Remarks")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("ReservationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.ReservationTarget", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TargetId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReservationId");
+
+                    b.HasIndex("TargetId");
+
+                    b.ToTable("ReservationTargets");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Site", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Phone")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Sites");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Target", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SiteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SiteId");
+
+                    b.ToTable("Targets");
+                });
+
             modelBuilder.Entity("Hachodromo.Shared.Entities.User", b =>
                 {
                     b.Property<string>("Id")
@@ -277,7 +401,10 @@ namespace Hachodromo.API.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<int>("MembershipId")
+                    b.Property<int?>("MembershipId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MembershipId1")
                         .HasColumnType("int");
 
                     b.Property<string>("NormalizedEmail")
@@ -318,6 +445,8 @@ namespace Hachodromo.API.Migrations
                     b.HasIndex("CityId");
 
                     b.HasIndex("MembershipId");
+
+                    b.HasIndex("MembershipId1");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -515,6 +644,58 @@ namespace Hachodromo.API.Migrations
                     b.Navigation("Country");
                 });
 
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Reservation", b =>
+                {
+                    b.HasOne("Hachodromo.Shared.Entities.User", "User")
+                        .WithMany("Reservations")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.ReservationTarget", b =>
+                {
+                    b.HasOne("Hachodromo.Shared.Entities.Reservation", "Reservation")
+                        .WithMany("ReservationTargets")
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Hachodromo.Shared.Entities.Target", "Target")
+                        .WithMany("ReservationTargets")
+                        .HasForeignKey("TargetId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Reservation");
+
+                    b.Navigation("Target");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Site", b =>
+                {
+                    b.HasOne("Hachodromo.Shared.Entities.City", "City")
+                        .WithMany("Sites")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Target", b =>
+                {
+                    b.HasOne("Hachodromo.Shared.Entities.Site", "Site")
+                        .WithMany("Targets")
+                        .HasForeignKey("SiteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Site");
+                });
+
             modelBuilder.Entity("Hachodromo.Shared.Entities.User", b =>
                 {
                     b.HasOne("Hachodromo.Shared.Entities.City", "City")
@@ -524,10 +705,13 @@ namespace Hachodromo.API.Migrations
                         .IsRequired();
 
                     b.HasOne("Hachodromo.Shared.Entities.Membership", "Membership")
-                        .WithMany("Users")
+                        .WithMany()
                         .HasForeignKey("MembershipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Hachodromo.Shared.Entities.Membership", null)
+                        .WithMany("Users")
+                        .HasForeignKey("MembershipId1");
 
                     b.Navigation("City");
 
@@ -592,6 +776,8 @@ namespace Hachodromo.API.Migrations
 
             modelBuilder.Entity("Hachodromo.Shared.Entities.City", b =>
                 {
+                    b.Navigation("Sites");
+
                     b.Navigation("Users");
                 });
 
@@ -615,6 +801,26 @@ namespace Hachodromo.API.Migrations
             modelBuilder.Entity("Hachodromo.Shared.Entities.Region", b =>
                 {
                     b.Navigation("Cities");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Reservation", b =>
+                {
+                    b.Navigation("ReservationTargets");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Site", b =>
+                {
+                    b.Navigation("Targets");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.Target", b =>
+                {
+                    b.Navigation("ReservationTargets");
+                });
+
+            modelBuilder.Entity("Hachodromo.Shared.Entities.User", b =>
+                {
+                    b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618
         }

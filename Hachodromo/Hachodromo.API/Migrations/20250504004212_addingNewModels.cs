@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Hachodromo.API.Migrations
 {
     /// <inheritdoc />
-    public partial class AddingItemsTables : Migration
+    public partial class addingNewModels : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -65,6 +65,23 @@ namespace Hachodromo.API.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Items", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Memberships",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Duration = table.Column<int>(type: "int", nullable: false),
+                    Discount = table.Column<decimal>(type: "decimal(5,4)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Memberships", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -186,7 +203,9 @@ namespace Hachodromo.API.Migrations
                     Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserType = table.Column<int>(type: "int", nullable: false),
                     BornDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    MembershipId = table.Column<int>(type: "int", nullable: true),
                     CityId = table.Column<int>(type: "int", nullable: false),
+                    MembershipId1 = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -207,6 +226,40 @@ namespace Hachodromo.API.Migrations
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                     table.ForeignKey(
                         name: "FK_AspNetUsers_Cities_CityId",
+                        column: x => x.CityId,
+                        principalTable: "Cities",
+                        principalColumn: "CityId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AspNetUsers_Memberships_MembershipId",
+                        column: x => x.MembershipId,
+                        principalTable: "Memberships",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
+                    table.ForeignKey(
+                        name: "FK_AspNetUsers_Memberships_MembershipId1",
+                        column: x => x.MembershipId1,
+                        principalTable: "Memberships",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sites",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    CityId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sites", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Sites_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
                         principalColumn: "CityId",
@@ -298,6 +351,78 @@ namespace Hachodromo.API.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Reservations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    ReservationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    HourStart = table.Column<TimeSpan>(type: "time", nullable: false),
+                    HourEnd = table.Column<TimeSpan>(type: "time", nullable: false),
+                    Remarks = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reservations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Reservations_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Targets",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SiteId = table.Column<int>(type: "int", nullable: false),
+                    Capacity = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Targets", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Targets_Sites_SiteId",
+                        column: x => x.SiteId,
+                        principalTable: "Sites",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ReservationTargets",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ReservationId = table.Column<int>(type: "int", nullable: false),
+                    TargetId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReservationTargets", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ReservationTargets_Reservations_ReservationId",
+                        column: x => x.ReservationId,
+                        principalTable: "Reservations",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ReservationTargets_Targets_TargetId",
+                        column: x => x.TargetId,
+                        principalTable: "Targets",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -334,6 +459,16 @@ namespace Hachodromo.API.Migrations
                 name: "IX_AspNetUsers_CityId",
                 table: "AspNetUsers",
                 column: "CityId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_MembershipId",
+                table: "AspNetUsers",
+                column: "MembershipId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUsers_MembershipId1",
+                table: "AspNetUsers",
+                column: "MembershipId1");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
@@ -387,6 +522,12 @@ namespace Hachodromo.API.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Memberships_Name",
+                table: "Memberships",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Regions_CountryId",
                 table: "Regions",
                 column: "CountryId");
@@ -396,6 +537,37 @@ namespace Hachodromo.API.Migrations
                 table: "Regions",
                 columns: new[] { "RegionName", "CountryId" },
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reservations_UserId",
+                table: "Reservations",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ReservationTargets_ReservationId",
+                table: "ReservationTargets",
+                column: "ReservationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ReservationTargets_TargetId",
+                table: "ReservationTargets",
+                column: "TargetId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sites_CityId",
+                table: "Sites",
+                column: "CityId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sites_Name",
+                table: "Sites",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Targets_SiteId",
+                table: "Targets",
+                column: "SiteId");
         }
 
         /// <inheritdoc />
@@ -423,16 +595,31 @@ namespace Hachodromo.API.Migrations
                 name: "ItemImages");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "ReservationTargets");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "Items");
+
+            migrationBuilder.DropTable(
+                name: "Reservations");
+
+            migrationBuilder.DropTable(
+                name: "Targets");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Sites");
+
+            migrationBuilder.DropTable(
+                name: "Memberships");
 
             migrationBuilder.DropTable(
                 name: "Cities");
