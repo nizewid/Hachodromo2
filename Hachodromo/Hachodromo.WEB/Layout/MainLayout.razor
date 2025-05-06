@@ -1,4 +1,11 @@
-﻿@inherits LayoutComponentBase
+﻿@using MudBlazor
+@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -10,8 +17,10 @@
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">Información adicional</a>
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
+        <MudContainer>
+            <article class="content px-4">
+                @Body
+            </article>
+        </MudContainer>
     </main>
 </div>

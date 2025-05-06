@@ -106,6 +106,59 @@ namespace Hachodromo.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        
+        [HttpGet("combo")]
+        [AllowAnonymous]
+        public async Task<ActionResult<List<Site>>> GetComboAsync()
+        {
+            var sites = await _context.Sites
+                .Include(c => c.City!)
+                .ThenInclude(r => r.Region!)
+                .ThenInclude(c => c.Country!)
+                .ToListAsync();
+            return Ok(sites);
+        }
 
+        // GET api/sites/5/timeslots?date=2025-05-07
+        [HttpGet("{siteId:int}/timeslots")]
+        [AllowAnonymous]
+        public async Task<ActionResult<List<TimeSlotDto>>> GetTimeSlots(
+            int siteId,
+            [FromQuery] DateTime date)
+        {
+            // 1) Número total de blancos en el sitio
+            var totalTargets = await _context.Targets
+                .CountAsync(t => t.SiteId == siteId);
+
+            // 2) Cargamos todas las reservas de ese sitio y fecha
+            var reservationsOnDate = await _context.ReservationTargets
+                .Include(rt => rt.Reservation)
+                .Include(rt => rt.Target)
+                .Where(rt =>
+                    rt.Target.SiteId == siteId &&
+                    rt.Reservation.ReservationDate.Date == date.Date)
+                .ToListAsync();
+
+            // 3) Generamos los slots de 12–23h
+            var slots = Enumerable.Range(12, 11)
+                .Select(h =>
+                {
+                    var start = TimeSpan.FromHours(h);
+                    var end = start.Add(TimeSpan.FromHours(1));
+                    // cuántos blancos ya están reservados en ese slot
+                    var reservedCount = reservationsOnDate
+                        .Count(rt => rt.Reservation.HourStart == start);
+                    return new TimeSlotDto
+                    {
+                        Start = start,
+                        End = end,
+                        AvailableCount = totalTargets - reservedCount
+                    };
+                })
+                .ToList();
+
+            return Ok(slots);
+        }
     }
 }
+

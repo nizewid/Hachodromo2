@@ -12,8 +12,8 @@ namespace Hachodromo.Shared.Entities
     public class Reservation
     {
         public int Id { get; set; }
-        [Required]
-        public string UserId { get; set; } = null!;
+        public string? UserId { get; set; }
+        public string? GuestEmail { get; set; }
 
         [Required]
         [Range(1, 4, ErrorMessage = "El campo {0} debe estar entre {1} y {2}.")]

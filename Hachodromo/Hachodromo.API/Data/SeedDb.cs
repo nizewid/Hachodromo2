@@ -15,6 +15,7 @@ namespace Hachodromo.API.Data
         private readonly IFileStorage _fileStorage;
         private string[] categories = { "Ropa", "Accesorios", "Vikingos" };
         private string[] itemImages = { "camisaviking.jpg", "camisaviking2.jpg", "cuernoVikingo.jpg", "llaveroviking.jpg" };
+        private string[] sitesPhotos = { "A.jpg", "B.jpeg", "C.jpg" };
         private string[] profileImages = { "Anais.png", "coco.jpg", "profile.jpg", "maya.png" };
 
 
@@ -35,56 +36,44 @@ namespace Hachodromo.API.Data
             await CheckItemsAsync();
             await CheckMembershipsAsync();
             await CheckCountriesAsync();
-            await CheckSitesAsync();
+            await CheckSiteAsync("Hachodromo OVD","Hachodromo de Oviedo","Calle Progreso 36","600111222","Oviedo", sitesPhotos[0], (6, TargetStatus.Available),(4, TargetStatus.Available));
+            await CheckSiteAsync("Hachodromo Gij","Hachodromo de Gijón","Calle Alegría 12","900900900","Gijón",sitesPhotos[1],(5, TargetStatus.Available),(6, TargetStatus.UnderMaintenance));
             await CheckUserAsync("13364217K", "José", "Flores Silva", "jgfs.jf@gmail.com", "640097444", profileImages[2], "C/Progreso 36", UserType.Admin, 1);
             await CheckUserAsync("11223344A", "Anais", "Gonzalez", "anais@example.com", "600111222", profileImages[0], "Calle Luna 5", UserType.User, 2);
             await CheckUserAsync("11222556B", "Coco", "Flores", "crutraucreibroimu-2614@yopmail.com", "600333444", profileImages[1], "Calle Sol 9", UserType.User, 3);
             await CheckUserAsync("44112233B", "Maya", "Gonzalez", "maya@yopmail.com", "600333444", profileImages[3], "Calle Sol 9", UserType.User, 4);
         }
 
-        private async Task CheckSitesAsync()
+        private async Task CheckSiteAsync(string name,string description,string address,string phone,string cityName, string photoSite, params (int capacity, TargetStatus status)[] targetsData)
         {
-            if (!_context.Sites.Any())
+
+            if (await _context.Sites.AnyAsync(s => s.Name == name))
+                return;
+
+            var city = await _context.Cities
+                .FirstOrDefaultAsync(c => c.CityName == cityName);
+            if (city == null)
+                throw new Exception($"La ciudad '{cityName}' no existe en la base de datos.");
+
+            var filePath = $"{Environment.CurrentDirectory}\\Images\\sites\\{photoSite}";
+            var fileBytes = File.ReadAllBytes(filePath);
+            var imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "sites");
+            var site = new Site
             {
-                var city = await _context.Cities.FirstOrDefaultAsync(x => x.CityName == "Oviedo");
-                var city2 = await _context.Cities.FirstOrDefaultAsync(x => x.CityName == "Gijón");
+                Name = name,
+                Description = description,
+                Address = address,
+                Phone = phone,
+                Photo = imagePath,
+                City = city,
+                CityId = city.CityId,
+                Targets = targetsData
+                    .Select(t => new Target { Capacity = t.capacity, Status = t.status })
+                    .ToList()
+            };
 
-                if (city == null || city2 == null)
-                    throw new Exception("Las ciudades necesarias para crear los sitios no existen en la base de datos.");
-
-                _context.Sites.AddRange(
-                    new Site
-                    {
-                        Name = "Hachodromo OVD",
-                        Description = "Hachodromo de Oviedo",
-                        Address = "Calle Progreso 36",
-                        Phone = "600111222",
-                        City = city,
-                        CityId = city.CityId,
-                        Targets = new List<Target>
-                                            {
-                                                new Target { Capacity = 6, Status = TargetStatus.Available },
-                                                new Target { Capacity = 4, Status = TargetStatus.Available }
-                                            }
-                    },
-                    new Site
-                    {
-                        Name = "Hachodromo Gij",
-                        Description = "Hachodromo de Gijón",
-                        Address = "Calle Alegría 12",
-                        Phone = "900900900",
-                        City = city2,
-                        CityId = city2.CityId,
-                        Targets = new List<Target>
-                                            {
-                                                new Target { Capacity = 5, Status = TargetStatus.Available },
-                                                new Target { Capacity = 6, Status = TargetStatus.UnderMaintenance }
-                                            }
-                    }
-                );
-
-                await _context.SaveChangesAsync();
-            }
+            _context.Sites.Add(site);
+            await _context.SaveChangesAsync();
         }
 
 

@@ -39,9 +39,10 @@ namespace Hachodromo.API.Data
             modelBuilder.Entity<Membership>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<User>()
                                     .HasOne(u => u.Membership)
-                                    .WithMany()
+                                    .WithMany(m => m.Users)      // ← bind to the Membership.Users nav
                                     .HasForeignKey(u => u.MembershipId)
                                     .OnDelete(DeleteBehavior.SetNull);
+            modelBuilder.Entity<Site>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<Site>().HasIndex(x => x.Name).IsUnique();
             modelBuilder.Entity<ReservationTarget>()
                                     .HasOne(rt => rt.Reservation)

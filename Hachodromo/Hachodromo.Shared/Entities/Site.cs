@@ -30,6 +30,9 @@ namespace Hachodromo.Shared.Entities
         [MaxLength(20, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
         public string? Phone { get; set; }
 
+        [Display(Name = "Foto")]
+        public string? Photo { get; set; }
+
         public int CityId { get; set; } // Clave foránea a la tabla de ciudades
 
         [Display(Name = "Ciudad")]
