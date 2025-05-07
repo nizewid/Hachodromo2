@@ -1,0 +1,248 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Hachodromo.WEB
+build_property.RootNamespace = Hachodromo.WEB
+build_property.ProjectDir = C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxDaGFuZ2VQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ConfirmEmail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxDb25maXJtRW1haWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/EditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxFZGl0VXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/RecoverPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWNvdmVyUGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ResendTokenEmail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZXNlbmRUb2tlbkVtYWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/ResetPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZXNldFBhc3N3b3JkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Auth/UsersIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxVc2Vyc0luZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Categories/CategoriesIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yaWVzSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Categories/CategoryCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUNyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Categories/CategoryEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Categories/CategoryForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDYXRlZ29yeUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Cities/CitiesEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0aWVzXENpdGllc0VkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Cities/CityCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0aWVzXENpdHlDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Cities/CityForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0aWVzXENpdHlGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Countries/CountriesIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXENvdW50cmllc0luZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Countries/CountryCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXENvdW50cnlDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Countries/CountryDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXENvdW50cnlEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Countries/CountryEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXENvdW50cnlFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Countries/CountryForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyaWVzXENvdW50cnlGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Items/ItemCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNcSXRlbUNyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Items/ItemEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNcSXRlbUVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Items/ItemForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNcSXRlbUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Items/ItemsIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXNcSXRlbXNJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Memberships/MembershipCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyc2hpcHNcTWVtYmVyc2hpcENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Memberships/MembershipEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyc2hpcHNcTWVtYmVyc2hpcEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Memberships/MembershipForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyc2hpcHNcTWVtYmVyc2hpcEZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Memberships/MembershipsIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyc2hpcHNcTWVtYmVyc2hpcHNJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Memberships/UsersByMembership.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyc2hpcHNcVXNlcnNCeU1lbWJlcnNoaXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Regions/RegionDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xSZWdpb25EZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Regions/RegionEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xSZWdpb25FZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Regions/RegionForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xSZWdpb25Gb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Regions/RegionsCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uc1xSZWdpb25zQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Reservations/ReservationCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25zXFJlc2VydmF0aW9uQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Reservations/ReservationForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25zXFJlc2VydmF0aW9uRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Reservations/ReservationIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25zXFJlc2VydmF0aW9uSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SiteCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZUNyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SiteEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZUVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SiteForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Sites/SitesIndex.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXNcU2l0ZXNJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/AuthLinks.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEF1dGhMaW5rcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/CarouselView.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhcm91c2VsVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/GenericList.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEdlbmVyaWNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/InputImg.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElucHV0SW1nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/MultipleSelector.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE11bHRpcGxlU2VsZWN0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Shared/Pagination.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2luYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rtl9qm72qw
+
+[C:/Proyect/Hachodrom/Hachodromo/Hachodromo.WEB/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c4hm57jf6n
