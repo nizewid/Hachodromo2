@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiApp\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\MauiApp.styles.css",
+      "PackagePath": "staticwebassets\\MauiApp.styles.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.MauiApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.MauiApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.build.MauiApp.props",
+      "PackagePath": "build\\MauiApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.buildMultiTargeting.MauiApp.props",
+      "PackagePath": "buildMultiTargeting\\MauiApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.buildTransitive.MauiApp.props",
+      "PackagePath": "buildTransitive\\MauiApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

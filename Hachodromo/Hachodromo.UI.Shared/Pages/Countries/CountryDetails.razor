@@ -1,0 +1,193 @@
+﻿@page "/countries/details/{Id:int}"
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+@attribute [Authorize(Roles = "Admin")]
+
+@if (country is null)
+{
+	<div class="spinner" />
+}
+else
+{
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">Detalles del País</h5>
+			<p class="card-text">Id: @country.Id</p>
+			<p class="card-text">Nombre: @country.Name</p>
+			<p class="card-text">Regiónes: @country.RegionNumber</p>
+			<div class="mb-2">
+				<a class="btn btn-primary" @onclick=@(()=> ShowModal(country.Id))>Nueva región</a>
+				<a class="btn btn-success" href="/countries">Regresar</a>
+			</div>
+		</div>
+	</div>
+
+	<h3>Regiones</h3>
+	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
+		<div class="mx-2">
+			<input style="widh: 200px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
+		</div>
+		<div>
+			<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
+			<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
+		</div>
+	</div>
+	<Pagination CurrentPage="currentPage" TotalPages="totalPages" SelectedPage="SelectedPageAsync" />
+	<GenericList MyList="regions">
+		<Loading>
+			<div class="spinner" />
+		</Loading>
+		<Body>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Estado</th>
+						<th>Ciudades</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var region in regions!)
+					{
+						<tr>
+							<td>@region.RegionName</td>
+							<td>@region.CityNumber</td>
+							<td>
+							<a class="btn btn-light" href="/region/details/@region.RegionId">Detalles</a>
+							<a class="btn btn-warning" @onclick=@(()=>ShowModal(region.RegionId, true))>Editar</a>
+							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(region.RegionId))>Eliminar</button>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</Body>
+	</GenericList>
+
+}
+@code {
+	private Country? country;
+	private List<Region>? regions;
+	private int currentPage = 1;
+	private int totalPages;
+
+	[Parameter]
+	public int Id { get; set; }
+
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public string Page { get; set; } = string.Empty;
+
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public string Filter { get; set; } = string.Empty;
+
+	[CascadingParameter]
+	IModalService Modal { get; set; } = default!;
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadAsync();
+	}
+
+	private async Task SelectedPageAsync(int page)
+	{
+		currentPage = page;
+		await LoadAsync(page);
+	}
+
+	private async Task LoadAsync(int page = 1)
+	{
+
+		string url1, url2 = string.Empty;
+
+		if (!string.IsNullOrWhiteSpace(Page))
+		{
+			page = Convert.ToInt32(Page);
+		}
+		if (string.IsNullOrEmpty(Filter))
+		{
+			url1 = $"/api/regions?id={Id}&page={page}";
+			url2 = $"/api/regions/totalPages?id={Id}";
+		}
+		else
+		{
+			url1 = $"/api/regions?id={Id}&page={page}&filter={Filter}";
+			url2 = $"/api/regions/totalPages?id={Id}&filter={Filter}";
+		}
+		var responseHttp = await repository.Get<Country>($"/api/countries/{Id}");
+		var responseHttp2 = await repository.Get<List<Region>>(url1);
+		var responseHttp3 = await repository.Get<int>(url2);
+		if (responseHttp.Error)
+		{
+			if (responseHttp.HttpResponseMessage.StatusCode != HttpStatusCode.NotFound)
+			{
+				navigationManager.NavigateTo("/countries");
+				return;
+			}
+			var message = await responseHttp.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+		country = responseHttp.Response;
+		regions = responseHttp2.Response;
+		totalPages = responseHttp3.Response;
+		//regions = country!.Regions!.ToList();
+	}
+
+	private async Task DeleteAsync(int id)
+	{
+		var result = await sweetAlertService.FireAsync(new SweetAlertOptions
+			{
+				Title = "Confirmación",
+				Text = "¿Deseas eliminar la región?",
+				Icon = SweetAlertIcon.Question,
+				ShowCancelButton = true,
+				CancelButtonText = "NO",
+				ConfirmButtonText = "SI"
+			});
+
+		var responseHttp = await repository.Delete($"/api/regions/{id}");
+		if (responseHttp.Error)
+		{
+			if (responseHttp.HttpResponseMessage.StatusCode != HttpStatusCode.NotFound)
+			{
+				var message = await responseHttp.GetErrorMessageAsync();
+				await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+				return;
+			}
+		}
+		await LoadAsync();
+	}
+	private async Task CleanFilterAsync()
+	{
+		Filter = string.Empty;
+		await ApplyFilterAsync();
+	}
+
+	private async Task ApplyFilterAsync()
+	{
+		int page = 1;
+		await LoadAsync(page);
+		await SelectedPageAsync(page);
+	}
+	private async Task ShowModal(int id = 0, bool isEdit = false)
+	{
+		IModalReference modalReference;
+		if (isEdit)
+		{
+			modalReference = Modal.Show<RegionEdit>($"Editar región", new ModalParameters().Add("RegionId", id));
+		}
+		else
+		{
+			modalReference = Modal.Show<RegionsCreate>($"Crear región", new ModalParameters().Add("CountryId", country!.Id));
+		}
+
+		var result = await modalReference.Result;
+		if (result.Confirmed)
+		{
+			await LoadAsync();
+		}
+	}
+}

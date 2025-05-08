@@ -1,0 +1,64 @@
+﻿@page "/Login"
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+@inject ILoginService loginService
+
+<EditForm Model="loginDto" OnValidSubmit="LoginAsync">
+    <DataAnnotationsValidator />
+
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <div class="card shadow-sm rounded-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">Iniciar Sesión</h5>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email:</label>
+                        <InputText class="form-control" @bind-Value="loginDto.Email" />
+                        <ValidationMessage For="@(() => loginDto.Email)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña:</label>
+                        <InputText type="password" class="form-control" @bind-Value="loginDto.Password" />
+                        <ValidationMessage For="@(() => loginDto.Password)" />
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit">Entrar</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+					<div class="text-center">
+						<p class="mb-0">¿No tienes una cuenta? <a href="/Register">Regístrate</a></p>
+					</div>
+					<div class="text-center">
+						<p class="mb-0">¿Olvidaste tu contraseña? <a href="/ForgotPassword">Recuperar contraseña</a></p>
+					</div>
+                    <div class="text-center">
+                        <p class="mb-0">Reenviar correo de reactivación <a href="/ResendToken">Enviar reactivación</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private LoginDto loginDto = new();
+
+    private async Task LoginAsync()
+    {
+        var responseHttp = await repository.Post<LoginDto, TokenDto>("/api/accounts/Login", loginDto);
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        await loginService.LoginAsync(responseHttp.Response!.Token);
+        navigationManager.NavigateTo("/");
+    }
+}

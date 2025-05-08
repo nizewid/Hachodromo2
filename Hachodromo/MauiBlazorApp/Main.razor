@@ -1,0 +1,47 @@
+﻿@using MauiBlazorApp.Components.Layout
+@using Microsoft.AspNetCore.Components          
+@using Microsoft.AspNetCore.Components.Authorization  
+@using Microsoft.AspNetCore.Components.Routing  
+@using Blazored.Modal  
+@using Blazored.Modal.Services  
+@using Hachodromo.Shared.Auth  
+@using Hachodromo.UI.Shared.Pages               
+@using System.Reflection
+@inject ILoginService LoginService
+<CascadingAuthenticationState>
+   <CascadingBlazoredModal Position="ModalPosition.Middle"  
+                           Size="ModalSize.Large"  
+                           HideHeader="true"  
+                           DisableBackgroundCancel="true"  
+                           AnimationType="ModalAnimationType.FadeInOut">  
+
+       @code {  
+           private Assembly[] AdditionalAssemblies => new[] { typeof(Hachodromo.UI.Shared.Pages.Home).Assembly };  
+       }  
+
+       <Router AppAssembly="@typeof(Main).Assembly"  
+               AdditionalAssemblies="@AdditionalAssemblies">  
+
+           <Found Context="routeData">  
+               <AuthorizeRouteView RouteData="@routeData"  
+                                   DefaultLayout="@typeof(MainLayout)">  
+                   <Authorizing>  
+                       <p>Autorizando…</p>  
+                   </Authorizing>  
+                   <NotAuthorized>  
+                       <p>No tienes autorización para acceder a esta página.</p>  
+                   </NotAuthorized>  
+               </AuthorizeRouteView>  
+
+               <FocusOnNavigate RouteData="@routeData" Selector="h1" />  
+           </Found>  
+
+           <NotFound>  
+               <LayoutView Layout="@typeof(MainLayout)">  
+                   <h3 role="alert">Lo siento, no hay nada en esta dirección.</h3>  
+               </LayoutView>  
+           </NotFound>  
+
+       </Router>  
+   </CascadingBlazoredModal>  
+</CascadingAuthenticationState>

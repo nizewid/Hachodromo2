@@ -1,0 +1,182 @@
+﻿@page "/items/edit/{ItemId:int}"
+@inject IRepository repository
+@inject NavigationManager navigationManager
+@inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles = "Admin")]
+
+
+@if (loading)
+{
+	<div class="spinner" />
+}
+else
+{
+	    <ItemForm @ref="itemForm" ItemDto="itemDto" SelectedCategories="selectedCategories" 
+			NonSelectedCategories="nonSelectedCategories" OnValidSubmit="SaveChangesAsync" 
+			ReturnAction="Return" IsEdit=true 
+			AddImageAction="AddImageAsync" RemoveImageAction="RemoveImageAsyc"/>
+}
+
+
+@code {
+	private ItemDto itemDto = new ItemDto
+		{
+			ItemCategoryIds = new List<int>(),
+			ItemImages = new List<string>()
+		};
+
+	private ItemForm? itemForm;
+	private List<Category> selectedCategories = new();
+	private List<Category> nonSelectedCategories = new();
+	private bool loading = true;
+	private Item? item;
+
+	[Parameter]
+	public int ItemId { get; set; }
+
+	protected async override Task OnInitializedAsync()
+	{
+		await LoadItemAsync();
+		await LoadCategoriesAsync();
+	}
+	private async Task LoadItemAsync()
+	{
+		loading = true;
+		var httpResponse = await repository.Get<Item>($"/api/items/{ItemId}");
+
+		if (httpResponse.Error)
+		{
+			loading = false;
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+		item = httpResponse.Response!;
+		itemDto = ToItemDto(item);
+		loading = false;
+	}
+
+	private ItemDto ToItemDto(Item item)
+	{
+		return new ItemDto
+			{
+				Description = item.Description,
+				Id = item.Id,
+				Name = item.Name,
+				Price = item.Price,
+				Stock = item.Stock,
+				ItemCategoryIds = item.ItemCategories!.Select(x => x.CategoryId).ToList(),
+				ItemImages = item.ItemImages!.Select(x => x.Image).ToList()
+			};
+	}
+
+	private async Task LoadCategoriesAsync()
+	{
+		loading = true;
+		var httpResponse = await repository.Get<List<Category>>("/api/categories");
+
+		if (httpResponse.Error)
+		{
+			loading = false;
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+		var categories = httpResponse.Response!;
+		foreach (var category in categories!)
+		{
+			var found = item!.ItemCategories!.FirstOrDefault(x => x.CategoryId == category.Id);
+			if (found == null)
+			{
+				nonSelectedCategories.Add(category);
+			}
+			else
+			{
+				selectedCategories.Add(category);
+			}
+		}
+		loading = false;
+	}
+	private async Task SaveChangesAsync()
+	{
+		var httpResponse = await repository.Put("/api/items", itemDto);
+		if (httpResponse.Error)
+		{
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+
+		Return();
+	}
+
+	private void Return()
+	{
+		itemForm!.FormPostedSuccessfully = true;
+		navigationManager.NavigateTo($"/items");
+	}
+	private async Task AddImageAsync()
+	{
+		if (itemDto.ItemImages is null || itemDto.ItemImages.Count == 0)
+		{
+			return;
+		}
+
+		var imageDto = new ImageDto
+			{
+				ItemId = ItemId,
+				Images = itemDto.ItemImages!
+			};
+
+		var httpResponse = await repository.Post<ImageDto, ImageDto>("/api/items/addImages", imageDto);
+		if (httpResponse.Error)
+		{
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+
+		itemDto.ItemImages = httpResponse.Response!.Images;
+		var toast = sweetAlertService.Mixin(new SweetAlertOptions
+			{
+				Toast = true,
+				Position = SweetAlertPosition.TopEnd,
+				ShowConfirmButton = false,
+				Timer = 5000
+			});
+		await toast.FireAsync(icon: SweetAlertIcon.Success, message: "Imagenes agregadas con éxito.");
+	}
+
+	private async Task RemoveImageAsyc()
+	{
+		if (itemDto.ItemImages is null || itemDto.ItemImages.Count == 0)
+		{
+			return;
+		}
+
+		var imageDto = new ImageDto
+			{
+				ItemId = ItemId,
+				Images = itemDto.ItemImages!
+			};
+
+		var httpResponse = await repository.Post<ImageDto, ImageDto>("/api/items/removeLastImage", imageDto);
+		if (httpResponse.Error)
+		{
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+
+		itemDto.ItemImages = httpResponse.Response!.Images;
+		var toast = sweetAlertService.Mixin(new SweetAlertOptions
+			{
+				Toast = true,
+				Position = SweetAlertPosition.TopEnd,
+				ShowConfirmButton = false,
+				Timer = 5000
+			});
+		await toast.FireAsync(icon: SweetAlertIcon.Success, message: "Imagén eliminada con éxito.");
+	}
+
+}

@@ -1,0 +1,153 @@
+﻿@page "/reservations/create/{siteId:int}"
+@using Hachodromo.Shared.DTOs
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+
+<h3>Crear reserva</h3>
+
+<MudGrid>
+    <!-- Selector de fecha -->
+    <MudItem xs="12" sm="6">
+        <MudDatePicker T="DateTime"
+                       @bind-Value="selectedDate"
+                       Label="Selecciona fecha"
+                       PickerVariant="PickerVariant.Inline"
+                       DisableToolbar="true"
+                       MinDate="@DateTime.Today" />
+    </MudItem>
+</MudGrid>
+
+<MudDivider Class="my-4" />
+
+<MudText class="mt-2 mb-2">Franjas para @selectedDate:dd/MM/yyyy</MudText>
+
+@if (loadingSlots)
+{
+    <MudProgressCircular Indeterminate="true" Class="my-4" />
+}
+else if (!timeSlots.Any())
+{
+    <MudText>No hay franjas disponibles.</MudText>
+}
+else
+{
+    <MudGrid Gutter="3">
+        @foreach (var slot in timeSlots)
+        {
+            <MudItem xs="12" sm="6" md="4" lg="3">
+                <MudCard>
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">@slot.Label</MudText>
+                        <MudText Typo="Typo.subtitle2">
+                            Disponibles: @slot.AvailableCount
+                        </MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Color="Color.Primary"
+                                   Variant="Variant.Filled"
+                                   Disabled="!slot.IsReservable"
+                                   OnClick="() => SelectSlot(slot)">
+                            Reservar
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+}
+@if (selectedSlot != null)
+{
+    <MudDivider Class="my-4" />
+    <MudText Typo="Typo.h5" Class="mb-2">
+        Reserva: @selectedSlot.Label el @selectedDate:dd/MM/yyyy
+    </MudText>
+
+    <ReservationForm @key="selectedSlot.Start"
+                     Model="Model"
+                     OnValidSubmit="HandleValidSubmit"/>
+}
+
+
+@code {
+    [Parameter] public int siteId { get; set; }
+
+    private DateTime _selectedDate = DateTime.Today;
+    private DateTime selectedDate
+    {
+        get => _selectedDate;
+        set
+        {
+            if (_selectedDate != value)
+            {
+                _selectedDate = value;
+                Model.ReservationDate = value;
+                _ = LoadTimeSlotsAsync();
+            }
+        }
+    }
+
+    private bool loadingSlots;
+    private List<TimeSlotDto> timeSlots = new();
+    private TimeSlotDto? selectedSlot;
+
+    private ReservationDto Model = new ReservationDto();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Pre-seteos iniciales
+        Model.SiteId = siteId;
+        Model.ReservationDate = selectedDate;
+
+        await LoadTimeSlotsAsync();
+    }
+
+    private async Task LoadTimeSlotsAsync()
+    {
+        loadingSlots = true;
+        try
+        {
+            var responseHttp = await repository.Get<List<TimeSlotDto>>($"/api/sites/{siteId}/timeslots?date={selectedDate:yyyy-MM-dd}");
+
+            if (responseHttp.Error)
+            {
+                await sweetAlertService.FireAsync(
+                    "Error",
+                    "No se pudieron cargar las franjas.",
+                    SweetAlertIcon.Error);
+
+                timeSlots = new();
+            }
+            else
+            {
+                timeSlots = responseHttp.Response!;
+            }
+        }
+        finally
+        {
+            loadingSlots = false;
+        }
+    }
+
+    private void SelectSlot(TimeSlotDto slot)
+    {
+        selectedSlot = slot;
+        Model.HourStart = slot.Start;
+        Model.HourEnd = slot.End;
+    }
+
+    private async Task HandleValidSubmit(ReservationDto dto)
+    {
+        var result = await repository.Post<ReservationDto>("/api/reservations", dto);
+        if (result.Error)
+        {
+            await sweetAlertService.FireAsync(
+                "Error",
+                "No se pudo crear la reserva.",
+                SweetAlertIcon.Error);
+            return;
+        }
+
+        navigationManager.NavigateTo("/reservations");
+    }
+}

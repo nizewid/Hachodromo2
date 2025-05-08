@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hachodromo.Mobile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f29a794d0f72dd58ea1570442b8fef03367fa355")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+056a6011f7171f7d9e7ade4e6a79e7a17f4eddea")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hachodromo.Mobile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hachodromo.Mobile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

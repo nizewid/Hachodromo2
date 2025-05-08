@@ -1,0 +1,1188 @@
+{
+  "Version": 1,
+  "Hash": "pXc/LtzBTZ2uPO7I1aJrowiI6f0iZAF/nTvybS67C7o=",
+  "Source": "Maui",
+  "BasePath": "/",
+  "Mode": "Root",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\Maui.Shared.csproj",
+      "Version": 2,
+      "Source": "Maui.Shared",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Maui\\wwwroot",
+      "Source": "Maui",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\",
+      "BasePath": "/",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\2ba65n8di4-02tkgx6alb.gz",
+      "SourceId": "Maui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "index#[.{fingerprint=02tkgx6alb}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "r3sbbx9der",
+      "Integrity": "+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\2ba65n8di4-02tkgx6alb.br",
+      "SourceId": "Maui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\",
+      "BasePath": "/",
+      "RelativePath": "index#[.{fingerprint=02tkgx6alb}]?.html.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "3ssnkx7g9y",
+      "Integrity": "cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\qzhq2dihid-obgb1x923p.br",
+      "SourceId": "Maui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\",
+      "BasePath": "/",
+      "RelativePath": "app#[.{fingerprint=obgb1x923p}]?.css.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "wbesqdrm5g",
+      "Integrity": "dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\qzhq2dihid-obgb1x923p.gz",
+      "SourceId": "Maui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "app#[.{fingerprint=obgb1x923p}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "vzj90oee09",
+      "Integrity": "e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css",
+      "SourceId": "Maui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "obgb1x923p",
+      "Integrity": "nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html",
+      "SourceId": "Maui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "02tkgx6alb",
+      "Integrity": "6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\qzhq2dihid-obgb1x923p.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.005714285714"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\qzhq2dihid-obgb1x923p.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004219409283"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU="
+        }
+      ]
+    },
+    {
+      "Route": "app.css.br",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\qzhq2dihid-obgb1x923p.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4="
+        }
+      ]
+    },
+    {
+      "Route": "app.css.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\qzhq2dihid-obgb1x923p.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk="
+        }
+      ]
+    },
+    {
+      "Route": "app.obgb1x923p.css",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\qzhq2dihid-obgb1x923p.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.005714285714"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "obgb1x923p"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU="
+        }
+      ]
+    },
+    {
+      "Route": "app.obgb1x923p.css",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\qzhq2dihid-obgb1x923p.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004219409283"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "obgb1x923p"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU="
+        }
+      ]
+    },
+    {
+      "Route": "app.obgb1x923p.css",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "obgb1x923p"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nAPExVxs4MSkXKnxvGIYwMYuD37zfvuOz6q6ILLNXLU="
+        }
+      ]
+    },
+    {
+      "Route": "app.obgb1x923p.css.br",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\qzhq2dihid-obgb1x923p.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "obgb1x923p"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dOpRm4inXwHl8WsNrLcjuJiwaSrWsglIJRVphPxTAq4="
+        }
+      ]
+    },
+    {
+      "Route": "app.obgb1x923p.css.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\qzhq2dihid-obgb1x923p.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "obgb1x923p"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-e4306rHDcKdd9rBZuHDSbbfopML3cK4Fvrptxx9lgJk="
+        }
+      ]
+    },
+    {
+      "Route": "index.02tkgx6alb.html",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\2ba65n8di4-02tkgx6alb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002710027100"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "368"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02tkgx6alb"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q="
+        }
+      ]
+    },
+    {
+      "Route": "index.02tkgx6alb.html",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\2ba65n8di4-02tkgx6alb.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.004065040650"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "245"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02tkgx6alb"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q="
+        }
+      ]
+    },
+    {
+      "Route": "index.02tkgx6alb.html",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "750"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02tkgx6alb"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q="
+        }
+      ]
+    },
+    {
+      "Route": "index.02tkgx6alb.html.br",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\2ba65n8di4-02tkgx6alb.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02tkgx6alb"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo="
+        }
+      ]
+    },
+    {
+      "Route": "index.02tkgx6alb.html.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\2ba65n8di4-02tkgx6alb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "368"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02tkgx6alb"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\2ba65n8di4-02tkgx6alb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002710027100"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "368"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\2ba65n8di4-02tkgx6alb.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.004065040650"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "245"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "750"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Bv+DxPrQXnm2cqQybzYksD7r+M89B2dleD/JdzeN1Q="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.br",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\publish\\2ba65n8di4-02tkgx6alb.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cxn/pxWtukhRCFpJlFFMMgFAWoxbPzsMDo1chj+iUxo="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\compressed\\2ba65n8di4-02tkgx6alb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "368"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 08:14:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+b2DCj2JYObCg2Hhfhma3d8BxGgwkhfVphvO+MFLP60="
+        }
+      ]
+    }
+  ]
+}

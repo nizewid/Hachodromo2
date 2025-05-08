@@ -1,0 +1,7 @@
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\wwwroot\bootstrap\bootstrap.min.css.map
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\wwwroot\app.css
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\wwwroot\bootstrap\bootstrap.min.css
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\favicon.png

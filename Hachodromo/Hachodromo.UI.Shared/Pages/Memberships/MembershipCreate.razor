@@ -1,0 +1,36 @@
+﻿@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+
+<h3>Membership Create</h3>
+
+<MembershipForm @ref="membershipForm" Membership="membership" OnValidSubmit="CreateAsync" ReturnAction="Return" />
+
+@code {
+	private Membership membership = new();
+
+	private MembershipForm? membershipForm;
+
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
+    private async Task CreateAsync()
+    {
+        var httpResponse = await repository.Post("/api/memberships", membership);
+        if (httpResponse.Error)
+        {
+            var message = await httpResponse.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
+        Return();
+    }
+
+    private void Return()
+    {
+        membershipForm!.FormPostedSuccessfully = true;
+        navigationManager.NavigateTo($"/memberships");
+    }
+
+}

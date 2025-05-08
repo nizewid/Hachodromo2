@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiBlazorApp\\obj\\Debug\\net9.0-ios\\iossimulator-x64\\scopedcss\\bundle\\MauiBlazorApp.styles.css",
+      "PackagePath": "staticwebassets\\MauiBlazorApp.styles.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiBlazorApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiBlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiBlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\MauiBlazorApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.MauiBlazorApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.MauiBlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.build.MauiBlazorApp.props",
+      "PackagePath": "build\\MauiBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildMultiTargeting.MauiBlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\MauiBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildTransitive.MauiBlazorApp.props",
+      "PackagePath": "buildTransitive\\MauiBlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

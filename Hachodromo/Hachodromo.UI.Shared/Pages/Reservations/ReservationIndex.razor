@@ -1,0 +1,71 @@
+﻿@page "/reservations"
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+
+<h3>ReservationIndex</h3>
+
+<MudGrid>
+	@if (sites == null)
+	{
+		<MudItem xs="12">
+			<MudProgressCircular Indeterminate="true" />
+		</MudItem>
+	}
+	else if (!sites.Any())
+	{
+		<MudItem xs="12">
+			<MudText>No hay sitios disponibles para reservar.</MudText>
+		</MudItem>
+	}
+	else
+	{
+		@foreach (var site in sites)
+		{
+			<MudItem xs="12" sm="6" md="4">
+				<MudCard>
+					@*@if (!string.IsNullOrEmpty(site.ImageUrl))
+					{
+						<MudCardMedia Image="@site.ImageUrl" Height="200px" />
+					}*@
+					<MudCardContent>
+						<MudText Typo="Typo.h5">@site.Name</MudText>
+						<MudText Typo="Typo.body2">@site.Description</MudText>
+					</MudCardContent>
+					<MudCardActions>
+						<MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="@(() => NavigateToCreateAsync(site.Id))">
+						   Reservar
+						</MudButton>
+					</MudCardActions>
+				</MudCard>
+			</MudItem>
+		}
+	}
+</MudGrid>
+
+
+@code {
+	private List<Site>? sites;
+	
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadSites();
+	}
+
+	private async Task LoadSites()
+	{
+		var responseHttp = await repository.Get<List<Site>>("/api/sites");
+		if (responseHttp.Error)
+		{
+			await sweetAlertService.FireAsync("Error", "No se pudieron cargar los sitios.", SweetAlertIcon.Error);
+			return;
+		}
+		sites = responseHttp.Response;
+	}
+
+	private void NavigateToCreateAsync(int siteId)
+	{
+		navigationManager.NavigateTo($"/reservations/create/{siteId}");
+	}
+}

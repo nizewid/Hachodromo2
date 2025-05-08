@@ -1,0 +1,62 @@
+﻿@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+@attribute [Authorize(Roles= "Admin")]
+
+<h3>Editar Región</h3>
+
+@if (region is null)
+{
+	<div class="spinner" />
+}
+else
+{
+	<RegionForm @ref="regionForm" Region="region" OnValidSubmit="EditAsync" ReturnAction="Return"/>
+}
+
+@code {
+	private Region? region;
+	private RegionForm? regionForm;
+
+	[Parameter]
+	public int RegionId { get; set; }
+
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
+	protected override async Task OnInitializedAsync()
+	{
+		var responseHttp = await repository.Get<Region>($"/api/regions/{RegionId}");
+		if (responseHttp.Error)
+		{
+			if (responseHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
+			{
+				await sweetAlertService.FireAsync("Error", "El país no existe");
+				navigationManager.NavigateTo("/countries");
+				return;
+			}
+
+			var message = await responseHttp.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+		region = responseHttp.Response;
+	}
+	private async Task EditAsync()
+	{
+		var responseHttp = await repository.Put<Region>($"/api/regions/", region!);
+		if (responseHttp.Error)
+		{
+			var message = await responseHttp.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			return;
+		}
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
+		Return();
+	}
+	private void Return()
+	{
+		regionForm!.FormPostedSuccessfully = true;
+		navigationManager.NavigateTo("/countries/details/{region!.RegionId");
+	}
+}

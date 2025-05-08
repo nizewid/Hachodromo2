@@ -1,0 +1,8 @@
+C:\Proyect\Hachodrom\Hachodromo\MauiApp\wwwroot\css\app.css
+C:\Proyect\Hachodrom\Hachodromo\MauiApp\wwwroot\css\bootstrap\bootstrap.min.css
+C:\Proyect\Hachodrom\Hachodromo\MauiApp\wwwroot\css\bootstrap\bootstrap.min.css.map
+C:\Proyect\Hachodrom\Hachodromo\MauiApp\wwwroot\index.html
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html

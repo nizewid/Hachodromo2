@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MauiBlazorApp</name>
+    </assembly>
+    <members>
+        <member name="T:MauiBlazorApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:Hachodromo.MAUI.Auth.MauiAuthenticationProvider">
+            <summary>Proveedor de autenticación para MAUI (Blazor Hybrid).  
+            Usa SecureStorage en lugar de localStorage.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,144 @@
+﻿@page "/sites/create"
+@inject IRepository repository
+@inject NavigationManager navigationManager
+@inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>Crear Local</h3>
+
+
+@if (loading)
+{
+    <div class="spinner" />
+}
+else
+{
+    <div class="mb-3">
+        <label class="form-label">País</label>
+        <select class="form-select" @onchange="CountryChangedAsync">
+            <option value="0">Seleccione un país</option>
+            @if (countries is not null)
+            {
+                @foreach (var country in countries)
+                {
+                    <option value="@country.Id">@country.Name</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">C/A ó Región</label>
+        <select class="form-select" @onchange="RegionChangedAsync">
+            <option value="0">Seleccione una región</option>
+            @if (regions is not null)
+            {
+                @foreach (var region in regions)
+                {
+                    <option value="@region.RegionId">@region.RegionName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Ciudad</label>
+        <select class="form-select" @bind="siteDto.CityId">
+            <option value="0">Seleccione una ciudad</option>
+            @if (cities is not null)
+            {
+                @foreach (var city in cities)
+                {
+                    <option value="@city.CityId">@city.CityName</option>
+                }
+            }
+        </select>
+    </div>
+    <SiteForm @ref="siteForm" SiteDto="siteDto" OnValidSubmit="CreateAsync" ReturnAction="Return" />
+}
+
+
+@code {
+    private SiteDto siteDto = new SiteDto();
+    private SiteForm? siteForm;
+    private List<Country>? countries;
+    private List<Region>? regions;
+    private List<City>? cities;
+
+    private bool loading = true;
+
+    protected async override Task OnInitializedAsync()
+    {
+        await LoadCountriesAsync();
+		loading = false;
+    }
+
+    private async Task CreateAsync()
+    {
+        if (siteDto.CityId == 0)
+        {
+            await sweetAlertService.FireAsync("Error", "Debe seleccionar una ciudad", SweetAlertIcon.Warning);
+            return;
+        }
+        var httpResponse = await repository.Post("/api/sites", siteDto);
+        if (httpResponse.Error)
+        {
+            var message = await httpResponse.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        Return();
+    }
+    private void Return()
+    {
+        siteForm!.FormPostedSuccessfully = true;
+        navigationManager.NavigateTo($"/sites");
+    }
+    private async Task LoadCountriesAsync()
+    {
+        var responseHttp = await repository.Get<List<Country>>("/api/countries/combo");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        countries = responseHttp.Response;
+    }
+    private async Task LoadRegionsAsync(int countryId)
+    {
+        var responseHttp = await repository.Get<List<Region>>($"/api/regions/combo/{countryId}");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        regions = responseHttp.Response;
+    }
+    private async Task LoadCitiesAsync(int regionId)
+    {
+        var responseHttp = await repository.Get<List<City>>($"/api/cities/combo/{regionId}");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        cities = responseHttp.Response;
+    }
+
+    private async Task CountryChangedAsync(ChangeEventArgs e)
+    {
+        var selectedCountry = Convert.ToInt32(e.Value!);
+        await LoadRegionsAsync(selectedCountry);
+    }
+
+
+    private async Task RegionChangedAsync(ChangeEventArgs e)
+    {
+        var selectedRegion = Convert.ToInt32(e.Value!);
+        await LoadCitiesAsync(selectedRegion);
+    }
+}
+
+
