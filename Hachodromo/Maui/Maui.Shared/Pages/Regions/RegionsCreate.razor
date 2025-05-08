@@ -1,0 +1,57 @@
+﻿@inject IRepository repository
+@inject NavigationManager NavigationManager
+@inject SweetAlertService sweetAlertService
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>Crear región para el pais: @country?.Name</h3>
+<RegionForm @ref="regionForm" Region="region" OnValidSubmit="Create" ReturnAction="Return"/>
+
+@code {
+	private Region region= new Region { RegionName = string.Empty};
+	private RegionForm? regionForm;
+	private Country? country;
+
+	[Parameter]
+	public int CountryId { get; set; }
+
+	[CascadingParameter]
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadCountry();
+	}
+
+	private async Task Create()
+	{
+		region.CountryId = CountryId;
+		var httpResponse = await repository.Post<Region>("/api/regions", region);
+		if (httpResponse.Error){
+			var message = await httpResponse.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message);
+			return;
+		}
+		await BlazoredModal.CloseAsync(ModalResult.Ok());
+		Return();
+	}
+	private void Return()
+	{
+		regionForm!.FormPostedSuccessfully = true;
+		NavigationManager.NavigateTo($"/countries/details/{CountryId}");
+	}
+
+	private async Task LoadCountry()
+	{
+		var response = await repository.Get<Country>($"/api/countries/{CountryId}");
+		if (!response.Error)
+		{
+			country = response.Response;
+		}
+		else
+		{
+			var message = await response.GetErrorMessageAsync();
+			await sweetAlertService.FireAsync("Error", message);
+			NavigationManager.NavigateTo("/countries");
+		}
+	}
+}

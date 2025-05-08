@@ -1,6 +1,6 @@
 [
   {
-    "Name": "api_web",
+    "Name": "ApiWebAssembly",
     "Projects": [
       {
         "Path": "Hachodromo.API\\Hachodromo.API.csproj",
@@ -8,9 +8,39 @@
         "DebugTarget": "https"
       },
       {
-        "Path": "Hachodromo.WEB\\Hachodromo.WEB.csproj",
+        "Path": "Maui\\Maui.Web\\Maui.Web.csproj",
         "Action": "Start",
         "DebugTarget": "https"
+      }
+    ]
+  },
+  {
+    "Name": "ApiWindows",
+    "Projects": [
+      {
+        "Path": "Hachodromo.API\\Hachodromo.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "Maui\\Maui\\Maui.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      }
+    ]
+  },
+  {
+    "Name": "ApiAndroid",
+    "Projects": [
+      {
+        "Path": "Hachodromo.API\\Hachodromo.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "Maui\\Maui\\Maui.csproj",
+        "Action": "Start",
+        "DebugTarget": "Pixel 4a - API 35 (Android 15.0 - API 35)"
       }
     ]
   }

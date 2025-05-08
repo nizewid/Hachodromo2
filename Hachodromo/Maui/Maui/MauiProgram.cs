@@ -1,6 +1,13 @@
-﻿using Maui.Services;
+﻿using Blazored.Modal;
+using CurrieTechnologies.Razor.SweetAlert2;
+using Maui.Services;
+using Maui.Shared.Auth;
+using Maui.Shared.Repositories;
 using Maui.Shared.Services;
+using Maui.Storage;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
 
 namespace Maui
 {
@@ -16,15 +23,47 @@ namespace Maui
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            // Add device-specific services used by the Maui.Shared project
-            builder.Services.AddSingleton<IFormFactor, FormFactor>();
-
+            // Servicios Blazor y app
             builder.Services.AddMauiBlazorWebView();
-
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
             builder.Logging.AddDebug();
 #endif
+
+            // Servicios generales
+            builder.Services.AddSingleton<IFormFactor, FormFactor>();
+            builder.Services.AddAuthorizationCore();
+            builder.Services.AddBlazoredModal();
+            builder.Services.AddSweetAlert2();
+            builder.Services.AddMudServices();
+            builder.Services.AddBlazoredModal();
+
+            // Autenticación
+            builder.Services.AddScoped<AuthenticationProviderJWT>();
+            builder.Services.AddScoped<AuthenticationStateProvider>(
+                sp => sp.GetRequiredService<AuthenticationProviderJWT>());
+            builder.Services.AddScoped<ILoginService>(
+                sp => sp.GetRequiredService<AuthenticationProviderJWT>());
+            builder.Services.AddSingleton<ILogService, LogService>();
+
+            // TokenStorage para MAUI
+            builder.Services.AddScoped<ITokenStorage, SecureTokenStorage>();
+
+            builder.Services.AddScoped(sp =>
+            {
+#if ANDROID
+                var baseUrl = "https://10.0.2.2:7062/";
+#else
+    var baseUrl = "https://localhost:7062/";
+#endif
+
+                return new HttpClient { BaseAddress = new Uri(baseUrl) };
+            });
+
+
+
+            // Servicio de repositorio compartido
+            builder.Services.AddScoped<IRepository, Repository>();
 
             return builder.Build();
         }

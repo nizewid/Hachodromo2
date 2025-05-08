@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\Maui.styles.css",
+      "PackagePath": "staticwebassets\\Maui.styles.css"
+    },
+    {
       "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },

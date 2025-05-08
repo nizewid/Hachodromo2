@@ -1,0 +1,90 @@
+﻿@using Hachodromo.Shared.DTOs
+
+<CascadingValue Value="editContext">
+    <MudForm @ref="mudForm" Model="Model">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <!-- Encabezado: fecha y franja seleccionadas -->
+        <MudGrid Gutter="3" Class="mb-4">
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.subtitle1">
+                    <strong>Fecha seleccionada:</strong> @Model.ReservationDate:dd/MM/yyyy
+                </MudText>
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.subtitle1">
+                    <strong>Horario seleccionado:</strong> @Model.HourStart:hh\\:mm – @Model.HourEnd:hh\\:mm
+                </MudText>
+            </MudItem>
+        </MudGrid>
+
+        <!-- Campos a rellenar -->
+        <MudGrid Gutter="3">
+            <MudItem xs="12" sm="6">
+                <MudTextField T="string"
+                              @bind-Value="Model.Email"
+                              For="() => Model.Email"
+                              Label="Correo electrónico"
+                              Required="true"
+                              Variant="Variant.Outlined"
+                              Adornment="Adornment.Start"
+                              AdornmentIcon="Icons.Material.Filled.Email" />
+            </MudItem>
+
+            <MudItem xs="12" sm="6">
+                <MudNumericField T="int"
+                                 @bind-Value="Model.PersonCount"
+                                 For="() => Model.PersonCount"
+                                 Label="Cantidad de personas"
+                                 Required="true"
+                                 Min="1" Max="10"
+                                 Variant="Variant.Outlined"
+                                 Adornment="Adornment.End"
+                                 AdornmentText="pers." />
+            </MudItem>
+
+            <MudItem xs="12">
+                <MudTextField T="string"
+                              @bind-Value="Model.Remarks"
+                              Label="Observaciones"
+                              Lines="4"
+                              Variant="Variant.Outlined" />
+            </MudItem>
+
+            <MudItem xs="12" Class="d-flex justify-end">
+                <MudButton OnClick="SubmitForm"
+                           Color="Color.Primary"
+                           Variant="Variant.Filled"
+                           StartIcon="Icons.Material.Filled.Save">
+                    Guardar
+                </MudButton>
+            </MudItem>
+        </MudGrid>
+    </MudForm>
+</CascadingValue>
+
+@code {
+    private MudForm mudForm = default!;
+    private EditContext editContext = default!;
+
+    [Parameter] public ReservationDto Model { get; set; } = new();
+    [Parameter] public EventCallback<ReservationDto> OnValidSubmit { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Inicializa el EditContext para validación
+        editContext = new EditContext(Model);
+    }
+
+    private async Task SubmitForm()
+    {
+        // Valida MudForm (DataAnnotations + reglas de MudBlazor)
+        await mudForm.Validate();
+        if (!mudForm.IsValid)
+            return;
+
+        // Si pasa validación, invoca callback
+        await OnValidSubmit.InvokeAsync(Model);
+    }
+}

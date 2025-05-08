@@ -1,0 +1,97 @@
+﻿@page "/memberships/manage/{MembershipId:int}/users/"
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+
+<h3>Usuarios con la membresía <strong>@membershipName</strong></h3>
+
+@if (isLoading)
+{
+    <div class="loading-progress" />
+}
+else if (users is null || users.Count == 0)
+{
+    <div class="alert alert-info">No hay usuarios con esta membresía.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.FullName</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>
+                        <button class="btn btn-danger" @onclick="() => DeleteUserMembership(user.Email!)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] public int MembershipId { get; set; }
+
+    private List<User>? users;
+    private string membershipName = "cargando...";
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (MembershipId <= 0)
+        {
+            users = new();
+            membershipName = "Desconocida";
+            isLoading = false;
+            return;
+        }
+
+        var membershipResponse = await repository.Get<Membership>($"/api/memberships/{MembershipId}");
+        membershipName = !membershipResponse.Error
+            ? membershipResponse.Response?.Name ?? "Desconocida"
+            : "Desconocida";
+
+        var response = await repository.Get<List<User>>($"/api/accounts/ByMembership/{MembershipId}");
+        if (!response.Error)
+        {
+            users = response.Response ?? new();
+        }
+        else
+        {
+            users = new();
+        }
+
+        isLoading = false;
+    }
+
+    private async Task DeleteUserMembership(string email)
+    {
+        var user = users!.FirstOrDefault(u => u.Email == email);
+        if (user == null)
+        {
+            await sweetAlertService.FireAsync("Error", "Usuario no encontrado", SweetAlertIcon.Error);
+            return;
+        }
+
+        var response = await repository.Put<object>($"/api/accounts/RemoveMembership/{email}", null!);
+        if (!response.Error)
+        {
+            users!.RemoveAll(u => u.Email == email);
+        }
+        else
+        {
+            var msg = await response.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", msg, SweetAlertIcon.Error);
+        }
+    }
+}

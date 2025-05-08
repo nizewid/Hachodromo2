@@ -1,0 +1,324 @@
+﻿@page "/EditUser"
+@page "/EditUser/{Email}"
+@inject IRepository repository
+@inject SweetAlertService sweetAlertService
+@inject NavigationManager navigationManager
+@inject ILoginService loginService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+@if (user is null)
+{
+    <div class="spinner" />
+}
+else
+{
+    <EditForm Model="user" OnValidSubmit="SaveUserAsync">
+        <DataAnnotationsValidator />
+
+        <div class="card">
+            <div class="card-header">
+                <span>
+                    <i class="oi oi-person" /> Editar Usuario
+                    <a class="btn btn-sm btn-secondary float-end" @onclick=@(()=>ShowModal())><i class="oi oi-key" /> Cambiar Contraseña</a>
+                    <button class="btn btn-sm btn-primary float-end mx-2" type="submit"><i class="oi oi-check" /> Guardar Cambios</button>
+                </span>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label>Nombres:</label>
+                            <div>
+                                <InputText class="form-control" @bind-Value="@user.FirstName" />
+                                <ValidationMessage For="@(() => user.FirstName)" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Apellidos:</label>
+                            <div>
+                                <InputText class="form-control" @bind-Value="@user.LastName" />
+                                <ValidationMessage For="@(() => user.LastName)" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Documento:</label>
+                            <div>
+                                <InputText class="form-control" @bind-Value="@user.Document" />
+                                <ValidationMessage For="@(() => user.Document)" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Teléfono:</label>
+                            <div>
+                                <InputText class="form-control" @bind-Value="@user.PhoneNumber" />
+                                <ValidationMessage For="@(() => user.PhoneNumber)" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Dirección:</label>
+                            <div>
+                                <InputText class="form-control" @bind-Value="@user.Address" />
+                                <ValidationMessage For="@(() => user.Address)" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <InputDate class="form-control" @bind-Value="user.BornDate" />
+                            <ValidationMessage For="@(() => user.BornDate)" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        @if (IsAdmin)
+                        {
+                            <div class="mb-3">
+                                <label class="form-label">Tipo de usuario</label>
+                                <select class="form-select" @bind="user.UserType">
+                                    <option value="@UserType.User">Usuario</option>
+                                    <option value="@UserType.Admin">Administrador</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Membresía</label>
+                                <select class="form-select" @bind="user.MembershipId">
+                                    <option value="0">Seleccione una membresía</option>
+                                    @if (memberships is not null)
+                                    {
+                                        @foreach (var membership in memberships)
+                                        {
+                                            <option value="@membership.Id">@membership.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        <div class="mb-3">
+                            <label>País:</label>
+                            <div>
+                                <select class="form-select" @onchange="CountryChangedAsync">
+                                    <option value="0">-- Seleccione un país --</option>
+                                    @if (countries is not null)
+                                    {
+                                        @foreach (var country in countries)
+                                        {
+                                            <option value="@country.Id" selected="@(country.Id == user.City!.Region!.Country!.Id)">@country.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Estado/Departamento:</label>
+                            <div>
+                                <select class="form-select" @onchange="RegionChangedAsync">
+                                    <option value="0">-- Seleccione un estado/departamento --</option>
+                                    @if (regions is not null)
+                                    {
+                                        @foreach (var region in regions)
+                                        {
+                                            <option value="@region.RegionId" selected="@(region.RegionId == user.City!.Region!.RegionId)">@region.RegionName</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Ciudad:</label>
+                            <div>
+                                <select class="form-select" @bind="user.CityId">
+                                    <option value="0">-- Seleccione una ciudad --</option>
+                                    @if (cities is not null)
+                                    {
+                                        @foreach (var city in cities)
+                                        {
+                                            <option value="@city.CityId" selected="@(city.CityId == user.City!.CityId)">@city.CityName</option>
+                                        }
+                                    }
+                                </select>
+                                <ValidationMessage For="@(() => user.CityId)" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <InputImg Label="Foto" ImageSelected="ImageSelected" ImageURL="@imageUrl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </EditForm>
+}
+
+@code {
+    private User? user;
+    private List<Country>? countries;
+    private List<Region>? regions;
+    private List<City>? cities;
+    private string? imageUrl;
+    private List<Membership>? memberships;
+
+    [Parameter]
+    public string? Email { get; set; }
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public bool IsAdmin { get; set; }
+
+    [CascadingParameter]
+    IModalService modalService { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var loggeduser = authState.User;
+        if (loggeduser.Identities is not null && loggeduser.Identity!.IsAuthenticated)
+        {
+            IsAdmin = loggeduser.IsInRole("Admin");
+        }
+        if (IsAdmin)
+        {
+            await LoadMembershipsAsync();
+        }
+
+        await LoadUserAsyc();
+        await LoadCountriesAsync();
+        await LoadRegionsAsync(user!.City!.Region!.Country!.Id);
+        await LoadCitiesAsync(user!.City!.Region!.RegionId);
+
+        if (!string.IsNullOrEmpty(user!.Photo))
+        {
+            imageUrl = user.Photo;
+            user.Photo = null;
+        }
+
+
+    }
+
+    private async Task LoadUserAsyc()
+    {
+        string url = string.Empty;
+        if(IsAdmin)
+        {
+            url = $"/api/accounts/{Email}";
+        }
+        else
+        {
+            url = $"/api/accounts";
+        }
+        var responseHTTP = await repository.Get<User>(url);
+
+        if (responseHTTP.Error)
+        {
+            if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                navigationManager.NavigateTo("/");
+                return;
+            }
+            var messageError = await responseHTTP.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", messageError, SweetAlertIcon.Error);
+            return;
+        }
+        user = responseHTTP.Response;
+    }
+
+    private void ImageSelected(string imagenBase64)
+    {
+        user!.Photo = imagenBase64;
+        imageUrl = null;
+    }
+
+    private async Task CountryChangedAsync(ChangeEventArgs e)
+    {
+        var selectedCountry = Convert.ToInt32(e.Value!);
+        await LoadRegionsAsync(selectedCountry);
+    }
+
+    private async Task RegionChangedAsync(ChangeEventArgs e)
+    {
+        var selectedRegion = Convert.ToInt32(e.Value!);
+        await LoadCitiesAsync(selectedRegion);
+    }
+
+    private async Task LoadCountriesAsync()
+    {
+        var responseHttp = await repository.Get<List<Country>>("/api/countries/combo");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        countries = responseHttp.Response;
+    }
+
+    private async Task LoadRegionsAsync(int countryId)
+    {
+        var responseHttp = await repository.Get<List<Region>>($"/api/regions/combo/{countryId}");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        regions = responseHttp.Response;
+    }
+
+    private async Task LoadCitiesAsync(int regionId)
+    {
+        var responseHttp = await repository.Get<List<City>>($"/api/cities/combo/{regionId}");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+
+        cities = responseHttp.Response;
+    }
+
+    private async Task SaveUserAsync()
+    {
+        var responseHttp = await repository.Put<User, TokenDto>("/api/accounts", user!);
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        if (IsAdmin)
+        {
+            await sweetAlertService.FireAsync("Éxito", "Usuario editado correctamente", SweetAlertIcon.Success);
+            navigationManager.NavigateTo("/users");
+        }
+        else
+        {
+            await sweetAlertService.FireAsync("Éxito", "Usuario editado correctamente", SweetAlertIcon.Success);
+            await loginService.LoginAsync(responseHttp.Response!.Token);
+            navigationManager.NavigateTo("/");
+        }
+    }
+    private async Task ShowModal()
+    {
+		//var parameters = new ModalParameters();
+	//	parameters.Add("UserId", user!.Id);
+		var modal = modalService.Show<ChangePassword>("Cambiar contraseña");
+		var result = await modal.Result;
+		if (!result.Cancelled)
+		{
+			await LoadUserAsyc();
+		}
+    }
+    private async Task LoadMembershipsAsync()
+    {
+        var responseHttp = await repository.Get<List<Membership>>("/api/memberships/");
+        if (responseHttp.Error)
+        {
+            var message = await responseHttp.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            return;
+        }
+        memberships = responseHttp.Response;
+    }
+
+}

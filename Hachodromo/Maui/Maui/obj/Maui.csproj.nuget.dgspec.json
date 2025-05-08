@@ -135,9 +135,34 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Blazored.Modal": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "CurrieTechnologies.Razor.SweetAlert2": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[8.6.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.9.0, )"
             }
           },
           "imports": [
@@ -259,7 +284,7 @@
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
@@ -308,7 +333,7 @@
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
@@ -357,7 +382,7 @@
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
@@ -407,7 +432,7 @@
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",

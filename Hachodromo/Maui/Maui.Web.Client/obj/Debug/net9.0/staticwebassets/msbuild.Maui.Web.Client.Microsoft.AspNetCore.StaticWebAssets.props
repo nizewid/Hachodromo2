@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>WasmResource</AssetTraitName>
       <AssetTraitValue>boot</AssetTraitValue>
-      <Fingerprint>yiodnjoszm</Fingerprint>
-      <Integrity>lh8bY3DINgTiqGL/cwOeVaJGdfE2ex1o8MzwCbmlZZE=</Integrity>
+      <Fingerprint>md9yvkcqlf</Fingerprint>
+      <Integrity>+vIfWRbrna1rF+s8xknbrluJxgPx4vfKB0WJ74HdICo=</Integrity>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js'))</OriginalItemSpec>
