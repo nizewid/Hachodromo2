@@ -30,6 +30,7 @@ namespace Maui
             builder.Logging.AddDebug();
 #endif
 
+            builder.Services.AddSingleton<INativeDialogService, NativeDialogService>();
             // Servicios generales
             builder.Services.AddSingleton<IFormFactor, FormFactor>();
             builder.Services.AddAuthorizationCore();
@@ -47,12 +48,14 @@ namespace Maui
             builder.Services.AddSingleton<ILogService, LogService>();
 
             // TokenStorage para MAUI
+
             builder.Services.AddScoped<ITokenStorage, SecureTokenStorage>();
+
 
             builder.Services.AddScoped(sp =>
             {
 #if ANDROID
-                var baseUrl = "https://10.0.2.2:7062/";
+                var baseUrl = "http://192.168.0.29:5157/";
 #else
     var baseUrl = "https://localhost:7062/";
 #endif

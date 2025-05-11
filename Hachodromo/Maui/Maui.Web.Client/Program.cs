@@ -31,6 +31,7 @@ namespace Maui.Web.Client
 
             // Auth
             builder.Services.AddAuthorizationCore();
+
             builder.Services.AddScoped<AuthenticationProviderJWT>();
             builder.Services.AddScoped<AuthenticationStateProvider>(
                 sp => sp.GetRequiredService<AuthenticationProviderJWT>());
@@ -39,6 +40,7 @@ namespace Maui.Web.Client
             builder.Services.AddScoped<ITokenStorage, LocalStorageTokenStorage>();
             // Ejemplo de servicio común
             builder.Services.AddScoped<IRepository, Repository>();
+            builder.Services.AddScoped<INativeDialogService, NativeDialogService>();
 
             await builder.Build().RunAsync();
         }

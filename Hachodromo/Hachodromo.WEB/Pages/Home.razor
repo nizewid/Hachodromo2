@@ -114,8 +114,12 @@ else
         }
         catch (Exception ex)
         {
-            await sweetAlertService.FireAsync("Error", ex.Message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync(
+                "Error",
+                $"{ex.GetType()}\n{ex.Message}\n{ex.StackTrace}",
+                "OK");
         }
+
     }
 
     private async Task CleanFilterAsync()

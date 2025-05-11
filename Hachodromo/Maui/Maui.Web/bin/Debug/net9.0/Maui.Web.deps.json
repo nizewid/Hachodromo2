@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "Maui.Web/1.0.0": {
         "dependencies": {
+          "Blazored.Modal": "7.3.1",
+          "CurrieTechnologies.Razor.SweetAlert2": "5.6.0",
           "Maui.Web.Client": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "9.0.4"
         },
@@ -560,9 +562,11 @@
       },
       "Maui.Web.Client/1.0.0": {
         "dependencies": {
+          "CurrieTechnologies.Razor.SweetAlert2": "5.6.0",
           "Hachodromo.Shared": "1.0.0",
           "Maui.Shared": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "9.0.4"
+          "Microsoft.AspNetCore.Components.WebAssembly": "9.0.4",
+          "MudBlazor": "8.6.0"
         },
         "runtime": {
           "Maui.Web.Client.dll": {

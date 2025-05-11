@@ -9,6 +9,7 @@ using Maui.Web.Services;                      // Servicios propios del host (si 
 using Microsoft.AspNetCore.Components.Authorization; // Para manejar el estado de autenticación
 using MudBlazor.Services;                     // Servicios del framework de UI MudBlazor
 
+
 namespace Maui.Web
 {
     public class Program
@@ -34,6 +35,7 @@ namespace Maui.Web
             builder.Services.AddMudServices();         // Servicios de MudBlazor
             builder.Services.AddBlazoredModal();       // Servicio para modales Blazored
 
+
             // Habilita el sistema de autorización de Blazor
             builder.Services.AddAuthorization();
 
@@ -56,6 +58,9 @@ namespace Maui.Web
             builder.Services.AddScoped<ITokenStorage, NullTokenStorage>();
             
             builder.Services.AddSingleton<IFormFactor, FormFactor>();
+            builder.Services.AddScoped<INativeDialogService, NativeDialogService>();
+
+
 
             // ⚠️ Este Build sobra — está fuera de lugar y luego vuelve a hacerse más abajo
             //await builder.Build().RunAsync(); // ❌ Elimínalo. El correcto es el siguiente Build
@@ -85,6 +90,8 @@ namespace Maui.Web
             // 🔐 Requerido para componentes interactivos protegidos por antifalsificación (formulario seguro)
             app.UseAntiforgery();
 
+            app.MapStaticAssets(); // 🔧 Sirve contenido de wwwroot del proyecto WebAssembly
+
             // ⬇️ Mapea el componente raíz (App.razor) y carga Blazor WebAssembly en modo interactivo
             app.MapRazorComponents<App>()
                 .AddInteractiveWebAssemblyRenderMode() // Usa Blazor WASM + Server para interactividad inicial
@@ -93,7 +100,7 @@ namespace Maui.Web
                     typeof(Maui.Web.Client._Imports).Assembly);  // Cliente WASM
 
             // 🔁 Ruta de fallback: cualquier URL no encontrada redirige al index.html (SPA)
-            app.MapFallbackToFile("index.html");
+           // app.MapFallbackToFile("index.html");
 
             // 🚀 Inicia la aplicación web
             app.Run();

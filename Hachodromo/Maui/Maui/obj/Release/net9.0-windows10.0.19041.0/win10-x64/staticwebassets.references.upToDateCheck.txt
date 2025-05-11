@@ -1,0 +1,2 @@
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Release\net9.0\staticwebassets.build.json
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Release\net9.0\staticwebassets.build.json

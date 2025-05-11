@@ -241,6 +241,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "CurrieTechnologies.Razor.SweetAlert2": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[9.0.4, )"
@@ -256,6 +260,10 @@
               "target": "Package",
               "version": "[9.0.4, )",
               "autoReferenced": true
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[8.6.0, )"
             }
           },
           "imports": [
@@ -342,6 +350,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Blazored.Modal": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "CurrieTechnologies.Razor.SweetAlert2": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly.Server": {
               "target": "Package",
               "version": "[9.0.4, )"

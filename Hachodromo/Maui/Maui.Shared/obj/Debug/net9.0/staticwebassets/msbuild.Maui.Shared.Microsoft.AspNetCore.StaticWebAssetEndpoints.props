@@ -48,17 +48,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 08:14:24 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Maui.Shared/Maui.Shared.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Maui.Shared.incpv8u6fr.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Maui.Shared/Maui.Shared.59auet6wht.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Maui.Shared.59auet6wht.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TgvGIGU3HJZqe/ZRwq63htCTpe4f1WPyNcEIAzPp5No="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5912"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022TgvGIGU3HJZqe/ZRwq63htCTpe4f1WPyNcEIAzPp5No=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 19:52:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"59auet6wht"},{"Name":"integrity","Value":"sha256-l65HXglO1fW2JEAK6LZQZ20YwoUOgKI0pvCSsmTgqG0="},{"Name":"label","Value":"_content/Maui.Shared/Maui.Shared.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5216"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022l65HXglO1fW2JEAK6LZQZ20YwoUOgKI0pvCSsmTgqG0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 19:56:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Maui.Shared/Maui.Shared.incpv8u6fr.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Maui.Shared.incpv8u6fr.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Maui.Shared/Maui.Shared.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Maui.Shared.59auet6wht.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"incpv8u6fr"},{"Name":"integrity","Value":"sha256-TgvGIGU3HJZqe/ZRwq63htCTpe4f1WPyNcEIAzPp5No="},{"Name":"label","Value":"_content/Maui.Shared/Maui.Shared.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5912"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022TgvGIGU3HJZqe/ZRwq63htCTpe4f1WPyNcEIAzPp5No=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 19:52:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-l65HXglO1fW2JEAK6LZQZ20YwoUOgKI0pvCSsmTgqG0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5216"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022l65HXglO1fW2JEAK6LZQZ20YwoUOgKI0pvCSsmTgqG0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 19:56:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

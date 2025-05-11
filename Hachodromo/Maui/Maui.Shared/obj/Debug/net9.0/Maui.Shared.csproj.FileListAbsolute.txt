@@ -57,8 +57,6 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\6qx
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\idw6ptej04-6gzpyzhau4.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\4fura9i8zc-8inm30yfxf.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\of8ka2v689-xineniuf5l.gz
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5whn0s4gws-hjeyh2j0oy.gz
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5tha5wsjju-incpv8u6fr.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\staticwebassets.build.json
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\staticwebassets.development.json
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -74,3 +72,5 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\Maui.Shared.dl
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\refint\Maui.Shared.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\Maui.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\ref\Maui.Shared.dll
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5whn0s4gws-5cik06pio6.gz
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5tha5wsjju-59auet6wht.gz

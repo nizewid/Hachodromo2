@@ -1,9 +1,9 @@
 ﻿@page "/"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
-    @using Maui.Shared.Services
-    @inject IFormFactor FormFactor
+@inject INativeDialogService dialogService
+@using Maui.Shared.Services
+@inject IFormFactor FormFactor
 
 <style type="text/css">
 	.card {
@@ -123,7 +123,7 @@ else
 		}
 		catch (Exception ex)
 		{
-			await sweetAlertService.FireAsync("Error", ex.Message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", ex.Message, "Aceptar");
 		}
 	}
 

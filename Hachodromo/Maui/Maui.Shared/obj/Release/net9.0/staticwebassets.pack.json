@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\obj\\Release\\net9.0\\scopedcss\\projectbundle\\Maui.Shared.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Maui.Shared.incpv8u6fr.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.Maui.Shared.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.Maui.Shared.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.build.Maui.Shared.props",
+      "PackagePath": "build\\Maui.Shared.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.Maui.Shared.props",
+      "PackagePath": "buildMultiTargeting\\Maui.Shared.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildTransitive.Maui.Shared.props",
+      "PackagePath": "buildTransitive\\Maui.Shared.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

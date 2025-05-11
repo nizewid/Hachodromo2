@@ -879,9 +879,11 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "CurrieTechnologies.Razor.SweetAlert2": "5.6.0",
           "Hachodromo.Shared": "1.0.0",
           "Maui.Shared": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "9.0.4"
+          "Microsoft.AspNetCore.Components.WebAssembly": "9.0.4",
+          "MudBlazor": "8.6.0"
         },
         "compile": {
           "bin/placeholder/Maui.Web.Client.dll": {}
@@ -2089,6 +2091,8 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Blazored.Modal >= 7.3.1",
+      "CurrieTechnologies.Razor.SweetAlert2 >= 5.6.0",
       "Maui.Web.Client >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 9.0.4"
     ]
@@ -2151,6 +2155,14 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Blazored.Modal": {
+            "target": "Package",
+            "version": "[7.3.1, )"
+          },
+          "CurrieTechnologies.Razor.SweetAlert2": {
+            "target": "Package",
+            "version": "[5.6.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly.Server": {
             "target": "Package",
             "version": "[9.0.4, )"
