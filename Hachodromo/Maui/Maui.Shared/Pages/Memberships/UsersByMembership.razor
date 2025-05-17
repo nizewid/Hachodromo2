@@ -1,6 +1,6 @@
 ﻿@page "/memberships/manage/{MembershipId:int}/users/"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 
 <h3>Usuarios con la membresía <strong>@membershipName</strong></h3>
 
@@ -79,19 +79,20 @@ else
         var user = users!.FirstOrDefault(u => u.Email == email);
         if (user == null)
         {
-            await sweetAlertService.FireAsync("Error", "Usuario no encontrado", SweetAlertIcon.Error);
+			await dialogService.ShowToastAsync("Usuario no encontrado", ToastType.Error);
             return;
         }
 
         var response = await repository.Put<object>($"/api/accounts/RemoveMembership/{email}", null!);
         if (!response.Error)
         {
+			await dialogService.ShowToastAsync($"Se eliminó la membresía de {user.FullName}", ToastType.Success);
             users!.RemoveAll(u => u.Email == email);
         }
         else
         {
             var msg = await response.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", msg, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", msg ?? "Ocurrió un error desconocido", "Aceptar");
         }
     }
 }

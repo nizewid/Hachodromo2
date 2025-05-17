@@ -9,41 +9,90 @@ main {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background: linear-gradient(180deg, #1b1f2b 0%, #2c2f3e 50%, #3a3e4a 100%);
+    box-shadow: inset -2px 0 5px rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    color: #dbefff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
+    .sidebar .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .sidebar .nav-link {
+        color: #dbefff;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background-color: rgba(168, 208, 255, 0.2);
+            color: #a8d0ff;
+        }
+
 .top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
+    background: linear-gradient(to right, #1c1f26, #0f1115);
+    border-bottom: 1px solid #3b3b3b;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    padding: 0 1rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #dbefff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
+    .top-row ::deep a,
+    .top-row ::deep .btn-link {
         white-space: nowrap;
-        margin-left: 1.5rem;
         text-decoration: none;
+        color: #dbefff;
+        padding: 0.35rem 0.8rem;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
+        .top-row ::deep a:hover,
+        .top-row ::deep .btn-link:hover {
+            color: #a8d0ff;
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 5px rgba(168, 208, 255, 0.6);
+        }
 
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
+        .top-row ::deep a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+
+    .top-row img {
+        border: 2px solid #a8d0ff;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
     }
 
 @media (max-width: 640.98px) {
     .top-row {
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
-    }
+        .top-row ::deep a,
+        .top-row ::deep .btn-link {
+            margin-left: 0;
+        }
 }
 
 @media (min-width: 641px) {
@@ -64,11 +113,11 @@ main {
         z-index: 1;
     }
 
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
+        .top-row.auth ::deep a:first-child {
+            flex: 1;
+            text-align: right;
+            width: 0;
+        }
 
     .top-row, article {
         padding-left: 2rem !important;

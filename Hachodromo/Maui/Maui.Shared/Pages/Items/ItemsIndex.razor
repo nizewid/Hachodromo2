@@ -1,89 +1,89 @@
 ﻿@page "/items"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 <h3>Items Index</h3>
 @if(Items is null){
-	<div class="spinner"/>
+    <div class="spinner"/>
 }
 else
 {
-        <GenericList MyList="Items">
-            <Body>
-                <div class="card">
-                    <div class="card-header">
-                        <span>
-                            <i class="oi oi-star" /> Items
-                            <a class="btn btn-sm btn-primary float-end" href="/items/create"><i class="oi oi-plus" /> Nuevo articulo</a>
-                        </span>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
-                            <div>
-                                <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar articulo..." @bind-value="Filter" />
-                            </div>
-                            <div class="mx-1">
-                                <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
-                                <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
-                            </div>
-                        </div>
-
-                        <Pagination CurrentPage="currentPage"
-                                    TotalPages="totalPages"
-                                    SelectedPage="SelectedPageAsync" />
-
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Descripción</th>
-                                    <th>Precio</th>
-                                    <th>Inventario</th>
-                                    <th>Categorías</th>
-                                    <th>Imagenes</th>
-                                    <th>Imagen Principal</th>
-                                    <th style="width:200px"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Items)
-                                {
-                                    <tr>
-                                        <td>
-                                            @item.Name
-                                        </td>
-                                        <td>
-                                            @item.Description
-                                        </td>
-                                        <td>
-                                            @($"{item.Price:C2}")
-                                        </td>
-                                        <td>
-                                            @($"{item.Stock:N2}")
-                                        </td>
-                                        <td>
-                                            @item.ItemCategoriesCount
-                                        </td>
-                                        <td>
-                                            @item.ItemImagesCount
-                                        </td>
-                                        <td>
-                                            <img src="@item.MainImage" style="width:100px;" />
-                                        </td>
-                                        <td>
-                                            <a href="/items/edit/@item.Id" class="btn btn-warning"><i class="oi oi-pencil" /> Editar</a>
-                                            <button class="btn btn-danger" @onclick=@(() => Delete(item.Id))><i class="oi oi-trash" /> Borrar</button>
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+    <GenericList MyList="Items">
+        <Body>
+            <div class="card">
+                <div class="card-header">
+                    <span>
+                        <i class="oi oi-star" /> Items
+                        <a class="btn btn-sm btn-primary float-end" href="/items/create"><i class="oi oi-plus" /> Nuevo articulo</a>
+                    </span>
                 </div>
-            </Body>
-        </GenericList>
+                <div class="card-body">
+                    <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
+                        <div>
+                            <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar articulo..." @bind-value="Filter" />
+                        </div>
+                        <div class="mx-1">
+                            <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
+                            <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
+                        </div>
+                    </div>
+
+                    <Pagination CurrentPage="currentPage"
+                    TotalPages="totalPages"
+                    SelectedPage="SelectedPageAsync" />
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Inventario</th>
+                                <th>Categorías</th>
+                                <th>Imagenes</th>
+                                <th>Imagen Principal</th>
+                                <th style="width:200px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Items)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Name
+                                    </td>
+                                    <td>
+                                        @item.Description
+                                    </td>
+                                    <td>
+                                        @($"{item.Price:C2}")
+                                    </td>
+                                    <td>
+                                        @($"{item.Stock:N2}")
+                                    </td>
+                                    <td>
+                                        @item.ItemCategoriesCount
+                                    </td>
+                                    <td>
+                                        @item.ItemImagesCount
+                                    </td>
+                                    <td>
+                                        <img src="@item.MainImage" style="width:100px;" />
+                                    </td>
+                                    <td>
+                                        <a href="/items/edit/@item.Id" class="btn btn-warning"><i class="oi oi-pencil" /> Editar</a>
+                                        <button class="btn btn-danger" @onclick=@(() => Delete(item.Id))><i class="oi oi-trash" /> Borrar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </Body>
+    </GenericList>
 
 }
 
@@ -142,23 +142,15 @@ else
         }
         catch (Exception ex)
         {
-            await sweetAlertService.FireAsync("Error", ex.Message, SweetAlertIcon.Error);
+            var message = ex.Message;
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
         }
     }
 
     private async Task Delete(int itemId)
     {
-        var result = await sweetAlertService.FireAsync(new SweetAlertOptions
-            {
-                Title = "Confirmación",
-                Text = "¿Esta seguro que quieres borrar el registro?",
-                Icon = SweetAlertIcon.Question,
-                ShowCancelButton = true
-            });
-
-        var confirm = string.IsNullOrEmpty(result.Value);
-
-        if (confirm)
+		var confirm = await dialogService.ShowConfirmMessageAsync("¿Está seguro de que desea eliminar el articulo?", "Se eliminará el articulo y no podrá recuperarse");
+        if (!confirm)
         {
             return;
         }
@@ -174,7 +166,7 @@ else
             }
 
             var mensajeError = await responseHTTP.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", mensajeError ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
 

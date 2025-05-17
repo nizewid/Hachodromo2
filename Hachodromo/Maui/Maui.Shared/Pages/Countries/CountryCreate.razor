@@ -1,6 +1,6 @@
 ﻿@inject IRepository repository
 @inject NavigationManager NavigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 <h3>Crear País</h3>
@@ -18,9 +18,10 @@
 		var httpResponse = await repository.Post<Country>("/api/countries", country);
 		if (httpResponse.Error){
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
+		await dialogService.ShowToastAsync("País creado", ToastType.Success);
 		await BlazoredModal.CloseAsync(ModalResult.Ok());
 		Return();
 	}

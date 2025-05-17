@@ -1,5 +1,5 @@
 ﻿@inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 
 <h3>Membership Create</h3>
@@ -20,7 +20,7 @@
         if (httpResponse.Error)
         {
             var message = await httpResponse.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
 		await BlazoredModal.CloseAsync(ModalResult.Ok());

@@ -1,7 +1,7 @@
 ﻿@page "/memberships/edit/{MembershipId:int}"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 
 <h3>Editar membresía</h3>
 
@@ -36,7 +36,7 @@ else
             }
 
             var message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
 
@@ -49,7 +49,7 @@ else
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
 		await BlazoredModal.CloseAsync(ModalResult.Ok());

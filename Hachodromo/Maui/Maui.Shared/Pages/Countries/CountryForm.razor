@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Components.Forms
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 
 <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"/>
 <EditForm EditContext="editContext" OnValidSubmit="HandleValidSubmit">
@@ -55,22 +55,12 @@
             return;
         }
 
-        var result = await sweetAlertService.FireAsync(new SweetAlertOptions
-            {
-                Title = "Confirmación",
-                Text = "¿Deseas abandonar la página y perder los cambios?",
-                Icon = SweetAlertIcon.Warning,
-                ShowCancelButton = true,
-                CancelButtonText = "NO",
-                ConfirmButtonText = "SI"
-            });
+		var confirm = await dialogService.ShowConfirmMessageAsync("¿Está seguro de que desea salir?", "Se perderán los cambios no guardados");
 
-        var confirm = !string.IsNullOrEmpty(result.Value);
-
-        if(confirm)
+        if(!confirm)
         {
-            return;
+            context.PreventNavigation();
         }
-        context.PreventNavigation();
+
     }
 }

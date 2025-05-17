@@ -1,0 +1,4 @@
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\wwwroot\index.html
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\wwwroot\app.css
+wwwroot\app.css
+wwwroot\index.html

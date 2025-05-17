@@ -1,152 +1,194 @@
 ﻿@page "/reservations/create/{siteId:int}"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
+@inject IDialogService mudDialogService
+@using Microsoft.AspNetCore.Components.Forms
+@using MudBlazor
+
 
 <h3>Crear reserva</h3>
 
 <MudGrid>
-    <!-- Selector de fecha -->
-    <MudItem xs="12" sm="6">
-        <MudDatePicker T="DateTime"
-                       @bind-Value="selectedDate"
-                       Label="Selecciona fecha"
-                       PickerVariant="PickerVariant.Inline"
-                       DisableToolbar="true"
-                       MinDate="@DateTime.Today" />
-    </MudItem>
+	<!-- Selector de fecha -->
+	<MudItem xs="12" sm="6">
+		<MudDatePicker T="DateTime"
+					   @bind-Value="_selectedDate"
+					   @bind-Value:event="oninput"
+					   Label="Selecciona fecha"
+					   PickerVariant="PickerVariant.Dialog"
+					   DisableToolbar="true"
+					   MinDate="@DateTime.Today"
+					   Class="mb-4"
+					   Immediate="true"
+					   DateChanged="HandleDateChanged" />
+
+	</MudItem>
 </MudGrid>
 
 <MudDivider Class="my-4" />
 
-<MudText class="mt-2 mb-2">Franjas para @selectedDate:dd/MM/yyyy</MudText>
+<MudText Class="mb-2">
+	Franjas para @_selectedDate.ToString("dd/MM/yyyy")
+</MudText>
 
 @if (loadingSlots)
 {
-    <MudProgressCircular Indeterminate="true" Class="my-4" />
+	<MudProgressCircular Indeterminate="true" Class="my-4" />
 }
 else if (!timeSlots.Any())
 {
-    <MudText>No hay franjas disponibles.</MudText>
+	<MudText>No hay franjas disponibles.</MudText>
 }
 else
 {
-    <MudGrid Gutter="3">
-        @foreach (var slot in timeSlots)
-        {
-            <MudItem xs="12" sm="6" md="4" lg="3">
-                <MudCard>
-                    <MudCardContent>
-                        <MudText Typo="Typo.h6">@slot.Label</MudText>
-                        <MudText Typo="Typo.subtitle2">
-                            Disponibles: @slot.AvailableCount
-                        </MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Color="Color.Primary"
-                                   Variant="Variant.Filled"
-                                   Disabled="!slot.IsReservable"
-                                   OnClick="() => SelectSlot(slot)">
-                            Reservar
-                        </MudButton>
-                    </MudCardActions>
-                </MudCard>
-            </MudItem>
-        }
-    </MudGrid>
+	<MudGrid Gutter="3">
+		@foreach (var slot in timeSlots)
+		{
+			<MudItem xs="12" sm="6" md="4" lg="3">
+				<MudCard>
+					<MudCardContent>
+						<MudText Typo="Typo.h6">@slot.Label</MudText>
+						<MudText Typo="Typo.subtitle2">
+							Disponibles: @slot.AvailableCount
+						</MudText>
+					</MudCardContent>
+					<MudCardActions>
+						<MudButton Color="Color.Primary"
+						Variant="Variant.Filled"
+						Disabled="!slot.IsReservable"
+						OnClick="() => SelectSlot(slot)">
+							Reservar
+						</MudButton>
+					</MudCardActions>
+				</MudCard>
+			</MudItem>
+		}
+	</MudGrid>
 }
-@if (selectedSlot != null)
-{
-    <MudDivider Class="my-4" />
-    <MudText Typo="Typo.h5" Class="mb-2">
-        Reserva: @selectedSlot.Label el @selectedDate:dd/MM/yyyy
-    </MudText>
-
-    <ReservationForm @key="selectedSlot.Start"
-                     Model="Model"
-                     OnValidSubmit="HandleValidSubmit"/>
-}
-
 
 @code {
-    [Parameter] public int siteId { get; set; }
+	[Parameter] public int siteId { get; set; }
+	private DateTime _selectedDate = DateTime.Today;
+	private DateTime selectedDate
+	{
+		get => _selectedDate;
+		set
+		{
+			if (_selectedDate != value)
+			{
+				_selectedDate = value;
+				Model.ReservationDate = value;
+				_ = LoadTimeSlotsAsync();
+			}
+		}
+	}
 
-    private DateTime _selectedDate = DateTime.Today;
-    private DateTime selectedDate
-    {
-        get => _selectedDate;
-        set
-        {
-            if (_selectedDate != value)
-            {
-                _selectedDate = value;
-                Model.ReservationDate = value;
-                _ = LoadTimeSlotsAsync();
-            }
-        }
-    }
+	private bool loadingSlots;
+	private List<TimeSlotDto> timeSlots = new();
 
-    private bool loadingSlots;
-    private List<TimeSlotDto> timeSlots = new();
-    private TimeSlotDto? selectedSlot;
+	private ReservationDto Model = new ReservationDto();
 
-    private ReservationDto Model = new ReservationDto();
+	protected override async Task OnInitializedAsync()
+	{
+		// Pre-seteos iniciales
+		Model.SiteId = siteId;
+		Model.ReservationDate = selectedDate;
 
-    protected override async Task OnInitializedAsync()
-    {
-        // Pre-seteos iniciales
-        Model.SiteId = siteId;
-        Model.ReservationDate = selectedDate;
+		await LoadTimeSlotsAsync();
+	}
 
-        await LoadTimeSlotsAsync();
-    }
+	private async Task LoadTimeSlotsAsync()
+	{
+		loadingSlots = true;
+		Console.WriteLine($"🔁 Nuevas franjas recibidas: {timeSlots.Count}");
+		Console.WriteLine($"🚀 Cargando slots para {_selectedDate:yyyy-MM-dd}");
 
-    private async Task LoadTimeSlotsAsync()
-    {
-        loadingSlots = true;
-        try
-        {
-            var responseHttp = await repository.Get<List<TimeSlotDto>>($"/api/sites/{siteId}/timeslots?date={selectedDate:yyyy-MM-dd}");
+		try
+		{
+			var responseHttp = await repository.Get<List<TimeSlotDto>>(
+				$"/api/sites/{siteId}/timeslots?date={selectedDate:yyyy-MM-dd}");
 
-            if (responseHttp.Error)
-            {
-                await sweetAlertService.FireAsync(
-                    "Error",
-                    "No se pudieron cargar las franjas.",
-                    SweetAlertIcon.Error);
+			if (responseHttp.Error)
+			{
+				var message = await responseHttp.GetErrorMessageAsync();
+				await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
+				timeSlots = new();
+			}
+			else
+			{
+				timeSlots = responseHttp.Response!;
+			}
+		}
+		finally
+		{
+			loadingSlots = false;
+		}
+	}
 
-                timeSlots = new();
-            }
-            else
-            {
-                timeSlots = responseHttp.Response!;
-            }
-        }
-        finally
-        {
-            loadingSlots = false;
-        }
-    }
 
-    private void SelectSlot(TimeSlotDto slot)
-    {
-        selectedSlot = slot;
-        Model.HourStart = slot.Start;
-        Model.HourEnd = slot.End;
-    }
+	private async Task SelectSlot(TimeSlotDto slot)
+	{
+		Model.HourStart = slot.Start;
+		Model.HourEnd = slot.End;
 
-    private async Task HandleValidSubmit(ReservationDto dto)
-    {
-        var result = await repository.Post<ReservationDto>("/api/reservations", dto);
-        if (result.Error)
-        {
-            await sweetAlertService.FireAsync(
-                "Error",
-                "No se pudo crear la reserva.",
-                SweetAlertIcon.Error);
-            return;
-        }
+		var parameters = new DialogParameters
+			{
+				["Model"] = Model,
+				["OnValidSubmit"] = EventCallback.Factory.Create<ReservationDto>(this, HandleValidSubmit)
+			};
 
-        navigationManager.NavigateTo("/reservations");
-    }
+		var options = new DialogOptions
+			{
+				CloseOnEscapeKey = true,
+				MaxWidth = MaxWidth.Medium,
+				FullWidth = true
+			};
+
+		var dialogReference = await mudDialogService.ShowAsync<ReservationForm>(
+			$"Reserva: {slot.Label} - {selectedDate:dd/MM/yyyy}", parameters, options);
+
+		var result = await dialogReference.Result;
+
+		if (!result.Canceled)
+		{
+			await dialogService.ShowToastAsync("Reserva confirmada", ToastType.Success);
+			navigationManager.NavigateTo("/reservations");
+		}
+	}
+
+	private async Task HandleValidSubmit(ReservationDto dto)
+	{
+		var result = await repository.Post<ReservationDto>("/api/reservations", dto);
+		if (result.Error)
+		{
+			var message = await result.GetErrorMessageAsync();
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
+			return;
+		}
+		await dialogService.ShowToastAsync("Reserva creada", ToastType.Success);
+		navigationManager.NavigateTo("/reservations");
+	}
+	private async Task OnDateChanged(DateTime newDate)
+	{
+		Console.WriteLine($" Nueva fecha seleccionada: {newDate:yyyy-MM-dd}");
+		if (_selectedDate != newDate)
+		{
+			_selectedDate = newDate;
+			Model.ReservationDate = newDate;
+			await LoadTimeSlotsAsync();
+			StateHasChanged();
+		}
+	}
+	private async Task HandleDateChanged(DateTime? newValue)
+	{
+		if (newValue is null || newValue.Value.Date == _selectedDate.Date)
+			return;
+
+		Console.WriteLine($" Fecha cambiada manualmente a: {newValue.Value:yyyy-MM-dd}");
+		_selectedDate = newValue.Value;
+		Model.ReservationDate = _selectedDate;
+		await LoadTimeSlotsAsync();
+		StateHasChanged();
+	}
 }

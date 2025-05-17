@@ -1,7 +1,7 @@
 ﻿@page "/items/edit/{ItemId:int}"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 
@@ -48,7 +48,7 @@ else
 		{
 			loading = false;
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 		item = httpResponse.Response!;
@@ -79,7 +79,7 @@ else
 		{
 			loading = false;
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 		var categories = httpResponse.Response!;
@@ -103,7 +103,7 @@ else
 		if (httpResponse.Error)
 		{
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 
@@ -132,19 +132,13 @@ else
 		if (httpResponse.Error)
 		{
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 
 		itemDto.ItemImages = httpResponse.Response!.Images;
-		var toast = sweetAlertService.Mixin(new SweetAlertOptions
-			{
-				Toast = true,
-				Position = SweetAlertPosition.TopEnd,
-				ShowConfirmButton = false,
-				Timer = 5000
-			});
-		await toast.FireAsync(icon: SweetAlertIcon.Success, message: "Imagenes agregadas con éxito.");
+		await dialogService.ShowToastAsync("Imagenes agregadas con éxito", ToastType.Success);
+		
 	}
 
 	private async Task RemoveImageAsyc()
@@ -164,19 +158,12 @@ else
 		if (httpResponse.Error)
 		{
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 
 		itemDto.ItemImages = httpResponse.Response!.Images;
-		var toast = sweetAlertService.Mixin(new SweetAlertOptions
-			{
-				Toast = true,
-				Position = SweetAlertPosition.TopEnd,
-				ShowConfirmButton = false,
-				Timer = 5000
-			});
-		await toast.FireAsync(icon: SweetAlertIcon.Success, message: "Imagén eliminada con éxito.");
+		await dialogService.ShowToastAsync("Imagenes eliminadas con éxito", ToastType.Success);
 	}
 
 }

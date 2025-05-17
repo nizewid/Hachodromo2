@@ -1,17 +1,19 @@
-﻿<div>
-    <label>@Label</label>
-    <div>
-        <InputFile OnChange="OnChange" accept=".jpg,.jpeg,.png" />
+﻿<div class="mb-3">
+    <label class="form-label">@Label</label>
+    <div class="border rounded p-3 bg-white">
+        <InputFile OnChange="OnChange" accept=".jpg,.jpeg,.png" class="form-control mb-3" />
+
+        @if (!string.IsNullOrWhiteSpace(imageBase64))
+        {
+            <img src=@($"data:image/jpeg;base64,{imageBase64}") class="responsive-img-small d-block mx-auto" />
+        }
+        else if (!string.IsNullOrWhiteSpace(ImageURL))
+        {
+            <img src="@ImageURL" class="responsive-img-small d-block mx-auto" />
+        }
     </div>
-    @if (!string.IsNullOrWhiteSpace(imageBase64))
-    {
-        <img src=@($"data:image/jpeg;base64,{imageBase64}") style="width:400px" />
-    }
-    else if (!string.IsNullOrWhiteSpace(ImageURL))
-    {
-        <img src="@ImageURL" style="width:400px" />
-    }
 </div>
+
 
 @code {
     [Parameter] public string Label { get; set; } = "Imagen";

@@ -1,0 +1,18 @@
+﻿:root {
+    /* 🎨 Colores de marca */
+    --brand-primary: #052767; /* azul oscuro */
+    --brand-primary2: #1b6ec2; /* azul brillante */
+    --brand-secondary: #3a0647; /* púrpura intenso */
+    --brand-info: #258cfb;
+    --brand-success: #18a999;
+    --brand-danger: #e94560;
+    /* 🌟 Mejoras visuales */
+    --brand-glow: rgba(27, 110, 194, 0.3);
+    --brand-bg-gradient: linear-gradient(180deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    --brand-hover-bg: rgba(255, 255, 255, 0.08);
+    --brand-hover-text: #ffffff;
+    /* Bootstrap overrides */
+    --bs-primary: var(--brand-primary2);
+    --bs-link-color: var(--brand-primary);
+    --bs-link-hover-color: var(--brand-primary2);
+}

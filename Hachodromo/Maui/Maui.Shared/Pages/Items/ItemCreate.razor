@@ -1,7 +1,7 @@
 ﻿@page "/items/create"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 <h3>ItemCreate</h3>
@@ -36,7 +36,7 @@ else
         if (httpResponse.Error)
         {
             var message = await httpResponse.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
         nonSelectedCategories = httpResponse.Response!;
@@ -48,7 +48,7 @@ else
         if (httpResponse.Error)
         {
             var message = await httpResponse.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
 

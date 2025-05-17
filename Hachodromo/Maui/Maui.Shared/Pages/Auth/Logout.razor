@@ -1,12 +1,14 @@
 ﻿@page "/Logout"
 @inject ILoginService loginService
 @inject NavigationManager navigationManager
+@inject INativeDialogService dialogService
 <h3>Logout</h3>
 
 @code {
 	protected override async Task OnInitializedAsync()
 	{
 		await loginService.LogoutAsync();
+		await dialogService.ShowToastAsync("Has cerrado sesión correctamente.", ToastType.Info);
 		navigationManager.NavigateTo("/");
 	}
 }

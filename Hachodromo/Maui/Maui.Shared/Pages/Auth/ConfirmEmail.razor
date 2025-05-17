@@ -1,7 +1,7 @@
 ﻿@page "/confirm-email"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 
 <h3>Confirmación de email</h3>
 
@@ -25,12 +25,13 @@
         if (responseHttp.Error)
         {
             message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             navigationManager.NavigateTo("/");
         }
         else
         {
-            await sweetAlertService.FireAsync("Confirmación", "Gracias por confirmar su email, ahora puedes ingresar al sistema.", SweetAlertIcon.Info);
+			await dialogService.ShowInfoAsync("Éxito", "Gracias por confirmar su email, ahora puedes ingresar al sistema.", "Aceptar");
+            //await sweetAlertService.FireAsync("Confirmación", "Gracias por confirmar su email, ahora puedes ingresar al sistema.", SweetAlertIcon.Info);
             navigationManager.NavigateTo("/Login");
         }
     }

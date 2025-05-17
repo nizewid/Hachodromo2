@@ -1,138 +1,140 @@
 ﻿@page "/Register"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 @inject ILoginService loginService
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
 <EditForm Model="userDto" OnValidSubmit="CreteUserAsync">
 	<DataAnnotationsValidator />
-	<div class="card shadow-sm border-0 rounded-4 p-4">
-		<div class="card shadow-sm border-0 rounded-4 p-4">
-			<div class="card-body">
-				<h5 class="card-title mb-4 text-center">Registro de usuario</h5>
-				<div class="row">
-					<div class="col-md-6">
-						@* Primera columna *@
-						<div class="mb-3">
-							<label class="form-label">Nombres</label>
-							<InputText class="form-control" @bind-Value="userDto.FirstName" />
-							<ValidationMessage For="@(() => userDto.FirstName)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Apellidos</label>
-							<InputText class="form-control" @bind-Value="userDto.LastName" />
-							<ValidationMessage For="@(() => userDto.LastName)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Documento</label>
-							<InputText class="form-control" @bind-Value="userDto.Document" />
-							<ValidationMessage For="@(() => userDto.Document)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Fecha de nacimiento</label>
-							<InputDate class="form-control" @bind-Value="userDto.BornDate" />
-							<ValidationMessage For="@(() => userDto.BornDate)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Teléfono</label>
-							<InputText class="form-control" @bind-Value="userDto.PhoneNumber" />
-							<ValidationMessage For="@(() => userDto.PhoneNumber)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Dirección</label>
-							<InputText class="form-control" @bind-Value="userDto.Address" />
-							<ValidationMessage For="@(() => userDto.Address)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-							<InputText class="form-control" @bind-Value="userDto.Email" />
-							<ValidationMessage For="@(() => userDto.Email)" />
-						</div>
+	<div class="card shadow rounded-4 bg-light border-0 my-5">
+		<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center rounded-top-4">
+			<h5 class="mb-0">
+				<i class="bi bi-person-fill me-2"></i> Registro de Usuario
+			</h5>
+		</div>
+		<div class="card-body p-4">
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					@* Primera columna *@
+					<div class="mb-3">
+						<label class="form-label">Nombres</label>
+						<InputText class="form-control" @bind-Value="userDto.FirstName" />
+						<ValidationMessage For="@(() => userDto.FirstName)" />
 					</div>
-					<div class="col-md-6">
-						@* Segunda columna *@
-						@if (IsAdmin)
-						{
-							<div class="mb-3">
-								<label class="form-label">Tipo de usuario</label>
-								<select class="form-select" @bind="userDto.UserType">
-									<option value="@UserType.User">Usuario</option>
-									<option value="@UserType.Admin">Administrador</option>
-								</select>
-							</div>
-							<div class="mb-3">
-								<label class="form-label">Membresía</label>
-								<select class="form-select" @bind="userDto.MembershipId">
-									<option value="0">Seleccione una membresía</option>
-									@if (memberships is not null)
-									{
-										@foreach (var membership in memberships)
-										{
-											<option value="@membership.Id">@membership.Name</option>
-										}
-									}
-									</select>
-							</div>
-						}
+					<div class="mb-3">
+						<label class="form-label">Apellidos</label>
+						<InputText class="form-control" @bind-Value="userDto.LastName" />
+						<ValidationMessage For="@(() => userDto.LastName)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Documento</label>
+						<InputText class="form-control" @bind-Value="userDto.Document" />
+						<ValidationMessage For="@(() => userDto.Document)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Fecha de nacimiento</label>
+						<InputDate class="form-control" @bind-Value="userDto.BornDate" />
+						<ValidationMessage For="@(() => userDto.BornDate)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Teléfono</label>
+						<InputText class="form-control" @bind-Value="userDto.PhoneNumber" />
+						<ValidationMessage For="@(() => userDto.PhoneNumber)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Dirección</label>
+						<InputText class="form-control" @bind-Value="userDto.Address" />
+						<ValidationMessage For="@(() => userDto.Address)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Email</label>
+						<InputText class="form-control" @bind-Value="userDto.Email" />
+						<ValidationMessage For="@(() => userDto.Email)" />
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					@* Segunda columna *@
+					@if (IsAdmin)
+					{
 						<div class="mb-3">
-							<label class="form-label">País</label>
-							<select class="form-select" @onchange="CountryChangedAsync">
-								<option value="0">Seleccione un país</option>
-								@if (countries is not null)
+							<label class="form-label">Tipo de usuario</label>
+							<select class="form-select" @bind="userDto.UserType">
+								<option value="@UserType.User">Usuario</option>
+								<option value="@UserType.Admin">Administrador</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label class="form-label">Membresía</label>
+							<select class="form-select" @bind="userDto.MembershipId">
+								<option value="0">Seleccione una membresía</option>
+								@if (memberships is not null)
 								{
-									@foreach (var country in countries)
+									@foreach (var membership in memberships)
 									{
-										<option value="@country.Id">@country.Name</option>
+										<option value="@membership.Id">@membership.Name</option>
 									}
 								}
 							</select>
 						</div>
-						<div class="mb-3">
-							<label class="form-label">C/A ó Región</label>
-							<select class="form-select" @onchange="RegionChangedAsync">
-								<option value="0">Seleccione una región</option>
-								@if (regions is not null)
+					}
+					<div class="mb-3">
+						<label class="form-label">País</label>
+						<select class="form-select" @onchange="CountryChangedAsync">
+							<option value="0">Seleccione un país</option>
+							@if (countries is not null)
+							{
+								@foreach (var country in countries)
 								{
-									@foreach (var region in regions)
-									{
-										<option value="@region.RegionId">@region.RegionName</option>
-									}
+									<option value="@country.Id">@country.Name</option>
 								}
-							</select>
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Ciudad</label>
-							<select class="form-select" @bind="userDto.CityId">
-								<option value="0">Seleccione una ciudad</option>
-								@if (cities is not null)
+							}
+						</select>
+					</div>
+					<div class="mb-3">
+						<label class="form-label">C/A ó Región</label>
+						<select class="form-select" @onchange="RegionChangedAsync">
+							<option value="0">Seleccione una región</option>
+							@if (regions is not null)
+							{
+								@foreach (var region in regions)
 								{
-									@foreach (var city in cities)
-									{
-										<option value="@city.CityId">@city.CityName</option>
-									}
+									<option value="@region.RegionId">@region.RegionName</option>
 								}
-							</select>
-						</div>
-						<div class="mb-3">
-							<InputImg Label="Foto" ImageSelected="ImageSelected" ImageURL="@imageUrl" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Contraseña</label>
-							<InputText type="password" class="form-control" @bind-Value="userDto.Password" />
-							<ValidationMessage For="@(() => userDto.Password)" />
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Confirmación de contraseña</label>
-							<InputText type="password" class="form-control" @bind-Value="userDto.ConfirmPassword" />
-							<ValidationMessage For="@(() => userDto.ConfirmPassword)" />
-						</div>
+							}
+						</select>
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Ciudad</label>
+						<select class="form-select" @bind="userDto.CityId">
+							<option value="0">Seleccione una ciudad</option>
+							@if (cities is not null)
+							{
+								@foreach (var city in cities)
+								{
+									<option value="@city.CityId">@city.CityName</option>
+								}
+							}
+						</select>
+					</div>
+					<div class="mb-3">
+						<InputImg Label="Foto" ImageSelected="ImageSelected" ImageURL="@imageUrl" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Contraseña</label>
+						<InputText type="password" class="form-control" @bind-Value="userDto.Password" />
+						<ValidationMessage For="@(() => userDto.Password)" />
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Confirmación de contraseña</label>
+						<InputText type="password" class="form-control" @bind-Value="userDto.ConfirmPassword" />
+						<ValidationMessage For="@(() => userDto.ConfirmPassword)" />
+					</div>
 
-					</div>
 				</div>
-				<div class="text-center mt-4">
-					<button class="btn btn-success px-5" type="submit">Registrar</button>
-				</div>
+			</div>
+			<div class="text-center mt-4">
+				<button class="btn btn-success px-5" type="submit">Registrar</button>
 			</div>
 		</div>
 	</div>
@@ -199,11 +201,13 @@
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowInfoAsync("Error", message!, "Aceptar");
 			return;
 		}
 
-		await sweetAlertService.FireAsync("Confirmación", "Su cuenta ha sido creada con éxito. Se te ha enviado un correo electrónico con las instrucciones para activar tu usuario.", SweetAlertIcon.Info);
+		await dialogService.ShowInfoAsync("Éxito", "Su cuenta ha sido creada con éxito. Se te ha enviado un correo electrónico con las instrucciones para activar tu usuario.", "Aceptar");
+		await dialogService.ShowToastAsync("Verifica tu correo", ToastType.Success);
+		//await sweetAlertService.FireAsync("Confirmación", "Su cuenta ha sido creada con éxito. Se te ha enviado un correo electrónico con las instrucciones para activar tu usuario.", SweetAlertIcon.Info);
 
 		navigationManager.NavigateTo("/");
 	}
@@ -227,7 +231,8 @@
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowInfoAsync("Error", message!, "Aceptar");
+			//await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
 			return;
 		}
 		memberships = responseHttp.Response;
@@ -239,7 +244,8 @@
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowInfoAsync("Error", message!, "Aceptar");
+
 			return;
 		}
 		countries = responseHttp.Response;
@@ -250,7 +256,8 @@
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowInfoAsync("Error", message!, "Aceptar");
+
 			return;
 		}
 		regions = responseHttp.Response;
@@ -261,7 +268,8 @@
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowInfoAsync("Error", message!, "Aceptar");
+			//await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
 			return;
 		}
 		cities = responseHttp.Response;

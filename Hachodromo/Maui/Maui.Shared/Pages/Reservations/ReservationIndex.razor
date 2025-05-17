@@ -1,6 +1,6 @@
 ﻿@page "/reservations"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 
 <h3>ReservationIndex</h3>
@@ -58,7 +58,8 @@
 		var responseHttp = await repository.Get<List<Site>>("/api/sites");
 		if (responseHttp.Error)
 		{
-			await sweetAlertService.FireAsync("Error", "No se pudieron cargar los sitios.", SweetAlertIcon.Error);
+			var message = await responseHttp.GetErrorMessageAsync();
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 		sites = responseHttp.Response;

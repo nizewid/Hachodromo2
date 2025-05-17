@@ -53,10 +53,12 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\00t
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\wwcxh2now0-q5egrc137l.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\jbwl3dbi3o-5ipweew5fc.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\raa8419rum-8qij0y2dsa.gz
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\6qxpcs6f0i-7ruftx6yfa.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\idw6ptej04-6gzpyzhau4.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\4fura9i8zc-8inm30yfxf.gz
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\vh24pgzoig-5n0hc6y4dm.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\of8ka2v689-xineniuf5l.gz
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5whn0s4gws-vsc7x7ze68.gz
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5tha5wsjju-a8c83uae8g.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\staticwebassets.build.json
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\staticwebassets.development.json
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -72,5 +74,4 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\Maui.Shared.dl
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\refint\Maui.Shared.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\Maui.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\ref\Maui.Shared.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5whn0s4gws-5cik06pio6.gz
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\5tha5wsjju-59auet6wht.gz
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui.Shared\obj\Debug\net9.0\compressed\6qxpcs6f0i-xmboywiap8.gz

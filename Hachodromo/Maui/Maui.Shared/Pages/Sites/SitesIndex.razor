@@ -1,7 +1,7 @@
 ﻿@page "/sites"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 @if (sites is null)
@@ -110,49 +110,47 @@ else
 
     private async Task LoadAsync(int page = 1)
     {
-        if (!string.IsNullOrWhiteSpace(Page))
+        if (!string.IsNullOrWhiteSpace(Page) && int.TryParse(Page, out int parsedPage))
         {
-            page = Convert.ToInt32(Page);
+            page = parsedPage;
         }
 
-        string url1 = string.Empty;
-        string url2 = string.Empty;
-
-        if (string.IsNullOrEmpty(Filter))
-        {
-            url1 = $"api/sites?page={page}";
-            url2 = $"api/sites/totalPages";
-        }
-        else
-        {
-            url1 = $"api/sites?page={page}&filter={Filter}";
-            url2 = $"api/sites/totalPages?filter={Filter}";
-        }
+        string baseUrl = "api/sites";
+        string recordsFilter = string.IsNullOrEmpty(Filter) ? "" : $"&filter={Uri.EscapeDataString(Filter)}";
+        string urlItems = $"{baseUrl}?page={page}{recordsFilter}";
+        string urlTotalPages = $"{baseUrl}/totalPages{(string.IsNullOrEmpty(Filter) ? "" : $"?filter={Uri.EscapeDataString(Filter)}")}";
 
         try
         {
-            var responseHppt = await repository.Get<List<Site>>(url1);
-            var responseHppt2 = await repository.Get<int>(url2);
-            sites = responseHppt.Response!;
-            totalPages = responseHppt2.Response!;
+            var responseItems = await repository.Get<List<Site>>(urlItems);
+            var responsePages = await repository.Get<int>(urlTotalPages);
+
+            if (responseItems.Error)
+            {
+                if (responseItems.HttpResponseMessage?.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    navigationManager.NavigateTo("/");
+                    return;
+                }
+
+                var message = await responseItems.GetErrorMessageAsync();
+                await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
+                return;
+            }
+
+            sites = responseItems.Response ?? new List<Site>();
+            totalPages = responsePages.Response;
         }
         catch (Exception ex)
         {
-            await sweetAlertService.FireAsync("Error", ex.Message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync("Error", ex.Message, "Aceptar");
         }
     }
 
+
     private async Task Delete(int siteId)
     {
-        var result = await sweetAlertService.FireAsync(new SweetAlertOptions
-            {
-                Title = "Confirmación",
-                Text = "¿Esta seguro que quieres borrar el registro?",
-                Icon = SweetAlertIcon.Question,
-                ShowCancelButton = true
-            });
-
-        var confirm = string.IsNullOrEmpty(result.Value);
+		var confirm = await dialogService.ShowConfirmMessageAsync("Eliminar Sitio", "¿Está seguro de que desea eliminar este sitio?");
 
         if (confirm)
         {
@@ -169,12 +167,13 @@ else
             }
             else
             {
-                var mensajeError = await responseHTTP.GetErrorMessageAsync();
-                await sweetAlertService.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+                var message = await responseHTTP.GetErrorMessageAsync();
+                await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             }
         }
         else
         {
+			await dialogService.ShowToastAsync("Sitio eliminado", ToastType.Success);
             await LoadAsync();
         }
     }

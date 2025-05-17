@@ -1,9 +1,9 @@
 ﻿@page "/Categories/Create"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 
-<h3>Category Create</h3>
+<h3>Crear Categoria</h3>
 
 <CategoryForm @ref="categoryForm" Category="category" OnValidSubmit="CreateAsync" ReturnAction="Return" />
 
@@ -21,7 +21,7 @@
         if (httpResponse.Error)
         {
             var message = await httpResponse.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
 		await BlazoredModal.CloseAsync(ModalResult.Ok());

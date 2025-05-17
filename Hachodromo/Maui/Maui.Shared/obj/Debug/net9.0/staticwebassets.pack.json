@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Maui.Shared.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Maui.Shared.59auet6wht.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Maui.Shared.a8c83uae8g.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\LogoColores.png",
+      "PackagePath": "staticwebassets\\LogoColores.png"
     },
     {
       "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\app.css",
@@ -15,6 +19,10 @@
     {
       "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\colorcode.css",
+      "PackagePath": "staticwebassets\\colorcode.css"
     },
     {
       "Id": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\wwwroot\\favicon.png",

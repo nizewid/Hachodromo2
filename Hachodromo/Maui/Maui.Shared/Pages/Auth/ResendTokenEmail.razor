@@ -1,6 +1,6 @@
 ﻿@page "/ResendToken"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 
 @if (loading)
@@ -43,13 +43,14 @@
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             loading = false;
             return;
         }
 
         loading = false;
-        await sweetAlertService.FireAsync("Confirmación", "Se te ha enviado un correo electrónico con las instrucciones para activar tu usuario.", SweetAlertIcon.Info);
+        await dialogService.ShowInfoAsync("Confirmación", "Se te ha enviado un correo electrónico con las instrucciones para activar tu usuario.");
+		await dialogService.ShowToastAsync("Verifica tu correo", ToastType.Success);
         navigationManager.NavigateTo("/");
     }
 }

@@ -1,6 +1,6 @@
 ﻿@page "/region/details/{RegionId:int}"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles = "Admin")]
 
@@ -124,7 +124,7 @@ else
 				return;
 			}
 			var message = await responseHttp1.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 		region = responseHttp1.Response;
@@ -135,23 +135,18 @@ else
 
 	private async Task DeleteAsync(int id)
 	{
-		var result = await sweetAlertService.FireAsync(new SweetAlertOptions
-			{
-				Title = "Confirmación",
-				Text = "¿Deseas eliminar la ciudad?",
-				Icon = SweetAlertIcon.Question,
-				ShowCancelButton = true,
-				CancelButtonText = "NO",
-				ConfirmButtonText = "SI"
-			});
-
+		var confirm = await dialogService.ShowConfirmMessageAsync("Confirmación", "¿Está seguro de que desea eliminar esta ciudad?");
+		if (!confirm)
+		{
+			return;
+		}
 		var responseHttp = await repository.Delete($"/api/cities/{id}");
 		if (responseHttp.Error)
 		{
 			if (responseHttp.HttpResponseMessage.StatusCode != HttpStatusCode.NotFound)
 			{
 				var message = await responseHttp.GetErrorMessageAsync();
-				await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+				await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 				return;
 			}
 		}

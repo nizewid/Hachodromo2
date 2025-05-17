@@ -1,6 +1,6 @@
 ﻿@inject IRepository repository
 @inject NavigationManager NavigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 <h3>Crear región para el pais: @country?.Name</h3>
@@ -28,10 +28,11 @@
 		var httpResponse = await repository.Post<Region>("/api/regions", region);
 		if (httpResponse.Error){
 			var message = await httpResponse.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
 		await BlazoredModal.CloseAsync(ModalResult.Ok());
+		await dialogService.ShowToastAsync("Región creada", ToastType.Success);
 		Return();
 	}
 	private void Return()
@@ -50,7 +51,7 @@
 		else
 		{
 			var message = await response.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			NavigationManager.NavigateTo("/countries");
 		}
 	}

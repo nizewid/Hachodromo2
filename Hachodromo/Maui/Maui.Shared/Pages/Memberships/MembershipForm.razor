@@ -1,4 +1,4 @@
-﻿@inject SweetAlertService sweetAlertService
+﻿@inject INativeDialogService dialogService
 
 <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
 
@@ -65,22 +65,13 @@
             return;
         }
 
-        var result = await sweetAlertService.FireAsync(new SweetAlertOptions
-            {
-                Title = "Confirmación",
-                Text = "¿Deseas abandonar la página y perder los cambios?",
-                Icon = SweetAlertIcon.Question,
-                ShowCancelButton = true,
-                CancelButtonText = "No",
-                ConfirmButtonText = "Si"
-            });
-
-        var confirm = !string.IsNullOrEmpty(result.Value);
-        if (confirm)
+		var confirm = await dialogService.ShowConfirmMessageAsync(
+					"¿Está seguro de que desea salir?",
+					"Los cambios no guardados se perderán.");
+        if (!confirm)
         {
-            return;
+            context.PreventNavigation();
         }
 
-        context.PreventNavigation();
     }
 }

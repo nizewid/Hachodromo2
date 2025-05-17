@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Components.Forms
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles= "Admin")]
 
 <NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation"/>
@@ -51,27 +51,19 @@
     private async Task OnBeforeInternalNavigation(LocationChangingContext context)
     {
         var formWasModified = editContext.IsModified();
-        if(!formWasModified || FormPostedSuccessfully)
-        {
+
+        if (!formWasModified || FormPostedSuccessfully)
             return;
-        }
 
-        var result = await sweetAlertService.FireAsync(new SweetAlertOptions
-            {
-                Title = "Confirmación",
-                Text = "¿Deseas abandonar la página y perder los cambios?",
-                Icon = SweetAlertIcon.Warning,
-                ShowCancelButton = true,
-                CancelButtonText = "NO",
-                ConfirmButtonText = "SI"
-            });
+        var confirmed = await dialogService.ShowConfirmMessageAsync(
+            "¿Está seguro de que desea salir?",
+            "Los cambios no guardados se perderán."
+        );
 
-        var confirm = !string.IsNullOrEmpty(result.Value);
-
-        if(confirm)
+        if (!confirmed)
         {
-            return;
+            context.PreventNavigation(); // Solo prevenir si NO confirmó
         }
-        context.PreventNavigation();
     }
+
 }

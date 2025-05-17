@@ -1,7 +1,7 @@
 ﻿@page "/sites/create"
 @inject IRepository repository
 @inject NavigationManager navigationManager
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
 <h3>Crear Local</h3>
@@ -75,17 +75,17 @@ else
     {
         if (siteDto.CityId == 0)
         {
-            await sweetAlertService.FireAsync("Error", "Debe seleccionar una ciudad", SweetAlertIcon.Warning);
+			await dialogService.ShowAlertAsync("Error", "Seleccione una ciudad", "Aceptar");
             return;
         }
         var httpResponse = await repository.Post("/api/sites", siteDto);
         if (httpResponse.Error)
         {
             var message = await httpResponse.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
-
+		await dialogService.ShowToastAsync("Local creado", ToastType.Success);
         Return();
     }
     private void Return()
@@ -98,8 +98,8 @@ else
         var responseHttp = await repository.Get<List<Country>>("/api/countries/combo");
         if (responseHttp.Error)
         {
-            var message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			var message = await responseHttp.GetErrorMessageAsync();
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
         countries = responseHttp.Response;
@@ -110,7 +110,7 @@ else
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
         regions = responseHttp.Response;
@@ -121,7 +121,7 @@ else
         if (responseHttp.Error)
         {
             var message = await responseHttp.GetErrorMessageAsync();
-            await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+            await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
             return;
         }
         cities = responseHttp.Response;

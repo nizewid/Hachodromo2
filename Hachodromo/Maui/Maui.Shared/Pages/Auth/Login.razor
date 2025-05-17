@@ -1,8 +1,8 @@
 ﻿@page "/Login"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @inject ILoginService loginService
+@inject INativeDialogService dialogService
 @inject ILogService log
 
 <EditForm Model="loginDto" OnValidSubmit="LoginAsync">
@@ -57,12 +57,12 @@
     </div>
 </EditForm>
 
-@if (!string.IsNullOrEmpty(log.Estado))
+@*if (!string.IsNullOrEmpty(log.Estado))
 {
     <div class="alert alert-secondary mt-2 text-center">
         <strong>@log.Estado</strong>
     </div>
-}
+}*@
 
 @code {
     private LoginDto loginDto = new();
@@ -79,26 +79,20 @@
             {
                 var message = await responseHttp.GetErrorMessageAsync();
                 log.Info("Login fallido: " + message);
-#if ANDROID
-            await dialogService.ShowAlertAsync("Error", message, "Aceptar");
-#else
-                await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
-#endif
+
+                await dialogService.ShowAlertAsync("Error", message, "Aceptar");
                 return;
             }
 
             log.Info("Login exitoso");
             await loginService.LoginAsync(responseHttp.Response!.Token);
             navigationManager.NavigateTo("/");
+			await dialogService.ShowToastAsync("Bienvenido", ToastType.Success);
         }
         catch (Exception ex)
         {
             log.Info("Excepción: " + ex.Message);
-#if ANDROID
-        await dialogService.ShowAlertAsync("Error", "Error inesperado", "Aceptar");
-#else
-            await sweetAlertService.FireAsync("Error", "Error inesperado", SweetAlertIcon.Error);
-#endif
+            await dialogService.ShowAlertAsync("Error", "Error inesperado", "Aceptar");
         }
     }
 }

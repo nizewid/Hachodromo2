@@ -1,4 +1,5 @@
 ﻿using Blazored.Modal;
+using CommunityToolkit.Maui;
 using CurrieTechnologies.Razor.SweetAlert2;
 using Maui.Services;
 using Maui.Shared.Auth;
@@ -18,6 +19,7 @@ namespace Maui
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

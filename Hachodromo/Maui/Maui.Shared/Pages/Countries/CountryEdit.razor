@@ -1,6 +1,6 @@
 ﻿@page "/countries/edit/{id:int}"
 @inject IRepository repository
-@inject SweetAlertService sweetAlertService
+@inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 @attribute [Authorize(Roles = "Admin")]
 
@@ -26,15 +26,16 @@ else
 		var responseHttp = await repository.Get<Country>($"/api/countries/{Id}");
 		if (responseHttp.Error)
 		{
+			var message = await responseHttp.GetErrorMessageAsync();
 			if (responseHttp.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
 			{
-				await sweetAlertService.FireAsync("Error", "El país no existe");
+
+				await dialogService.ShowAlertAsync("Error", "País no encontrado", "Aceptar");
 				navigationManager.NavigateTo("/countries");
 				return;
 			}
 
-			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Otro error no controlado", "Aceptar");
 			return;
 		}
 		country = responseHttp.Response;
@@ -46,9 +47,10 @@ else
 		if (responseHttp.Error)
 		{
 			var message = await responseHttp.GetErrorMessageAsync();
-			await sweetAlertService.FireAsync("Error", message, SweetAlertIcon.Error);
+			await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
 			return;
 		}
+		await dialogService.ShowToastAsync("País editado con éxito", ToastType.Success);
 		Return();
 	}
 	private void Return()
