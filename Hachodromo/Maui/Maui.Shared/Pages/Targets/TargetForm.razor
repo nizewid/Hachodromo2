@@ -1,0 +1,58 @@
+﻿@inject IRepository repository
+@inject INativeDialogService dialogService
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField Label="Capacidad" @bind-Value="Target.Capacity" />
+        <MudSelect T="TargetStatus" Label="Estado" @bind-Value="Target.Status">
+            <MudSelectItem Value="TargetStatus.Available">Disponible</MudSelectItem>
+            <MudSelectItem Value="TargetStatus.UnderMaintenance">Mantenimiento</MudSelectItem>
+            <MudSelectItem Value="TargetStatus.InUse">En uso</MudSelectItem>
+            <MudSelectItem Value="TargetStatus.Reserved">Reservada</MudSelectItem>
+        </MudSelect>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="() => MudDialog.Cancel()" Color="Color.Secondary">Cancelar</MudButton>
+        <MudButton OnClick="Save" Color="Color.Primary">Guardar</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
+    [Parameter] public TargetDto Target { get; set; }
+    [Parameter] public bool IsNew { get; set; }
+
+    private async Task Save()
+    {
+        HttpResponseWrapper<object> response;
+        string url;
+
+        try
+        {
+            if (IsNew)
+            {
+                url = $"api/sites/{Target.SiteId}/targets";
+                response = await repository.Post(url, Target);
+            }
+            else
+            {
+                url = $"api/sites/{Target.SiteId}/targets/{Target.Id}";
+                response = await repository.Put(url, Target);
+            }
+
+            if (!response.Error)
+            {
+                MudDialog.Close(DialogResult.Ok(true));
+            }
+            else
+            {
+                var message = await response.GetErrorMessageAsync();
+                await dialogService.ShowAlertAsync("Error", message ?? "No se pudo guardar", "Aceptar");
+            }
+        }
+        catch (Exception ex)
+        {
+            await dialogService.ShowAlertAsync("Error inesperado", ex.Message, "Aceptar");
+        }
+    }
+}

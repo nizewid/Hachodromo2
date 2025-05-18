@@ -5371,7 +5371,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -5420,7 +5420,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -5469,7 +5469,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -5532,7 +5532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -5573,7 +5573,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -5614,7 +5614,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -8000,145 +8000,8 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23276"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:32:06 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000086707708"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11532"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.pdb.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11532"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm",
+      "Route": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8151,305 +8014,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34069"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:00 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tydgoxi1lc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000073534819"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tydgoxi1lc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tydgoxi1lc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm.gz"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "34069"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:00 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000073534819"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.wasm.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23276"
+          "Value": "23268"
         },
         {
           "Name": "Content-Type",
@@ -8457,21 +8022,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
+          "Value": "\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:32:06 GMT"
+          "Value": "Sun, 18 May 2025 21:27:36 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xqgccb5ogs"
+          "Value": "hhpz1yiqsm"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
         },
         {
           "Name": "label",
@@ -8480,13 +8045,13 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb",
-      "AssetFile": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb.gz",
+      "Route": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000086707708"
+          "Quality": "0.000086715227"
         }
       ],
       "ResponseHeaders": [
@@ -8504,7 +8069,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11532"
+          "Value": "11531"
         },
         {
           "Name": "Content-Type",
@@ -8512,15 +8077,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
+          "Value": "W/\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
         },
         {
           "Name": "Vary",
@@ -8530,11 +8095,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xqgccb5ogs"
+          "Value": "hhpz1yiqsm"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
         },
         {
           "Name": "label",
@@ -8543,8 +8108,8 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb.gz",
-      "AssetFile": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb.gz",
+      "Route": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8561,7 +8126,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11532"
+          "Value": "11531"
         },
         {
           "Name": "Content-Type",
@@ -8569,11 +8134,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
         },
         {
           "Name": "Vary",
@@ -8583,11 +8148,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xqgccb5ogs"
+          "Value": "hhpz1yiqsm"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E="
+          "Value": "sha256-m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s="
         },
         {
           "Name": "label",
@@ -8596,8 +8161,8 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.dguegewx60.wasm",
-      "AssetFile": "_framework/Maui.Shared.dguegewx60.wasm",
+      "Route": "_framework/Hachodromo.Shared.n8myq6kaht.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.n8myq6kaht.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8610,7 +8175,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "361237"
+          "Value": "34581"
         },
         {
           "Name": "Content-Type",
@@ -8618,36 +8183,36 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dguegewx60"
+          "Value": "n8myq6kaht"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
         },
         {
           "Name": "label",
-          "Value": "_framework/Maui.Shared.wasm"
+          "Value": "_framework/Hachodromo.Shared.wasm"
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.dguegewx60.wasm",
-      "AssetFile": "_framework/Maui.Shared.dguegewx60.wasm.gz",
+      "Route": "_framework/Hachodromo.Shared.n8myq6kaht.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.n8myq6kaht.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000008681686"
+          "Quality": "0.000073297662"
         }
       ],
       "ResponseHeaders": [
@@ -8665,7 +8230,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "13642"
         },
         {
           "Name": "Content-Type",
@@ -8673,15 +8238,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "W/\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
         },
         {
           "Name": "Vary",
@@ -8691,21 +8256,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dguegewx60"
+          "Value": "n8myq6kaht"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
         },
         {
           "Name": "label",
-          "Value": "_framework/Maui.Shared.wasm"
+          "Value": "_framework/Hachodromo.Shared.wasm"
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.dguegewx60.wasm.gz",
-      "AssetFile": "_framework/Maui.Shared.dguegewx60.wasm.gz",
+      "Route": "_framework/Hachodromo.Shared.n8myq6kaht.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.n8myq6kaht.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8722,7 +8287,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "13642"
         },
         {
           "Name": "Content-Type",
@@ -8730,11 +8295,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
         },
         {
           "Name": "Vary",
@@ -8744,11 +8309,446 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dguegewx60"
+          "Value": "n8myq6kaht"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU="
+          "Value": "sha256-9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm.gz"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:27:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb",
+      "AssetFile": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000086715227"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11531"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11531"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.n8myq6kaht.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.wasm",
+      "AssetFile": "_framework/Hachodromo.Shared.n8myq6kaht.wasm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000073297662"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13642"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.wasm.gz",
+      "AssetFile": "_framework/Hachodromo.Shared.n8myq6kaht.wasm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13642"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.08sml2emju.wasm",
+      "AssetFile": "_framework/Maui.Shared.08sml2emju.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "390421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "08sml2emju"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Shared.wasm"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.08sml2emju.wasm",
+      "AssetFile": "_framework/Maui.Shared.08sml2emju.wasm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000007964066"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "08sml2emju"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Shared.wasm"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.08sml2emju.wasm.gz",
+      "AssetFile": "_framework/Maui.Shared.08sml2emju.wasm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "08sml2emju"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU="
         },
         {
           "Name": "label",
@@ -8757,145 +8757,8 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.pdb",
-      "AssetFile": "_framework/Maui.Shared.vzueyvgznq.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "245580"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:08 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Shared.pdb",
-      "AssetFile": "_framework/Maui.Shared.vzueyvgznq.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000005224360"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "191410"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Shared.pdb.gz",
-      "AssetFile": "_framework/Maui.Shared.vzueyvgznq.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "191410"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Shared.vzueyvgznq.pdb",
-      "AssetFile": "_framework/Maui.Shared.vzueyvgznq.pdb",
+      "Route": "_framework/Maui.Shared.blt32qfde6.pdb",
+      "AssetFile": "_framework/Maui.Shared.blt32qfde6.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8908,7 +8771,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "245580"
+          "Value": "263176"
         },
         {
           "Name": "Content-Type",
@@ -8916,21 +8779,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
+          "Value": "\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:08 GMT"
+          "Value": "Sun, 18 May 2025 21:50:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vzueyvgznq"
+          "Value": "blt32qfde6"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
         },
         {
           "Name": "label",
@@ -8939,13 +8802,13 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.vzueyvgznq.pdb",
-      "AssetFile": "_framework/Maui.Shared.vzueyvgznq.pdb.gz",
+      "Route": "_framework/Maui.Shared.blt32qfde6.pdb",
+      "AssetFile": "_framework/Maui.Shared.blt32qfde6.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000005224360"
+          "Quality": "0.000004870494"
         }
       ],
       "ResponseHeaders": [
@@ -8963,7 +8826,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "191410"
+          "Value": "205317"
         },
         {
           "Name": "Content-Type",
@@ -8971,15 +8834,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
+          "Value": "W/\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -8989,11 +8852,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vzueyvgznq"
+          "Value": "blt32qfde6"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
         },
         {
           "Name": "label",
@@ -9002,8 +8865,8 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.vzueyvgznq.pdb.gz",
-      "AssetFile": "_framework/Maui.Shared.vzueyvgznq.pdb.gz",
+      "Route": "_framework/Maui.Shared.blt32qfde6.pdb.gz",
+      "AssetFile": "_framework/Maui.Shared.blt32qfde6.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9020,7 +8883,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "191410"
+          "Value": "205317"
         },
         {
           "Name": "Content-Type",
@@ -9028,11 +8891,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9042,11 +8905,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vzueyvgznq"
+          "Value": "blt32qfde6"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY="
+          "Value": "sha256-wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ="
         },
         {
           "Name": "label",
@@ -9055,8 +8918,8 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.wasm",
-      "AssetFile": "_framework/Maui.Shared.dguegewx60.wasm",
+      "Route": "_framework/Maui.Shared.pdb",
+      "AssetFile": "_framework/Maui.Shared.blt32qfde6.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9069,36 +8932,36 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "361237"
+          "Value": "263176"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/wasm"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.wasm",
-      "AssetFile": "_framework/Maui.Shared.dguegewx60.wasm.gz",
+      "Route": "_framework/Maui.Shared.pdb",
+      "AssetFile": "_framework/Maui.Shared.blt32qfde6.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000008681686"
+          "Quality": "0.000004870494"
         }
       ],
       "ResponseHeaders": [
@@ -9116,23 +8979,23 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "205317"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/wasm"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "W/\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9142,13 +9005,150 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.pdb.gz",
+      "AssetFile": "_framework/Maui.Shared.blt32qfde6.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "205317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.wasm",
+      "AssetFile": "_framework/Maui.Shared.08sml2emju.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "390421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.wasm",
+      "AssetFile": "_framework/Maui.Shared.08sml2emju.wasm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000007964066"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Shared.wasm.gz",
-      "AssetFile": "_framework/Maui.Shared.dguegewx60.wasm.gz",
+      "AssetFile": "_framework/Maui.Shared.08sml2emju.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9165,7 +9165,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "125563"
         },
         {
           "Name": "Content-Type",
@@ -9173,11 +9173,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9187,174 +9187,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU="
+          "Value": "sha256-9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Web.Client.7b58jzts02.pdb",
-      "AssetFile": "_framework/Maui.Web.Client.7b58jzts02.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17216"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7b58jzts02"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Maui.Web.Client.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Web.Client.7b58jzts02.pdb",
-      "AssetFile": "_framework/Maui.Web.Client.7b58jzts02.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000100371374"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9962"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7b58jzts02"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Maui.Web.Client.pdb"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Web.Client.7b58jzts02.pdb.gz",
-      "AssetFile": "_framework/Maui.Web.Client.7b58jzts02.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9962"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7b58jzts02"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Maui.Web.Client.pdb.gz"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Web.Client.lfmqma191b.wasm",
-      "AssetFile": "_framework/Maui.Web.Client.lfmqma191b.wasm",
+      "Route": "_framework/Maui.Web.Client.cpu7i034oz.wasm",
+      "AssetFile": "_framework/Maui.Web.Client.cpu7i034oz.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9375,21 +9214,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lfmqma191b"
+          "Value": "cpu7i034oz"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         },
         {
           "Name": "label",
@@ -9398,8 +9237,8 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Web.Client.lfmqma191b.wasm",
-      "AssetFile": "_framework/Maui.Web.Client.lfmqma191b.wasm.gz",
+      "Route": "_framework/Maui.Web.Client.cpu7i034oz.wasm",
+      "AssetFile": "_framework/Maui.Web.Client.cpu7i034oz.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -9430,15 +9269,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "W/\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9448,11 +9287,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lfmqma191b"
+          "Value": "cpu7i034oz"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         },
         {
           "Name": "label",
@@ -9461,8 +9300,8 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Web.Client.lfmqma191b.wasm.gz",
-      "AssetFile": "_framework/Maui.Web.Client.lfmqma191b.wasm.gz",
+      "Route": "_framework/Maui.Web.Client.cpu7i034oz.wasm.gz",
+      "AssetFile": "_framework/Maui.Web.Client.cpu7i034oz.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9487,11 +9326,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9501,11 +9340,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lfmqma191b"
+          "Value": "cpu7i034oz"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw="
+          "Value": "sha256-c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c="
         },
         {
           "Name": "label",
@@ -9514,8 +9353,169 @@
       ]
     },
     {
+      "Route": "_framework/Maui.Web.Client.gczinh3hbr.pdb",
+      "AssetFile": "_framework/Maui.Web.Client.gczinh3hbr.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17216"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gczinh3hbr"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Web.Client.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Web.Client.gczinh3hbr.pdb",
+      "AssetFile": "_framework/Maui.Web.Client.gczinh3hbr.pdb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000100371374"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9962"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gczinh3hbr"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Web.Client.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Web.Client.gczinh3hbr.pdb.gz",
+      "AssetFile": "_framework/Maui.Web.Client.gczinh3hbr.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9962"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gczinh3hbr"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Web.Client.pdb.gz"
+        }
+      ]
+    },
+    {
       "Route": "_framework/Maui.Web.Client.pdb",
-      "AssetFile": "_framework/Maui.Web.Client.7b58jzts02.pdb",
+      "AssetFile": "_framework/Maui.Web.Client.gczinh3hbr.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9536,23 +9536,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
+          "Value": "\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.pdb",
-      "AssetFile": "_framework/Maui.Web.Client.7b58jzts02.pdb.gz",
+      "AssetFile": "_framework/Maui.Web.Client.gczinh3hbr.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -9583,15 +9583,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
+          "Value": "W/\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9601,13 +9601,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.pdb.gz",
-      "AssetFile": "_framework/Maui.Web.Client.7b58jzts02.pdb.gz",
+      "AssetFile": "_framework/Maui.Web.Client.gczinh3hbr.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9632,11 +9632,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9646,13 +9646,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE="
+          "Value": "sha256-kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.wasm",
-      "AssetFile": "_framework/Maui.Web.Client.lfmqma191b.wasm",
+      "AssetFile": "_framework/Maui.Web.Client.cpu7i034oz.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9673,23 +9673,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.wasm",
-      "AssetFile": "_framework/Maui.Web.Client.lfmqma191b.wasm.gz",
+      "AssetFile": "_framework/Maui.Web.Client.cpu7i034oz.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -9720,15 +9720,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "W/\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9738,13 +9738,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.wasm.gz",
-      "AssetFile": "_framework/Maui.Web.Client.lfmqma191b.wasm.gz",
+      "AssetFile": "_framework/Maui.Web.Client.cpu7i034oz.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9769,11 +9769,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Vary",
@@ -9783,7 +9783,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw="
+          "Value": "sha256-c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c="
         }
       ]
     },
@@ -72390,17 +72390,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE=\""
+          "Value": "\"4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE="
+          "Value": "sha256-4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM="
         }
       ]
     },
@@ -72411,7 +72411,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000070957213"
+          "Quality": "0.000070967284"
         }
       ],
       "ResponseHeaders": [
@@ -72429,7 +72429,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14092"
+          "Value": "14090"
         },
         {
           "Name": "Content-Type",
@@ -72437,15 +72437,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ=\""
+          "Value": "\"+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE=\""
+          "Value": "W/\"4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:48:18 GMT"
         },
         {
           "Name": "Vary",
@@ -72455,7 +72455,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE="
+          "Value": "sha256-4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM="
         }
       ]
     },
@@ -72478,7 +72478,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14092"
+          "Value": "14090"
         },
         {
           "Name": "Content-Type",
@@ -72486,11 +72486,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ=\""
+          "Value": "\"+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:48:18 GMT"
         },
         {
           "Name": "Vary",
@@ -72500,7 +72500,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ="
+          "Value": "sha256-+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU="
         }
       ]
     },

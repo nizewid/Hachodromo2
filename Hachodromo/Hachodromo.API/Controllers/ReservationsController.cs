@@ -71,50 +71,48 @@ public class ReservationsController : ControllerBase
         return Ok(dto);
     }
 
-    // POST api/reservations
-    [HttpPost]
-    [AllowAnonymous]
-    public async Task<ActionResult<ReservationDto>> Create([FromBody] ReservationDto dto)
+  [HttpPost]
+[AllowAnonymous]
+public async Task<ActionResult<ReservationDto>> Create([FromBody] ReservationDto dto)
+{
+    if (!ModelState.IsValid)
+        return ValidationProblem(ModelState);
+
+    var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    var emailClaim = User.FindFirstValue(ClaimTypes.Name); // 👈 Correo del usuario logueado
+
+    // Validación para anónimos: Email obligatorio
+    if (userIdClaim == null && string.IsNullOrWhiteSpace(dto.Email))
+        return BadRequest("El correo es obligatorio para usuarios no autenticados.");
+
+    var entity = new Reservation
     {
-        if (!ModelState.IsValid)
-            return ValidationProblem(ModelState);
+        UserId = userIdClaim != null ? Guid.Parse(userIdClaim) : null,
+        GuestEmail = userIdClaim != null
+                        ? emailClaim   // 👈 Lo guardamos también para autenticados
+                        : dto.Email.Trim(),
+        ReservationDate = dto.ReservationDate.Date,
+        HourStart = dto.HourStart,
+        HourEnd = dto.HourEnd,
+        Remarks = dto.Remarks,
+        CreatedDate = DateTime.UtcNow,
 
-        // Email del token, si viene
-        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        var emailClaim = User.FindFirstValue(ClaimTypes.Email);
+    };
 
-        // Si anónimo deben pasar dto.Email
-        if (userId == null && string.IsNullOrWhiteSpace(dto.Email))
-            return BadRequest("El correo es obligatorio para usuarios no autenticados.");
+    entity.ReservationTargets.Add(new ReservationTarget
+    {
+        TargetId = dto.SiteId
+    });
 
-        var entity = new Reservation
-        {
-            UserId = userId,               // null para invitado
-            GuestEmail = userId == null
-                                ? dto.Email.Trim()
-                                : null,
-            ReservationDate = dto.ReservationDate.Date,
-            HourStart = dto.HourStart,
-            HourEnd = dto.HourEnd,
-            Remarks = dto.Remarks
-        };
+    _context.Reservations.Add(entity);
+    await _context.SaveChangesAsync();
 
-        entity.ReservationTargets.Add(new ReservationTarget
-        {
-            TargetId = dto.SiteId
-        });
+    dto.Id = entity.Id;
+    dto.Email = entity.GuestEmail!;
 
-        _context.Reservations.Add(entity);
-        await _context.SaveChangesAsync();
+    return CreatedAtAction(nameof(GetById), new { id = entity.Id }, dto);
+}
 
-        dto.Id = entity.Id;
-        dto.Email = userId != null
-                        ? emailClaim!
-                        : dto.Email.Trim();
-
-        return CreatedAtAction(nameof(GetById),
-            new { id = entity.Id }, dto);
-    }
 
     // PUT api/reservations/{id}
     [HttpPut("{id:int}")]
@@ -149,5 +147,35 @@ public class ReservationsController : ControllerBase
 
         await _context.SaveChangesAsync();
         return NoContent();
+    }
+    //Sumary OBtener las reservas de cada usuario para mostrarlo en pequeñas Cards como Cromos
+    [HttpGet("my")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    public async Task<ActionResult<List<ReservationDto>>> GetMyReservations()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (userId == null)
+            return BadRequest("No se ha encontrado el usuario.");
+        var userGuid = Guid.Parse(userId);
+        var list = await _context.Reservations
+            .AsNoTracking()
+            .Include(r => r.User)
+            .Include(r => r.ReservationTargets)
+            .Where(r => r.UserId == userGuid)
+            .Select(r => new ReservationDto
+            {
+                Id = r.Id,
+                SiteId = r.ReservationTargets.First().TargetId,
+                PersonCount = 1, // ajusta si lo almacenas distinto
+                Email = r.User != null
+                                    ? r.User.Email!
+                                    : r.GuestEmail!,
+                ReservationDate = r.ReservationDate,
+                HourStart = r.HourStart,
+                HourEnd = r.HourEnd,
+                Remarks = r.Remarks
+            })
+            .ToListAsync();
+        return Ok(list);
     }
 }

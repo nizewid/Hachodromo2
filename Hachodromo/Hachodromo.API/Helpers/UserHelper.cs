@@ -11,10 +11,10 @@ namespace Hachodromo.API.Helpers
     {
         private readonly DataContext _context;
         private readonly UserManager<User> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<IdentityRole<Guid>> _roleManager;
         private readonly SignInManager<User> _singInManager;
 
-        public UserHelper(DataContext context, UserManager<User> userManager, RoleManager<IdentityRole> roleManager, SignInManager<User> singInManager)
+        public UserHelper(DataContext context, UserManager<User> userManager, RoleManager<IdentityRole<Guid>> roleManager, SignInManager<User> singInManager)
         {
             UserManager = userManager;
             _context = context;
@@ -45,7 +45,7 @@ namespace Hachodromo.API.Helpers
             bool roleExists = await _roleManager.RoleExistsAsync(roleName);
             if(!roleExists)
             {
-                await _roleManager.CreateAsync(new IdentityRole(roleName));
+                await _roleManager.CreateAsync(new IdentityRole<Guid>(roleName));
             }
         }
 
@@ -74,11 +74,12 @@ namespace Hachodromo.API.Helpers
         public async Task<User> GetUserAsync(Guid userId)
         {
             var user = await _context.Users
-                                        .Include(c => c.City!)
-                                        .ThenInclude(r => r.Region!)
-                                        .ThenInclude(c => c.Country!)
-                                        .Include(m => m.Membership!)
-                                        .FirstOrDefaultAsync(x => x.Id == userId.ToString());
+                .Include(c => c.City!)
+                    .ThenInclude(r => r.Region!)
+                    .ThenInclude(c => c.Country!)
+                .Include(m => m.Membership!)
+                .FirstOrDefaultAsync(x => x.Id == userId);
+
             return user!;
         }
 

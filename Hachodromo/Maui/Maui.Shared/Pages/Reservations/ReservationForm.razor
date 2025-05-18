@@ -1,39 +1,49 @@
 ﻿@using Hachodromo.Shared.DTOs
 @inject INativeDialogService dialogService
+@inject AuthenticationStateProvider authStateProvider
 
 <MudPaper Class="pa-6 mud-width-full" Elevation="8" Style="border-radius: 16px;">
 
-<MudStack Spacing="1" AlignItems="AlignItems.Center" Class="mb-4">
-    <MudText Typo="Typo.subtitle1">
-        Confirmar reserva
-    </MudText>
-    <MudText Typo="Typo.body1">
-            @Model.ReservationDate.ToString("dd/MM/yyyy")
-    </MudText>
-    <MudText Typo="Typo.body2" Color="Color.Secondary">
-            @Model.HourStart.ToString(@"hh\:mm") - @Model.HourEnd.ToString(@"hh\:mm")
-    </MudText>
-</MudStack>
-
+    <MudStack Spacing="1" AlignItems="AlignItems.Center" Class="mb-4">
+        <MudText Typo="Typo.subtitle1">Confirmar reserva</MudText>
+        <MudText Typo="Typo.body1">@Model.ReservationDate.ToString("dd/MM/yyyy")</MudText>
+        <MudText Typo="Typo.body2" Color="Color.Secondary">@Model.HourStart:hh\\:mm - @Model.HourEnd:hh\\:mm</MudText>
+    </MudStack>
 
     <CascadingValue Value="editContext">
-        <MudForm @ref="mudForm" Model="Model">
+        <EditForm EditContext="editContext" OnValidSubmit="SubmitForm">
             <DataAnnotationsValidator />
             <ValidationSummary />
 
             <MudGrid Gutter="3">
-                <!-- Correo -->
-                <MudItem xs="12">
-                    <MudTextField T="string" Label="Correo electrónico"
-                                  For="() => Model.Email"
-                                  @bind-Value="Model.Email"
-                                  Required="true"
-                                  Variant="Variant.Outlined"
-                                  Adornment="Adornment.Start"
-                                  AdornmentIcon="@Icons.Material.Filled.Email" />
-                </MudItem>
 
-                <!-- Personas -->
+                <!-- Correo electrónico -->
+                @if (IsAnonymous)
+                {
+                    <MudItem xs="12">
+                        <MudTextField T="string" Label="Correo electrónico"
+                                      For="() => Model.Email"
+                                      @bind-Value="Model.Email"
+                                      Required="true"
+                                      Variant="Variant.Outlined"
+                                      Adornment="Adornment.Start"
+                                      AdornmentIcon="@Icons.Material.Filled.Email" />
+                        <ValidationMessage For="@(() => Model.Email)" />
+                    </MudItem>
+                }
+                else
+                {
+                    <MudItem xs="12">
+                        <MudTextField T="string" Label="Correo electrónico"
+                                      Value="@Model.Email"
+                                      Disabled="true"
+                                      Variant="Variant.Outlined"
+                                      Adornment="Adornment.Start"
+                                      AdornmentIcon="@Icons.Material.Filled.Email" />
+                    </MudItem>
+                }
+
+                <!-- Cantidad de personas -->
                 <MudItem xs="12" sm="6">
                     <MudNumericField T="int" Label="Cantidad de personas"
                                      For="() => Model.PersonCount"
@@ -43,6 +53,7 @@
                                      Variant="Variant.Outlined"
                                      Adornment="Adornment.Start"
                                      AdornmentIcon="@Icons.Material.Filled.Groups" />
+                    <ValidationMessage For="@(() => Model.PersonCount)" />
                 </MudItem>
 
                 <!-- Observaciones -->
@@ -58,39 +69,38 @@
 
             <!-- Botones -->
             <MudDivider Class="my-4" />
-
             <MudStack Direction="Row" Justify="Justify.FlexEnd" Spacing="2">
                 <MudButton OnClick="Cancel" Color="Color.Default" Variant="Variant.Outlined" StartIcon="@Icons.Material.Filled.Close">
                     Cancelar
                 </MudButton>
-                <MudButton OnClick="SubmitForm" Color="Color.Primary" Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Check">
+                <MudButton Color="Color.Primary" Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Check" ButtonType="ButtonType.Submit">
                     Confirmar
                 </MudButton>
             </MudStack>
-        </MudForm>
+        </EditForm>
     </CascadingValue>
 
 </MudPaper>
 
-
 @code {
-    private MudForm mudForm = default!;
     private EditContext editContext = default!;
+    private bool IsAnonymous = true;
 
     [Parameter] public ReservationDto Model { get; set; } = new();
     [Parameter] public EventCallback<ReservationDto> OnValidSubmit { get; set; }
-    [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; } = default!;
 
-
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         editContext = new EditContext(Model);
+        var authState = await authStateProvider.GetAuthenticationStateAsync();
+        IsAnonymous = !(authState.User.Identity?.IsAuthenticated ?? false);
     }
 
     private async Task SubmitForm()
     {
-        await mudForm.Validate();
-        if (!mudForm.IsValid)
+        var isValid = editContext.Validate();
+        if (!isValid)
             return;
 
         await OnValidSubmit.InvokeAsync(Model);
@@ -101,9 +111,8 @@
             await dialogService.ShowToastAsync("Reserva enviada correctamente", ToastType.Success);
     }
 
-
     private void Cancel()
     {
-        MudDialog?.Cancel(); // Cancela el modal
+        MudDialog?.Cancel();
     }
 }

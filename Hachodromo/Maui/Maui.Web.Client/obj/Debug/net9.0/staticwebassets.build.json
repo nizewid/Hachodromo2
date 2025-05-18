@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yuU5iXgwBBsIQ/EIOzHOgp+z66A4Q82dKGWABogbS/M=",
+  "Hash": "Pg9rJM4CdB67lSJYiw6EXH3WazRY07YftFG/xg/1Q3w=",
   "Source": "Maui.Web.Client",
   "BasePath": "/",
   "Mode": "Default",
@@ -302,8 +302,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "cts9u02uqx",
-      "Integrity": "4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE=",
+      "Fingerprint": "2szfrd27f5",
+      "Integrity": "4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\blazor.boot.json"
@@ -512,8 +512,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "xqgccb5ogs",
-      "Integrity": "yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=",
+      "Fingerprint": "hhpz1yiqsm",
+      "Integrity": "O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Hachodromo.Shared\\bin\\Debug\\net9.0\\Hachodromo.Shared.pdb"
@@ -533,8 +533,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "tydgoxi1lc",
-      "Integrity": "tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=",
+      "Fingerprint": "n8myq6kaht",
+      "Integrity": "F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\webcil\\Hachodromo.Shared.wasm"
@@ -617,8 +617,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "vzueyvgznq",
-      "Integrity": "a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=",
+      "Fingerprint": "blt32qfde6",
+      "Integrity": "cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Shared\\bin\\Debug\\net9.0\\Maui.Shared.pdb"
@@ -638,8 +638,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "dguegewx60",
-      "Integrity": "UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=",
+      "Fingerprint": "08sml2emju",
+      "Integrity": "YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\webcil\\Maui.Shared.wasm"
@@ -659,8 +659,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "7b58jzts02",
-      "Integrity": "4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=",
+      "Fingerprint": "gczinh3hbr",
+      "Integrity": "cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\Maui.Web.Client.pdb"
@@ -680,8 +680,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "lfmqma191b",
-      "Integrity": "EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=",
+      "Fingerprint": "cpu7i034oz",
+      "Integrity": "MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\webcil\\Maui.Web.Client.wasm"
@@ -5307,12 +5307,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.Web.HttpUtility.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-tydgoxi1lc.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-n8myq6kaht.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=tydgoxi1lc}]!.wasm.gz",
+      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=n8myq6kaht}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -5321,8 +5321,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ihvvn97on7",
-      "Integrity": "2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=",
+      "Fingerprint": "vz08amk1nt",
+      "Integrity": "9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm"
@@ -5685,12 +5685,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-vzueyvgznq.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-blt32qfde6.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Maui.Shared#[.{fingerprint=vzueyvgznq}]!.pdb.gz",
+      "RelativePath": "_framework/Maui.Shared#[.{fingerprint=blt32qfde6}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -5699,8 +5699,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "so0f41y0mg",
-      "Integrity": "xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=",
+      "Fingerprint": "zz3wty31fq",
+      "Integrity": "wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.pdb"
@@ -7092,7 +7092,7 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\dvwsx8mn4f-cts9u02uqx.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\dvwsx8mn4f-2szfrd27f5.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
@@ -7106,8 +7106,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "z3ajjccykv",
-      "Integrity": "EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ=",
+      "Fingerprint": "weuoyeo7it",
+      "Integrity": "+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -7617,12 +7617,12 @@
       "OriginalItemSpec": "C:\\Users\\jgfs_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.6.0\\staticwebassets\\borderlessTheme.js"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-xqgccb5ogs.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-hhpz1yiqsm.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=xqgccb5ogs}]!.pdb.gz",
+      "RelativePath": "_framework/Hachodromo.Shared#[.{fingerprint=hhpz1yiqsm}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -7631,8 +7631,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "eu08n2oasw",
-      "Integrity": "uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=",
+      "Fingerprint": "p750wqagbi",
+      "Integrity": "m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb"
@@ -9318,12 +9318,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Abstractions.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-lfmqma191b.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-cpu7i034oz.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Maui.Web.Client#[.{fingerprint=lfmqma191b}]!.wasm.gz",
+      "RelativePath": "_framework/Maui.Web.Client#[.{fingerprint=cpu7i034oz}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -9332,8 +9332,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "92dxsny83q",
-      "Integrity": "n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=",
+      "Fingerprint": "ri5iid9u3i",
+      "Integrity": "c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.wasm"
@@ -9444,12 +9444,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.KeyDerivation.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-dguegewx60.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-08sml2emju.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Maui.Shared#[.{fingerprint=dguegewx60}]!.wasm.gz",
+      "RelativePath": "_framework/Maui.Shared#[.{fingerprint=08sml2emju}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -9458,8 +9458,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "78752q3ets",
-      "Integrity": "KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=",
+      "Fingerprint": "wf1ffstn2r",
+      "Integrity": "9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.wasm"
@@ -10704,12 +10704,12 @@
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm"
     },
     {
-      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-7b58jzts02.gz",
+      "Identity": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-gczinh3hbr.gz",
       "SourceId": "Maui.Web.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Maui.Web.Client#[.{fingerprint=7b58jzts02}]!.pdb.gz",
+      "RelativePath": "_framework/Maui.Web.Client#[.{fingerprint=gczinh3hbr}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -10718,8 +10718,8 @@
       "RelatedAsset": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "33cccrhpqj",
-      "Integrity": "0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=",
+      "Fingerprint": "o2bueutdrk",
+      "Integrity": "kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.pdb"
@@ -18076,7 +18076,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -18133,7 +18133,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -18182,7 +18182,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -18237,7 +18237,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -18286,7 +18286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -18327,7 +18327,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:14:01 GMT"
+          "Value": "Sun, 18 May 2025 14:21:10 GMT"
         },
         {
           "Name": "Vary",
@@ -18861,11 +18861,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE=\""
+          "Value": "\"4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18875,18 +18875,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE="
+          "Value": "sha256-4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\dvwsx8mn4f-cts9u02uqx.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\dvwsx8mn4f-2szfrd27f5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000070957213"
+          "Quality": "0.000070967284"
         }
       ],
       "ResponseHeaders": [
@@ -18896,15 +18896,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14092"
+          "Value": "14090"
         },
         {
           "Name": "ETag",
-          "Value": "\"EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ=\""
+          "Value": "\"+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:48:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18924,19 +18924,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE=\""
+          "Value": "W/\"4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4Idg4MArTBb/2twz/tVr/Gp45cpy8+Hd4VA2QriJFnE="
+          "Value": "sha256-4pHeoOGLVRlcbRnSmCBjyJ5Y8YSsuTVUclpEM3jiBTM="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\dvwsx8mn4f-cts9u02uqx.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\dvwsx8mn4f-2szfrd27f5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -18945,7 +18945,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14092"
+          "Value": "14090"
         },
         {
           "Name": "Content-Type",
@@ -18953,11 +18953,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ=\""
+          "Value": "\"+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:48:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18975,7 +18975,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EWMytUzlfuySIraxFzFGDPgA69PeyepAsi2qYw3BQtQ="
+          "Value": "sha256-+EmBPDA0bkpX+eFTBAkko2EQIzuiat388m9FtJ/VuOU="
         }
       ]
     },
@@ -21501,7 +21501,7 @@
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.pdb",
+      "Route": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb",
       "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21511,7 +21511,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23276"
+          "Value": "23268"
         },
         {
           "Name": "Content-Type",
@@ -21519,148 +21519,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
+          "Value": "\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:32:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-xqgccb5ogs.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000086707708"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11532"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-xqgccb5ogs.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11532"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "34069"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:00 GMT"
+          "Value": "Sun, 18 May 2025 21:27:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21670,305 +21533,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tydgoxi1lc"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-tydgoxi1lc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000073534819"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tydgoxi1lc"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.tydgoxi1lc.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-tydgoxi1lc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tydgoxi1lc"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Hachodromo.Shared.wasm.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "34069"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-tydgoxi1lc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000073534819"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tUbknQAba8JwyZh4DeKmkwrVBx3/VkvMMNyyIbRhTi4="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-tydgoxi1lc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2qNJKsGUO7bVFLqe9I29w5exfAzZMxZewKR2313ZubY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23276"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:32:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xqgccb5ogs"
+          "Value": "hhpz1yiqsm"
         },
         {
           "Name": "label",
@@ -21976,18 +21541,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-xqgccb5ogs.gz",
+      "Route": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-hhpz1yiqsm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000086707708"
+          "Quality": "0.000086715227"
         }
       ],
       "ResponseHeaders": [
@@ -21997,15 +21562,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11532"
+          "Value": "11531"
         },
         {
           "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22025,13 +21590,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0=\""
+          "Value": "W/\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xqgccb5ogs"
+          "Value": "hhpz1yiqsm"
         },
         {
           "Name": "label",
@@ -22039,13 +21604,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yceiGlRbvBItww3lKPmN09+ahNYtNJY3rZVEohD9+R0="
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
         }
       ]
     },
     {
-      "Route": "_framework/Hachodromo.Shared.xqgccb5ogs.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-xqgccb5ogs.gz",
+      "Route": "_framework/Hachodromo.Shared.hhpz1yiqsm.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-hhpz1yiqsm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -22054,7 +21619,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11532"
+          "Value": "11531"
         },
         {
           "Name": "Content-Type",
@@ -22062,11 +21627,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E=\""
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:56:02 GMT"
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -22084,7 +21649,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xqgccb5ogs"
+          "Value": "hhpz1yiqsm"
         },
         {
           "Name": "label",
@@ -22092,7 +21657,442 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uopTrpyyFe/ST6S33hVLL6izxRFkPAJ3InN6zPm9Y3E="
+          "Value": "sha256-m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.n8myq6kaht.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n8myq6kaht"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.n8myq6kaht.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-n8myq6kaht.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000073297662"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13642"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n8myq6kaht"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.n8myq6kaht.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-n8myq6kaht.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13642"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n8myq6kaht"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Hachodromo.Shared.wasm.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:27:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-hhpz1yiqsm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000086715227"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11531"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\gmgbf97wxk-hhpz1yiqsm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11531"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:27:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m30p1zVh1q2LcXWlaIBpsbpHieiqPmGKaUaNf7Cth4s="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Hachodromo.Shared.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34581"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-n8myq6kaht.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000073297662"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13642"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Hachodromo.Shared.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\1evx3jfcc3-n8myq6kaht.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13642"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 20:43:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9WbJspn6GgaHD7KnGSB4YQNj55OQS3LWzJefFUtwfUY="
         }
       ]
     },
@@ -22991,7 +22991,7 @@
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.dguegewx60.wasm",
+      "Route": "_framework/Maui.Shared.08sml2emju.wasm",
       "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.wasm",
       "Selectors": [],
       "ResponseHeaders": [
@@ -23001,7 +23001,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "361237"
+          "Value": "390421"
         },
         {
           "Name": "Content-Type",
@@ -23009,11 +23009,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23023,7 +23023,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dguegewx60"
+          "Value": "08sml2emju"
         },
         {
           "Name": "label",
@@ -23031,18 +23031,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.dguegewx60.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-dguegewx60.gz",
+      "Route": "_framework/Maui.Shared.08sml2emju.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-08sml2emju.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000008681686"
+          "Quality": "0.000007964066"
         }
       ],
       "ResponseHeaders": [
@@ -23052,15 +23052,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "125563"
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23080,13 +23080,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "W/\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dguegewx60"
+          "Value": "08sml2emju"
         },
         {
           "Name": "label",
@@ -23094,13 +23094,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.dguegewx60.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-dguegewx60.gz",
+      "Route": "_framework/Maui.Shared.08sml2emju.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-08sml2emju.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -23109,7 +23109,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "125563"
         },
         {
           "Name": "Content-Type",
@@ -23117,11 +23117,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23139,7 +23139,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dguegewx60"
+          "Value": "08sml2emju"
         },
         {
           "Name": "label",
@@ -23147,12 +23147,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU="
+          "Value": "sha256-9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.pdb",
+      "Route": "_framework/Maui.Shared.blt32qfde6.pdb",
       "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -23162,7 +23162,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "245580"
+          "Value": "263176"
         },
         {
           "Name": "Content-Type",
@@ -23170,148 +23170,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
+          "Value": "\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Shared.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-vzueyvgznq.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000005224360"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "191410"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Shared.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-vzueyvgznq.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "191410"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Shared.vzueyvgznq.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "245580"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:08 GMT"
+          "Value": "Sun, 18 May 2025 21:50:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23321,7 +23184,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vzueyvgznq"
+          "Value": "blt32qfde6"
         },
         {
           "Name": "label",
@@ -23329,18 +23192,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.vzueyvgznq.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-vzueyvgznq.gz",
+      "Route": "_framework/Maui.Shared.blt32qfde6.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-blt32qfde6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000005224360"
+          "Quality": "0.000004870494"
         }
       ],
       "ResponseHeaders": [
@@ -23350,15 +23213,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "191410"
+          "Value": "205317"
         },
         {
           "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23378,13 +23241,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU=\""
+          "Value": "W/\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vzueyvgznq"
+          "Value": "blt32qfde6"
         },
         {
           "Name": "label",
@@ -23392,13 +23255,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-a5KuCIvy1S4MDDqR5uyOLlyIj/0yjsYxumnA961IgEU="
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Shared.vzueyvgznq.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-vzueyvgznq.gz",
+      "Route": "_framework/Maui.Shared.blt32qfde6.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-blt32qfde6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -23407,7 +23270,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "191410"
+          "Value": "205317"
         },
         {
           "Name": "Content-Type",
@@ -23415,11 +23278,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY=\""
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23437,7 +23300,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vzueyvgznq"
+          "Value": "blt32qfde6"
         },
         {
           "Name": "label",
@@ -23445,7 +23308,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xAZ+CVwCNpapHhmO1udyAkxsO4VwxGVaNIWO8ljPSmY="
+          "Value": "sha256-wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Shared.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "263176"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-blt32qfde6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000004870494"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "205317"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Shared.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\3h3w4xf7ki-blt32qfde6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "205317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wa6FvwzzcIKG3Qb6RSeOy9RI2kSG80KEo89bFAV5wPQ="
         }
       ]
     },
@@ -23460,7 +23460,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "361237"
+          "Value": "390421"
         },
         {
           "Name": "Content-Type",
@@ -23468,11 +23468,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23482,18 +23482,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Shared.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-dguegewx60.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-08sml2emju.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000008681686"
+          "Quality": "0.000007964066"
         }
       ],
       "ResponseHeaders": [
@@ -23503,15 +23503,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "125563"
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23531,19 +23531,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4=\""
+          "Value": "W/\"YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UyaYWL4l7HjH/P1jnoKA3k0DmjB2diBvDcuPRDOxdz4="
+          "Value": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Shared.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-dguegewx60.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\scjadu46ll-08sml2emju.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -23552,7 +23552,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "115184"
+          "Value": "125563"
         },
         {
           "Name": "Content-Type",
@@ -23560,11 +23560,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU=\""
+          "Value": "\"9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:36:09 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23582,173 +23582,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KbKiDaI5ChiLRhNzTZb0iVePqSK6JlJn4ZOcl4va1BU="
+          "Value": "sha256-9FvAR1CE+4SQtKBdkJNuC+xe/PHqLMudgP0FdRUgMTU="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Web.Client.7b58jzts02.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17216"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7b58jzts02"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Maui.Web.Client.pdb"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Web.Client.7b58jzts02.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-7b58jzts02.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000100371374"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9962"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7b58jzts02"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Maui.Web.Client.pdb"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Web.Client.7b58jzts02.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-7b58jzts02.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9962"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7b58jzts02"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Maui.Web.Client.pdb.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Maui.Web.Client.lfmqma191b.wasm",
+      "Route": "_framework/Maui.Web.Client.cpu7i034oz.wasm",
       "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.wasm",
       "Selectors": [],
       "ResponseHeaders": [
@@ -23766,11 +23605,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23780,7 +23619,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lfmqma191b"
+          "Value": "cpu7i034oz"
         },
         {
           "Name": "label",
@@ -23788,13 +23627,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Web.Client.lfmqma191b.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-lfmqma191b.gz",
+      "Route": "_framework/Maui.Web.Client.cpu7i034oz.wasm",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-cpu7i034oz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -23813,11 +23652,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23837,13 +23676,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "W/\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lfmqma191b"
+          "Value": "cpu7i034oz"
         },
         {
           "Name": "label",
@@ -23851,13 +23690,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         }
       ]
     },
     {
-      "Route": "_framework/Maui.Web.Client.lfmqma191b.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-lfmqma191b.gz",
+      "Route": "_framework/Maui.Web.Client.cpu7i034oz.wasm.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-cpu7i034oz.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -23874,11 +23713,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23896,7 +23735,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lfmqma191b"
+          "Value": "cpu7i034oz"
         },
         {
           "Name": "label",
@@ -23904,7 +23743,168 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw="
+          "Value": "sha256-c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Web.Client.gczinh3hbr.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Maui.Web.Client.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17216"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gczinh3hbr"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Web.Client.pdb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Web.Client.gczinh3hbr.pdb",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-gczinh3hbr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000100371374"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9962"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gczinh3hbr"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Web.Client.pdb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Maui.Web.Client.gczinh3hbr.pdb.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-gczinh3hbr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9962"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gczinh3hbr"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Maui.Web.Client.pdb.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE="
         }
       ]
     },
@@ -23927,11 +23927,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
+          "Value": "\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23941,13 +23941,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.pdb",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-7b58jzts02.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-gczinh3hbr.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -23966,11 +23966,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23990,19 +23990,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs=\""
+          "Value": "W/\"cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4/vM9KLtqFAqeJNjmdHzMod9sdfHRP8beS+6AI9LrXs="
+          "Value": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.pdb.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-7b58jzts02.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\zcnf4h84yg-gczinh3hbr.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -24019,11 +24019,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE=\""
+          "Value": "\"kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24041,7 +24041,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0Q9aAuqz4LeqA/+kMNqFgJYNR+fS+idRaUV2JxMsnwE="
+          "Value": "sha256-kKmk8Fr8rI5wADbnGr7M5nTOuEqkmzNYC93mD8J2siE="
         }
       ]
     },
@@ -24064,11 +24064,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:43 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24078,13 +24078,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.wasm",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-lfmqma191b.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-cpu7i034oz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -24103,11 +24103,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24127,19 +24127,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA=\""
+          "Value": "W/\"MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EYKtuuABxNgD/gws8cuZNI46u1pa8ZGBPOB+vnRtFLA="
+          "Value": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
         }
       ]
     },
     {
       "Route": "_framework/Maui.Web.Client.wasm.gz",
-      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-lfmqma191b.gz",
+      "AssetFile": "C:\\Proyect\\Hachodrom\\Hachodromo\\Maui\\Maui.Web.Client\\obj\\Debug\\net9.0\\compressed\\ruv81ynx8d-cpu7i034oz.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -24156,11 +24156,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw=\""
+          "Value": "\"c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 20:33:44 GMT"
+          "Value": "Sun, 18 May 2025 21:50:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24178,7 +24178,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-n8eoTgLEUwz0d3W0B1bg9DR26lwSQzvlrxOnq5gfdQw="
+          "Value": "sha256-c6IiT1OzLAJwDexvFW7kkXwFhDT/77sjNIfsep8Fo5c="
         }
       ]
     },

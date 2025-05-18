@@ -1,4 +1,4 @@
-using Hachodromo.API.Data;
+﻿using Hachodromo.API.Data;
 using Hachodromo.API.Helpers;
 using Hachodromo.API.Services;
 using Hachodromo.Shared.Entities;
@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -63,23 +64,25 @@ namespace Hachodromo.API
             builder.Services.AddScoped<IUserHelper, UserHelper>();
             builder.Services.AddScoped<IFileStorage, FileStorage>();
             builder.Services.AddScoped<IMailHelper, MailHelper>();
-            builder.Services.AddIdentity<User, IdentityRole>(x =>
+            builder.Services.AddIdentity<User, IdentityRole<Guid>>(x =>
             {
                 x.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
                 x.SignIn.RequireConfirmedEmail = true;
                 x.User.RequireUniqueEmail = true;
+
                 x.Password.RequireDigit = false;
                 x.Password.RequiredLength = 6;
                 x.Password.RequiredUniqueChars = 0;
                 x.Password.RequireLowercase = false;
                 x.Password.RequireNonAlphanumeric = false;
                 x.Password.RequireUppercase = false;
-                x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1); //TODO: change to 5 min
+
+                x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1); // TODO: change to 5 min
                 x.Lockout.MaxFailedAccessAttempts = 3;
                 x.Lockout.AllowedForNewUsers = true;
             })
-                .AddEntityFrameworkStores<DataContext>()
-                .AddDefaultTokenProviders();
+            .AddEntityFrameworkStores<DataContext>()  // 👈 asegúrate que DataContext ya usa Guid también
+            .AddDefaultTokenProviders();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(x => x.TokenValidationParameters = new TokenValidationParameters
@@ -88,6 +91,8 @@ namespace Hachodromo.API
                     ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
+                    NameClaimType = ClaimTypes.NameIdentifier,
+                    RoleClaimType = ClaimTypes.Role,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
                     ClockSkew = TimeSpan.Zero,
                 });

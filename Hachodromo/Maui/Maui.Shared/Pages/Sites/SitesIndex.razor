@@ -1,212 +1,238 @@
 ﻿@page "/sites"
+@using Maui.Shared.Pages.Targets
 @inject IRepository repository
 @inject NavigationManager navigationManager
 @inject INativeDialogService dialogService
+@inject IDialogService mudDialogService
 @attribute [Authorize(Roles = "Admin")]
 
 @if (sites is null)
 {
-    <div class="spinner" />
+	<div class="spinner" />
 }
 else
 {
-    <GenericList MyList="sites">
-        <Body>
-            <div class="card">
-                <div class="card-header">
-                    <span>
-                        <i class="oi oi-list"></i> Sitios
-                        <a class="btn btn-sm btn-primary float-end" @onclick=@(() => ShowModal())><i class="oi oi-plus"></i> Añadir Sitio</a>
-                    </span>
-                </div>
-                <div class="card-body">
-                    <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
-                        <div>
-                            <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar Sitio..." @bind-value="Filter" />
-                        </div>
-                        <div class="mx-1">
-                            <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
-                            <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
-                        </div>
-                    </div>
+	<GenericList MyList="sites">
+		<Body>
+			<div class="card">
+				<div class="card-header">
+					<span>
+						<i class="oi oi-list"></i> Sitios
+						<a class="btn btn-sm btn-primary float-end" @onclick=@(() => ShowModal())><i class="oi oi-plus"></i> Añadir Sitio</a>
+					</span>
+				</div>
+				<div class="card-body">
+					<div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
+						<div>
+							<input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar Sitio..." @bind-value="Filter" />
+						</div>
+						<div class="mx-1">
+							<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
+							<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
+						</div>
+					</div>
 
-                    <Pagination CurrentPage="currentPage"
-                    TotalPages="totalPages"
-                    SelectedPage="SelectedPageAsync" />
+					<Pagination CurrentPage="currentPage"
+					TotalPages="totalPages"
+					SelectedPage="SelectedPageAsync" />
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Descripcion</th>
-                                <th>Ciudad</th>
-                                <th>Teléfono</th>
-                                <th>Targets</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var site in sites)
-                            { 
-                                <tr>
-                                    <td>
-                                        @site.Name
-                                    </td>
-                                    <td>
-                                        @site.Description
-                                    </td>
-                                    <td>
-										@site.City!.CityName 
-                                    </td>
-                                    <td>
-                                        @site.Phone
-                                    </td>
-                                    <td>
-                                        @site.TargetsCount!.Value
-                                     </td>
-                                    <td>
-                                        <button class="btn btn-warning" @onclick="() => ShowModal(site.Id, true)">
-                                            <i class="oi oi-pencil"></i> Editar
-                                        </button>
-                                        <!-- <button class="btn btn-danger" @onclick=@(() => Delete(site.Id))><i class="oi oi-trash" /> Borrar</button>-->
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </Body>
-    </GenericList>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Foto</th>
+								<th>Nombre</th>
+								<th>Descripcion</th>
+								<th>Ciudad</th>
+								<th>Teléfono</th>
+								<th>Targets</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var site in sites)
+							{
+								<tr>
+									<td>
+										<td><img src="@site.Photo" width="80" height="80" style="border-radius:50%" /></td>
+									</td>
+									<td>
+										@site.Name
+									</td>
+									<td>
+										@site.Description
+									</td>
+									<td>
+										@site.City!.CityName
+									</td>
+									<td>
+										@site.Phone
+									</td>
+									<td>
+										@site.TargetsCount!.Value
+									</td>
+									<td>
+										<button class="btn btn-warning" @onclick="() => ShowModal(site.Id, true)">
+											<i class="oi oi-pencil"></i> Editar
+										</button>
+										<button class="btn btn-warning" @onclick="() => ShowTargetsModal(site.Id,site.Name)">
+											<i class="oi oi-pencil"></i> Targets
+										</button>
+										<!-- <button class="btn btn-danger" @onclick=@(() => Delete(site.Id))><i class="oi oi-trash" /> Borrar</button>-->
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</Body>
+	</GenericList>
 }
 
 @code {
-    public List<Site>? sites { get; set; }
-    private int currentPage = 1;
-    private int totalPages;
+	public List<Site>? sites { get; set; }
+	private int currentPage = 1;
+	private int totalPages;
 
-    [Parameter]
-    [SupplyParameterFromQuery]
-    public string Page { get; set; } = "";
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public string Page { get; set; } = "";
 
-    [Parameter]
-    [SupplyParameterFromQuery]
-    public string Filter { get; set; } = "";
+	[Parameter]
+	[SupplyParameterFromQuery]
+	public string Filter { get; set; } = "";
 
-    [CascadingParameter]
-    IModalService Modal { get; set; } = default!;
-
-
-    protected async override Task OnInitializedAsync()
-    {
-        await LoadAsync();
-    }
-
-    private async Task SelectedPageAsync(int page)
-    {
-        currentPage = page;
-        await LoadAsync(page);
-    }
-
-    private async Task LoadAsync(int page = 1)
-    {
-        if (!string.IsNullOrWhiteSpace(Page) && int.TryParse(Page, out int parsedPage))
-        {
-            page = parsedPage;
-        }
-
-        string baseUrl = "api/sites";
-        string recordsFilter = string.IsNullOrEmpty(Filter) ? "" : $"&filter={Uri.EscapeDataString(Filter)}";
-        string urlItems = $"{baseUrl}?page={page}{recordsFilter}";
-        string urlTotalPages = $"{baseUrl}/totalPages{(string.IsNullOrEmpty(Filter) ? "" : $"?filter={Uri.EscapeDataString(Filter)}")}";
-
-        try
-        {
-            var responseItems = await repository.Get<List<Site>>(urlItems);
-            var responsePages = await repository.Get<int>(urlTotalPages);
-
-            if (responseItems.Error)
-            {
-                if (responseItems.HttpResponseMessage?.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    navigationManager.NavigateTo("/");
-                    return;
-                }
-
-                var message = await responseItems.GetErrorMessageAsync();
-                await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
-                return;
-            }
-
-            sites = responseItems.Response ?? new List<Site>();
-            totalPages = responsePages.Response;
-        }
-        catch (Exception ex)
-        {
-            await dialogService.ShowAlertAsync("Error", ex.Message, "Aceptar");
-        }
-    }
+	[CascadingParameter]
+	IModalService Modal { get; set; } = default!;
 
 
-    private async Task Delete(int siteId)
-    {
+	protected async override Task OnInitializedAsync()
+	{
+		await LoadAsync();
+	}
+
+	private async Task SelectedPageAsync(int page)
+	{
+		currentPage = page;
+		await LoadAsync(page);
+	}
+
+	private async Task LoadAsync(int page = 1)
+	{
+		if (!string.IsNullOrWhiteSpace(Page) && int.TryParse(Page, out int parsedPage))
+		{
+			page = parsedPage;
+		}
+
+		string baseUrl = "api/sites";
+		string recordsFilter = string.IsNullOrEmpty(Filter) ? "" : $"&filter={Uri.EscapeDataString(Filter)}";
+		string urlItems = $"{baseUrl}?page={page}{recordsFilter}";
+		string urlTotalPages = $"{baseUrl}/totalPages{(string.IsNullOrEmpty(Filter) ? "" : $"?filter={Uri.EscapeDataString(Filter)}")}";
+
+		try
+		{
+			var responseItems = await repository.Get<List<Site>>(urlItems);
+			var responsePages = await repository.Get<int>(urlTotalPages);
+
+			if (responseItems.Error)
+			{
+				if (responseItems.HttpResponseMessage?.StatusCode == System.Net.HttpStatusCode.NotFound)
+				{
+					navigationManager.NavigateTo("/");
+					return;
+				}
+
+				var message = await responseItems.GetErrorMessageAsync();
+				await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
+				return;
+			}
+
+			sites = responseItems.Response ?? new List<Site>();
+			totalPages = responsePages.Response;
+		}
+		catch (Exception ex)
+		{
+			await dialogService.ShowAlertAsync("Error", ex.Message, "Aceptar");
+		}
+	}
+
+
+	private async Task Delete(int siteId)
+	{
 		var confirm = await dialogService.ShowConfirmMessageAsync("Eliminar Sitio", "¿Está seguro de que desea eliminar este sitio?");
 
-        if (confirm)
-        {
-            return;
-        }
+		if (confirm)
+		{
+			return;
+		}
 
-        var responseHTTP = await repository.Delete($"api/sites/{siteId}");
+		var responseHTTP = await repository.Delete($"api/sites/{siteId}");
 
-        if (responseHTTP.Error)
-        {
-            if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                navigationManager.NavigateTo("/");
-            }
-            else
-            {
-                var message = await responseHTTP.GetErrorMessageAsync();
-                await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
-            }
-        }
-        else
-        {
+		if (responseHTTP.Error)
+		{
+			if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+			{
+				navigationManager.NavigateTo("/");
+			}
+			else
+			{
+				var message = await responseHTTP.GetErrorMessageAsync();
+				await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
+			}
+		}
+		else
+		{
 			await dialogService.ShowToastAsync("Sitio eliminado", ToastType.Success);
-            await LoadAsync();
-        }
-    }
+			await LoadAsync();
+		}
+	}
 
-    private async Task CleanFilterAsync()
-    {
-        Filter = string.Empty;
-        await ApplyFilterAsync();
-    }
+	private async Task CleanFilterAsync()
+	{
+		Filter = string.Empty;
+		await ApplyFilterAsync();
+	}
 
-    private async Task ApplyFilterAsync()
-    {
-        int page = 1;
-        await LoadAsync(page);
-        await SelectedPageAsync(page);
-    }
+	private async Task ApplyFilterAsync()
+	{
+		int page = 1;
+		await LoadAsync(page);
+		await SelectedPageAsync(page);
+	}
 
-    private async Task ShowModal(int id = 0, bool isEdit = false)
-    {
-        IModalReference modalReference;
-        if (isEdit)
-        {
-           modalReference = Modal.Show<SiteEdit>($"Editar Local", new ModalParameters().Add("SiteId", id));
-        }
-        else
-        {
-            modalReference = Modal.Show<SiteCreate>($"Crear Local");
-        }
+	private async Task ShowModal(int id = 0, bool isEdit = false)
+	{
+		IModalReference modalReference;
+		if (isEdit)
+		{
+			modalReference = Modal.Show<SiteEdit>($"Editar Local", new ModalParameters().Add("SiteId", id));
+		}
+		else
+		{
+			modalReference = Modal.Show<SiteCreate>($"Crear Local");
+		}
 
-        var result = await modalReference.Result;
-        if (result.Confirmed)
-        {
-            await LoadAsync();
-        }
-    }
+		var result = await modalReference.Result;
+		if (result.Confirmed)
+		{
+			await LoadAsync();
+		}
+	}
+	private async Task ShowTargetsModal(int siteId, string siteName)
+	{
+		var parameters = new DialogParameters
+			{
+				["SiteId"] = siteId,
+				["SiteName"] = siteName
+			};
+
+		var modalReference = mudDialogService.Show<TargetIndex>("Gestionar Targets", parameters);
+
+		var result = await modalReference.Result;
+
+		if (!result.Canceled)
+		{
+			await LoadAsync();
+		}
+	}
 }

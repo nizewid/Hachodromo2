@@ -29,7 +29,8 @@ namespace Hachodromo.API.Data
 
         public async Task SeedAsync()
         {
-            await _context.Database.EnsureCreatedAsync();
+            //await _context.Database.EnsureCreatedAsync();
+            await _context.Database.MigrateAsync();
 
             await CheckRolesAsync();
             await CheckCategoriesAsync();

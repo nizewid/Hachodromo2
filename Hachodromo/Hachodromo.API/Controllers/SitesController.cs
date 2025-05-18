@@ -126,9 +126,10 @@ namespace Hachodromo.API.Controllers
             int siteId,
             [FromQuery] DateTime date)
         {
-            // 1) Número total de blancos en el sitio
-            var totalTargets = await _context.Targets
-                .CountAsync(t => t.SiteId == siteId);
+            // 1) Número total de blancos en el sitio disponibles
+            var totalTargets = await _context.Targets.Where(t => t.SiteId == siteId && t.Status == Shared.Enums.TargetStatus.Available)
+                .CountAsync();
+
 
             // 2) Cargamos todas las reservas de ese sitio y fecha
             var reservationsOnDate = await _context.ReservationTargets

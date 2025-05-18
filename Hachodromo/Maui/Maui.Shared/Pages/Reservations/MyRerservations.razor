@@ -1,0 +1,113 @@
+﻿@page "/myreservations"
+@inject IRepository repository
+@inject INativeDialogService dialogService
+@inject NavigationManager navigationManager
+@inject IDialogService mudDialogService
+@inject AuthenticationStateProvider authStateProvider
+
+<MudText Typo="Typo.h5" Class="mb-4">Mis Reservas</MudText>
+
+@if (loading)
+{
+	<MudProgressCircular Indeterminate="true" />
+}
+else if (reservations.Count == 0)
+{
+	<MudAlert Severity="Severity.Info">No tienes reservas registradas.</MudAlert>
+}
+else
+{
+	<MudGrid>
+		@foreach (var reserva in reservations)
+		{
+			<MudItem xs="12" sm="6" md="4" lg="3">
+				<MudCard Class="ma-2">
+					<MudCardContent>
+						<MudText Typo="Typo.h6">@reserva.ReservationDate.ToString("dddd, dd MMMM yyyy")</MudText>
+						<MudText>Hora: @reserva.HourStart:hh\\:mm - @reserva.HourEnd:hh\\:mm</MudText>
+						<MudText>Personas: @reserva.PersonCount</MudText>
+						<MudText>Email: @reserva.Email</MudText>
+						@if (!string.IsNullOrWhiteSpace(reserva.Remarks))
+						{
+							<MudText Class="mt-1" Color="Color.Secondary">Nota: @reserva.Remarks</MudText>
+						}
+					</MudCardContent>
+					<MudCardActions>
+						<MudButton Color="Color.Error" Size="Size.Small" Variant="Variant.Text"
+								   OnClick="@(() => ShowModal(reserva.Id!.Value))">
+							Cancelar
+						</MudButton>
+					</MudCardActions>
+				</MudCard>
+			</MudItem>
+		}
+	</MudGrid>
+}
+
+@code {
+	private List<ReservationDto> reservations = new();
+	private bool loading = true;
+	private bool Login = new();
+	public string UserMail { get; set; } = string.Empty;
+
+	protected override async Task OnInitializedAsync()
+	{
+		await LoadUserClaimsAsync();
+		await LoadAsync();
+	}
+
+	private async Task LoadAsync()
+	{
+		var response = await repository.Get<List<ReservationDto>>("api/reservations/my/");
+		if (response.Error)
+		{
+			await dialogService.ShowAlertAsync("Error", "No se pudieron cargar las reservas.", "Aceptar");
+		}
+		reservations = response.Response!;
+
+		if (reservations.Count == 0)
+		{
+			await dialogService.ShowAlertAsync("Información", "No tienes reservas registradas.", "Aceptar");
+		}
+		else
+		{
+			reservations = reservations.OrderByDescending(r => r.ReservationDate).ToList();
+		};
+		loading = false;
+
+	}
+
+	private async Task ShowModal(int id)
+	{
+		var parameters = new DialogParameters();
+		parameters.Add("Id", id);
+		var dialog = mudDialogService.Show<ReservationForm>("Cancelar Reserva", parameters);
+		var result = await dialog.Result;
+		if (!result.Canceled)
+		{
+			return;
+		}
+	}
+
+	private async Task LoadUserClaimsAsync()
+	{
+		var authState = await authStateProvider.GetAuthenticationStateAsync();
+		var user = authState.User;
+		if (user.Identity?.IsAuthenticated == true)
+		{
+			/*foreach (var claim in user.Claims)  LO utilizo para ver los Claims
+			{
+				Console.WriteLine($"🔐 CLAIM: {claim.Type} = {claim.Value}");
+			}*/
+			var email = user.Identity?.Name;
+			if (!string.IsNullOrEmpty(email))
+			{
+				UserMail = email;
+			}
+			else{
+				await dialogService.ShowToastAsync("No se pudo obtener el correo electrónico del usuario.", ToastType.Error);
+			}
+		}
+	}
+
+}

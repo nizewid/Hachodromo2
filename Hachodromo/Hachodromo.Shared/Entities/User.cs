@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Hachodromo.Shared.Entities
 {
-    public class User : IdentityUser
+    public class User : IdentityUser<Guid>
     {
         [Display(Name = "Documento")]
         [MaxLength(20, ErrorMessage = "El campo {0} debe tener máximo {1} caracteres.")]

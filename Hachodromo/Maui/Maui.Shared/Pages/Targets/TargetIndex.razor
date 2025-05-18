@@ -1,0 +1,142 @@
+﻿@inject INativeDialogService dialogService
+@inject IRepository repository
+@inject NavigationManager navigationManager
+@inject IDialogService mudDialogService
+
+<MudPaper Class="pa-4">
+    <MudText Typo="Typo.h6">Dianas de: @SiteName</MudText>
+
+    <MudProgressLinear Indeterminate="true" Color="Color.Primary" Visible="@isLoading" Style="height:4px;" />
+
+    <MudTable Items="targets" Dense Hover Striped>
+        <HeaderContent>
+            <MudTh>ID</MudTh>
+            <MudTh>Capacidad</MudTh>
+            <MudTh>Estado</MudTh>
+            <MudTh>Acciones</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.Id</MudTd>
+            <MudTd>@context.Capacity</MudTd>
+            <MudTd>@context.Status</MudTd>
+            <MudTd>
+                <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Info" OnClick="@(() => EditTarget(context))" />
+                <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" OnClick="@(() => DeleteTarget(context))" />
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+
+    <MudButton StartIcon="@Icons.Material.Filled.Add" OnClick="CreateTarget" Color="Color.Primary" Variant="Variant.Filled" Class="mt-4">
+        Añadir Diana
+    </MudButton>
+
+    <MudDivider Class="my-4" />
+
+    <MudButton OnClick="Close" Color="Color.Secondary">Cerrar</MudButton>
+</MudPaper>
+
+@code {
+    [Parameter] public int SiteId { get; set; }
+    [Parameter] public string SiteName { get; set; }
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
+    
+    private List<TargetDto> targets = new();
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+        try
+        {
+            var responseTargets = await repository.Get<List<TargetDto>>($"api/sites/{SiteId}/targets");
+            if (responseTargets.Error)
+            {
+                if (responseTargets.HttpResponseMessage?.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    navigationManager.NavigateTo("/");
+                    return;
+                }
+
+                var message = await responseTargets.GetErrorMessageAsync();
+                await dialogService.ShowAlertAsync("Error", message ?? "Ocurrió un error desconocido", "Aceptar");
+                return;
+            }
+
+            targets = responseTargets.Response ?? new List<TargetDto>();
+        }
+        catch (Exception ex)
+        {
+            await dialogService.ShowAlertAsync("Error inesperado", ex.Message, "Aceptar");
+            targets = new List<TargetDto>();
+        }
+        isLoading = false;
+    }
+
+
+    void Close() => MudDialog?.Close(DialogResult.Ok(false));
+    void Save() => MudDialog?.Close(DialogResult.Ok(true));
+
+    private async Task CreateTarget()
+{
+    var newTarget = new TargetDto
+    {
+        SiteId = SiteId,
+        Capacity = 2,
+        Status = TargetStatus.Available
+    };
+
+    var parameters = new DialogParameters
+    {
+        ["Target"] = newTarget,
+        ["IsNew"] = true
+    };
+
+    var dialog = mudDialogService.Show<TargetForm>("Nueva Diana", parameters);
+    var result = await dialog.Result;
+
+    if (!result.Canceled)
+    {
+        await OnInitializedAsync();
+    }
+}
+
+private async Task EditTarget(TargetDto target)
+{
+    var parameters = new DialogParameters
+    {
+        ["Target"] = target,
+        ["IsNew"] = false
+    };
+
+    var dialog = mudDialogService.Show<TargetForm>("Editar Diana", parameters);
+    var result = await dialog.Result;
+
+    if (!result.Canceled)
+    {
+        await OnInitializedAsync();
+    }
+}
+
+private async Task DeleteTarget(TargetDto target)
+{
+    var confirm = await mudDialogService.ShowMessageBox(
+        "Confirmar",
+        $"¿Eliminar la diana con capacidad {target.Capacity}?",
+        "Eliminar", "Cancelar"
+    );
+
+    if (confirm == true)
+    {
+        var response = await repository.Delete($"api/targets/{target.Id}");
+        if (!response.Error)
+        {
+            await OnInitializedAsync();
+        }
+        else
+        {
+            var message = await response.GetErrorMessageAsync();
+            await dialogService.ShowAlertAsync("Error", message ?? "No se pudo eliminar", "Aceptar");
+        }
+    }
+}
+}

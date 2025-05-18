@@ -23,7 +23,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Hachodromo.Shared.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Hachodromo.API.Controllers.AccountsController",
@@ -149,6 +159,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.AccountsController",
+    "Method": "GetClaims",
+    "RelativePath": "api/accounts/debug-claims",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -1311,6 +1331,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ReservationsController",
+    "Method": "GetMyReservations",
+    "RelativePath": "api/Reservations/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Hachodromo.Shared.DTOs.ReservationDto, Hachodromo.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Hachodromo.API.Controllers.SitesController",
     "Method": "Get",
     "RelativePath": "api/sites",
@@ -1428,6 +1468,84 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.TargetsController",
+    "Method": "Post",
+    "RelativePath": "api/sites/{siteId}/targets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "siteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "targetDto",
+        "Type": "Hachodromo.Shared.DTOs.TargetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Hachodromo.Shared.DTOs.TargetDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.TargetsController",
+    "Method": "Put",
+    "RelativePath": "api/sites/{siteId}/targets/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "siteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "targetDto",
+        "Type": "Hachodromo.Shared.DTOs.TargetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hachodromo.API.Controllers.TargetsController",
+    "Method": "Delete",
+    "RelativePath": "api/sites/{siteId}/targets/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "siteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Hachodromo.API.Controllers.SitesController",

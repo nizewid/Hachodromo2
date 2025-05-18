@@ -1,10 +1,11 @@
 ﻿using Hachodromo.Shared.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hachodromo.API.Data
 {
-    public class DataContext : IdentityDbContext<User>
+    public class DataContext : IdentityDbContext<User, IdentityRole<Guid>,Guid>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -54,6 +55,11 @@ namespace Hachodromo.API.Data
                                     .WithMany(t => t.ReservationTargets)
                                     .HasForeignKey(rt => rt.TargetId)
                                     .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.User)
+                .WithMany(u => u.Reservations)
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

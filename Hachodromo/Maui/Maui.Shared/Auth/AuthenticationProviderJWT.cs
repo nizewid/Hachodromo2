@@ -35,7 +35,7 @@ namespace Maui.Shared.Auth
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var claims = ParseClaimsFromJWT(token);
-            return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(claims, "jwt")));
+            return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(claims, "Jwt")));
         }
 
         private IEnumerable<Claim>? ParseClaimsFromJWT(string token)

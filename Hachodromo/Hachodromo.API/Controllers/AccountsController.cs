@@ -108,6 +108,7 @@ namespace Hachodromo.API.Controllers
             {
                 new Claim(ClaimTypes.Name, user.Email!),
                 new Claim(ClaimTypes.Role, user.UserType.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim("Document", user.Document),
                 new Claim("FirstName", user.FirstName),
                 new Claim("LastName", user.LastName),
@@ -117,7 +118,7 @@ namespace Hachodromo.API.Controllers
                 new Claim("BornDate", user.BornDate.ToString("yyyy-MM-dd")),
 
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:key"]!));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expiration = DateTime.UtcNow.AddDays(7);
             var token = new JwtSecurityToken(
@@ -174,10 +175,39 @@ namespace Hachodromo.API.Controllers
 
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult> Get()
+        public async Task<ActionResult<UserDto>> Get()
         {
-            return Ok(await _userHelper.GetUserAsync(User.Identity!.Name!));
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("No se pudo obtener el ID del usuario autenticado.");
+
+            var user = await _userHelper.GetUserAsync(Guid.Parse(userId));
+
+            if (user == null)
+                return NotFound("Usuario no encontrado.");
+
+            var userDto = new UserDto
+            {
+                Id = user.Id,
+                Document = user.Document,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email!,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber!,
+                BornDate = user.BornDate,
+                CityId = user.CityId,
+                City = user.City,
+                MembershipId = user.MembershipId,
+                UserType = user.UserType,
+                Photo = user.Photo
+            };
+
+            return Ok(userDto);
         }
+
+
         [HttpPost("changePassword")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> ChangePasswordAsync(ChangePasswordDto model)
@@ -349,6 +379,17 @@ namespace Hachodromo.API.Controllers
                 return NotFound();
             }
             return Ok(user);
+        }
+
+        [HttpGet("debug-claims")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public ActionResult GetClaims()
+        {
+            var claims = User.Claims
+                .Select(c => new { c.Type, c.Value })
+                .ToList();
+
+            return Ok(claims);
         }
 
     }

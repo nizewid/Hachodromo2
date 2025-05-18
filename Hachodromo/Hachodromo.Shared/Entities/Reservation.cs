@@ -12,7 +12,7 @@ namespace Hachodromo.Shared.Entities
     public class Reservation
     {
         public int Id { get; set; }
-        public string? UserId { get; set; }
+        public Guid? UserId { get; set; }
         public string? GuestEmail { get; set; }
 
         [Required]

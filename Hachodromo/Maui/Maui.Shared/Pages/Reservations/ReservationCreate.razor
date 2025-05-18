@@ -3,9 +3,7 @@
 @inject INativeDialogService dialogService
 @inject NavigationManager navigationManager
 @inject IDialogService mudDialogService
-@using Microsoft.AspNetCore.Components.Forms
-@using MudBlazor
-
+@inject AuthenticationStateProvider authStateProvider
 
 <h3>Crear reserva</h3>
 
@@ -13,15 +11,15 @@
 	<!-- Selector de fecha -->
 	<MudItem xs="12" sm="6">
 		<MudDatePicker T="DateTime"
-					   @bind-Value="_selectedDate"
-					   @bind-Value:event="oninput"
-					   Label="Selecciona fecha"
-					   PickerVariant="PickerVariant.Dialog"
-					   DisableToolbar="true"
-					   MinDate="@DateTime.Today"
-					   Class="mb-4"
-					   Immediate="true"
-					   DateChanged="HandleDateChanged" />
+		@bind-Value="_selectedDate"
+		@bind-Value:event="oninput"
+		Label="Selecciona fecha"
+		PickerVariant="PickerVariant.Dialog"
+		DisableToolbar="true"
+		MinDate="@DateTime.Today"
+		Class="mb-4"
+		Immediate="true"
+		DateChanged="HandleDateChanged" />
 
 	</MudItem>
 </MudGrid>
@@ -98,6 +96,26 @@ else
 		await LoadTimeSlotsAsync();
 	}
 
+	private async Task LoadUserEmailIfAuthenticated()
+	{
+		var authState = await authStateProvider.GetAuthenticationStateAsync();
+		var user = authState.User;
+
+
+		if (user.Identity?.IsAuthenticated == true)
+		{
+			/*foreach (var claim in user.Claims)  LO utilizo para ver los Claims 
+			{
+				Console.WriteLine($"🔐 CLAIM: {claim.Type} = {claim.Value}");
+			}*/
+			var email = user.Identity?.Name;
+			if (!string.IsNullOrEmpty(email))
+			{
+				Model.Email = email;
+			}
+		}
+	}
+
 	private async Task LoadTimeSlotsAsync()
 	{
 		loadingSlots = true;
@@ -106,8 +124,7 @@ else
 
 		try
 		{
-			var responseHttp = await repository.Get<List<TimeSlotDto>>(
-				$"/api/sites/{siteId}/timeslots?date={selectedDate:yyyy-MM-dd}");
+			var responseHttp = await repository.Get<List<TimeSlotDto>>($"/api/sites/{siteId}/timeslots?date={selectedDate:yyyy-MM-dd}");
 
 			if (responseHttp.Error)
 			{
@@ -131,6 +148,8 @@ else
 	{
 		Model.HourStart = slot.Start;
 		Model.HourEnd = slot.End;
+
+		await LoadUserEmailIfAuthenticated();
 
 		var parameters = new DialogParameters
 			{
