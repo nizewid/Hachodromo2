@@ -4,3 +4,4 @@
 **/appconfig.json
 **/*.cache
 .vs/
+cleaning.bat
