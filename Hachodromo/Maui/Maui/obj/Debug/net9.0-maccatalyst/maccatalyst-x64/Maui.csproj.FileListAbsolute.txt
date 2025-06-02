@@ -293,9 +293,6 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccataly
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.dylib
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Hachodromo.Shared.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Maui.Shared.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Hachodromo.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Maui.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Maui.csproj.AssemblyReference.cache

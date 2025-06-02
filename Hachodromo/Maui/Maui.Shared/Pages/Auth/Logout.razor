@@ -8,7 +8,7 @@
 	protected override async Task OnInitializedAsync()
 	{
 		await loginService.LogoutAsync();
-		await dialogService.ShowToastAsync("Has cerrado sesión correctamente.", ToastType.Info);
+		await dialogService.ShowInfoAsync("Fin de sesión","Has cerrado sesión correctamente","Aceptar");
 		navigationManager.NavigateTo("/");
 	}
 }

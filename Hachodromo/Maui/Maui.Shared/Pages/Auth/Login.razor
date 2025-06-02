@@ -87,7 +87,7 @@
             log.Info("Login exitoso");
             await loginService.LoginAsync(responseHttp.Response!.Token);
             navigationManager.NavigateTo("/");
-			await dialogService.ShowToastAsync("Bienvenido", ToastType.Success);
+			//await dialogService.ShowConfirmMessageAsync("Bienvenido", ToastType.Success);
         }
         catch (Exception ex)
         {

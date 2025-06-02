@@ -11,9 +11,6 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\com.companyna
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\com.companyname.maui-Signed.apk.idsig
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Hachodromo.Shared.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Maui.Shared.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Hachodromo.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-android\Maui.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
@@ -1722,12 +1719,3 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\asset
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\assets\arm64-v8a\zh-Hant\Microsoft.Maui.Controls.resources.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\assets\arm64-v8a\zh-HK\Microsoft.Maui.Controls.resources.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\assets\arm64-v8a\_Microsoft.Android.Resource.Designer.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.ll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\environment.arm64-v8a.ll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.ll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.o
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\environment.arm64-v8a.o
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.o
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so

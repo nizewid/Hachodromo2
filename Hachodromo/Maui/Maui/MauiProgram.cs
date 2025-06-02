@@ -57,7 +57,7 @@ namespace Maui
             builder.Services.AddScoped(sp =>
             {
 #if ANDROID
-                var baseUrl = "http://192.168.0.29:5157/";
+                var baseUrl = "http://192.168.0.35:5157/";
 #else
     var baseUrl = "https://localhost:7062/";
 #endif

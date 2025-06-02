@@ -141,7 +141,7 @@
 </EditForm>
 
 @code {
-	private UserDto userDto = new();
+	private UserDto userDto = new() { BornDate = DateTime.Today};
 	private List<Country>? countries;
 	private List<Region>? regions;
 	private List<City>? cities;

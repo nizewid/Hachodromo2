@@ -119,13 +119,14 @@ namespace Hachodromo.API
             }
 
             app.UseHttpsRedirection();
-            app.UseAuthorization();
-            app.UseAuthentication();
-            app.MapControllers();
             app.UseCors(x => x.AllowAnyMethod()
-                            .AllowAnyHeader()
-                            .SetIsOriginAllowed(origin => true) // allow any origin
-                            .AllowCredentials());
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials());
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.MapControllers();
+
             app.Run();
         }
     }

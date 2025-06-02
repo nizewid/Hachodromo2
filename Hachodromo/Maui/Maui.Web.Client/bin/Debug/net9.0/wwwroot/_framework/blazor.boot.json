@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Maui.Web.Client",
   "resources": {
-    "hash": "sha256-DbHLO5YTZgYSZD27Xi7zWsOs8XfJlytyRWkhMAg32UY=",
+    "hash": "sha256-fhp5ObD4+GHL/I4Vsmyn7UbWH/uGHjTcHrKX4+T+weA=",
     "fingerprinting": {
       "Blazored.Modal.h7t7ava08f.wasm": "Blazored.Modal.wasm",
       "CurrieTechnologies.Razor.SweetAlert2.lvj7kgyo2r.wasm": "CurrieTechnologies.Razor.SweetAlert2.wasm",
@@ -224,12 +224,12 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Hachodromo.Shared.n8myq6kaht.wasm": "Hachodromo.Shared.wasm",
-      "Maui.Shared.08sml2emju.wasm": "Maui.Shared.wasm",
-      "Hachodromo.Shared.hhpz1yiqsm.pdb": "Hachodromo.Shared.pdb",
-      "Maui.Shared.blt32qfde6.pdb": "Maui.Shared.pdb",
-      "Maui.Web.Client.cpu7i034oz.wasm": "Maui.Web.Client.wasm",
-      "Maui.Web.Client.gczinh3hbr.pdb": "Maui.Web.Client.pdb"
+      "Hachodromo.Shared.cdexi29n4d.wasm": "Hachodromo.Shared.wasm",
+      "Maui.Shared.3gzjjyl4zp.wasm": "Maui.Shared.wasm",
+      "Hachodromo.Shared.97eyyy7qta.pdb": "Hachodromo.Shared.pdb",
+      "Maui.Shared.bq9xwv7svy.pdb": "Maui.Shared.pdb",
+      "Maui.Web.Client.5yaa8uynsn.wasm": "Maui.Web.Client.wasm",
+      "Maui.Web.Client.m08pdi900u.pdb": "Maui.Web.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hvg7u8bimp.js": "sha256-LX9rFEWGVxhkOkAVPG0w5RxPwzPBlEUz6dQNjWS7M+M="
@@ -462,14 +462,14 @@
       "WindowsBase.5lai2eowco.wasm": "sha256-GcDi5293y2A7oSiFYTbBTUe0d+ISbvgeel4ZNd8KkPM=",
       "mscorlib.wzkfrp7u5k.wasm": "sha256-9PjsU0gaxxz5Vyw++p9DeYUWLsaXbaMS2RbX6wmTUmk=",
       "netstandard.d82br99ghv.wasm": "sha256-DS8keXxU4eQpa1kIoiFxOA2Ii2g9hoNWSaVi8F8AnIE=",
-      "Hachodromo.Shared.n8myq6kaht.wasm": "sha256-F5djj7cxHMJiPpRzp6I7SabUTtb7yX7zfxnABHw62W8=",
-      "Maui.Shared.08sml2emju.wasm": "sha256-YBWXsMqef5sn3d/CyEPcA59y/Nltbjcc/B94faJq/qI=",
-      "Maui.Web.Client.cpu7i034oz.wasm": "sha256-MBn9ErLuSVInUXO+YQe5V2k8hXVwgNjMc2Ume4ivv1g="
+      "Hachodromo.Shared.cdexi29n4d.wasm": "sha256-ALFRIGazOzk8uPLZWeQZFbMkaMvl+rjKEH6XqPQZYPE=",
+      "Maui.Shared.3gzjjyl4zp.wasm": "sha256-zbrEDCunKhm+hDwhJL8AcEPVrVTxaor3ZrMFrfM5anQ=",
+      "Maui.Web.Client.5yaa8uynsn.wasm": "sha256-E4rsBxZaWSXVdisgn8ObJXRPDhXpArMNdQCYpA+1Woc="
     },
     "pdb": {
-      "Hachodromo.Shared.hhpz1yiqsm.pdb": "sha256-O4uNS1wEqJnX5i7kdO11J18skru4Zz7VZ9Jfx/q00iQ=",
-      "Maui.Shared.blt32qfde6.pdb": "sha256-cS00EAZBwVbFjKclkyeNyk+rPaKudWixJGUDbEq3+UQ=",
-      "Maui.Web.Client.gczinh3hbr.pdb": "sha256-cE7mZh122awsYUkdO27N7hi2aa7uLxlAsEgi8x8E9/Y="
+      "Hachodromo.Shared.97eyyy7qta.pdb": "sha256-m2kl8KildcG9o0ijWRlzkdwqdCfJjYWrQgHyJCzZy+k=",
+      "Maui.Shared.bq9xwv7svy.pdb": "sha256-feQatr9xf/S5VSFAWZjLhjgNZ0h/tF7xn9/U7sdtcB8=",
+      "Maui.Web.Client.m08pdi900u.pdb": "sha256-1jleOSLh/AU4/WX86Nwj8bBCyRsd+2uEgSEDdZS+XKE="
     }
   },
   "cacheBootResources": true,

@@ -15,9 +15,6 @@
           "Microsoft.AspNetCore.Components.WebView.Maui": "9.0.14",
           "Microsoft.Extensions.Logging.Debug": "9.0.4",
           "Microsoft.Maui.Controls": "9.0.60",
-          "Microsoft.Maui.Controls.HotReload.Forms": "17.0.0.0",
-          "Microsoft.VisualStudio.DesignTools.MobileTapContracts": "17.0.0.0",
-          "Microsoft.VisualStudio.DesignTools.TapContract": "17.0.0.0",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.2903.40",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
@@ -980,30 +977,6 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.HotReload.Forms/17.0.0.0": {
-        "runtime": {
-          "Microsoft.Maui.Controls.HotReload.Forms.dll": {
-            "assemblyVersion": "17.0.0.0",
-            "fileVersion": "17.12.40308.65294"
-          }
-        }
-      },
-      "Microsoft.VisualStudio.DesignTools.MobileTapContracts/17.0.0.0": {
-        "runtime": {
-          "Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll": {
-            "assemblyVersion": "17.0.0.0",
-            "fileVersion": "17.12.40308.65294"
-          }
-        }
-      },
-      "Microsoft.VisualStudio.DesignTools.TapContract/17.0.0.0": {
-        "runtime": {
-          "Microsoft.VisualStudio.DesignTools.TapContract.dll": {
-            "assemblyVersion": "17.0.0.0",
-            "fileVersion": "17.12.40308.65294"
-          }
-        }
-      },
       "Microsoft.Web.WebView2.Core.Projection/1.0.2903.40": {
         "runtime": {
           "Microsoft.Web.WebView2.Core.Projection.dll": {
@@ -1508,21 +1481,6 @@
     },
     "Maui.Shared/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Maui.Controls.HotReload.Forms/17.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.VisualStudio.DesignTools.MobileTapContracts/17.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.VisualStudio.DesignTools.TapContract/17.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

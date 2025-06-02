@@ -298,9 +298,6 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Shared.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Maui.Shared.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Hachodromo.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-ios\iossimulator-x64\Maui.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\Maui.csproj.AssemblyReference.cache
@@ -455,3 +452,6 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\ref\Maui.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\compressed\2ba65n8di4-tzy3788c8j.gz
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\compressed\publish\2ba65n8di4-tzy3788c8j.br
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_C252DD306810868BA1EBC55BE032FFBB44339345E10FAF46EAF83F1462CB16AC.png
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_C252DD306810868BA1EBC55BE032FFBB44339345E10FAF46EAF83F1462CB16AC@2x.png
+C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\sp\splash_C252DD306810868BA1EBC55BE032FFBB44339345E10FAF46EAF83F1462CB16AC@3x.png

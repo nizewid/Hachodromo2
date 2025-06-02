@@ -554,9 +554,6 @@ C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\w
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Hachodromo.Shared.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Maui.Shared.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.Projection.dll
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Hachodromo.Shared.pdb
 C:\Proyect\Hachodrom\Hachodromo\Maui\Maui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Maui.Shared.pdb
