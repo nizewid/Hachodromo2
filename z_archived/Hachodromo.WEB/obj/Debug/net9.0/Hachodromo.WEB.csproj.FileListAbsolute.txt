@@ -1,7 +1,0 @@
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.csproj.AssemblyReference.cache
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.GeneratedMSBuildEditorConfig.editorconfig
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.AssemblyInfoInputs.cache
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.AssemblyInfo.cs
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.csproj.CoreCompileInputs.cache
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.MvcApplicationPartsAssemblyInfo.cache
-C:\Proyect\Hachodrom\Hachodromo\Hachodromo.WEB\obj\Debug\net9.0\Hachodromo.WEB.sourcelink.json

@@ -1,7 +1,52 @@
-# Archivos de compilación y temporales
+# =======================
+# Compilación .NET / MAUI
+# =======================
 **/bin/
 **/obj/
-**/appconfig.json
+**/Debug/
+**/Release/
+**/*.dll
+**/*.exe
+**/*.pdb
 **/*.cache
+**/*.log
+**/*.tmp
+
+# =======================
+# Visual Studio / VS Code
+# =======================
 .vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+*.csproj.user
+
+# =======================
+# MAUI y Blazor WebAssembly
+# =======================
+**/compressed/
+**/publish/
+**/staticwebassets.build.json
+**/staticwebassets.publish.json
+**/staticwebassets.build.endpoints.json
+**/staticwebassets.publish.endpoints.json
+**/staticwebassets.references.upToDateCheck.txt
+**/msbuild.Maui.*
+**/*.g.cs
+**/*.nfloat.g.cs
+**/Manifests/
+**/XamlSaveStateFile.xml
+
+# =======================
+# Archivos de configuración local
+# =======================
+**/appconfig.json
+**/appsettings.Development.json
+*.db
+
+# =======================
+# Scripts y archivos locales
+# =======================
 cleaning.bat
+limpiar.bat
