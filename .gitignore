@@ -1,2 +1,6 @@
+# Archivos de compilación y temporales
+**/bin/
+**/obj/
+**/appconfig.json
+**/*.cache
 .vs/
-/Hachodromo/Hachodromo.API/appsettings.json
