@@ -2,6 +2,7 @@
 
 Aplicación multiplataforma para la gestión de reservas, sesiones y clientes en un local de lanzamiento de hachas. Desarrollado con .NET MAUI, Blazor y tecnologías modernas para backend y frontend.
 
+Base de proyecto de FP DE DAM en Gijón AST- 
 ---
 
 ## 📁 Estructura del proyecto
