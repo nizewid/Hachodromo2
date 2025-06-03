@@ -12,54 +12,66 @@
 }
 else
 {
-	<div class="card">
+	<div class="card mb-4">
 		<div class="card-body">
-			<h5 class="card-title">Detalles de región @region.RegionName</h5>
-			<p class="card-text">Id: @region.RegionId</p>
-			<p class="card-text">Ciudades: @region.CityNumber</p>
-			<div class="mb-2">
-				<a class="btn btn-primary" @onclick=@(()=>ShowModal())>Nueva Ciudad</a>
-				<a class="btn btn-success" href="/countries/details/@region.CountryId">Regresar</a>
+			<h5 class="card-title">Detalles de región <strong>@region.RegionName</strong></h5>
+			<p class="card-text mb-1"><strong>ID:</strong> @region.RegionId</p>
+			<p class="card-text mb-3"><strong>Ciudades:</strong> @region.CityNumber</p>
+			<div class="d-flex flex-wrap gap-2">
+				<a class="btn btn-primary" @onclick="() => ShowModal()"><i class="oi oi-plus me-1"></i> Nueva Ciudad</a>
+				<a class="btn btn-success" href="/countries/details/@region.CountryId"><i class="oi oi-arrow-left me-1"></i> Regresar</a>
 			</div>
 		</div>
 	</div>
-	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
-		<div class="mx-2">
-			<input style="widh: 200px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
-		</div>
-		<div>
-			<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
-			<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
-		</div>
+
+	<div class="d-flex flex-wrap align-items-center mb-3 gap-2">
+		<input class="form-control" style="max-width: 300px;" placeholder="Buscar..." @bind-value="Filter" />
+		<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">
+			<i class="oi oi-layers"></i> <span class="d-none d-sm-inline">Filtrar</span>
+		</button>
+		<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">
+			<i class="oi oi-ban"></i> <span class="d-none d-sm-inline">Limpiar</span>
+		</button>
 	</div>
+
 	<Pagination CurrentPage="currentPage" TotalPages="totalPages" SelectedPage="SelectedPageAsync" />
+
 	<GenericList MyList="cities">
 		<Loading>
 			<div class="spinner" />
 		</Loading>
 		<Body>
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Ciudad</th>
-						<th>Acciones</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach (var city in cities!)
-					{
+			<div class="table-responsive">
+				<table class="table table-striped align-middle">
+					<thead class="table-light">
 						<tr>
-							<td>@city.CityName</td>
-							<td>
-							<a class="btn btn-warning" @onclick=@(() => ShowModal(city.CityId,true))>Editar</a>
-							<button class="btn btn-danger" @onclick=@(() => DeleteAsync(city.CityId))>Eliminar</button>
-							</td>
+							<th>Ciudad</th>
+							<th style="min-width: 150px;">Acciones</th>
 						</tr>
-					}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						@foreach (var city in cities!)
+						{
+							<tr>
+								<td>@city.CityName</td>
+								<td>
+									<div class="d-flex flex-column flex-sm-row gap-1">
+										<button class="btn btn-sm btn-warning" @onclick="() => ShowModal(city.CityId, true)">
+											<i class="oi oi-pencil"></i> <span class="d-none d-sm-inline">Editar</span>
+										</button>
+										<button class="btn btn-sm btn-danger" @onclick="() => DeleteAsync(city.CityId)">
+											<i class="oi oi-trash"></i> <span class="d-none d-sm-inline">Eliminar</span>
+										</button>
+									</div>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
 		</Body>
 	</GenericList>
+
 }
 
 @code {

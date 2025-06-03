@@ -2,41 +2,58 @@
 @namespace Maui.Shared.Components.Reservations
 
 <MudPaper Class="p-2 mud-elevation-0">
-    <table class="mud-table mud-table-dense">
-        <thead>
-            <tr>
-                <th>Hora</th>
-                @foreach (var d in _weekDays)
-                {
-                    <th>@d.ToString("ddd dd/MM")</th>
-                    ;
-                }
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var h in _slots)
+    <!-- Cabecera que muestra el lunes de la semana -->
+    <MudText Typo="Typo.h6" Class="mb-2">
+        Semana de @StartOfWeek.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("es-ES"))
+    </MudText>
+
+    <!-- Tabla de franjas horarias vs. días de la semana -->
+    <MudTable T="TimeSlotItem"
+              Dense="true"
+              Striped="false"
+              Hover="false"
+              Bordered="false"
+              Items="_slots">
+
+        <!-- Encabezado -->
+        <HeaderContent>
+            <MudTh Align="Align.Center" Class="pa-2">Hora</MudTh>
+            @foreach (var day in _weekDays)
             {
-                <tr>
-                    <td>@h.ToString(@"hh\:mm")</td>
-                    @foreach (var d in _weekDays)
-                    {
-                        var list = Reservations.Where(r => r.ReservationDate.Date == d.Date && r.HourStart <= h && r.HourEnd > h);
-                        <td>
-                            @if (list.Any())
-                            {@foreach (var res in list)
-                                {
-                                    <MudChip T="string" Size="Size.Small">@res.PersonCount</MudChip>
-                                }                       }
-                            else
-                            {
-                                <MudText Typo="Typo.caption">–</MudText>
-                            }
-                        </td>
-                    }
-                </tr>
+                bool isToday = day.Date == DateTime.Today;
+                <MudTh Align="Align.Center"
+                       Class="@((isToday ? "mud-theme-primary-lighten4 " : "") + "pa-2")">
+                    @day.ToString("ddd dd/MM", new System.Globalization.CultureInfo("es-ES"))
+                </MudTh>
             }
-        </tbody>
-    </table>
+        </HeaderContent>
+
+        <!-- Filas -->
+        <RowTemplate Context="slot">
+            <MudTd Align="Align.Center">@slot.TimeSlot</MudTd>
+            @foreach (var day in _weekDays)
+            {
+                var count = Reservations.Count(r =>
+                    r.ReservationDate.Date == day.Date &&
+                    r.HourStart <= slot.Span &&
+                    r.HourEnd > slot.Span);
+
+                <MudTd Align="Align.Center" Class="pa-1">
+                    @if (count > 0)
+                    {
+                        <MudChip T="string" Color="Color.Primary" Size="Size.Small" Class="ma-0">
+                            @($"{count} reserva(s)")
+                        </MudChip>
+                    }
+                    else
+                    {
+                        <MudText Typo="Typo.caption">–</MudText>
+                    }
+                </MudTd>
+            }
+        </RowTemplate>
+
+    </MudTable>
 </MudPaper>
 
 @code {
@@ -44,12 +61,32 @@
     [Parameter] public DateTime Date { get; set; }
     [Parameter] public List<ReservationDto> Reservations { get; set; } = new();
 
-    private readonly List<TimeSpan> _slots = Enumerable.Range(10, 12).Select(TimeSpan.FromHours).ToList();
+    // ---------- datos auxiliares ----------
+    private class TimeSlotItem
+    {
+        public TimeSpan Span { get; set; }
+        public string   TimeSlot { get; set; } = string.Empty;
+    }
+
+    private readonly List<TimeSlotItem> _slots =
+        Enumerable.Range(10, 12)
+                  .Select(h => new TimeSlotItem
+                  {
+                      Span      = TimeSpan.FromHours(h),
+                      TimeSlot  = $"{h:00}:00"
+                  })
+                  .ToList();
+
     private List<DateTime> _weekDays = new();
+
+    private DateTime StartOfWeek => Date.DayOfWeek == DayOfWeek.Sunday
+        ? Date.AddDays(-6).Date
+        : Date.AddDays(1 - (int)Date.DayOfWeek).Date;
 
     protected override void OnParametersSet()
     {
-        var monday = Date.Date.AddDays(-(((int)Date.DayOfWeek + 6) % 7));
-        _weekDays = Enumerable.Range(0, 7).Select(i => monday.AddDays(i)).ToList();
+        _weekDays = Enumerable.Range(0, 7)
+                              .Select(i => StartOfWeek.AddDays(i))
+                              .ToList();
     }
 }

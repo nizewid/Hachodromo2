@@ -13,26 +13,39 @@
                ValueExpression="@(() => _selectedSite)"
                Label="Selecciona un sitio"
                Dense Class="mb-2">
-
         @foreach (var site in _sites)
         {
             <MudSelectItem Value="site">@site.Name</MudSelectItem>
         }
     </MudSelect>
 
-
-
     <!-- Botones conmutadores Vista -->
     <MudButtonGroup Color="Color.Primary" Class="my-2">
-        <MudButton Variant="@GetVariant("Día")" OnClick="@(()=>ChangeView("Día"))">Día</MudButton>
-        <MudButton Variant="@GetVariant("Semana")" OnClick="@(()=>ChangeView("Semana"))">Semana</MudButton>
-        <MudButton Variant="@GetVariant("Mes")" OnClick="@(()=>ChangeView("Mes"))">Mes</MudButton>
+        <MudButton Variant="@GetVariant("Día")"
+                   OnClick="@(() => ChangeView("Día"))">
+            Día
+        </MudButton>
+        <MudButton Variant="@GetVariant("Semana")"
+                   OnClick="@(() => ChangeView("Semana"))">
+            Semana
+        </MudButton>
+        <MudButton Variant="@GetVariant("Mes")"
+                   OnClick="@(() => ChangeView("Mes"))">
+            Mes
+        </MudButton>
     </MudButtonGroup>
 
-    <!-- Selector de fecha -->
-    <MudDatePicker T="DateTime" Value="_selectedDate" ValueChanged="HandleDateChanged"
-                   Label="Selecciona fecha" PickerVariant="PickerVariant.Dialog" DisableToolbar="true"
-                   MinDate="@DateTime.Today" Class="mb-4" Immediate="true" />
+    <!-- Selector de fecha: solo habilitado cuando _viewMode == "Día" -->
+    <MudDatePicker T="DateTime"
+                   @bind-Value="_selectedDate"
+                   DateChanged="HandleDateChanged"
+                   Label="Selecciona fecha"
+                   PickerVariant="PickerVariant.Dialog"
+                   DisableToolbar="true"
+                   MinDate="@DateTime.Today"
+                   Class="mb-4"
+                   Immediate="true"
+                   Disabled="@(_viewMode != "Día")" />
 
     <!-- Render de la vista -->
     @if (_selectedSite is not null)
@@ -40,13 +53,19 @@
         @switch (_viewMode)
         {
             case "Día":
-                <ReservationViewDay Site="_selectedSite" Date="_selectedDate" Reservations="_reservations" />
+                <ReservationViewDay Site="_selectedSite"
+                                    Date="_selectedDate"
+                                    Reservations="_reservations" />
                 break;
             case "Semana":
-                <ReservationViewWeek Site="_selectedSite" Date="_selectedDate" Reservations="_reservations" />
+                <ReservationViewWeek Site="_selectedSite"
+                                     Date="_selectedDate"
+                                     Reservations="_reservations" />
                 break;
             case "Mes":
-                <ReservationViewMonth Site="_selectedSite" Date="_selectedDate" Reservations="_reservations" />
+                <ReservationViewMonth Site="_selectedSite"
+                                      Date="_selectedDate"
+                                      Reservations="_reservations" />
                 break;
         }
     }
@@ -59,45 +78,109 @@
     private string _viewMode = "Día";
     private List<ReservationDto> _reservations = new();
 
-    private Variant GetVariant(string mode) => _viewMode == mode ? Variant.Filled : Variant.Outlined;
+    private Variant GetVariant(string mode) =>
+        _viewMode == mode ? Variant.Filled : Variant.Outlined;
 
-    private async Task OnSiteChanged(Site? newSite)
+    protected override async Task OnInitializedAsync()
     {
-        _selectedSite = newSite;
-        if (_selectedSite is not null)
-            await LoadReservationsForSite(_selectedSite.Id, _selectedDate);
+        await LoadSites();
     }
-
-    private void ChangeView(string mode) => _viewMode = mode;
-    protected override async Task OnInitializedAsync() => await LoadSites();
 
     private async Task LoadSites()
     {
         var r = await repository.Get<List<Site>>("/api/sites");
         if (r.Error)
         {
-            await dialogService.ShowAlertAsync("Error", await r.GetErrorMessageAsync() ?? "Error desconocido", "Aceptar");
+            await dialogService.ShowAlertAsync(
+                "Error",
+                await r.GetErrorMessageAsync() ?? "Error desconocido",
+                "Aceptar");
             return;
         }
         _sites = r.Response!;
     }
 
-    private async Task HandleDateChanged(DateTime d)
+    private async Task OnSiteChanged(Site? newSite)
     {
-        _selectedDate = d;
-        await LoadReservationsForSite(_selectedSite?.Id, _selectedDate);
+        _selectedSite = newSite;
+        if (_selectedSite is not null)
+        {
+            // Cada vez que el usuario selecciona un sitio, recargamos reservas
+            await LoadReservationsForSite();
+        }
+    }
+
+    private void ChangeView(string mode)
+    {
+        _viewMode = mode;
+
+        // Al cambiar de vista, recargamos reservas usando la fecha actual
+        if (_selectedSite is not null)
+        {
+            _ = LoadReservationsForSite();
+        }
+    }
+
+    private async Task HandleDateChanged(DateTime? newDate)
+    {
+        if (newDate is null)
+            return;
+
+        _selectedDate = newDate.Value;
+
+        // Solo recargamos cuando estemos en vista “Día”
+        if (_viewMode == "Día" && _selectedSite is not null)
+        {
+            await LoadReservationsForSite();
+        }
+
         StateHasChanged();
     }
 
-    private async Task LoadReservationsForSite(int? siteId, DateTime date)
+    private async Task LoadReservationsForSite()
     {
-        if (!siteId.HasValue) return;
-        var r = await repository.Get<List<ReservationDto>>($"/api/sites/{siteId}/reservations?date={date:yyyy-MM-dd}");
+        if (_selectedSite is null)
+            return;
+
+        string url;
+
+        if (_viewMode == "Día")
+        {
+            // Endpoint: date=YYYY-MM-DD
+            url = $"/api/sites/{_selectedSite.Id}/reservations?date={_selectedDate:yyyy-MM-dd}";
+        }
+        else if (_viewMode == "Semana")
+        {
+            // Calculamos primer día (lunes) y último día (domingo) de la semana que contiene _selectedDate
+            DateTime monday = _selectedDate.DayOfWeek == DayOfWeek.Sunday
+                ? _selectedDate.AddDays(-6).Date
+                : _selectedDate.AddDays(1 - (int)_selectedDate.DayOfWeek).Date;
+            DateTime sunday = monday.AddDays(6);
+
+            url = $"/api/sites/{_selectedSite.Id}/reservations?" +
+                  $"startDate={monday:yyyy-MM-dd}&endDate={sunday:yyyy-MM-dd}";
+        }
+        else
+        {
+            // Vista “Mes”: calcular primer día y último día del mes de _selectedDate
+            var firstOfMonth = new DateTime(_selectedDate.Year, _selectedDate.Month, 1);
+            var lastOfMonth = firstOfMonth.AddMonths(1).AddDays(-1);
+
+            url = $"/api/sites/{_selectedSite.Id}/reservations?" +
+                  $"startDate={firstOfMonth:yyyy-MM-dd}&endDate={lastOfMonth:yyyy-MM-dd}";
+        }
+
+        var r = await repository.Get<List<ReservationDto>>(url);
         if (r.Error)
         {
-            await dialogService.ShowAlertAsync("Error", await r.GetErrorMessageAsync() ?? "Error desconocido", "Aceptar");
+            await dialogService.ShowAlertAsync(
+                "Error",
+                await r.GetErrorMessageAsync() ?? "Error desconocido",
+                "Aceptar");
+            _reservations = new();
             return;
         }
+
         _reservations = r.Response ?? new();
     }
 }

@@ -12,17 +12,19 @@
 }
 else
 {
-	<div class="mb-2" style="display:flex; flex-wrap:wrap; align-items: center">
-		<div>
-			<a class="btn btn-primary mb-3" @onclick=@(()=> ShowModal())>Crear País</a>
-		</div>
-		<div class="mx-2">
-			<input style="width: 300px" type="type" class="form-control" id="titulo" placeHolder="Buscar..." @bind-value="Filter" />
-		</div>
-		<div>
-			<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">Filtrar</button>
-			<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">Limpiar</button>
-		</div>
+	<div class="mb-3 d-flex flex-wrap align-items-center gap-2">
+		<a class="btn btn-primary" @onclick="() => ShowModal()">
+			<i class="oi oi-plus me-1"></i> <span class="d-none d-sm-inline">Crear País</span>
+		</a>
+
+		<input class="form-control" style="max-width: 300px;" type="text" placeholder="Buscar..." @bind-value="Filter" />
+
+		<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync">
+			<i class="oi oi-layers"></i> <span class="d-none d-sm-inline">Filtrar</span>
+		</button>
+		<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync">
+			<i class="oi oi-ban"></i> <span class="d-none d-sm-inline">Limpiar</span>
+		</button>
 	</div>
 
 	<Pagination CurrentPage="currentPage"
@@ -34,33 +36,44 @@ else
 			<div class="spinner" />
 		</Loading>
 		<Body>
-            <table class="table table-striped">  
-               <thead>  
-                   <tr> 
-                       <th>id</th>  
-                       <th>Nombre</th>  
-                       <th>Provincias</th>  
-                       <th>Acciones</th>  
-                   </tr>  
-               </thead>  
-               <tbody>  
-                   @foreach (var country in Countries!)  
-                   {  
-                       <tr>  
-                           <td>@country.Id</td>  
-                           <td>@country.Name</td>  
-                           <td>@country.RegionNumber</td>  
-                           <td>  
-                               <a class="btn btn-light" href="/countries/details/@country.Id">Detalles</a>  
-                               <a class="btn btn-warning" @onclick="@(()=>ShowModal(country.Id,true))">Editar</a>  
-                               <button class="btn btn-danger" @onclick="@(() => DeleteAsync(country.Id))">Eliminar</button>  
-                           </td>  
-                       </tr>  
-                   }  
-               </tbody>  
-            </table>
+			<div class="table-responsive">
+				<table class="table table-striped align-middle">
+					<thead class="table-light">
+						<tr>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Provincias</th>
+							<th style="min-width: 150px;">Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var country in Countries!)
+						{
+							<tr>
+								<td>@country.Id</td>
+								<td>@country.Name</td>
+								<td>@country.RegionNumber</td>
+								<td>
+									<div class="d-flex flex-column flex-sm-row gap-1">
+										<a class="btn btn-sm btn-light" href="/countries/details/@country.Id">
+											<i class="oi oi-eye"></i> <span class="d-none d-sm-inline">Detalles</span>
+										</a>
+										<button class="btn btn-sm btn-warning" @onclick="() => ShowModal(country.Id, true)">
+											<i class="oi oi-pencil"></i> <span class="d-none d-sm-inline">Editar</span>
+										</button>
+										<button class="btn btn-sm btn-danger" @onclick="() => DeleteAsync(country.Id)">
+											<i class="oi oi-trash"></i> <span class="d-none d-sm-inline">Eliminar</span>
+										</button>
+									</div>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
 		</Body>
 	</GenericList>
+
 }
 @code {
 	public List<Country>? Countries { get; set; }

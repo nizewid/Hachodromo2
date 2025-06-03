@@ -14,6 +14,8 @@ namespace Hachodromo.Shared.DTOs
         [Required]
         public int SiteId { get; set; }
 
+        public string SiteName { get; set; } = string.Empty;
+
         [Required]
         [Range(1, 10, ErrorMessage = "Debes indicar una cantidad de personas válida.")]
         public int PersonCount { get; set; }

@@ -4,7 +4,7 @@
 @inject INativeDialogService dialogService
 @attribute [Authorize(Roles = "Admin")]
 
-<h3>Items Index</h3>
+<h3>Items de venta</h3>
 @if(Items is null){
     <div class="spinner"/>
 }
@@ -13,78 +13,75 @@ else
     <GenericList MyList="Items">
         <Body>
             <div class="card">
-                <div class="card-header">
-                    <span>
-                        <i class="oi oi-star" /> Items
-                        <a class="btn btn-sm btn-primary float-end" href="/items/create"><i class="oi oi-plus" /> Nuevo articulo</a>
+                <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <span class="fw-bold">
+                        <i class="oi oi-star me-1"></i> Items
                     </span>
+                    <a class="btn btn-sm btn-primary" href="/items/create">
+                        <i class="oi oi-plus"></i> <span class="d-none d-sm-inline">Nuevo artículo</span>
+                    </a>
                 </div>
                 <div class="card-body">
-                    <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
-                        <div>
-                            <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar articulo..." @bind-value="Filter" />
-                        </div>
-                        <div class="mx-1">
-                            <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
-                            <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
-                        </div>
+                    <div class="mb-3 d-flex flex-wrap align-items-center gap-2">
+                        <input class="form-control" style="max-width: 400px;" type="text" placeholder="Buscar artículo..." @bind-value="Filter" />
+                        <button class="btn btn-outline-primary" @onclick="ApplyFilterAsync">
+                            <i class="oi oi-layers"></i> <span class="d-none d-sm-inline">Filtrar</span>
+                        </button>
+                        <button class="btn btn-outline-danger" @onclick="CleanFilterAsync">
+                            <i class="oi oi-ban"></i> <span class="d-none d-sm-inline">Limpiar</span>
+                        </button>
                     </div>
 
                     <Pagination CurrentPage="currentPage"
-                    TotalPages="totalPages"
-                    SelectedPage="SelectedPageAsync" />
+                                TotalPages="totalPages"
+                                SelectedPage="SelectedPageAsync" />
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Descripción</th>
-                                <th>Precio</th>
-                                <th>Inventario</th>
-                                <th>Categorías</th>
-                                <th>Imagenes</th>
-                                <th>Imagen Principal</th>
-                                <th style="width:200px"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Items)
-                            {
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead class="table-light">
                                 <tr>
-                                    <td>
-                                        @item.Name
-                                    </td>
-                                    <td>
-                                        @item.Description
-                                    </td>
-                                    <td>
-                                        @($"{item.Price:C2}")
-                                    </td>
-                                    <td>
-                                        @($"{item.Stock:N2}")
-                                    </td>
-                                    <td>
-                                        @item.ItemCategoriesCount
-                                    </td>
-                                    <td>
-                                        @item.ItemImagesCount
-                                    </td>
-                                    <td>
-                                        <img src="@item.MainImage" style="width:100px;" />
-                                    </td>
-                                    <td>
-                                        <a href="/items/edit/@item.Id" class="btn btn-warning"><i class="oi oi-pencil" /> Editar</a>
-                                        <button class="btn btn-danger" @onclick=@(() => Delete(item.Id))><i class="oi oi-trash" /> Borrar</button>
-                                    </td>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                    <th>Inventario</th>
+                                    <th>Categorías</th>
+                                    <th>Imágenes</th>
+                                    <th>Principal</th>
+                                    <th style="min-width: 150px;">Acciones</th>
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Items)
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td>@item.Description</td>
+                                        <td>@($"{item.Price:C2}")</td>
+                                        <td>@($"{item.Stock:N0}")</td>
+                                        <td>@item.ItemCategoriesCount</td>
+                                        <td>@item.ItemImagesCount</td>
+                                        <td>
+                                            <img src="@item.MainImage" style="max-width: 80px; border-radius: 8px;" />
+                                        </td>
+                                        <td>
+                                            <div class="d-flex flex-column flex-sm-row gap-1">
+                                                <a href="/items/edit/@item.Id" class="btn btn-sm btn-warning">
+                                                    <i class="oi oi-pencil"></i> <span class="d-none d-sm-inline">Editar</span>
+                                                </a>
+                                                <button class="btn btn-sm btn-danger" @onclick=@(() => Delete(item.Id))>
+                                                    <i class="oi oi-trash"></i> <span class="d-none d-sm-inline">Borrar</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </Body>
     </GenericList>
-
 }
 
 @code {

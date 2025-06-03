@@ -1,35 +1,40 @@
 ﻿@using MudBlazor
 @namespace Maui.Shared.Components.Reservations
 
-<MudPaper Class="p-2 mud-elevation-0">
-    <MudText Typo="Typo.h6" Class="mb-3">@Date.ToString("MMMM yyyy")</MudText>
+<MudPaper Class="p-4">
+    <MudText Typo="Typo.h6" Class="mb-3">
+        @Date.ToString("MMMM yyyy", new System.Globalization.CultureInfo("es-ES"))
+    </MudText>
 
     <div class="calendar-grid mb-1">
         @foreach (var n in _names)
         {
-            <div class="calendar-header">@n</div>
-            ;
+            <div class="calendar-header text-center fw-bold text-secondary">@n</div>
         }
     </div>
 
     <div class="calendar-grid">
         @for (int i = 0; i < _offset; i++)
         {
-            <div></div>
-            ;
+            <div class="calendar-day placeholder"></div>
         }
         @foreach (var d in _days)
         {
-            var c = Reservations.Count(r => r.ReservationDate.Date == d.Date);
-            <div class="calendar-day mud-elevation-1">
+            var count = Reservations.Count(r => r.ReservationDate.Date == d.Date);
+            bool isToday = d.Date == DateTime.Today;
+
+            <div class="@($"calendar-day mud-elevation-1 pa-2 text-center {(isToday ? "mud-theme-primary-lighten4" : "")}")">
                 <MudText Typo="Typo.subtitle2">@d.Day</MudText>
-                @if (c > 0)
+                @if (count > 0)
                 {
-                    <MudChip T="string" Size="Size.Small">@c reserva(s)</MudChip>
+                    <MudChip T="string" Size="Size.Small" Color="Color.Primary" Class="mt-1">
+                        <span class="d-none d-sm-inline">@($"{count} res.")</span>
+                        <span class="d-sm-none">@count</span>
+                    </MudChip>
                 }
                 else
                 {
-                    <MudText Typo="Typo.caption">–</MudText>
+                    <MudText Typo="Typo.caption" Class="mt-1">–</MudText>
                 }
             </div>
         }
@@ -48,7 +53,7 @@
     protected override void OnParametersSet()
     {
         var first = new DateTime(Date.Year, Date.Month, 1);
-        _offset = ((int)first.DayOfWeek + 6) % 7;
+        _offset = ((int)first.DayOfWeek + 6) % 7; // Ajusta para empezar en lunes
         _days = Enumerable.Range(0, DateTime.DaysInMonth(Date.Year, Date.Month))
                           .Select(i => first.AddDays(i)).ToList();
     }

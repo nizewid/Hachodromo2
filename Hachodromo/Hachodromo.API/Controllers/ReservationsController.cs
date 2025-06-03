@@ -190,6 +190,7 @@ public class ReservationsController : ControllerBase
             {
                 Id = r.Id,
                 SiteId = r.ReservationTargets.First().TargetId,
+                SiteName = r.ReservationTargets.First().Target.Site!.Name, 
                 PersonCount = 1, // ajusta si lo almacenas distinto
                 Email = r.User != null
                                     ? r.User.Email!

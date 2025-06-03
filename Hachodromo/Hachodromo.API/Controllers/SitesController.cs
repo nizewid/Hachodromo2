@@ -206,32 +206,52 @@ namespace Hachodromo.API.Controllers
             return Ok(list);
         }
         /// <summary>
-        /// Devuelve las reservas de un sitio para un día concreto.
-        /// Ejemplo GET api/sites/5/reservations?date=2025-06-03
-        /// Si <c>date</c> se omite devuelve todas las reservas del sitio.
+        /// Devuelve las reservas de un sitio para un día concreto o para un rango de fechas.
+        /// Ejemplos:
+        ///   GET api/sites/5/reservations?date=2025-06-03
+        ///   GET api/sites/5/reservations?startDate=2025-06-01&endDate=2025-06-07
+        /// Si no se especifica ni <c>date</c> ni <c>startDate/endDate</c>, devuelve todas las reservas del sitio.
         /// </summary>
         /// <param name="siteId">Id del sitio</param>
-        /// <param name="date">Fecha del día a consultar (yyyy-MM-dd)</param>
+        /// <param name="date">Fecha única a consultar (yyyy-MM-dd)</param>
+        /// <param name="startDate">Fecha de inicio del rango (yyyy-MM-dd)</param>
+        /// <param name="endDate">Fecha de fin del rango (yyyy-MM-dd)</param>
         [HttpGet("{siteId:int}/reservations")]
-        [AllowAnonymous]           // pon [Authorize] si lo necesitas
+        [AllowAnonymous]  // Cambiar a [Authorize] si se necesita autenticación
         public async Task<ActionResult<List<ReservationDto>>> GetReservationsBySite(
             int siteId,
-            [FromQuery] DateTime? date)
+            [FromQuery] DateTime? date,
+            [FromQuery] DateTime? startDate,
+            [FromQuery] DateTime? endDate)
         {
             // 1) Base query: todas las reservas cuyo Target pertenece al sitio
             var query = _context.ReservationTargets
                                 .Include(rt => rt.Reservation)
+                                .ThenInclude(r => r.ReservationTargets)
+                                .ThenInclude(rt => rt.Target)
+                                .Include(rt => rt.Reservation)
+                                .ThenInclude(r => r.User)
                                 .Where(rt => rt.Target.SiteId == siteId)
-                                .Select(rt => rt.Reservation);
+                                .Select(rt => rt.Reservation)
+                                .Distinct();
 
-            // 2) Filtro opcional por día
-            if (date.HasValue)
-                query = query.Where(r => r.ReservationDate == date.Value.Date);
+            // 2) Filtro por rango o por día
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                var inicio = startDate.Value.Date;
+                var fin = endDate.Value.Date;
+                query = query.Where(r => r.ReservationDate >= inicio && r.ReservationDate <= fin);
+            }
+            else if (date.HasValue)
+            {
+                var dia = date.Value.Date;
+                query = query.Where(r => r.ReservationDate == dia);
+            }
 
-            // 3) Proyección a DTO ordenada
+            // 3) Proyección a DTO ordenada por fecha y hora de inicio
             var list = await query
-                .Distinct()
-                .OrderBy(r => r.HourStart)
+                .OrderBy(r => r.ReservationDate)
+                .ThenBy(r => r.HourStart)
                 .Select(r => new ReservationDto
                 {
                     Id = r.Id,
@@ -247,7 +267,6 @@ namespace Hachodromo.API.Controllers
 
             return Ok(list);
         }
-
     }
 }
 

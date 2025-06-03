@@ -35,13 +35,13 @@ else
 					<Pagination CurrentPage="currentPage"
 					TotalPages="totalPages"
 					SelectedPage="SelectedPageAsync" />
-
+					<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
 							<tr>
 								<th>Foto</th>
 								<th>Nombre</th>
-								<th>Descripcion</th>
+									<th class="d-none d-sm-table-cell">Descripción</th>
 								<th>Ciudad</th>
 								<th>Teléfono</th>
 								<th>Targets</th>
@@ -53,14 +53,17 @@ else
 							{
 								<tr>
 									<td>
-										<td><img src="@site.Photo" width="80" height="80" style="border-radius:50%" /></td>
+											<div class="d-flex justify-content-center align-items-center">
+												<img src="@site.Photo"
+													 alt="@site.Name"
+													 class="rounded-circle shadow-sm border border-2"
+													 style="width: 80px; height: 80px; object-fit: cover;" />
+											</div>
 									</td>
 									<td>
 										@site.Name
 									</td>
-									<td>
-										@site.Description
-									</td>
+										<td class="d-none d-sm-table-cell">@site.Description</td>
 									<td>
 										@site.City!.CityName
 									</td>
@@ -70,19 +73,26 @@ else
 									<td>
 										@site.TargetsCount!.Value
 									</td>
-									<td>
-										<button class="btn btn-warning" @onclick="() => ShowModal(site.Id, true)">
-											<i class="oi oi-pencil"></i> Editar
-										</button>
-										<button class="btn btn-warning" @onclick="() => ShowTargetsModal(site.Id,site.Name)">
-											<i class="oi oi-pencil"></i> Targets
-										</button>
-										<!-- <button class="btn btn-danger" @onclick=@(() => Delete(site.Id))><i class="oi oi-trash" /> Borrar</button>-->
-									</td>
-								</tr>
+										<td>
+											<div class="d-flex flex-column flex-sm-row align-items-center gap-1">
+												<MudButton Variant="Variant.Filled" Color="Color.Warning" Size="Size.Small"
+														   OnClick="() => ShowModal(site.Id, true)">
+													<MudIcon Icon="@Icons.Material.Filled.Edit" />
+													<span class="d-none d-sm-inline ms-1">Editar</span>
+												</MudButton>
+												<MudButton Variant="Variant.Filled" Color="Color.Secondary" Size="Size.Small"
+														   OnClick="() => ShowTargetsModal(site.Id, site.Name)">
+													<MudIcon Icon="@Icons.Material.Filled.TrackChanges" />
+													<span class="d-none d-sm-inline ms-1">Targets</span>
+												</MudButton>
+											</div>
+										</td>
+
+									</tr>									
 							}
 						</tbody>
 					</table>
+					</div>
 				</div>
 			</div>
 		</Body>

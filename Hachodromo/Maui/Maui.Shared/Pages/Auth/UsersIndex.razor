@@ -10,65 +10,74 @@
 }
 else
 {
-	<GenericList MyList="Users">
-		<Body>
-			<div class="card">
-				<div class="card-header">
-					<span>
-						<i class="oi oi-people"></i> Usuarios
-						<a class="btn btn-sm btn-primary float-end" href="/register/?IsAdmin=true"><i class="oi oi-plus"></i> Adicionar Administrador</a>
-					</span>
-				</div>
-				<div class="card-body">
-					<div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
-						<div>
-							<input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar usuario..." @bind-value="Filter" />
-						</div>
-						<div class="mx-1">
-							<button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
-							<button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
-						</div>
+	<MudPaper Class="pa-4">
+    <MudText Typo="Typo.h6" Class="mb-3">
+        <MudIcon Icon="@Icons.Material.Filled.People" Class="me-1" /> Usuarios
+    </MudText>
+
+    <div class="d-flex flex-wrap align-items-center mb-3 gap-2">
+        <MudTextField @bind-Value="Filter" Placeholder="Buscar usuario..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Style="width: 100%; max-width: 400px;" />
+        <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="ApplyFilterAsync" StartIcon="@Icons.Material.Filled.FilterList">Filtrar</MudButton>
+        <MudButton Variant="Variant.Outlined" Color="Color.Error" OnClick="CleanFilterAsync" StartIcon="@Icons.Material.Filled.Clear">Limpiar</MudButton>
+        <MudSpacer />
+        <MudButton StartIcon="@Icons.Material.Filled.PersonAdd" Color="Color.Primary" Href="/register/?IsAdmin=true">
+            Añadir usuario
+        </MudButton>
+    </div>
+
+    <Pagination CurrentPage="currentPage" TotalPages="totalPages" SelectedPage="SelectedPage" />
+
+    <MudTable Items="Users" Dense Striped Hover>
+        <HeaderContent>
+            <MudTh>Imagén</MudTh>
+            <MudTh>Nombre</MudTh>
+            <MudTh>Membresía</MudTh>
+            <MudTh>Teléfono</MudTh>
+            <MudTh>Email</MudTh>
+            <MudTh>Dirección</MudTh>
+            <MudTh>Confirmado</MudTh>
+            <MudTh>Tipo</MudTh>
+            <MudTh>Acciones</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>
+					<div class="d-flex justify-content-center align-items-center">
+						<img src="@context.Photo"
+							 alt="@context.FullName"
+							 class="rounded-circle shadow-sm border border-2"
+							 style="width: 80px; height: 80px; object-fit: cover;" />
 					</div>
+            </MudTd>
+            <MudTd>@context.FullName</MudTd>
+            <MudTd>@context.Membership?.Name</MudTd>
+            <MudTd>@context.PhoneNumber</MudTd>
+            <MudTd>@context.Email</MudTd>
+            <MudTd>@($"{context.Address}, {context.City?.CityName}")</MudTd>
+            <MudTd>
+                @if (context.EmailConfirmed)
+                {
+						<MudChip T="string" Color="Color.Success" Size="Size.Small" Variant="Variant.Outlined">Sí</MudChip>
+                }
+                else
+                {
+						<MudChip T="string" Color="Color.Default" Size="Size.Small" Variant="Variant.Outlined">No</MudChip>
+                }
+            </MudTd>
+            <MudTd>
+					<MudChip T="string" Color="Color.Info" Size="Size.Small" Variant="Variant.Outlined">@context.UserType</MudChip>
+            </MudTd>
+            <MudTd>
+                <div class="d-flex flex-column flex-sm-row gap-1">
+                    <MudButton Variant="Variant.Filled" Color="Color.Warning" Size="Size.Small" OnClick="() => EditSelectedUser(context.Email!)">
+                        <MudIcon Icon="@Icons.Material.Filled.Edit" />
+                        <span class="d-none d-sm-inline ms-1">Editar</span>
+                    </MudButton>
+                </div>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudPaper>
 
-					<Pagination CurrentPage="currentPage"
-								TotalPages="totalPages"
-								SelectedPage="SelectedPage" />
-
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Imagén</th>
-								<th>Usuario</th>
-								<th>Membresía</th>
-								<th>Teléfono</th>
-								<th>Email</th>
-								<th>Dirección</th>
-								<th>Confirmado</th>
-								<th>Tipo Usuario</th>
-								<th>Acciones</th>
-							</tr>
-						</thead>
-						<tbody>
-							@foreach (var user in Users)
-							{
-								<tr>
-									<td><img src="@user.Photo" width="80" height="80" style="border-radius:50%" /></td>
-									<td>@user.FullName</td>
-									<td>@user.Membership!.Name</td>
-									<td>@user.PhoneNumber</td>
-									<td>@user.Email</td>
-									<td>@user.Address, @user.City!.CityName</td>
-									<td>@user.EmailConfirmed</td>
-									<td>@user.UserType</td>
-									<td><a class="btn btn-warning" @onclick="@(()=>EditSelectedUser(@user.Email!))">Editar</a></td>
-								</tr>
-							}
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</Body>
-	</GenericList>
 }
 
 @code {

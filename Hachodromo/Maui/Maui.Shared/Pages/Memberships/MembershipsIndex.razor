@@ -15,68 +15,75 @@ else
             <div class="card">
                 <div class="card-header">
                     <span>
-                        <i class="oi oi-list"></i> Membresias
-                        <a class="btn btn-sm btn-primary float-end" @onclick=@(() => ShowModal())><i class="oi oi-plus"></i> Añadir Membresía</a>
+                        <i class="oi oi-list"></i> Membresías
+                        <a class="btn btn-sm btn-primary float-end" @onclick=@(() => ShowModal())>
+                            <i class="oi oi-plus"></i> Añadir Membresía
+                        </a>
                     </span>
                 </div>
                 <div class="card-body">
-                    <div class="mb-2" style="display: flex; flex-wrap:wrap; align-items: center;">
-                        <div>
-                            <input style="width: 400px;" type="text" class="form-control" id="titulo" placeholder="Buscar Membresia..." @bind-value="Filter" />
+                    <!-- Filtros responsivos -->
+                    <div class="row g-2 align-items-center mb-3">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <input type="text" class="form-control" id="titulo"
+                                   placeholder="Buscar Membresía..." @bind-value="Filter" />
                         </div>
-                        <div class="mx-1">
-                            <button type="button" class="btn btn-outline-primary" @onclick="ApplyFilterAsync"><i class="oi oi-layers" /> Filtrar</button>
-                            <button type="button" class="btn btn-outline-danger" @onclick="CleanFilterAsync"><i class="oi oi-ban" /> Limpiar</button>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-primary w-100" @onclick="ApplyFilterAsync">
+                                <i class="oi oi-layers" /> Filtrar
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-danger w-100" @onclick="CleanFilterAsync">
+                                <i class="oi oi-ban" /> Limpiar
+                            </button>
                         </div>
                     </div>
 
                     <Pagination CurrentPage="currentPage"
-                    TotalPages="totalPages"
-                    SelectedPage="SelectedPageAsync" />
+                                TotalPages="totalPages"
+                                SelectedPage="SelectedPageAsync" />
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Membresia</th>
-                                <th>Descripcion</th>
-                                <th>Precio</th>
-								<th>Duración</th>
-                                <th>Descuento</th>
-                                <th style="width:200px"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var membership in memberships)
-                            {
+                    <!-- Tabla -->
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
                                 <tr>
-                                    <td>
-                                        @membership.Name
-                                    </td>
-									<td>
-										@membership.Description
-									</td>
-                                    <td>
-                                        @membership.Price.ToString("C")
-                                    </td>
-                                    <td>
-										@membership.Duration.ToString() meses
-                                    </td>
-                                    <td>
-										@membership.Discount.ToString("P")
-                                    </td>
-                                    <td>
-                                        <div class="d-flex flex-wrap gap-1">
-                                        <button class="btn btn-warning" @onclick="() => ShowModal(membership.Id, true)">
-                                            <i class="oi oi-pencil"></i> Editar
-                                        </button>
-                                        <button class="btn btn-danger" @onclick="@(() => Delete(membership.Id))"><i class="oi oi-trash" /> Borrar</button>
-                                            <button class="btn btn-dark" @onclick="@(()=> ManageMembership(membership.Id))"><i class="oi oi-cog" /> Gestionar</button>
-                                        </div>
-                                    </td>
+                                    <th>Membresía</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                    <th>Duración</th>
+                                    <th>Descuento</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach (var membership in memberships)
+                                {
+                                    <tr>
+                                        <td>@membership.Name</td>
+                                        <td>@membership.Description</td>
+                                        <td>@membership.Price.ToString("C")</td>
+                                        <td>@($"{membership.Duration} meses")</td>
+                                        <td>@membership.Discount.ToString("P")</td>
+                                        <td>
+                                            <div class="d-flex flex-column flex-sm-row flex-wrap gap-1">
+                                                <button class="btn btn-sm btn-warning" @onclick="() => ShowModal(membership.Id, true)">
+                                                    <i class="oi oi-pencil"></i> <span class="d-none d-sm-inline">Editar</span>
+                                                </button>
+                                                <button class="btn btn-sm btn-danger" @onclick="@(() => Delete(membership.Id))">
+                                                    <i class="oi oi-trash"></i> <span class="d-none d-sm-inline">Borrar</span>
+                                                </button>
+                                                <button class="btn btn-sm btn-dark" @onclick="@(() => ManageMembership(membership.Id))">
+                                                    <i class="oi oi-cog"></i> <span class="d-none d-sm-inline">Gestionar</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </Body>

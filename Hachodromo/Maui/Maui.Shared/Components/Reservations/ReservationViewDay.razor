@@ -2,33 +2,44 @@
 @namespace Maui.Shared.Components.Reservations
 
 <MudPaper Class="p-2 mud-elevation-0">
-    <MudText Typo="Typo.h6" Class="mb-2">@Date.ToString("dddd, dd MMMM")</MudText>
+    <!-- Cabecera con la fecha -->
+    <MudText Typo="Typo.h6" Class="mb-3">
+        @Date.ToString("dddd, dd MMMM", new System.Globalization.CultureInfo("es-ES"))
+    </MudText>
 
-    <table class="mud-table mud-table-dense">
-        <thead><tr><th>Hora</th><th>Reservas</th></tr></thead>
-        <tbody>
-            @foreach (var h in _slots)
-            {
-                var list = Reservations.Where(r => r.ReservationDate.Date == Date.Date && r.HourStart <= h && r.HourEnd > h);
-                <tr>
-                    <td>@h.ToString(@"hh\:mm")</td>
-                    <td>
-                        @if (list.Any())
-                        {
-                            @foreach (var res in list)
-                            {
-                                <MudChip T="string" Color="Color.Primary" Size="Size.Small">@res.PersonCount personas</MudChip>
-                            }
-                        }
-                        else
-                        {
-                            <MudText Typo="Typo.caption">–</MudText>
-                        }
-                    </td>
-                </tr>
+    <!-- Tabla MudBlazor densa -->
+    <MudTable T="TimeSpan" Dense="true" Striped="false" Hover="false" Bordered="false" Items="_slots">
+        <!-- Encabezado -->
+        <HeaderContent>
+            <MudTh Align="Align.Center" Class="pa-2">Hora</MudTh>
+            <MudTh Align="Align.Center" Class="pa-2">Reservas</MudTh>
+        </HeaderContent>
+
+        <!-- Filas -->
+        <RowTemplate Context="slot">
+            <MudTd Align="Align.Center">@slot.ToString(@"hh\:mm")</MudTd>
+
+            @{
+                var count = Reservations.Count(r =>
+                r.ReservationDate.Date == Date.Date &&
+                r.HourStart <= slot &&
+                r.HourEnd > slot);
             }
-        </tbody>
-    </table>
+
+            <MudTd Align="Align.Center">
+                @if (count > 0)
+                {
+                    <MudChip T="string" Color="Color.Primary" Size="Size.Small">
+                        @($"{count} reserva(s)")
+                    </MudChip>
+                }
+                else
+                {
+                    <MudText Typo="Typo.caption">–</MudText>
+                }
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
 </MudPaper>
 
 @code {
@@ -36,5 +47,9 @@
     [Parameter] public DateTime Date { get; set; }
     [Parameter] public List<ReservationDto> Reservations { get; set; } = new();
 
-    private readonly List<TimeSpan> _slots = Enumerable.Range(10, 12).Select(TimeSpan.FromHours).ToList();
+    // Franjas horarias de 10 h a 21 h (12 slots)
+    private readonly List<TimeSpan> _slots =
+        Enumerable.Range(10, 12)
+                  .Select(TimeSpan.FromHours)
+                  .ToList();
 }

@@ -29,6 +29,9 @@ else
 						<MudText>
 							Hora: @reserva.HourStart.ToString(@"hh\:mm") - @reserva.HourEnd.ToString(@"hh\:mm")
 						</MudText>
+						<MudText>
+							Sitio: <strong>@reserva.SiteName</strong>
+						</MudText>
 						<MudText>Personas: @reserva.PersonCount</MudText>
 						<MudText>Email: @reserva.Email</MudText>
 						@if (!string.IsNullOrWhiteSpace(reserva.Remarks))
@@ -38,7 +41,7 @@ else
 					</MudCardContent>
 					<MudCardActions>
 						<MudButton Color="Color.Error" Size="Size.Small" Variant="Variant.Text"
-								   OnClick="@(() => ShowModal(reserva.Id!.Value))">
+								   OnClick="@(() => CancelReservationAsync(reserva.Id!.Value))">
 							Cancelar
 						</MudButton>
 					</MudCardActions>
@@ -81,16 +84,22 @@ else
 
 	}
 
-	private async Task ShowModal(int id)
+	private async Task CancelReservationAsync(int id)
 	{
-		var parameters = new DialogParameters();
-		parameters.Add("Id", id);
-		var dialog = mudDialogService.Show<ReservationForm>("Cancelar Reserva", parameters);
-		var result = await dialog.Result;
-		if (!result.Canceled)
+		var confirmed = await dialogService.ShowConfirmMessageAsync(UserMail, "¿Estás seguro de que deseas cancelar esta reserva?", "SI", "NO");
+		if (!confirmed)
 		{
 			return;
 		}
+		var responseHTTP = await repository.Delete($"api/reservations/{id}");
+		if (responseHTTP.Error)
+		{
+			navigationManager.NavigateTo("/");
+			var message = await responseHTTP.GetErrorMessageAsync();
+			await dialogService.ShowAlertAsync("Error", message!, "Aceptar");
+		}
+		await dialogService.ShowToastAsync("Reserva cancelada correctamente", ToastType.Success);
+		await LoadAsync();
 	}
 
 	private async Task LoadUserClaimsAsync()
@@ -99,10 +108,7 @@ else
 		var user = authState.User;
 		if (user.Identity?.IsAuthenticated == true)
 		{
-			/*foreach (var claim in user.Claims)  LO utilizo para ver los Claims
-			{
-				Console.WriteLine($"🔐 CLAIM: {claim.Type} = {claim.Value}");
-			}*/
+
 			var email = user.Identity?.Name;
 			if (!string.IsNullOrEmpty(email))
 			{
