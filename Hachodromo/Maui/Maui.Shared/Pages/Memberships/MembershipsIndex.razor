@@ -65,12 +65,13 @@ else
 										@membership.Discount.ToString("P")
                                     </td>
                                     <td>
-
+                                        <div class="d-flex flex-wrap gap-1">
                                         <button class="btn btn-warning" @onclick="() => ShowModal(membership.Id, true)">
                                             <i class="oi oi-pencil"></i> Editar
                                         </button>
                                         <button class="btn btn-danger" @onclick="@(() => Delete(membership.Id))"><i class="oi oi-trash" /> Borrar</button>
-                                        <button class="btn btn-dark" @onclick="@(()=> ManageMembership(membership.Id))"><i class="oi oi-trash" /> Gestionar</button>"
+                                            <button class="btn btn-dark" @onclick="@(()=> ManageMembership(membership.Id))"><i class="oi oi-cog" /> Gestionar</button>
+                                        </div>
                                     </td>
                                 </tr>
                             }
