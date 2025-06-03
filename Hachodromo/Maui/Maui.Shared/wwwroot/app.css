@@ -149,6 +149,38 @@ code {
     display: flex;
 }
 
+/* Calendario mensual */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+    overflow-x: auto;
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: 600;
+}
+
+.calendar-day {
+    min-height: 90px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+@media (max-width: 600px) {
+    .calendar-day {
+        min-height: 70px;
+        font-size: 0.75rem;
+    }
+
+    .calendar-header {
+        font-size: 0.8rem;
+    }
+}
+
 .selectable-ul {
     height: 200px;
     overflow-y: auto;

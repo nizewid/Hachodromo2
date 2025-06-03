@@ -126,12 +126,12 @@ namespace Hachodromo.API.Controllers
             int siteId,
             [FromQuery] DateTime date)
         {
-            // 1) Número total de blancos en el sitio disponibles
+            //Número total de blancos en el sitio disponibles
             var totalTargets = await _context.Targets.Where(t => t.SiteId == siteId && t.Status == Shared.Enums.TargetStatus.Available)
                 .CountAsync();
 
 
-            // 2) Cargamos todas las reservas de ese sitio y fecha
+            //todas las reservas de ese sitio y fecha
             var reservationsOnDate = await _context.ReservationTargets
                 .Include(rt => rt.Reservation)
                 .Include(rt => rt.Target)
@@ -140,15 +140,17 @@ namespace Hachodromo.API.Controllers
                     rt.Reservation.ReservationDate.Date == date.Date)
                 .ToListAsync();
 
-            // 3) Generamos los slots de 12–23h
+            //Generamos los slots de 12–23h
             var slots = Enumerable.Range(12, 11)
                 .Select(h =>
                 {
                     var start = TimeSpan.FromHours(h);
                     var end = start.Add(TimeSpan.FromHours(1));
-                    // cuántos blancos ya están reservados en ese slot
+
                     var reservedCount = reservationsOnDate
-                        .Count(rt => rt.Reservation.HourStart == start);
+                        .Where(rt => rt.Reservation.HourStart == start)
+                        .Count(); // cuenta dianas ocupadas, no reservas
+
                     return new TimeSlotDto
                     {
                         Start = start,
@@ -160,6 +162,92 @@ namespace Hachodromo.API.Controllers
 
             return Ok(slots);
         }
+        /// <summary>
+        /// Devuelve todas las reservas de un sitio dentro de un rango de fechas
+        /// (incluye ambas fechas). Ideal para las vistas Semana y Mes.
+        ///     GET api/sites/5/reservations/range?from=2025-06-02&to=2025-06-08
+        /// </summary>
+        /// <param name="siteId">Identificador numérico del sitio</param>
+        /// <param name="from">Fecha de inicio del rango (inclusive)</param>
+        /// <param name="to">Fecha fin del rango (inclusive)</param>
+        /// <returns>Lista de <see cref="ReservationDto"/> ordenada por fecha y hora</returns>
+        [HttpGet("{siteId:int}/reservations/range")]
+        [AllowAnonymous]                 // cámbialo a [Authorize] si sólo para admin
+        public async Task<ActionResult<List<ReservationDto>>> GetReservationsRange(
+            int siteId,
+            [FromQuery] DateTime from,
+            [FromQuery] DateTime to)
+        {
+            if (to < from)
+                return BadRequest("La fecha 'to' debe ser mayor o igual que 'from'.");
+
+            var list = await _context.ReservationTargets
+                .Include(rt => rt.Reservation)
+                .Where(rt => rt.Target.SiteId == siteId &&
+                             rt.Reservation.ReservationDate >= from.Date &&
+                             rt.Reservation.ReservationDate <= to.Date)
+                .Select(rt => rt.Reservation)
+                .Distinct()                          // evita duplicados por Target
+                .OrderBy(r => r.ReservationDate)
+                .ThenBy(r => r.HourStart)
+                .Select(r => new ReservationDto
+                {
+                    Id = r.Id,
+                    SiteId = siteId,
+                    PersonCount = r.ReservationTargets.Count,
+                    Email = r.User != null ? r.User.Email! : r.GuestEmail!,
+                    ReservationDate = r.ReservationDate,
+                    HourStart = r.HourStart,
+                    HourEnd = r.HourEnd,
+                    Remarks = r.Remarks
+                })
+                .ToListAsync();
+
+            return Ok(list);
+        }
+        /// <summary>
+        /// Devuelve las reservas de un sitio para un día concreto.
+        /// Ejemplo GET api/sites/5/reservations?date=2025-06-03
+        /// Si <c>date</c> se omite devuelve todas las reservas del sitio.
+        /// </summary>
+        /// <param name="siteId">Id del sitio</param>
+        /// <param name="date">Fecha del día a consultar (yyyy-MM-dd)</param>
+        [HttpGet("{siteId:int}/reservations")]
+        [AllowAnonymous]           // pon [Authorize] si lo necesitas
+        public async Task<ActionResult<List<ReservationDto>>> GetReservationsBySite(
+            int siteId,
+            [FromQuery] DateTime? date)
+        {
+            // 1) Base query: todas las reservas cuyo Target pertenece al sitio
+            var query = _context.ReservationTargets
+                                .Include(rt => rt.Reservation)
+                                .Where(rt => rt.Target.SiteId == siteId)
+                                .Select(rt => rt.Reservation);
+
+            // 2) Filtro opcional por día
+            if (date.HasValue)
+                query = query.Where(r => r.ReservationDate == date.Value.Date);
+
+            // 3) Proyección a DTO ordenada
+            var list = await query
+                .Distinct()
+                .OrderBy(r => r.HourStart)
+                .Select(r => new ReservationDto
+                {
+                    Id = r.Id,
+                    SiteId = siteId,
+                    PersonCount = r.ReservationTargets.Count,
+                    Email = r.User != null ? r.User.Email! : r.GuestEmail!,
+                    ReservationDate = r.ReservationDate,
+                    HourStart = r.HourStart,
+                    HourEnd = r.HourEnd,
+                    Remarks = r.Remarks
+                })
+                .ToListAsync();
+
+            return Ok(list);
+        }
+
     }
 }
 

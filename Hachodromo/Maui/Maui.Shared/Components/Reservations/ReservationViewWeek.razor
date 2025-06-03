@@ -1,0 +1,55 @@
+﻿@using MudBlazor
+@namespace Maui.Shared.Components.Reservations
+
+<MudPaper Class="p-2 mud-elevation-0">
+    <table class="mud-table mud-table-dense">
+        <thead>
+            <tr>
+                <th>Hora</th>
+                @foreach (var d in _weekDays)
+                {
+                    <th>@d.ToString("ddd dd/MM")</th>
+                    ;
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var h in _slots)
+            {
+                <tr>
+                    <td>@h.ToString(@"hh\:mm")</td>
+                    @foreach (var d in _weekDays)
+                    {
+                        var list = Reservations.Where(r => r.ReservationDate.Date == d.Date && r.HourStart <= h && r.HourEnd > h);
+                        <td>
+                            @if (list.Any())
+                            {@foreach (var res in list)
+                                {
+                                    <MudChip T="string" Size="Size.Small">@res.PersonCount</MudChip>
+                                }                       }
+                            else
+                            {
+                                <MudText Typo="Typo.caption">–</MudText>
+                            }
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</MudPaper>
+
+@code {
+    [Parameter] public Site Site { get; set; } = default!;
+    [Parameter] public DateTime Date { get; set; }
+    [Parameter] public List<ReservationDto> Reservations { get; set; } = new();
+
+    private readonly List<TimeSpan> _slots = Enumerable.Range(10, 12).Select(TimeSpan.FromHours).ToList();
+    private List<DateTime> _weekDays = new();
+
+    protected override void OnParametersSet()
+    {
+        var monday = Date.Date.AddDays(-(((int)Date.DayOfWeek + 6) % 7));
+        _weekDays = Enumerable.Range(0, 7).Select(i => monday.AddDays(i)).ToList();
+    }
+}

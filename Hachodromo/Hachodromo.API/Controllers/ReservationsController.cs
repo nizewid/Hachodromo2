@@ -1,6 +1,7 @@
 ﻿using Hachodromo.API.Data;
 using Hachodromo.Shared.DTOs;
 using Hachodromo.Shared.Entities;
+using Hachodromo.Shared.Enums;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -70,49 +71,72 @@ public class ReservationsController : ControllerBase
 
         return Ok(dto);
     }
-
-  [HttpPost]
-[AllowAnonymous]
-public async Task<ActionResult<ReservationDto>> Create([FromBody] ReservationDto dto)
-{
-    if (!ModelState.IsValid)
-        return ValidationProblem(ModelState);
-
-    var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-    var emailClaim = User.FindFirstValue(ClaimTypes.Name); // 👈 Correo del usuario logueado
-
-    // Validación para anónimos: Email obligatorio
-    if (userIdClaim == null && string.IsNullOrWhiteSpace(dto.Email))
-        return BadRequest("El correo es obligatorio para usuarios no autenticados.");
-
-    var entity = new Reservation
+    [HttpPost]
+    [AllowAnonymous]
+    public async Task<ActionResult<ReservationDto>> Create([FromBody] ReservationDto dto)
     {
-        UserId = userIdClaim != null ? Guid.Parse(userIdClaim) : null,
-        GuestEmail = userIdClaim != null
-                        ? emailClaim   // 👈 Lo guardamos también para autenticados
-                        : dto.Email.Trim(),
-        ReservationDate = dto.ReservationDate.Date,
-        HourStart = dto.HourStart,
-        HourEnd = dto.HourEnd,
-        Remarks = dto.Remarks,
-        CreatedDate = DateTime.UtcNow,
+        if (!ModelState.IsValid)
+            return ValidationProblem(ModelState);
 
-    };
+        // Si no está autenticado, obligamos a que llegue correo
+        var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var emailClaim = User.FindFirstValue(ClaimTypes.Name);
+        if (userIdClaim == null && string.IsNullOrWhiteSpace(dto.Email))
+            return BadRequest("El correo es obligatorio para usuarios no autenticados.");
 
-    entity.ReservationTargets.Add(new ReservationTarget
-    {
-        TargetId = dto.SiteId
-    });
+        // Fecha y hora de inicio de la reserva (solo fecha, ignoramos hora de fin para buscar diana)
+        var fecha = dto.ReservationDate.Date;
+        var horaInicio = dto.HourStart;
 
-    _context.Reservations.Add(entity);
-    await _context.SaveChangesAsync();
+        // 1) Calculamos qué dianas de ese sitio están marcadas como Available
+        //    y NO tienen ya una ReservationTarget para la misma fecha+hora.
+        //    Si no queda ninguna, devolvemos BadRequest.
+        var dianaLibreId = await _context.Targets
+            .Where(t => t.SiteId == dto.SiteId && t.Status == TargetStatus.Available)
+            .Select(t => t.Id)
+            // Excluir las que ya están en ReservationTargets en esa fecha+hInicio
+            .Except(
+                _context.ReservationTargets
+                    .Include(rt => rt.Reservation)
+                    .Where(rt =>
+                        rt.Target.SiteId == dto.SiteId &&
+                        rt.Reservation.ReservationDate == fecha &&
+                        rt.Reservation.HourStart == horaInicio
+                    )
+                    .Select(rt => rt.TargetId)
+            )
+            .FirstOrDefaultAsync();
 
-    dto.Id = entity.Id;
-    dto.Email = entity.GuestEmail!;
+        if (dianaLibreId == 0)
+            return BadRequest("No hay dianas disponibles para la fecha y hora seleccionadas.");
 
-    return CreatedAtAction(nameof(GetById), new { id = entity.Id }, dto);
-}
+        // 2) Creamos la entidad Reservation
+        var entity = new Reservation
+        {
+            UserId = userIdClaim != null ? Guid.Parse(userIdClaim) : null,
+            GuestEmail = userIdClaim != null
+                            ? emailClaim   // Guardamos correo de usuario autenticado
+                            : dto.Email.Trim(),
+            ReservationDate = fecha,
+            HourStart = horaInicio,
+            HourEnd = dto.HourEnd,
+            Remarks = dto.Remarks,
+            CreatedDate = DateTime.UtcNow
+        };
 
+        // 3) Asociamos UNA sola ReservationTarget con la diana elegida
+        entity.ReservationTargets.Add(new ReservationTarget
+        {
+            TargetId = dianaLibreId
+        });
+
+        _context.Reservations.Add(entity);
+        await _context.SaveChangesAsync();
+
+        dto.Id = entity.Id;
+        dto.Email = entity.GuestEmail!;
+        return CreatedAtAction(nameof(GetById), new { id = entity.Id }, dto);
+    }
 
     // PUT api/reservations/{id}
     [HttpPut("{id:int}")]
@@ -177,5 +201,31 @@ public async Task<ActionResult<ReservationDto>> Create([FromBody] ReservationDto
             })
             .ToListAsync();
         return Ok(list);
+    }
+    // DELETE api/reservations/{id}
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var entity = await _context.Reservations
+            .Include(r => r.ReservationTargets)
+            .FirstOrDefaultAsync(r => r.Id == id);
+
+        if (entity == null)
+            return NotFound();
+
+        var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var userRole = User.FindFirstValue(ClaimTypes.Role);
+
+        var isOwner = entity.UserId != null && entity.UserId.ToString() == userIdClaim;
+        var isAdmin = userRole == UserType.Admin.ToString();
+
+        if (!isOwner && !isAdmin)
+            return Forbid();
+
+        _context.ReservationTargets.RemoveRange(entity.ReservationTargets);
+        _context.Reservations.Remove(entity);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 }

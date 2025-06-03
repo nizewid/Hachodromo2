@@ -1,0 +1,55 @@
+﻿@using MudBlazor
+@namespace Maui.Shared.Components.Reservations
+
+<MudPaper Class="p-2 mud-elevation-0">
+    <MudText Typo="Typo.h6" Class="mb-3">@Date.ToString("MMMM yyyy")</MudText>
+
+    <div class="calendar-grid mb-1">
+        @foreach (var n in _names)
+        {
+            <div class="calendar-header">@n</div>
+            ;
+        }
+    </div>
+
+    <div class="calendar-grid">
+        @for (int i = 0; i < _offset; i++)
+        {
+            <div></div>
+            ;
+        }
+        @foreach (var d in _days)
+        {
+            var c = Reservations.Count(r => r.ReservationDate.Date == d.Date);
+            <div class="calendar-day mud-elevation-1">
+                <MudText Typo="Typo.subtitle2">@d.Day</MudText>
+                @if (c > 0)
+                {
+                    <MudChip T="string" Size="Size.Small">@c reserva(s)</MudChip>
+                }
+                else
+                {
+                    <MudText Typo="Typo.caption">–</MudText>
+                }
+            </div>
+        }
+    </div>
+</MudPaper>
+
+@code {
+    [Parameter] public Site Site { get; set; } = default!;
+    [Parameter] public DateTime Date { get; set; }
+    [Parameter] public List<ReservationDto> Reservations { get; set; } = new();
+
+    private readonly string[] _names = { "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom" };
+    private List<DateTime> _days = new();
+    private int _offset;
+
+    protected override void OnParametersSet()
+    {
+        var first = new DateTime(Date.Year, Date.Month, 1);
+        _offset = ((int)first.DayOfWeek + 6) % 7;
+        _days = Enumerable.Range(0, DateTime.DaysInMonth(Date.Year, Date.Month))
+                          .Select(i => first.AddDays(i)).ToList();
+    }
+}

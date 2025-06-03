@@ -7,7 +7,7 @@
     <MudStack Spacing="1" AlignItems="AlignItems.Center" Class="mb-4">
         <MudText Typo="Typo.subtitle1">Confirmar reserva</MudText>
         <MudText Typo="Typo.body1">@Model.ReservationDate.ToString("dd/MM/yyyy")</MudText>
-        <MudText Typo="Typo.body2" Color="Color.Secondary">@Model.HourStart:hh\\:mm - @Model.HourEnd:hh\\:mm</MudText>
+        <MudText Typo="Typo.body2" Color="Color.Secondary"> @Model.HourStart.ToString(@"hh\:mm") - @Model.HourEnd.ToString(@"hh\:mm")</MudText>
     </MudStack>
 
     <CascadingValue Value="editContext">
@@ -87,6 +87,7 @@
     private bool IsAnonymous = true;
 
     [Parameter] public ReservationDto Model { get; set; } = new();
+	[Parameter] public int Id { get; set; } = 0;
     [Parameter] public EventCallback<ReservationDto> OnValidSubmit { get; set; }
     [CascadingParameter] IMudDialogInstance MudDialog { get; set; } = default!;
 
